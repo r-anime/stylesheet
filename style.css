@@ -1,0 +1,6 @@
+.link a.title {
+    color: red !important;
+}
+.link .midcol .arrow {
+    display: none;
+}
