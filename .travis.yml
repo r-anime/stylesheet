@@ -5,4 +5,4 @@ install: pip install -r update/requirements.txt
 script: cd update && python updateSubreddit.py
 before_install:
 - openssl aes-256-cbc -K $encrypted_5e5bd7eb47bb_key -iv $encrypted_5e5bd7eb47bb_iv
-  -in oauth.ini.enc -out oauth.ini -d
+  -in update/oauth.ini.enc -out update/oauth.ini -d
