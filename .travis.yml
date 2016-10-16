@@ -1,6 +1,6 @@
 language: python
 python:
   - "3.5"
-install: "pip install -r requirements.txt"
+install: "pip install -r update/requirements.txt"
 script: "exit 0"
 after_success: "cd update && python -3 updateSubreddit.py"
