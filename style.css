@@ -1,7 +1,5 @@
-.link a.title {
-    color: green !important;
-}
-.link .midcol .arrow {
-    display: none;
-}
-/* test */
+/* So look at that, the code here is actually live on /r/geo1088_sandbox right now. That's pretty sweet. */
+
+.author[href$="/geo1088"] { color: #0094ff }
+.author[href$="/geo1088"]::before { content: "My name is "; color: #369 }
+.author[href$="/geo1088"]::after { content: " and I hate you all."; color: #369 }
