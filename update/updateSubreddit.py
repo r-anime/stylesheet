@@ -1,4 +1,4 @@
-import praw, OAuth2Util, os, json, sys
+import praw, os, json, sys
 from csscompressor import compress
 
 # Get directory of the project root (i.e. parent of this "updates" directory)
