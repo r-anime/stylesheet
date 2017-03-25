@@ -1,9 +1,9 @@
 language: python
 python:
 - '3.5'
-install: pip install -r update/requirements.txt
-script: cd update && python updateSubreddit.py
 before_install:
-- openssl aes-256-cbc -K $encrypted_5e5bd7eb47bb_key -iv $encrypted_5e5bd7eb47bb_iv
-  -in update/oauth.ini.enc -out update/oauth.ini -d
-
+- openssl aes-256-cbc -K $encrypted_4f59f0e49779_key -iv $encrypted_4f59f0e49779_iv -in update/config.json.enc -out update/config.json -d
+install:
+- pip install -r update/requirements.txt
+script:
+- cd update && python updateSubreddit.py

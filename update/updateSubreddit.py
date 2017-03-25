@@ -1,7 +1,4 @@
-import praw
-import OAuth2Util
-import os
-import json
+import praw, OAuth2Util, os, json, sys
 from csscompressor import compress
 
 # Get directory of the project root (i.e. parent of this "updates" directory)
@@ -13,20 +10,28 @@ config_file = open(os.path.join(update_dir, "config.json"), "r")
 config = json.load(config_file)
 config_file.close()
 
-# Reddit login
-r = praw.Reddit(config['user_agent'])
-o = OAuth2Util.OAuth2Util(r)
-o.refresh(force=True)
+# Reddit init and login stuff
+# scopes = ["wikiedit", "modconfig"]
+r = praw.Reddit(
+    client_id=config["auth"]["client_id"],
+    client_secret=config["auth"]["client_secret"],
+    username=config["auth"]["username"],
+    password=config["auth"]["password"],
+    user_agent=config["user_agent"]
+)
 print("Hopefully I just logged into Reddit okay.")
 
 # Get the subreddit
-sub = r.get_subreddit(config["subreddit"])
 print("Using subreddit {}".format(config["subreddit"]))
+sub = r.subreddit(config["subreddit"])
+print("Hey, in case no one's told you in a while: You're awesome! :D")
 
 # Read stylesheet and minify it, storing the results
 stylesheet_file = open(os.path.join(project_dir, "style.css"), "r")
 stylesheet = compress(stylesheet_file.read())
+# stylesheet = stylesheet_file.read() # no mini
 stylesheet_file.close()
+print("Got and minified stylesheet.")
 
 # If there's a link specified in the config, add a comment with that link to the uploaded stylesheet
 link = config["stylesheet_link"]
@@ -36,9 +41,16 @@ if (link):
     stylesheet = comment + "\n" + stylesheet
 
 # Push the stylesheet to the subreddit
-sub.edit_wiki_page("config/stylesheet", stylesheet, "")
+print("Now trying to upload the stylesheet to /r/{}".format(config["subreddit"]))
+try:
+    sub.wiki['config/stylesheet'].edit(stylesheet)
+    # TODO: Support an update reason there
+except Exception:
+    print("Ran into an error while uploading stylesheet; aborting.")
+    raise
+    sys.exit(1)
+
 print("That's a wrap")
-# TODO: Support an update reason there
 
 # # Get and upload the sidebar (TODO)
 # sidebar = open(os.path.join(os.path.join(dir, os.pardir), "sidebar.md"))

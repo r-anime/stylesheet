@@ -1,0 +1,11 @@
+{
+    "user_agent": "A description of this script (include your username for contact)",
+    "subreddit": "subreddit - no /r/",
+    "stylesheet_link": "some URL to link the user to that contains the non-minified version of the stylesheet",
+    "auth": {
+        "client_id": "Reddit application ID",
+        "client_secret": "Reddit application secret",
+        "username": "username, no /u/",
+        "password": "the password to your reddit account"
+    }
+}

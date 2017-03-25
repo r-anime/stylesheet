@@ -1,5 +1,0 @@
-{
-    "user_agent": "A user agent for this script",
-    "subreddit": "subreddit",
-    "stylesheet_link": "some URL to link the user to that contains the non-minified version of the stylesheet"
-}
