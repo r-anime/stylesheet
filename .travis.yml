@@ -9,7 +9,7 @@ script:
 - sass main.scss style.css
 after_success:
 - if [ "$TRAVIS_BRANCH" = "master" ]; then
-    cd update;
+    cd .update;
     pip install -r requirements.txt;
     python updateSubreddit.py;
   fi
