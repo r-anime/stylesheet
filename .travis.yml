@@ -2,7 +2,7 @@ language: python
 python:
 - '3.5'
 before_install:
-- openssl aes-256-cbc -K $encrypted_4f59f0e49779_key -iv $encrypted_4f59f0e49779_iv -in config.json.enc -out config.json -d;
+- openssl aes-256-cbc -K $encrypted_4f59f0e49779_key -iv $encrypted_4f59f0e49779_iv -in .update/config.json.enc -out .update/config.json -d;
 install:
 - gem install sass
 script:
