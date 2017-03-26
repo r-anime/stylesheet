@@ -1,12 +1,19 @@
+# Python is required for the deploy script
 language: python
 python:
 - '3.5'
+
+# Decrypt the config file
 before_install:
 - openssl aes-256-cbc -K $encrypted_4f59f0e49779_key -iv $encrypted_4f59f0e49779_iv -in .update/config.json.enc -out .update/config.json -d;
+
+# The Sass part is the actual build
 install:
 - gem install sass
 script:
 - sass main.scss style.css
+
+# If we got a commit to master, sync it with Reddit
 after_success:
 - if [ "$TRAVIS_BRANCH" = "master" ]; then
     cd .update;
