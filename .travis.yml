@@ -13,7 +13,7 @@ script:
 # If we got a commit to master, sync it with Reddit
 after_success:
 - if [ "$TRAVIS_BRANCH" = "master" ]; then
-    REV_EDIT_MSG=$(git log -1 --pretty=%B | tr -d '\n');
+    REV_EDIT_MSG=`git log -1 --pretty=%B`;
     REV_EDIT_MSG=${REV_EDIT_MSG:-"<no commit message>"};
     export REV_EDIT_MSG;
     cd .update;
