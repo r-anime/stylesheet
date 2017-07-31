@@ -5,7 +5,7 @@ python:
 
 # The Sass part is the actual build
 install:
-- rvm install 2.x 
+- rvm install 2.4.1
 - gem install sass
 script:
 - sass main.scss style.css
