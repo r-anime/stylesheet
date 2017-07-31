@@ -42,6 +42,7 @@ if (link):
 
 # Push the stylesheet to the subreddit
 print("Now trying to upload the stylesheet to /r/{}".format(config["subreddit"]))
+print("Using revision reason: {}".format(os.environ['REV_EDIT_MSG']))
 try:
     sub.wiki['config/stylesheet'].edit(stylesheet, os.environ['REV_EDIT_MSG'])
     # TODO: Support an update reason there
