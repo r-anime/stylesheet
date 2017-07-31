@@ -43,7 +43,7 @@ if (link):
 # Push the stylesheet to the subreddit
 print("Now trying to upload the stylesheet to /r/{}".format(config["subreddit"]))
 try:
-    sub.wiki['config/stylesheet'].edit(stylesheet)
+    sub.wiki['config/stylesheet'].edit(stylesheet, os.environ['REV_EDIT_MSG'])
     # TODO: Support an update reason there
 except Exception:
     print("Ran into an error while uploading stylesheet; aborting.")
