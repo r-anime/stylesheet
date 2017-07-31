@@ -13,10 +13,10 @@ config_file.close()
 # Reddit init and login stuff
 # scopes = ["wikiedit", "modconfig"]
 r = praw.Reddit(
-    client_id=config["auth"]["client_id"],
-    client_secret=config["auth"]["client_secret"],
-    username=config["auth"]["username"],
-    password=config["auth"]["password"],
+    client_id=os.environ['REDDIT_CLIENT_ID'],
+    client_secret=os.environ['REDDIT_CLIENT_SECRET'],
+    username=os.environ['REDDIT_USERNAME'],
+    password=os.environ['REDDIT_PASSWORD'],
     user_agent=config["user_agent"]
 )
 print("Hopefully I just logged into Reddit okay.")
