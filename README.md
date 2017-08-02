@@ -6,7 +6,7 @@
 - Copy `.update` and `.travis.yml` into your repo
 - Edit `.update/config.json` with your information fill it out with your information.
 - Have a Reddit API application of type "script"
-- From your repo's settings in Travis, add `REDDIT_CLIENT_ID`, `REDDIT_CLIENT_SECRET`, `REDDIT_USERNAME`, and `REDDIT_PASSWORD` as keys with the relevant information
+- From your repo's settings in Travis, add `REDDIT_CLIENT_ID`, `REDDIT_CLIENT_SECRET`, `REDDIT_USERNAME`, and `REDDIT_PASSWORD` as environment variables with the relevant information
 - If you want, mess around with `.travis.yml` to change stuff like the deployment branch or the main sass file to compile
 - Once this is all set up, edit your styles and push to GitHub
  (TODO: write better guide)
