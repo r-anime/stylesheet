@@ -17,8 +17,7 @@ r = praw.Reddit(
     client_secret=os.environ['REDDIT_CLIENT_SECRET'],
     username=os.environ['REDDIT_USERNAME'],
     password=os.environ['REDDIT_PASSWORD'],
-    user_agent=config["user_agent"]
-)
+    user_agent=config["user_agent"])
 print("Hopefully I just logged into Reddit okay.")
 
 # Get the subreddit
@@ -48,7 +47,6 @@ try:
     # TODO: Support an update reason there
 except Exception:
     print("Ran into an error while uploading stylesheet; aborting.")
-    raise
     sys.exit(1)
 
 print("That's a wrap")
