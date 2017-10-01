@@ -31,12 +31,7 @@ r = praw.Reddit(
     user_agent="script:geo1088/reddit-stylesheet-sync:v1.0 (by /u/geo1088)")
 print("Hopefully I just logged into Reddit okay.")
 
-# Get the subreddit
-print("Writing stylesheet to /r/{}".format(sub_name))
-sub = r.subreddit(sub_name)
-print("Hey, in case no one's told you in a while: You're awesome! :D")
-
-# Read stylesheet and minify it, storing the results
+# Read stylesheet and minify it
 stylesheet_file = open(os.path.join(project_dir, "style.css"), "r")
 stylesheet = compress(stylesheet_file.read()) # minify
 # stylesheet = stylesheet_file.read() # don't minify
@@ -44,17 +39,16 @@ stylesheet_file.close()
 print("Got and minified stylesheet.")
 
 # Push the stylesheet to the subreddit
-# print("Now trying to upload the stylesheet to /r/{}".format(sub_name))
-# print("Using revision reason: {}".format(os.environ['REV_EDIT_MSG']))
-# try:
-#     sub.wiki['config/stylesheet'].edit(stylesheet, os.environ['REV_EDIT_MSG'])
-# except Exception:
-#     print("Ran into an error while uploading stylesheet; aborting.")
-#     sys.exit(1)
-
-# Debug some shit
-print(os.environ["TRAVIS_COMMIT_MESSAGE"])
-print(os.environ["TRAVIS_COMMIT_RANGE"])
+print("Writing stylesheet to /r/{}".format(sub_name))
+sub = r.subreddit(sub_name)
+try:
+    edit_msg = "https://github.com/{}/compare/{}".format(
+        os.environ['TRAVIS_REPO_SLUG'],
+        os.environ['TRAVIS_COMMIT_RANGE'])
+    sub.wiki['config/stylesheet'].edit(stylesheet, edit_msg)
+except Exception:
+    print("Ran into an error while uploading stylesheet; aborting.")
+    sys.exit(1)
 
 print("That's a wrap")
 
