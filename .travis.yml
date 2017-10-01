@@ -7,13 +7,11 @@ python:
 install:
 - rvm install 2.4.1
 - gem install sass
+- pip install -r .update/requirements.txt
 script:
 - sass main.scss style.css
-
-# If we got a commit to master, sync it with Reddit
-after_success:
-- if [ "$TRAVIS_BRANCH" = "master" ]; then
-    cd .update;
-    pip install -r requirements.txt;
-    python updateSubreddit.py;
-  fi
+deploy:
+  provider: script
+  script: python .update/updateSubreddit.py
+  on:
+    branch: master
