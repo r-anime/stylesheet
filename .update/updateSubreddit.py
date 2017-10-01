@@ -29,7 +29,7 @@ r = praw.Reddit(
     username=username,
     password=password,
     user_agent="script:geo1088/reddit-stylesheet-sync:v1.0 (by /u/geo1088)")
-print("Hopefully I just logged into Reddit okay.")
+print("Logged into Reddit as /u/{}".format(username))
 
 # Read stylesheet and minify it
 stylesheet_file = open(os.path.join(project_dir, "style.css"), "r")
@@ -46,8 +46,9 @@ try:
         os.environ['TRAVIS_REPO_SLUG'],
         os.environ['TRAVIS_COMMIT_RANGE'])
     sub.wiki['config/stylesheet'].edit(stylesheet, edit_msg)
-except Exception:
+except Exception, e:
     print("Ran into an error while uploading stylesheet; aborting.")
+    print(e)
     sys.exit(1)
 
 print("That's a wrap")
