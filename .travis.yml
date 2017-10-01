@@ -13,5 +13,6 @@ script:
 deploy:
   provider: script
   script: python .update/updateSubreddit.py
+  skip_cleanup: true
   on:
     branch: master
