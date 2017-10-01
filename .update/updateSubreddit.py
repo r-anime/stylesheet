@@ -1,10 +1,6 @@
 import praw, os, json, sys
 from csscompressor import compress
 
-# Get directory of the project root (i.e. parent of this "updates" directory)
-update_dir = os.getcwd()
-project_dir = os.path.join(update_dir, os.pardir)
-
 # Read config from environment variables
 client_id = os.environ['REDDIT_CLIENT_ID']
 client_secret = os.environ['REDDIT_CLIENT_SECRET']
@@ -32,7 +28,7 @@ r = praw.Reddit(
 print("Logged into Reddit as /u/{}".format(username))
 
 # Read stylesheet and minify it
-stylesheet_file = open(os.path.join(project_dir, "style.css"), "r")
+stylesheet_file = open(os.path.join(os.getcwd(), "style.css"), "r")
 stylesheet = compress(stylesheet_file.read()) # minify
 # stylesheet = stylesheet_file.read() # don't minify
 stylesheet_file.close()
