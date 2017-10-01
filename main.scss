@@ -2,9 +2,9 @@ body {
     a {
         background: red;
     }
-    // &.res-nightmode {
-    //     a {
-    //         background: darkred;
-    //     }
-    // }
+    &.res-nightmode {
+        a {
+            background: darkred;
+        }
+    }
 }
