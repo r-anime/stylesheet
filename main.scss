@@ -1,11 +1,1 @@
-body {
-    a {
-        background: red;
-    }
-    &.res-nightmode {
-        a {
-            background: darkred;
-        }
-    }
-}
-a { text-decoration: underline!important }
+@import "base";
