@@ -6,10 +6,10 @@ python:
 # The Sass part is the actual build
 install:
 - rvm install 2.4.1
-- gem install sass
+# - gem install sass
 - pip install -r .update/requirements.txt
-script:
-- sass main.scss style.css
+# script:
+# - sass main.scss style.css
 deploy:
   provider: script
   script: python .update/updateSubreddit.py
