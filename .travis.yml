@@ -8,8 +8,8 @@ install:
 - rvm install 2.4.1
 # - gem install sass
 - pip install -r .update/requirements.txt
-# script:
-# - sass main.scss style.css
+script:
+- echo "Nothing to do, we're not actually compiling sass"
 deploy:
   provider: script
   script: python .update/updateSubreddit.py
