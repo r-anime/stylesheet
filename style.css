@@ -1400,19 +1400,10 @@ html:not(:lang(en)) .side [href$="#w"]+em:after {
 	font-family: inherit!important;
 	overflow: visible!important
 }
-.md .voteWeight[style*="none"] {display: none!important}
-/** begin spritesheets, abandon all hope **/
-
-/** reeeee more random shit **/
-.id-t3_6d5q8n .md [href="#evilbot"] {
-	/* This block is temporary */
-	width: 119px;
-	height: 148px;
-	background: url(%%q%%)
-}
 .linkflair-green .linkflairlabel, .linkflair-blue .linkflairlabel {
 	display: none
 }
+.md .voteWeight[style*="none"] {display: none!important}
 
 /** Comment faces! something something urban's domain - he writes shit code but we love him anyway <3 **/
 
