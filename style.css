@@ -1800,65 +1800,46 @@ to{background-position:0 0}}
 
 
 /** Spritesheet 1 **/
-.md [href="#gendo-pls"],
-.md [href="#k-on-hug"],
-.md [href="#lewd"],
-.md [href="#nanami-hug"],
-.md [href="#yui-crying"],
-.md [href="#ok"]
-{
-	background-image:url(%%spritesheet1%%)
-}
 .md [href="#gendo-pls"]{width:171px;height:114px;background-position:0 -520px}
 .md [href="#k-on-hug"]{width:180px;height:120px;background-position:0 -814px}
 .md [href="#lewd"]{width:100px;height:150px;background-position:0 -984px}
 .md [href="#nanami-hug"]{width:120px;height:150px;background-position:0 -1184px}
 .md [href="#yui-crying"]{width:80px;height:80px;background-position:0 -1644px}
 .md [href="#ok"]{width:100px;height:100px;background-position:-100px 0}
-
+.md [href="#gendo-pls"],
+.md [href="#k-on-hug"],
+.md [href="#lewd"],
+.md [href="#nanami-hug"],
+.md [href="#yui-crying"],
+.md [href="#ok"] {
+	background-image:url(%%spritesheet1%%)
+}
 
 /** Spritesheet 2 **/
-.md [href="#stare"],
-.md [href="#what"]
-{
-	background-image:url(%%spritesheet2%%)
-}
 .md [href="#stare"]{width:150px;height:100px;background-position:0 -780px}
 .md [href="#what"]{width:100px;height:80px;background-position:0 -1060px}
-
+.md [href="#stare"],
+.md [href="#what"] {
+	background-image:url(%%spritesheet2%%)
+}
 
 /** Spritesheet 3 **/
 .md [href="#gununu"]{background-image:url(%%spritesheet3%%);display:inline-block;width:107px;height:80px;background-position:0 -780px}
 
 
 /** Spritesheet 4 **/
-.md [href="#facepalm"],
-.md [href="#nico-heart"],
-.md [href="#thumbs-up"],
-.md [href="#kukuku"]
-{
-	background-image:url(%%spritesheet4%%)
-}
 .md [href="#facepalm"]{width:80px;height:80px;background-position:0 0}
 .md [href="#nico-heart"]{width:100px;height:80px;background-position:0 -520px}
 .md [href="#thumbs-up"]{width:120px;height:100px;background-position:0 -1430px}
 .md [href="#kukuku"]{width:100px;height:150px;background-position:-170px -390px}
-
+.md [href="#facepalm"],
+.md [href="#nico-heart"],
+.md [href="#thumbs-up"],
+.md [href="#kukuku"] {
+	background-image:url(%%spritesheet4%%)
+}
 
 /** Spritesheet 5 **/
-.md [href="#kotori"],
-.md [href="#araragi-1"],
-.md [href="#deadpan"],
-.md [href="#head-tilt"],
-.md [href="#manly-tears"],
-.md [href="#not-raining"],
-.md [href="#ohmygod"],
-.md [href="#shock"],
-.md [href="#heart-thumbs-up"],
-.md [href="#wow-really"]
-{
-	background-image:url(%%spritesheet5%%)
-}
 .md [href="#kotori"]{width:85px;height:89px;background-position:-215px -5px}
 .md [href="#araragi-1"]{width:100px;height:50px;background-position:-5px -95px}
 .md [href="#deadpan"]{width:80px;height:85px;background-position:-300px -155px}
@@ -1869,51 +1850,20 @@ to{background-position:0 0}}
 .md [href="#shock"]{width:170px;height:100px;background-position:-115px -400px}
 .md [href="#heart-thumbs-up"]{width:79px;height:100px;background-position:-295px -400px}
 .md [href="#wow-really"]{width:80px;height:85px;background-position:-564px -400px}
-
+.md [href="#kotori"],
+.md [href="#araragi-1"],
+.md [href="#deadpan"],
+.md [href="#head-tilt"],
+.md [href="#manly-tears"],
+.md [href="#not-raining"],
+.md [href="#ohmygod"],
+.md [href="#shock"],
+.md [href="#heart-thumbs-up"],
+.md [href="#wow-really"] {
+	background-image:url(%%spritesheet5%%)
+}
 
 /** Static Spritesheet 1 **/
-.md [href="#badassmugi"],
-.md [href="#banjoisahellofadrug"],
-.md [href="#bearhug"],
-.md [href="#bearwithme"],
-.md [href="#biribiricat"],
-.md [href="#csikon"],
-.md [href="#elsieqq"],
-.md [href="#haruhiisnotamused"],
-.md [href="#hisokaclown"],
-.md [href="#hanasakueurgh"],
-.md [href="#jibrilaww"],
-.md [href="#jibrilfetish"],
-.md [href="#katoupls"],
-.md [href="#mechablush"],
-.md [href="#miiaembarassed"],
-.md [href="#misakiteehee"],
-.md [href="#misakiwink"],
-.md [href="#nononkek"],
-.md [href="#ohgodwhathaveidone"],
-.md [href="#smugpoint"],
-.md [href="#smugshinobu"],
-.md [href="#SPORTS"],
-.md [href="#whowouldathunkit"],
-.md [href="#yandereyuno"],
-.md [href="#cup2"],
-.md [href="#annoyedkirito"],
-.md [href="#bestiathumbsup"],
-.md [href="#flclawe"],
-.md [href="#crazedlaugh"],
-.md [href="#cup1"],
-.md [href="#gintamaspillage"],
-.md [href="#hunchedover"],
-.md [href="#hypeoverload"],
-.md [href="#infernocopu"],
-.md [href="#niatilt"],
-.md [href="#nosepick"],
-.md [href="#mug1"],
-.md [href="#mug3"]
-{
-	background-image:url(%%StaticSpriteSheet1%%);width:178px;height:98px
-}
-ele{color:#f00}
 .md [href="#badassmugi"]{background:0 -2922px}
 .md [href="#banjoisahellofadrug"]{background:0 -3022px}
 .md [href="#bearhug"]{background:0 -3122px}
@@ -1952,55 +1902,48 @@ ele{color:#f00}
 .md [href="#nosepick"]{height:116px!important;background:0 -2119px}
 .md [href="#mug1"]{height:131px!important;background:0 -1111px}
 .md [href="#mug3"]{height:131px!important;background:0 -1244px}
-
+.md [href="#badassmugi"],
+.md [href="#banjoisahellofadrug"],
+.md [href="#bearhug"],
+.md [href="#bearwithme"],
+.md [href="#biribiricat"],
+.md [href="#csikon"],
+.md [href="#elsieqq"],
+.md [href="#haruhiisnotamused"],
+.md [href="#hisokaclown"],
+.md [href="#hanasakueurgh"],
+.md [href="#jibrilaww"],
+.md [href="#jibrilfetish"],
+.md [href="#katoupls"],
+.md [href="#mechablush"],
+.md [href="#miiaembarassed"],
+.md [href="#misakiteehee"],
+.md [href="#misakiwink"],
+.md [href="#nononkek"],
+.md [href="#ohgodwhathaveidone"],
+.md [href="#smugpoint"],
+.md [href="#smugshinobu"],
+.md [href="#SPORTS"],
+.md [href="#whowouldathunkit"],
+.md [href="#yandereyuno"],
+.md [href="#cup2"],
+.md [href="#annoyedkirito"],
+.md [href="#bestiathumbsup"],
+.md [href="#flclawe"],
+.md [href="#crazedlaugh"],
+.md [href="#cup1"],
+.md [href="#gintamaspillage"],
+.md [href="#hunchedover"],
+.md [href="#hypeoverload"],
+.md [href="#infernocopu"],
+.md [href="#niatilt"],
+.md [href="#nosepick"],
+.md [href="#mug1"],
+.md [href="#mug3"] {
+	background-image:url(%%StaticSpriteSheet1%%);width:178px;height:98px
+}
 
 /** Static Spritesheet 2 **/
-.md [href="#akyuusqueel"],
-.md [href="#arakawascream"],
-.md [href="#asunanotamused"],
-.md [href="#barakamonnotcool"],
-.md [href="#bestiacheckyourprivilage"],
-.md [href="#chiyomad"],
-.md [href="#comewithmeifyouwanttobebestgirl"],
-.md [href="#crazyhatgirlexcited"],
-.md [href="#disbelief"],
-.md [href="#dontdometh"],
-.md [href="#duckhue"],
-.md [href="#embarassedisla"],
-.md [href="#gintamacrushed"],
-.md [href="#gintamasunlight"],
-.md [href="#gintamathispleasesme"],
-.md [href="#happypoi"],
-.md [href="#izananotthisshitagain"],
-.md [href="#katoupout"],
-.md [href="#nocomment"],
-.md [href="#kumikouninterested"],
-.md [href="#kyonfacepalm"],
-.md [href="#maidshock"],
-.md [href="#marikalewd"],
-.md [href="#mug2"],
-.md [href="#nichijouqq"],
-.md [href="#rengehype"],
-.md [href="#scaredmio"],
-.md [href="#sheerdisgust"],
-.md [href="#smugillya"],
-.md [href="#smuglancer"],
-.md [href="#thoughtful"],
-.md [href="#trollarcher"],
-.md [href="#uglycry"],
-.md [href="#vashheadscratch"],
-.md [href="#WRYYY"],
-.md [href="#yuruyuriapprove"],
-.md [href="#happydera"],
-.md [href="#holdme"],
-.md [href="#misakaheh"],
-.md [href="#ohnoudidnt"],
-.md [href="#teehee"],
-.md [href="#tiredfate"],
-.md [href="#chitogheh"]
-{
-	background:url(%%StaticSpriteSheet2%%);width:178px;height:98px
-}
 .md [href="#akyuusqueel"]{width:129px;height:121px;background-position:0 -8621px}
 .md [href="#arakawascream"]{width:143px;height:117px;background-position:0 -7733px}
 .md [href="#asunanotamused"]{width:125px;height:118px;background-position:0 -10136px}
@@ -2044,66 +1987,53 @@ ele{color:#f00}
 .md [href="#teehee"]{width:155px;height:122px;background-position:0 -5408px}
 .md [href="#tiredfate"]{background-position:0 -5200px}
 .md [href="#chitogheh"]{background-position:0 0}
-
+.md [href="#akyuusqueel"],
+.md [href="#arakawascream"],
+.md [href="#asunanotamused"],
+.md [href="#barakamonnotcool"],
+.md [href="#bestiacheckyourprivilage"],
+.md [href="#chiyomad"],
+.md [href="#comewithmeifyouwanttobebestgirl"],
+.md [href="#crazyhatgirlexcited"],
+.md [href="#disbelief"],
+.md [href="#dontdometh"],
+.md [href="#duckhue"],
+.md [href="#embarassedisla"],
+.md [href="#gintamacrushed"],
+.md [href="#gintamasunlight"],
+.md [href="#gintamathispleasesme"],
+.md [href="#happypoi"],
+.md [href="#izananotthisshitagain"],
+.md [href="#katoupout"],
+.md [href="#nocomment"],
+.md [href="#kumikouninterested"],
+.md [href="#kyonfacepalm"],
+.md [href="#maidshock"],
+.md [href="#marikalewd"],
+.md [href="#mug2"],
+.md [href="#nichijouqq"],
+.md [href="#rengehype"],
+.md [href="#scaredmio"],
+.md [href="#sheerdisgust"],
+.md [href="#smugillya"],
+.md [href="#smuglancer"],
+.md [href="#thoughtful"],
+.md [href="#trollarcher"],
+.md [href="#uglycry"],
+.md [href="#vashheadscratch"],
+.md [href="#WRYYY"],
+.md [href="#yuruyuriapprove"],
+.md [href="#happydera"],
+.md [href="#holdme"],
+.md [href="#misakaheh"],
+.md [href="#ohnoudidnt"],
+.md [href="#teehee"],
+.md [href="#tiredfate"],
+.md [href="#chitogheh"] {
+	background:url(%%StaticSpriteSheet2%%);width:178px;height:98px
+}
 
 /** Cream Soda Sheet 1 **/
-.md [href="#amurodealwithit"],
-.md [href="#antabaka"],
-.md [href="#badtaste"],
-.md [href="#brokenkokoro"],
-.md [href="#calmdown"],
-.md [href="#chinosmirk"],
-.md [href="#concealedexcitement"],
-.md [href="#cup3"],
-.md [href="#cup6"],
-.md [href="#didyouseriouslyjustsaythat"],
-.md [href="#displeasedasuka"],
-.md [href="#edneedsdis"],
-.md [href="#exciteutawarerumono"],
-.md [href="#faito"],
-.md [href="#forbiddenlove"],
-.md [href="#ginapproves"],
-.md [href="#goblet1"],
-.md [href="#happysaitama"],
-.md [href="#helmetgril"],
-.md [href="#howcouldyou"],
-.md [href="#igiveup"],
-.md [href="#ilovethiskindofshit"],
-.md [href="#juice1"],
-.md [href="#konosubawot"],
-.md [href="#konosubawot2"],
-.md [href="#kukuku2"],
-.md [href="#kumikolook"],
-.md [href="#kumikotears"],
-.md [href="#miyamoriunimpressed"],
-.md [href="#mug4"],
-.md [href="#mug5"],
-.md [href="#mug7"],
-.md [href="#noice"],
-.md [href="#notaccordingtokeikaku"],
-.md [href="#oooreally"],
-.md [href="#osomatsurage"],
-.md [href="#papithumbsup"],
-.md [href="#pleasetellmemore"],
-.md [href="#psh-mongrels"],
-.md [href="#rinkek"],
-.md [href="#saberawe"],
-.md [href="#saitamadeathstare"],
-.md [href="#salute"],
-.md [href="#schemingsaten"],
-.md [href="#shinjimug"],
-.md [href="#smugasuna"],
-.md [href="#spookyglasses"],
-.md [href="#tamakoapple"],
-.md [href="#tearsofabestgirl"],
-.md [href="#thisisfine"],
-.md [href="#uglycry"],
-.md [href="#whatisthisguydoing"],
-.md [href="#yuishrug"],
-.md [href="#yunosunglasses"]
-{
-	background-image:url(%%CreamSodaSheet%%);width:129px;height:121px
-}
 .md [href="#amurodealwithit"]{background:0 -323px}
 .md [href="#antabaka"]{background:0 -569px}
 .md [href="#badtaste"]{background:0 -815px}
@@ -2158,74 +2088,64 @@ ele{color:#f00}
 .md [href="#whatisthisguydoing"]{background:0 -8318px}
 .md [href="#yuishrug"]{background:0 -8564px}
 .md [href="#yunosunglasses"]{width:105px!important;height:121px!important;background:0 -9281px}
-
+.md [href="#amurodealwithit"],
+.md [href="#antabaka"],
+.md [href="#badtaste"],
+.md [href="#brokenkokoro"],
+.md [href="#calmdown"],
+.md [href="#chinosmirk"],
+.md [href="#concealedexcitement"],
+.md [href="#cup3"],
+.md [href="#cup6"],
+.md [href="#didyouseriouslyjustsaythat"],
+.md [href="#displeasedasuka"],
+.md [href="#edneedsdis"],
+.md [href="#exciteutawarerumono"],
+.md [href="#faito"],
+.md [href="#forbiddenlove"],
+.md [href="#ginapproves"],
+.md [href="#goblet1"],
+.md [href="#happysaitama"],
+.md [href="#helmetgril"],
+.md [href="#howcouldyou"],
+.md [href="#igiveup"],
+.md [href="#ilovethiskindofshit"],
+.md [href="#juice1"],
+.md [href="#konosubawot"],
+.md [href="#konosubawot2"],
+.md [href="#kukuku2"],
+.md [href="#kumikolook"],
+.md [href="#kumikotears"],
+.md [href="#miyamoriunimpressed"],
+.md [href="#mug4"],
+.md [href="#mug5"],
+.md [href="#mug7"],
+.md [href="#noice"],
+.md [href="#notaccordingtokeikaku"],
+.md [href="#oooreally"],
+.md [href="#osomatsurage"],
+.md [href="#papithumbsup"],
+.md [href="#pleasetellmemore"],
+.md [href="#psh-mongrels"],
+.md [href="#rinkek"],
+.md [href="#saberawe"],
+.md [href="#saitamadeathstare"],
+.md [href="#salute"],
+.md [href="#schemingsaten"],
+.md [href="#shinjimug"],
+.md [href="#smugasuna"],
+.md [href="#spookyglasses"],
+.md [href="#tamakoapple"],
+.md [href="#tearsofabestgirl"],
+.md [href="#thisisfine"],
+.md [href="#uglycry"],
+.md [href="#whatisthisguydoing"],
+.md [href="#yuishrug"],
+.md [href="#yunosunglasses"] {
+	background-image:url(%%CreamSodaSheet%%);width:129px;height:121px
+}
 
 /** Root Beer **/
-.md [href="#annoyedmayaka"],
-.md [href="#annoyedsaber"],
-.md [href="#banhammer"],
-.md [href="#bitchplease"],
-.md [href="#cheekygahara"],
-.md [href="#crumblingdespair"],
-.md [href="#cup4"],
-.md [href="#cup5"],
-.md [href="#delicioustears"],
-.md [href="#donewiththisshit"],
-.md [href="#firstthinginthemorning"],
-.md [href="#fuckyou"],
-.md [href="#giveitback"],
-.md [href="#glasses-push"],
-.md [href="#hackadollthumbsup"],
-.md [href="#healthypasstimes"],
-.md [href="#hououinseesit"],
-.md [href="#justasplanned"],
-.md [href="#kaorusmile"],
-.md [href="#keikaku"],
-.md [href="#killuadisgust"],
-.md [href="#konodioda"],
-.md [href="#kotourashock"],
-.md [href="#kurokokek"],
-.md [href="#labmembernumber009"],
-.md [href="#lovenectar"],
-.md [href="#meguminthumbsup"],
-.md [href="#minoridenied"],
-.md [href="#mitsukishock"],
-.md [href="#mug6"],
-.md [href="#overwhelmed"],
-.md [href="#peace"],
-.md [href="#plebgetawayfromme"],
-.md [href="#poltears"],
-.md [href="#quality"],
-.md [href="#recoil"],
-.md [href="#saehug"],
-.md [href="#saesmile"],
-.md [href="#sciencebringspeopletogether"],
-.md [href="#schwing"],
-.md [href="#shatteredsaten"],
-.md [href="#shirayukidetermined"],
-.md [href="#shirayukidizzyblush"],
-.md [href="#shirayukidrunk"],
-.md [href="#shirayukieavesdrop"],
-.md [href="#shirayukifuckinreally"],
-.md [href="#shirayukismile"],
-.md [href="#smughaikyuu"],
-.md [href="#smugobi"],
-.md [href="#takaradasalute"],
-.md [href="#takasakiapproves"],
-.md [href="#thinkingtoohard"],
-.md [href="#TOMODA"],
-.md [href="#toradorable"],
-.md [href="#toradorasalute"],
-.md [href="#triggeredkillua"],
-.md [href="#trollnui"],
-.md [href="#utahapraises"],
-.md [href="#waah"],
-.md [href="#watashihasdeclined"],
-.md [href="#watashiworried"],
-.md [href="#whatamireading"]
-{
-	background-image:url(%%RootBeerSheet%%);width:178px;height:98px
-}
 .md [href="#annoyedmayaka"]{background:0 0}
 .md [href="#annoyedsaber"]{background:0 -100px}
 .md [href="#banhammer"]{background:0 -200px}
@@ -2288,19 +2208,72 @@ ele{color:#f00}
 .md [href="#watashihasdeclined"]{background:0 -8000px}
 .md [href="#watashiworried"]{background:0 -8100px}
 .md [href="#whatamireading"]{background:0 -8200px}
-
+.md [href="#annoyedmayaka"],
+.md [href="#annoyedsaber"],
+.md [href="#banhammer"],
+.md [href="#bitchplease"],
+.md [href="#cheekygahara"],
+.md [href="#crumblingdespair"],
+.md [href="#cup4"],
+.md [href="#cup5"],
+.md [href="#delicioustears"],
+.md [href="#donewiththisshit"],
+.md [href="#firstthinginthemorning"],
+.md [href="#fuckyou"],
+.md [href="#giveitback"],
+.md [href="#glasses-push"],
+.md [href="#hackadollthumbsup"],
+.md [href="#healthypasstimes"],
+.md [href="#hououinseesit"],
+.md [href="#justasplanned"],
+.md [href="#kaorusmile"],
+.md [href="#keikaku"],
+.md [href="#killuadisgust"],
+.md [href="#konodioda"],
+.md [href="#kotourashock"],
+.md [href="#kurokokek"],
+.md [href="#labmembernumber009"],
+.md [href="#lovenectar"],
+.md [href="#meguminthumbsup"],
+.md [href="#minoridenied"],
+.md [href="#mitsukishock"],
+.md [href="#mug6"],
+.md [href="#overwhelmed"],
+.md [href="#peace"],
+.md [href="#plebgetawayfromme"],
+.md [href="#poltears"],
+.md [href="#quality"],
+.md [href="#recoil"],
+.md [href="#saehug"],
+.md [href="#saesmile"],
+.md [href="#sciencebringspeopletogether"],
+.md [href="#schwing"],
+.md [href="#shatteredsaten"],
+.md [href="#shirayukidetermined"],
+.md [href="#shirayukidizzyblush"],
+.md [href="#shirayukidrunk"],
+.md [href="#shirayukieavesdrop"],
+.md [href="#shirayukifuckinreally"],
+.md [href="#shirayukismile"],
+.md [href="#smughaikyuu"],
+.md [href="#smugobi"],
+.md [href="#takaradasalute"],
+.md [href="#takasakiapproves"],
+.md [href="#thinkingtoohard"],
+.md [href="#TOMODA"],
+.md [href="#toradorable"],
+.md [href="#toradorasalute"],
+.md [href="#triggeredkillua"],
+.md [href="#trollnui"],
+.md [href="#utahapraises"],
+.md [href="#waah"],
+.md [href="#watashihasdeclined"],
+.md [href="#watashiworried"],
+.md [href="#whatamireading"] {
+	background-image:url(%%RootBeerSheet%%);width:178px;height:98px
+}
 
 /** Lenin Sheet 2 **/
-.md [href="#konosubot"],
-.md [href="#lewdbot"],
-.md [href="#hardtruthbot"],
-.md [href="#blushubot"],
-.md [href="#yanderebot"],
-.md [href="#bot-chan"],
-.md [href="#heartbot"]
-{
-	background-image:url(%%leninadesheet2%%)
-}
 .md [href="#konosubot"]{width:128px;height:151px;background:-166px -457px}
 .md [href="#lewdbot"]{width:151px;height:148px;background:0 -5px}
 .md [href="#hardtruthbot"]{width:151px;height:148px;background:0 -157px}
@@ -2308,48 +2281,17 @@ ele{color:#f00}
 .md [href="#yanderebot"]{width:128px;height:148px;background:0 -461px}
 .md [href="#bot-chan"]{width:120px;height:148px;background:-153px -5px}
 .md [href="#heartbot"]{width:113px;height:148px;background:-160px -157px}
-
+.md [href="#konosubot"],
+.md [href="#lewdbot"],
+.md [href="#hardtruthbot"],
+.md [href="#blushubot"],
+.md [href="#yanderebot"],
+.md [href="#bot-chan"],
+.md [href="#heartbot"] {
+	background-image:url(%%leninadesheet2%%)
+}
 
 /** STAT 1 **/
-.md [href="#adminsdidwhat"],
-.md [href="#airfist"],
-.md [href="#arresteddevelopment"],
-.md [href="#comfy"],
-.md [href="#saikikek"],
-.md [href="#cooresto"],
-.md [href="#ero"],
-.md [href="#everythingisfine"],
-.md [href="#frockychou"],
-.md [href="#fujostare"],
-.md [href="#gabdisgust"],
-.md [href="#happykaoru"],
-.md [href="#KUSOTTARE"],
-.md [href="#mmmmyrgh"],
-.md [href="#naziloli"],
-.md [href="#mangaka"],
-.md [href="#ohfuck"],
-.md [href="#ohshit"],
-.md [href="#ok_hand"],
-.md [href="#peacepeace"],
-.md [href="#protest"],
-.md [href="#ptsd"],
-.md [href="#sadholo"],
-.md [href="#shh"],
-.md [href="#shhbabe"],
-.md [href="#sleepingcutie"],
-.md [href="#whatdidijustread"],
-.md [href="#wideeyed"],
-.md [href="#nottodisushittoagen"],
-.md [href="#megubeer"],
-.md [href="#instillfear"],
-.md [href="#rec"],
-.md [href="#sweating"],
-.md [href="#teekyuuhype"],
-.md [href="#whisperwhisper"],
-.md [href="#getout"]
-{
-	background-image:url(%%stat1%%);width:178px;height:100px
-}
 .md [href="#adminsdidwhat"]{background:-0px -845px}
 .md [href="#airfist"]{background:-0px -945px}
 .md [href="#arresteddevelopment"]{background:-0px -1045px}
@@ -2386,72 +2328,46 @@ ele{color:#f00}
 .md [href="#teekyuuhype"]{background:-0px -224px;height:107px!important}
 .md [href="#whisperwhisper"]{background:-0px -116px;height:108px!important}
 .md [href="#getout"]{background:-0px -0px;height:116px!important}
-
+.md [href="#adminsdidwhat"],
+.md [href="#airfist"],
+.md [href="#arresteddevelopment"],
+.md [href="#comfy"],
+.md [href="#saikikek"],
+.md [href="#cooresto"],
+.md [href="#ero"],
+.md [href="#everythingisfine"],
+.md [href="#frockychou"],
+.md [href="#fujostare"],
+.md [href="#gabdisgust"],
+.md [href="#happykaoru"],
+.md [href="#KUSOTTARE"],
+.md [href="#mmmmyrgh"],
+.md [href="#naziloli"],
+.md [href="#mangaka"],
+.md [href="#ohfuck"],
+.md [href="#ohshit"],
+.md [href="#ok_hand"],
+.md [href="#peacepeace"],
+.md [href="#protest"],
+.md [href="#ptsd"],
+.md [href="#sadholo"],
+.md [href="#shh"],
+.md [href="#shhbabe"],
+.md [href="#sleepingcutie"],
+.md [href="#whatdidijustread"],
+.md [href="#wideeyed"],
+.md [href="#nottodisushittoagen"],
+.md [href="#megubeer"],
+.md [href="#instillfear"],
+.md [href="#rec"],
+.md [href="#sweating"],
+.md [href="#teekyuuhype"],
+.md [href="#whisperwhisper"],
+.md [href="#getout"] {
+	background-image:url(%%stat1%%);width:178px;height:100px
+}
 
 /** STAT 2**/
-.md [href="#cup8"],
-.md [href="#kanyehidouyo"],
-.md [href="#konosubawot3"],
-.md [href="#makicry"],
-.md [href="#nicoisdone"],
-.md [href="#dubs"],
-.md [href="#mug10"],
-.md [href="#cateyes"],
-.md [href="#ohdear"],
-.md [href="#sideeyes"],
-.md [href="#loliwave"],
-.md [href="#towel"],
-.md [href="#fingertwirl"],
-.md [href="#mug9"],
-.md [href="#hellopolice"],
-.md [href="#eheheh"],
-.md [href="#girlishploy"],
-.md [href="#niconoo"],
-.md [href="#kms"],
-.md [href="#morethanonewaifu"],
-.md [href="#annoyedkiki"],
-.md [href="#usamiwink"],
-.md [href="#cup9"],
-.md [href="#smugrose"],
-.md [href="#lewdgyaru"],
-.md [href="#uwaa"],
-.md [href="#fujoship"],
-.md [href="#judgesucy"],
-.md [href="#selfcontrol"],
-.md [href="#taigaheadache"],
-.md [href="#killitwithfire"],
-.md [href="#datass"],
-.md [href="#surprisedhifumi"],
-.md [href="#nerr"],
-.md [href="#cantbehelped"],
-.md [href="#mindblank"],
-.md [href="#happyrem"],
-.md [href="#modsalute"],
-.md [href="#feelingloved"],
-.md [href="#assman"],
-.md [href="#zetsuboushta"],
-.md [href="#nicoheart"],
-.md [href="#eyythisguy"],
-.md [href="#loli_ok"],
-.md [href="#tomato"],
-.md [href="#nichijouthumbs"],
-.md [href="#biiru"],
-.md [href="#urarahype"],
-.md [href="#illyastare"],
-.md [href="#mug8"],
-.md [href="#konhug"],
-.md [href="#megushock"],
-.md [href="#dejected"],
-.md [href="#etotamadunno"],
-.md [href="#sowwy"],
-.md [href="#blindinglight"],
-.md [href="#cup7"],
-.md [href="#lifeishard"],
-.md [href="#nosenpai"],
-.md [href="#kannathumbs"]
-{
-	background-image:url(%%stat2%%);width:150px;height:116px
-}
 .md [href="#annoyedkiki"]{background:-0px -4989px;height:110px!important}
 .md [href="#assman"]{background:-0px -2715px;height:128px!important}
 .md [href="#biiru"]{background:-0px -1909px;height:138px!important}
@@ -2512,3 +2428,65 @@ ele{color:#f00}
 .md [href="#usamiwink"]{background:-0px -5099px;height:110px!important}
 .md [href="#uwaa"]{background:-0px -4542px;height:113px!important}
 .md [href="#zetsuboushta"]{background:-0px -2843px;height:128px!important}
+.md [href="#cup8"],
+.md [href="#kanyehidouyo"],
+.md [href="#konosubawot3"],
+.md [href="#makicry"],
+.md [href="#nicoisdone"],
+.md [href="#dubs"],
+.md [href="#mug10"],
+.md [href="#cateyes"],
+.md [href="#ohdear"],
+.md [href="#sideeyes"],
+.md [href="#loliwave"],
+.md [href="#towel"],
+.md [href="#fingertwirl"],
+.md [href="#mug9"],
+.md [href="#hellopolice"],
+.md [href="#eheheh"],
+.md [href="#girlishploy"],
+.md [href="#niconoo"],
+.md [href="#kms"],
+.md [href="#morethanonewaifu"],
+.md [href="#annoyedkiki"],
+.md [href="#usamiwink"],
+.md [href="#cup9"],
+.md [href="#smugrose"],
+.md [href="#lewdgyaru"],
+.md [href="#uwaa"],
+.md [href="#fujoship"],
+.md [href="#judgesucy"],
+.md [href="#selfcontrol"],
+.md [href="#taigaheadache"],
+.md [href="#killitwithfire"],
+.md [href="#datass"],
+.md [href="#surprisedhifumi"],
+.md [href="#nerr"],
+.md [href="#cantbehelped"],
+.md [href="#mindblank"],
+.md [href="#happyrem"],
+.md [href="#modsalute"],
+.md [href="#feelingloved"],
+.md [href="#assman"],
+.md [href="#zetsuboushta"],
+.md [href="#nicoheart"],
+.md [href="#eyythisguy"],
+.md [href="#loli_ok"],
+.md [href="#tomato"],
+.md [href="#nichijouthumbs"],
+.md [href="#biiru"],
+.md [href="#urarahype"],
+.md [href="#illyastare"],
+.md [href="#mug8"],
+.md [href="#konhug"],
+.md [href="#megushock"],
+.md [href="#dejected"],
+.md [href="#etotamadunno"],
+.md [href="#sowwy"],
+.md [href="#blindinglight"],
+.md [href="#cup7"],
+.md [href="#lifeishard"],
+.md [href="#nosenpai"],
+.md [href="#kannathumbs"] {
+	background-image:url(%%stat2%%);width:150px;height:116px
+}
