@@ -1232,6 +1232,39 @@ html:not(:lang(en)) .side [href$="#w"]+em:after {
 	width: 300px;
 }
 
+/*Konami code*/
+
+  #baconBit {    background: url(%%aniplane%%);
+    cursor: default;
+    display: inline-block;
+    height: 50px;
+    width: 90px;
+    -webkit-animation: aniplane 2.5s steps(21) infinite;
+    animation: aniplane 2.5s steps(21) infinite;
+            } 
+            #baconBit.makeitrain {
+                top: 100%;
+                left: 100%;
+                -webkit-transform: rotate(0deg);
+                -moz-transform: rotate(0eg);
+                }
+            
+            #baconBit {
+                  -webkit-transition: all 10s linear !important;
+                  -moz-transition: all 10s linear !important;
+                  -o-transition: all 10s linear !important;
+                  -ms-transition: all 10s linear !important; 
+            }
+@-webkit-keyframes aniplane {
+    from { background-position: 0 0; }
+    to   { background-position: 0 -1250px; }
+}
+@keyframes aniplane {
+    from { background-position: 0 0; }
+    to   { background-position: 0 -1250px; }
+}
+
+
 /** all the nightmode **/
 .res-nightmode #header-img-a:after {
     content: '';
