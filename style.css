@@ -793,7 +793,7 @@ body #progressIndicator {
 /** Thumbnail shit **/
 .thumbnail.self {background: 0 -560px}
 .thumbnail[href*="recom"] {background: 0 -350px}
-.thumbnail[href*="cosplay"] {background: 0 0}
+.thumbnail[href*="cosplay"] {background: 0 -0px}
 .thumbnail[href*="satire"] {background: 0 -490px}
 .thumbnail[href*="/wt"] {background: 0 -700px}
 .linkflair-green .thumbnail {background: 0 -210px}
@@ -2057,7 +2057,7 @@ to{background-position:0 0}}
 .md [href="#igiveup"]{background:0 -3521px}
 .md [href="#ilovethiskindofshit"]{background:0 -3767px}
 .md [href="#juice1"]{background:0 -3890px}
-.md [href="#konosubawot"]{width:129px!important;height:167px!important;background:0 0}
+.md [href="#konosubawot"]{width:129px!important;height:167px!important;background:0 -0px}
 .md [href="#konosubawot2"]{width:129px!important;height:152px!important;background:0 -169px}
 .md [href="#kukuku2"]{background:0 -4013px}
 .md [href="#kumikolook"]{background:0 -4136px}
@@ -2146,7 +2146,7 @@ to{background-position:0 0}}
 }
 
 /** Root Beer **/
-.md [href="#annoyedmayaka"]{background:0 0}
+.md [href="#annoyedmayaka"]{background:0 -0px}
 .md [href="#annoyedsaber"]{background:0 -100px}
 .md [href="#banhammer"]{background:0 -200px}
 .md [href="#bitchplease"]{background:0 -400px}
