@@ -1,6 +1,6 @@
 # Hi, if you're modifying this file to run yourself you should change the user agent, thanks.
 
-import praw, os
+import praw, os, sys
 from csscompressor import compress
 
 # Read config from environment variables
@@ -8,7 +8,10 @@ client_id = os.environ['REDDIT_CLIENT_ID']
 client_secret = os.environ['REDDIT_CLIENT_SECRET']
 username = os.environ['REDDIT_USERNAME']
 password = os.environ['REDDIT_PASSWORD']
-sub_name = os.environ['REDDIT_SUBREDDIT']
+try:
+    sub_name = sys.argv[1]
+except Exception:
+    sub_name = os.environ['REDDIT_SUBREDDIT']
 
 if not client_id or not client_secret:
     raise ValueError("Missing Reddit app credentials. Make sure you set the REDDIT_CLIENT_ID and REDDIT_CLIENT_SECRET environment variables in your Travis settings.")
