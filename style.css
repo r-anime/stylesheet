@@ -1010,27 +1010,22 @@ a.author.moderator {color: #5dab00}
 }
 
 /** spoiler hype **/
-a[href="/s"],a[href="/n"] { /* fuck /n TODO */
+a[href="/s"] {
 	color: #fff!important;
 	background: #000;
 	padding: 1px 0 1px 3px;
 	cursor: text;
 	border-radius: 2px
 }
-a[href="/s"]:hover,a[href="/n"]:hover {color: #f44!important}
-a[href="/s"]::after,a[href="/n"]::after {
+a[href="/s"]:hover{color: #f44!important}
+a[href="/s"]::after{
 	content: attr(title);
 	background: inherit;
 	color: #000;
 	padding: 0 10px
 }
 a[href="/s"]:hover::after,
-a[href="/s"]:active::after,
-a[href="/n"]:hover::after,
-a[href="/n"]:active::after {color: #FFF}
-a[href="/n"] {background: #800}
-a[href="/n"]::after {color: #800}
-a[href="/n"]:hover {color: #0BF!important}
+a[href="/s"]:active::after {color: #FFF}
 
 /** List flairs **/
 .flair {
