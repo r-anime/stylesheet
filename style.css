@@ -1784,58 +1784,47 @@ to{background-position:0 0}}
 .md [href="#headpat"]{height:98px;width:235px;background:url(%%anim7%%) 0 -9700px no-repeat}
 .md [href="#headpat"]:hover{animation:headpat 7.76s steps(97) infinite}
 
-
-/** Spritesheet 1 **/
-.md [href="#gendo-pls"]{width:171px;height:114px;background-position:0 -520px}
-.md [href="#k-on-hug"]{width:180px;height:120px;background-position:0 -814px}
-.md [href="#lewd"]{width:100px;height:150px;background-position:0 -984px}
-.md [href="#nanami-hug"]{width:120px;height:150px;background-position:0 -1184px}
-.md [href="#yui-crying"]{width:80px;height:80px;background-position:0 -1644px}
-.md [href="#ok"]{width:100px;height:100px;background-position:-100px 0}
+/** Old Sheet 1**/
+.md [href="#gendo-pls"]{width:171px;height:114px;background-position:0 0px}
+.md [href="#k-on-hug"]{width:180px;height:120px;background-position:0 -114px}
+.md [href="#lewd"]{width:100px;height:150px;background-position:0 -234px}
+.md [href="#nanami-hug"]{width:120px;height:150px;background-position:0 -384px}
+.md [href="#yui-crying"]{width:80px;height:80px;background-position:0 -534px}
+.md [href="#ok"]{width:100px;height:100px;background-position:0 -614px}
+.md [href="#stare"]{width:150px;height:100px;background-position:0 -714px}
+.md [href="#what"]{width:100px;height:80px;background-position:0 -814px}
+.md [href="#gununu"] {width:107px;height:80px;background-position:0 -894px}
+.md [href="#facepalm"]{width:80px;height:80px;background-position:0 -974px}
+.md [href="#nico-heart"]{width:100px;height:80px;background-position:0 -1054px}
+.md [href="#thumbs-up"]{width:120px;height:100px;background-position:0 -1134px}
+.md [href="#kukuku"]{width:100px;height:150px;background-position:-170px -1234px}
 .md [href="#gendo-pls"],
 .md [href="#k-on-hug"],
 .md [href="#lewd"],
 .md [href="#nanami-hug"],
 .md [href="#yui-crying"],
-.md [href="#ok"] {
-	background-image:url(%%spritesheet1%%)
-}
-
-/** Spritesheet 2 **/
-.md [href="#stare"]{width:150px;height:100px;background-position:0 -780px}
-.md [href="#what"]{width:100px;height:80px;background-position:0 -1060px}
+.md [href="#ok"],
 .md [href="#stare"],
-.md [href="#what"] {
-	background-image:url(%%spritesheet2%%)
-}
-
-/** Spritesheet 3 **/
-.md [href="#gununu"]{background-image:url(%%spritesheet3%%);display:inline-block;width:107px;height:80px;background-position:0 -780px}
-
-
-/** Spritesheet 4 **/
-.md [href="#facepalm"]{width:80px;height:80px;background-position:0 0}
-.md [href="#nico-heart"]{width:100px;height:80px;background-position:0 -520px}
-.md [href="#thumbs-up"]{width:120px;height:100px;background-position:0 -1430px}
-.md [href="#kukuku"]{width:100px;height:150px;background-position:-170px -390px}
+.md [href="#what"],
+.md [href="#gununu"],
 .md [href="#facepalm"],
 .md [href="#nico-heart"],
 .md [href="#thumbs-up"],
 .md [href="#kukuku"] {
-	background-image:url(%%spritesheet4%%)
+	background-image:url(%%OldSheet1%%)
 }
 
-/** Spritesheet 5 **/
-.md [href="#kotori"]{width:85px;height:89px;background-position:-215px -5px}
-.md [href="#araragi-1"]{width:100px;height:50px;background-position:-5px -95px}
-.md [href="#deadpan"]{width:80px;height:85px;background-position:-300px -155px}
-.md [href="#head-tilt"]{width:121px;height:100px;background-position:-312px -290px}
-.md [href="#manly-tears"]{width:150px;height:100px;background-position:-445px -5px}
-.md [href="#not-raining"]{width:146px;height:100px;background-position:-480px -115px}
-.md [href="#ohmygod"]{width:175px;height:100px;background-position:-443px -290px}
-.md [href="#shock"]{width:170px;height:100px;background-position:-115px -400px}
-.md [href="#heart-thumbs-up"]{width:79px;height:100px;background-position:-295px -400px}
-.md [href="#wow-really"]{width:80px;height:85px;background-position:-564px -400px}
+/**Old Sheet 2**/
+.md [href="#kotori"]{width:85px;height:89px;background-position:0 0px}
+.md [href="#araragi-1"]{width:100px;height:50px;background-position:0 -89px}
+.md [href="#deadpan"]{width:80px;height:85px;background-position:0 -139px}
+.md [href="#head-tilt"]{width:121px;height:100px;background-position:0 -224px}
+.md [href="#manly-tears"]{width:150px;height:100px;background-position:0 -324px}
+.md [href="#not-raining"]{width:146px;height:100px;background-position:0 -424px}
+.md [href="#ohmygod"]{width:175px;height:100px;background-position:0 -524px}
+.md [href="#shock"]{width:170px;height:100px;background-position:0 -624px}
+.md [href="#heart-thumbs-up"]{width:79px;height:100px;background-position:0 -724px}
+.md [href="#wow-really"]{width:80px;height:85px;background-position:0 -824px}
 .md [href="#kotori"],
 .md [href="#araragi-1"],
 .md [href="#deadpan"],
@@ -1846,7 +1835,7 @@ to{background-position:0 0}}
 .md [href="#shock"],
 .md [href="#heart-thumbs-up"],
 .md [href="#wow-really"] {
-	background-image:url(%%spritesheet5%%)
+background-image:url(%%OldSheet2%%)
 }
 
 /** Static Spritesheet 1 **/
