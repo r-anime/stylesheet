@@ -1835,7 +1835,7 @@ to{background-position:0 0}}
 .md [href="#shock"],
 .md [href="#heart-thumbs-up"],
 .md [href="#wow-really"] {
-background-image:url(%%OldSheet2%%)
+	background-image:url(%%OldSheet2%%)
 }
 
 /** Static Spritesheet 1 **/
