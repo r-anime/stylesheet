@@ -226,6 +226,14 @@ body>.content,
 	margin: 0 331px 10px 10px;
 	border-radius: 5px
 }
+.infobar.welcome, .infobar.listingsignupbar {
+	margin: 0;
+	border-radius: 0;
+	border-left: 0;
+	border-right: 0;
+}
+.infobar.listingsignupbar { margin: -2px 0 !important }
+.listingsignupbar__container { padding: 28px 18px }
 /** Base nightmode text coloring **/
 /*.res-nightmode :not(time):not(select):not(option),*/
 .res-nightmode .pagename a {color: #FFF}
