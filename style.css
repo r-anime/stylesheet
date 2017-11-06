@@ -57,11 +57,6 @@
 .author[href$="/FAN_ROTOM_IS_SCARY"].moderator:after{content:": 『ZA PORISU』";color:#e393be}
 .author[href$="/FAN_ROTOM_IS_SCARY"].moderator:before{content:"JoJotom's Stand";color:#8e0b0b}
 .author[href$="/FAN_ROTOM_IS_SCARY"]{font-size:0}
-.author[href$="/faux_wizard"]:not(.moderator){font-size: 0}
-.author[href$="/faux_wizard"]:not(.moderator):before{color:#cc0000; content: "faux"}
-.author[href$="/faux_wizard"]:not(.moderator):after{color:#3F00FF;content:"_witch_academia"}
-.author[href$="/faux_wizard"].moderator:after{Content:"レディットパトロールルルフォ";font-weight:bold}
-.author[href$="/faux_wizard"].moderator{font-size:0}
 .author[href$="/foamyfrog"]:after{content:" is new to the internet"}
 .author[href$="/FreeRobotFrost"]:after{color:#f00000;content:" ~survivor of yaoi~"}
 .author[href$="/g_suzuki"]:after{content:" Good Smile Company"}
@@ -110,7 +105,7 @@
 .author[href$="/neito"]:after{color:#f3c!important;content:" You Are Responsible for What You Have Tamed"}
 .author[href$="/NotTheRealMorty"]:not(.moderator){font-size: 0}
 .author[href$="/NotTheRealMorty"]:not(.moderator):before{content: "NTRMorty"}
-.author[href$="/NotTheRealMorty"]:not(.moderator):after{color:#ff8000;content:" Flat chest best chest "}
+.author[href$="/NotTheRealMorty"]:not(.moderator):after{color:#ff8000;font-weight: bold; content:" Shinobu Best Character 2017 "}
 .author[href$="/NotTheRealMorty"].moderator:after{Content:"NTRMorty";font-weight:bold}
 .author[href$="/NotTheRealMorty"].moderator{font-size:0}
 .author[href$="/Obviouslynotafaggot"]:after{content:" ヽ( ﾟヮﾟ)ﾉ"}
