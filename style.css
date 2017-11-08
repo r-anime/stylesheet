@@ -191,9 +191,9 @@
 
 /** customization stuff **/
 .titlebox .number:before {content: ""}
-.titlebox .number:after {content: " Redditors who stayed home and watched anime for halloween"}
+.titlebox .number:after {content: " weebs"}
 .titlebox .users-online span.number:before {content: " "}
-.titlebox .users-online span.number:after {content: " Redditors who ate lots of candy anyway"}
+.titlebox .users-online span.number:after {content: " weebs on reddit instead of watching anime"}
 .subscribers {display: block;}
 
 
