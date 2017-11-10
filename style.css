@@ -526,11 +526,7 @@ span.multi-count {margin: 0!important}
 	border-radius: 5px;
 	padding: 0 40px 0 10px;
 	line-height: 30px;
-	margin-left: 45px;
-	width: 255px;
-	position: relative;
-	z-index: 0;
-	transition: z-index 0s .2s,margin-left .2s,width .2s
+	width: 300px;
 }
 .res-nightmode #search input[type="text"] {
 	background: #2f2f2f!important;
@@ -540,10 +536,7 @@ span.multi-count {margin: 0!important}
 	border-color: #6a9de6;
 	outline: 0;
 	box-shadow: 0 0 3px #6a9de6;
-	width: 300px;
-	margin-left: 0;
 	z-index: 2;
-	transition: z-index 0s 0s,margin-left .2s,width .2s
 }
 #searchexpando {
 	margin-top: 10px;
@@ -1310,64 +1303,6 @@ html:not(:lang(en)) .side [href$="#w"]+em:after {
 	color: #FFF!important;
 	border-color: #FFF
 }
-.side .md p:nth-last-of-type(2) {
-	position: absolute;
-	top: 125px;
-	margin: 0 -11px;
-	padding: 35px 0 0;
-	background: #FFF;
-	border-radius: 5px;
-	box-shadow: inset 0 0 0 1px #BBB;
-	width: 35px;
-	height: 0;
-	overflow: hidden;
-	transition: .2s 0s;
-	z-index:1;
-}
-.side .md p:nth-last-of-type(2):hover {
-	width: 200px;
-	height: 65px;
-	box-shadow: inset 0 0 0 1px #BBB,0 2px 4px rgba(0,0,0,.2);
-    transition: .2s .15s;
-}
-.side .md p:nth-last-of-type(2) strong {
-	position: absolute;
-	top: 0;
-	width: 130px;
-	padding: 0 35px;
-	background: #6a9de6;
-	line-height: 35px;
-	color: #FFF;
-	font-size: 18px;
-	font-weight: bold;
-	text-align: center
-}
-.side .md p:nth-last-of-type(2) strong:after {
-	content: "";
-	position: absolute;
-	left: 0;
-	background: url(%%ui-elements%%) 70px 70px/128px;
-	width: 35px;
-	height: 35px;
-	transition: .2s
-}
-.side .md p:nth-last-of-type(2):hover strong:after {background-color: #557eb8}
-.side .md p:nth-last-of-type(2) em,.side .md p:nth-last-of-type(2) a {
-	display: block;
-	line-height: 30px;
-	font-size: 16px;
-	text-align: center
-}
-.side .md p:nth-last-of-type(2) em {
-	font-weight: bold;
-	font-style: normal
-}
-.res-nightmode .side .md p:nth-last-of-type(2) {
-	background: #2f2f2f!important;
-	box-shadow: inset 0 0 0 1px #000
-}
-.res-nightmode .side .md p:nth-last-of-type(2) strong {background-color: #445f7e!important}
-.res-nightmode .side .md p:nth-last-of-type(2):hover strong:after {background-color: #2b4665}
 
 /** and here are comment faces and shit **/
 .md [href^="#"] {
