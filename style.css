@@ -1096,23 +1096,34 @@ a[href="/s"]:active::after {color: #FFF}
 	background: white!important;
 	border: 1px solid currentcolor
 }
-.linkflair-green a.title,.linkflair-blue a.title {
+.linkflair-green .linkflairlabel,
+.linkflair-blue .linkflairlabel,
+.linkflair-red .linkflairlabel {
+	display: none;
+}
+.linkflair-green a.title,
+.linkflair-blue a.title,
+.linkflair-red a.title {
 	display: inline-block;
 	padding: 2px 5px;
 	border-radius: 5px
+	color: white !important;
 }
 .linkflair-green a.title {
 	background: #46b141;
 	border: 1px solid #090;
-	color: white!important
 }
 .linkflair-blue a.title {
 	background: #6a9de6;
 	border: 1px solid #557eb8;
-	color: white!important
 }
-.linkflair-green a.title:hover {background: #090}
-.linkflair-blue a.title:hover {background: #557eb8}
+.linkflair-red a.title {
+	background: #e6756a;
+	border: 1px solid #b85d55;
+}
+.linkflair-green a.title:hover { background: #090 }
+.linkflair-blue a.title:hover { background: #557eb8 }
+.linkflair-red a.title:hover { background: #b85d55 }
 
 /** Post filter shit **/
 [lang="xn"] .link.over18,
@@ -1400,9 +1411,6 @@ html:not(:lang(en)) .side [href$="#w"]+em:after {
 	position: static!important;
 	font-family: inherit!important;
 	overflow: visible!important
-}
-.linkflair-green .linkflairlabel, .linkflair-blue .linkflairlabel {
-	display: none
 }
 .md .voteWeight[style*="none"] {display: none!important}
 
