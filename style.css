@@ -1094,7 +1094,7 @@ a[href="/s"]:active::after {color: #FFF}
 	color: #e02424!important;
 	font-weight: 900;
 	background: white!important;
-	border: 1px solid currentcolor
+	border: 1px solid currentcolor;
 }
 .linkflair-green .linkflairlabel,
 .linkflair-blue .linkflairlabel,
@@ -1106,7 +1106,7 @@ a[href="/s"]:active::after {color: #FFF}
 .linkflair-red a.title {
 	display: inline-block;
 	padding: 2px 5px;
-	border-radius: 5px
+	border-radius: 5px;
 	color: white !important;
 }
 .linkflair-green a.title {
