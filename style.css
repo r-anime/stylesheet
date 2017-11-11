@@ -1087,25 +1087,43 @@ a[href="/s"]:active::after {color: #FFF}
 	color: #e02424!important;
 	font-weight: 900;
 	background: white!important;
-	border: 1px solid currentcolor
+	border: 1px solid currentcolor;
 }
-.linkflair-green a.title,.linkflair-blue a.title {
+.linkflair-green .linkflairlabel,
+.linkflair-blue .linkflairlabel,
+.linkflair-red .linkflairlabel,
+.linkflair-palered .linkflairlabel {
+	display: none;
+}
+.linkflair-green a.title,
+.linkflair-blue a.title,
+.linkflair-red a.title,
+.linkflair-palered a.title {
 	display: inline-block;
 	padding: 2px 5px;
-	border-radius: 5px
+	border-radius: 5px;
+	color: white !important;
 }
 .linkflair-green a.title {
 	background: #46b141;
 	border: 1px solid #090;
-	color: white!important
 }
 .linkflair-blue a.title {
 	background: #6a9de6;
 	border: 1px solid #557eb8;
-	color: white!important
 }
-.linkflair-green a.title:hover {background: #090}
-.linkflair-blue a.title:hover {background: #557eb8}
+.linkflair-red a.title {
+	background: #de3954;
+	border: 1px solid #ce223e;
+}
+.linkflair-palered a.title {
+	background: #e97b8d;
+	border: 1px solid #e35970;
+}
+.linkflair-green a.title:hover { background: #090 }
+.linkflair-blue a.title:hover { background: #557eb8 }
+.linkflair-red a.title:hover { background: #b85d55 }
+.linkflair-palered a.title:hover { background: #e35970 }
 
 /** Post filter shit **/
 [lang="xn"] .link.over18,
@@ -1335,9 +1353,6 @@ html:not(:lang(en)) .side [href$="#w"]+em:after {
 	position: static!important;
 	font-family: inherit!important;
 	overflow: visible!important
-}
-.linkflair-green .linkflairlabel, .linkflair-blue .linkflairlabel {
-	display: none
 }
 .md .voteWeight[style*="none"] {display: none!important}
 
