@@ -1122,7 +1122,7 @@ a[href="/s"]:active::after {color: #FFF}
 }
 .linkflair-green a.title:hover { background: #090 }
 .linkflair-blue a.title:hover { background: #557eb8 }
-.linkflair-red a.title:hover { background: #b85d55 }
+.linkflair-red a.title:hover { background: #ce223e }
 .linkflair-palered a.title:hover { background: #e35970 }
 
 /** Post filter shit **/
