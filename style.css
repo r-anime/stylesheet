@@ -1272,7 +1272,7 @@ html:not(:lang(en)) .side [href$="#w"]+em:after {
   width: 45px;
   height: 50px;
   display: block;
-  background: url('https://i.imgur.com/cwsaC7K.png') 50%/contain no-repeat;
+  background: url(%%discord%%) 50%/contain no-repeat;
 }
 .side [href*="discord"] em {
   display: block;
