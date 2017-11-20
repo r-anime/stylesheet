@@ -1245,6 +1245,45 @@ html:not(:lang(en)) .side [href$="#w"]+em:after {
 	width: 300px;
 }
 
+/** Discord button **/
+.side [href*="discord"] {
+  display: block;
+  color: #FFF;
+  padding-right: 9px;
+  font-weight: bold;
+  line-height: 20px;
+  background: #6A9DE6;
+  position: relative;
+  top: 0;
+  line-height: 18px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 200ms;
+}
+.side [href*="discord"]:hover {
+  color: #FFF;
+  background: #557eb8;
+  top: -2px;
+}
+.side [href*="discord"]:before {
+  content: "";
+  width: 45px;
+  height: 50px;
+  display: block;
+  background: url('https://i.imgur.com/cwsaC7K.png') 50%/contain no-repeat;
+}
+.side [href*="discord"] em {
+  display: block;
+  font-weight: normal;
+  opacity: 0.8;
+}
+.side [href*="discord"]:hover em {
+  text-decoration: underline;
+}
+
+
 /** all the nightmode **/
 .res-nightmode #header-img-a:after {
     content: '';
