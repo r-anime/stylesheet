@@ -299,7 +299,7 @@ body>.content,
 }
 #sr-header-area .drop-choices {
 	border: 0;
-	background: #57EB8;
+	background: #557EB8 !important;
 }
 html #sr-header-area a.RESShortcutsCurrentSub {
 	color: inherit!important;
