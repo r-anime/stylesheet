@@ -1312,6 +1312,34 @@ html:not(:lang(en)) .side [href$="#w"]+em:after {
 	border-color: #FFF
 }
 
+/** december: header snowfall effect **/
+@keyframes snow {
+	0% {
+		background-position:
+			0 0,
+			0 0,
+			0 0;
+	}
+	to {
+		background-position:
+			500px 1000px,
+			400px 400px,
+			600px 300px;
+	}
+}
+#header {
+	background-image:
+		url(%%snow1%%),
+		url(%%snow2%%),
+		url(%%snow3%%);
+	background-size: auto;
+	background-repeat: repeat;
+	animation: snow 20s linear infinite;
+}
+#header:not(:hover) {
+	animation-play-state: paused;
+}
+
 /** and here are comment faces and shit **/
 .md [href^="#"] {
 	display: inline-block;
