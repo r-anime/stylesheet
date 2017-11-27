@@ -191,9 +191,9 @@
 
 /** customization stuff **/
 .titlebox .number:before {content: ""}
-.titlebox .number:after {content: " Weebs"}
+.titlebox .number:after {content: " weebs"}
 .titlebox .users-online span.number:before {content: " "}
-.titlebox .users-online span.number:after {content: " Weebs on Reddit Instead of Watching Anime"}
+.titlebox .users-online span.number:after {content: " weebs browsing reddit instead of watching anime"}
 .subscribers {display: block;}
 
 
