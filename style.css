@@ -191,9 +191,9 @@
 
 /** customization stuff **/
 .titlebox .number:before {content: ""}
-.titlebox .number:after {content: " Weebs"}
+.titlebox .number:after {content: " weebs"}
 .titlebox .users-online span.number:before {content: " "}
-.titlebox .users-online span.number:after {content: " Weebs on Reddit Instead of Watching Anime"}
+.titlebox .users-online span.number:after {content: " weebs browsing reddit instead of watching anime"}
 .subscribers {display: block;}
 
 
@@ -264,7 +264,7 @@ body>.content,
 	box-shadow: 0 1px 2px rgba(0,0,0,0.2)
 }
 #sr-header-area {
-	background: #557eb8;
+	background: rgba(0, 0, 0, 0.2);
 	border-bottom: 0;
 	color: #FFF;
 /* 	text-transform: none; */
@@ -284,7 +284,9 @@ body>.content,
 	color: #FFF
 }
 #sr-header-area .separator,
-.sr-bar a {color: #FFF!important}
+.sr-bar a {
+	color: #FFF !important;
+}
 #sr-header-area *,
 #sr-more-link,
 .res #RESShortcutsEditContainer,
@@ -294,9 +296,11 @@ body>.content,
 .res #RESShortcutsAdd,
 .res #RESShortcutsTrash {
 	color: #FFF;
-	background-color: inherit!important
 }
-#sr-header-area .drop-choices {border: 0}
+#sr-header-area .drop-choices {
+	border: 0;
+	background: #557EB8 !important;
+}
 html #sr-header-area a.RESShortcutsCurrentSub {
 	color: inherit!important;
 	text-decoration: underline
@@ -308,7 +312,7 @@ html #sr-header-area a.RESShortcutsCurrentSub {
 	left: 0;
 	right: 0;
 	z-index: -1;
-	box-shadow: inset 0 -35px #557eb8
+	box-shadow: inset 0 -35px rgba(0, 0, 0, 0.2);
 }
 #header-img-a {
 	position: absolute;
@@ -1310,6 +1314,34 @@ html:not(:lang(en)) .side [href$="#w"]+em:after {
 .res-nightmode .nsfw-stamp,.res-nightmode .link .buttons .first::before {
 	color: #FFF!important;
 	border-color: #FFF
+}
+
+/** december: header snowfall effect **/
+@keyframes snow {
+	0% {
+		background-position:
+			0 0,
+			0 0,
+			0 0;
+	}
+	to {
+		background-position:
+			500px 1000px,
+			400px 400px,
+			600px 300px;
+	}
+}
+#header {
+	background-image:
+		url(%%snow1%%),
+		url(%%snow2%%),
+		url(%%snow3%%);
+	background-size: auto;
+	background-repeat: repeat;
+	animation: snow 20s linear infinite;
+}
+#header:not(:hover) {
+	animation-play-state: paused;
 }
 
 /** and here are comment faces and shit **/
