@@ -1331,7 +1331,7 @@ html:not(:lang(en)) .side [href$="#w"]+em:after {
 			600px 300px;
 	}
 }
-#header {
+html:not(:lang(ns)) #header {
 	background-image:
 		url(%%snow1%%),
 		url(%%snow2%%),
@@ -1340,7 +1340,7 @@ html:not(:lang(en)) .side [href$="#w"]+em:after {
 	background-repeat: repeat;
 	animation: snow 20s linear infinite;
 }
-#header:not(:hover) {
+html:not(:lang(ns)) #header:not(:hover) {
 	animation-play-state: paused;
 }
 
