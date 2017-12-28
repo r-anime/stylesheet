@@ -699,6 +699,7 @@ body>.content .spacer {margin: 0}
     padding-left: 25px;
     overflow: hidden;
 }
+/* Collapse buttons going down the sides */
 .comment .expand {
     position: absolute;
     top: 0px;
@@ -736,6 +737,11 @@ body>.content .spacer {margin: 0}
 .comment.collapsed .expand:after { content: "[+]" }
 .comment.collapsed .expand { bottom: 20px }
 .comment.collapsed { padding: 0 }
+/* Fix RES expando images overflowing under the sidebar in comments */
+.res-image img {
+    max-width: 100%!important;
+}
+/* Other spacing */
 .comment .child {
     border: 0;
     margin: 0;
