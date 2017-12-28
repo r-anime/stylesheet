@@ -1276,6 +1276,7 @@ html:not(:lang(en)) .side [href$="#w"]+em:after {
   color: #FFF;
   background: #557eb8;
   top: -2px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); 
 }
 .side [href*="discord"]:before {
   content: "";
