@@ -25,7 +25,7 @@
 .author[href$="/AutoModerator"]:before{content:"Bot-chan"}
 .author[href$="/AutoModerator"]{font-size:0}
 .author[href$="/BanjoTheBear"]:after{color:#7c759e;content:" Chuunibyou, gao gao~"}
-.author[href$="/basedbecker"]:after{content:"basedpecker"}
+.author[href$="/basedbecker"]:after{content:"xXxfunk_m4st3r_<33xXx"}
 .author[href$="/basedbecker"]{font-size:0}
 .author[href$="/Berzerker7"]:after{content:" has the best taste"}
 .author[href$="/biggyh"]:after{color:#f59719;content:" Viewster Brand + Social Manager"}
@@ -57,11 +57,6 @@
 .author[href$="/FAN_ROTOM_IS_SCARY"].moderator:after{content:": 『ZA PORISU』";color:#e393be}
 .author[href$="/FAN_ROTOM_IS_SCARY"].moderator:before{content:"JoJotom's Stand";color:#8e0b0b}
 .author[href$="/FAN_ROTOM_IS_SCARY"]{font-size:0}
-.author[href$="/faux_wizard"]:not(.moderator){font-size: 0}
-.author[href$="/faux_wizard"]:not(.moderator):before{color:#cc0000; content: "faux"}
-.author[href$="/faux_wizard"]:not(.moderator):after{color:#3F00FF;content:"_witch_academia"}
-.author[href$="/faux_wizard"].moderator:after{Content:"レディットパトロールルルフォ";font-weight:bold}
-.author[href$="/faux_wizard"].moderator{font-size:0}
 .author[href$="/foamyfrog"]:after{content:" is new to the internet"}
 .author[href$="/FreeRobotFrost"]:after{color:#f00000;content:" ~survivor of yaoi~"}
 .author[href$="/g_suzuki"]:after{content:" Good Smile Company"}
@@ -110,7 +105,7 @@
 .author[href$="/neito"]:after{color:#f3c!important;content:" You Are Responsible for What You Have Tamed"}
 .author[href$="/NotTheRealMorty"]:not(.moderator){font-size: 0}
 .author[href$="/NotTheRealMorty"]:not(.moderator):before{content: "NTRMorty"}
-.author[href$="/NotTheRealMorty"]:not(.moderator):after{color:#ff8000;content:" Flat chest best chest "}
+.author[href$="/NotTheRealMorty"]:not(.moderator):after{color:#ff8000;font-weight: bold; content:" Shinobu Best Character 2017 "}
 .author[href$="/NotTheRealMorty"].moderator:after{Content:"NTRMorty";font-weight:bold}
 .author[href$="/NotTheRealMorty"].moderator{font-size:0}
 .author[href$="/Obviouslynotafaggot"]:after{content:" ヽ( ﾟヮﾟ)ﾉ"}
@@ -196,9 +191,9 @@
 
 /** customization stuff **/
 .titlebox .number:before {content: ""}
-.titlebox .number:after {content: " Citizens of Orth"}
+.titlebox .number:after {content: " weebs"}
 .titlebox .users-online span.number:before {content: " "}
-.titlebox .users-online span.number:after {content: " Cave Raiders exploring the Abyss"}
+.titlebox .users-online span.number:after {content: " weebs browsing reddit instead of watching anime"}
 .subscribers {display: block;}
 
 
@@ -226,6 +221,14 @@ body>.content,
 	margin: 0 331px 10px 10px;
 	border-radius: 5px
 }
+.infobar.welcome, .infobar.listingsignupbar {
+	margin: 0;
+	border-radius: 0;
+	border-left: 0;
+	border-right: 0;
+}
+.infobar.listingsignupbar { margin: -2px 0 !important }
+.listingsignupbar__container { padding: 28px 18px }
 /** Base nightmode text coloring **/
 /*.res-nightmode :not(time):not(select):not(option),*/
 .res-nightmode .pagename a {color: #FFF}
@@ -261,7 +264,7 @@ body>.content,
 	box-shadow: 0 1px 2px rgba(0,0,0,0.2)
 }
 #sr-header-area {
-	background: #557eb8;
+	background: rgba(0, 0, 0, 0.2);
 	border-bottom: 0;
 	color: #FFF;
 /* 	text-transform: none; */
@@ -281,7 +284,9 @@ body>.content,
 	color: #FFF
 }
 #sr-header-area .separator,
-.sr-bar a {color: #FFF!important}
+.sr-bar a {
+	color: #FFF !important;
+}
 #sr-header-area *,
 #sr-more-link,
 .res #RESShortcutsEditContainer,
@@ -291,9 +296,11 @@ body>.content,
 .res #RESShortcutsAdd,
 .res #RESShortcutsTrash {
 	color: #FFF;
-	background-color: inherit!important
 }
-#sr-header-area .drop-choices {border: 0}
+#sr-header-area .drop-choices {
+	border: 0;
+	background: #557EB8 !important;
+}
 html #sr-header-area a.RESShortcutsCurrentSub {
 	color: inherit!important;
 	text-decoration: underline
@@ -305,7 +312,7 @@ html #sr-header-area a.RESShortcutsCurrentSub {
 	left: 0;
 	right: 0;
 	z-index: -1;
-	box-shadow: inset 0 -35px #557eb8
+	box-shadow: inset 0 -35px rgba(0, 0, 0, 0.2);
 }
 #header-img-a {
 	position: absolute;
@@ -523,11 +530,7 @@ span.multi-count {margin: 0!important}
 	border-radius: 5px;
 	padding: 0 40px 0 10px;
 	line-height: 30px;
-	margin-left: 45px;
-	width: 255px;
-	position: relative;
-	z-index: 0;
-	transition: z-index 0s .2s,margin-left .2s,width .2s
+	width: 300px;
 }
 .res-nightmode #search input[type="text"] {
 	background: #2f2f2f!important;
@@ -537,10 +540,7 @@ span.multi-count {margin: 0!important}
 	border-color: #6a9de6;
 	outline: 0;
 	box-shadow: 0 0 3px #6a9de6;
-	width: 300px;
-	margin-left: 0;
 	z-index: 2;
-	transition: z-index 0s 0s,margin-left .2s,width .2s
 }
 #searchexpando {
 	margin-top: 10px;
@@ -699,6 +699,7 @@ body>.content .spacer {margin: 0}
     padding-left: 25px;
     overflow: hidden;
 }
+/* Collapse buttons going down the sides */
 .comment .expand {
     position: absolute;
     top: 0px;
@@ -736,6 +737,11 @@ body>.content .spacer {margin: 0}
 .comment.collapsed .expand:after { content: "[+]" }
 .comment.collapsed .expand { bottom: 20px }
 .comment.collapsed { padding: 0 }
+/* Fix RES expando images overflowing under the sidebar in comments */
+.res-image img {
+    max-width: 100%!important;
+}
+/* Other spacing */
 .comment .child {
     border: 0;
     margin: 0;
@@ -1063,6 +1069,13 @@ a[href="/s"]:active::after {color: #FFF}
 }
 /* default logo */
 .flair-custom::before {background-position: 0 -96px}
+/* list services */
+.flair-MAL::before {background-position: 0 0}
+.flair-HB::before {background-position: 0 -16px}
+.flair-ANI::before {background-position: 0 -32px}
+.flair-AP::before {background-position: 0 -48px}
+.flair-ann::before {background-position: 0 -64px}
+.flair-anidb::before {background-position: 0 -80px}
 /* verification styles/logos */
 .flair-v-crunchy {border-color: #F78B24}
 .flair-v-crunchy::before {background-position: -16px 0}
@@ -1075,38 +1088,53 @@ a[href="/s"]:active::after {color: #FFF}
 .flair-v-rightstuf {border-color: #EE314C}
 .flair-v-rightstuf::before {background-position: -16px -32px}
 .flair-v-rightstuf::after {content: " - Right Stuf (Verified)"; color: #EE314C}
-/* list services */
-.flair-MAL::before {background-position: 0 0}
-.flair-HB::before {background-position: 0 -16px}
-.flair-ANI::before {background-position: 0 -32px}
-.flair-AP::before {background-position: 0 -48px}
-.flair-ann::before {background-position: 0 -64px}
-.flair-anidb::before {background-position: 0 -80px}
+.flair-v-otaquest {border-color: #000}
+.flair-v-otaquest::before {background-position: -16px -48px}
+.flair-v-otaquest::after {content: " - OTAQUEST (Verified)"; color: #000}
 
 /** Mod use post flairs **/
 .linkflair-misleading .linkflairlabel {
 	color: #e02424!important;
 	font-weight: 900;
 	background: white!important;
-	border: 1px solid currentcolor
+	border: 1px solid currentcolor;
 }
-.linkflair-green a.title,.linkflair-blue a.title {
+.linkflair-green .linkflairlabel,
+.linkflair-blue .linkflairlabel,
+.linkflair-red .linkflairlabel,
+.linkflair-palered .linkflairlabel {
+	display: none;
+}
+.linkflair-green a.title,
+.linkflair-blue a.title,
+.linkflair-red a.title,
+.linkflair-palered a.title {
 	display: inline-block;
 	padding: 2px 5px;
-	border-radius: 5px
+	border-radius: 5px;
+	color: white !important;
 }
 .linkflair-green a.title {
 	background: #46b141;
 	border: 1px solid #090;
-	color: white!important
 }
 .linkflair-blue a.title {
 	background: #6a9de6;
 	border: 1px solid #557eb8;
-	color: white!important
 }
-.linkflair-green a.title:hover {background: #090}
-.linkflair-blue a.title:hover {background: #557eb8}
+.linkflair-red a.title {
+	background: #de3954;
+	border: 1px solid #ce223e;
+}
+.linkflair-palered a.title {
+	background: #e97b8d;
+	border: 1px solid #e35970;
+}
+.linkflair-green a.title:hover { background: #090 }
+.linkflair-blue a.title:hover { background: #557eb8 }
+.linkflair-red a.title:hover { background: #ce223e }
+.linkflair-palered a.title:hover { background: #e35970 }
+.linkflair-palered a.title:before { content: "[Finished] " }
 
 /** Post filter shit **/
 [lang="xn"] .link.over18,
@@ -1259,6 +1287,45 @@ html:not(:lang(en)) .side [href$="#w"]+em:after {
     to   { background-position: 0 -1250px; }
 }
 
+/** Discord button **/
+.side [href*="discord"] {
+  display: block;
+  color: #FFF;
+  padding-right: 9px;
+  font-weight: bold;
+  line-height: 20px;
+  background: #6A9DE6;
+  position: relative;
+  top: 0;
+  line-height: 18px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 200ms;
+}
+.side [href*="discord"]:hover {
+  color: #FFF;
+  background: #557eb8;
+  top: -2px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); 
+}
+.side [href*="discord"]:before {
+  content: "";
+  width: 45px;
+  height: 50px;
+  display: block;
+  background: url(%%discord%%) 50%/contain no-repeat;
+}
+.side [href*="discord"] em {
+  display: block;
+  font-weight: normal;
+  opacity: 0.8;
+}
+.side [href*="discord"]:hover em {
+  text-decoration: underline;
+}
+
 /** all the nightmode **/
 .res-nightmode #header-img-a:after {
     content: '';
@@ -1325,64 +1392,34 @@ html:not(:lang(en)) .side [href$="#w"]+em:after {
 	color: #FFF!important;
 	border-color: #FFF
 }
-.side .md p:nth-last-of-type(2) {
-	position: absolute;
-	top: 125px;
-	margin: 0 -11px;
-	padding: 35px 0 0;
-	background: #FFF;
-	border-radius: 5px;
-	box-shadow: inset 0 0 0 1px #BBB;
-	width: 35px;
-	height: 0;
-	overflow: hidden;
-	transition: .2s 0s;
-	z-index:1;
+
+/** december: header snowfall effect **/
+@keyframes snow {
+	0% {
+		background-position:
+			0 0,
+			0 0,
+			0 0;
+	}
+	to {
+		background-position:
+			500px 1000px,
+			400px 400px,
+			600px 300px;
+	}
 }
-.side .md p:nth-last-of-type(2):hover {
-	width: 200px;
-	height: 65px;
-	box-shadow: inset 0 0 0 1px #BBB,0 2px 4px rgba(0,0,0,.2);
-    transition: .2s .15s;
+html:not(:lang(ns)) #header {
+	background-image:
+		url(%%snow1%%),
+		url(%%snow2%%),
+		url(%%snow3%%);
+	background-size: auto;
+	background-repeat: repeat;
+	animation: snow 20s linear infinite;
 }
-.side .md p:nth-last-of-type(2) strong {
-	position: absolute;
-	top: 0;
-	width: 130px;
-	padding: 0 35px;
-	background: #6a9de6;
-	line-height: 35px;
-	color: #FFF;
-	font-size: 18px;
-	font-weight: bold;
-	text-align: center
+html:not(:lang(ns)) #header:not(:hover) {
+	animation-play-state: paused;
 }
-.side .md p:nth-last-of-type(2) strong:after {
-	content: "";
-	position: absolute;
-	left: 0;
-	background: url(%%ui-elements%%) 70px 70px/128px;
-	width: 35px;
-	height: 35px;
-	transition: .2s
-}
-.side .md p:nth-last-of-type(2):hover strong:after {background-color: #557eb8}
-.side .md p:nth-last-of-type(2) em,.side .md p:nth-last-of-type(2) a {
-	display: block;
-	line-height: 30px;
-	font-size: 16px;
-	text-align: center
-}
-.side .md p:nth-last-of-type(2) em {
-	font-weight: bold;
-	font-style: normal
-}
-.res-nightmode .side .md p:nth-last-of-type(2) {
-	background: #2f2f2f!important;
-	box-shadow: inset 0 0 0 1px #000
-}
-.res-nightmode .side .md p:nth-last-of-type(2) strong {background-color: #445f7e!important}
-.res-nightmode .side .md p:nth-last-of-type(2):hover strong:after {background-color: #2b4665}
 
 /** and here are comment faces and shit **/
 .md [href^="#"] {
@@ -1426,9 +1463,6 @@ html:not(:lang(en)) .side [href$="#w"]+em:after {
 	position: static!important;
 	font-family: inherit!important;
 	overflow: visible!important
-}
-.linkflair-green .linkflairlabel, .linkflair-blue .linkflairlabel {
-	display: none
 }
 .md .voteWeight[style*="none"] {display: none!important}
 
@@ -1816,58 +1850,47 @@ to{background-position:0 0}}
 .md [href="#headpat"]{height:98px;width:235px;background:url(%%anim7%%) 0 -9700px no-repeat}
 .md [href="#headpat"]:hover{animation:headpat 7.76s steps(97) infinite}
 
-
-/** Spritesheet 1 **/
-.md [href="#gendo-pls"]{width:171px;height:114px;background-position:0 -520px}
-.md [href="#k-on-hug"]{width:180px;height:120px;background-position:0 -814px}
-.md [href="#lewd"]{width:100px;height:150px;background-position:0 -984px}
-.md [href="#nanami-hug"]{width:120px;height:150px;background-position:0 -1184px}
-.md [href="#yui-crying"]{width:80px;height:80px;background-position:0 -1644px}
-.md [href="#ok"]{width:100px;height:100px;background-position:-100px 0}
+/** Old Sheet 1**/
+.md [href="#gendo-pls"]{width:171px;height:114px;background-position:0 0px}
+.md [href="#k-on-hug"]{width:180px;height:120px;background-position:0 -114px}
+.md [href="#lewd"]{width:100px;height:150px;background-position:0 -234px}
+.md [href="#nanami-hug"]{width:120px;height:150px;background-position:0 -384px}
+.md [href="#yui-crying"]{width:80px;height:80px;background-position:0 -534px}
+.md [href="#ok"]{width:100px;height:100px;background-position:0 -614px}
+.md [href="#stare"]{width:150px;height:100px;background-position:0 -714px}
+.md [href="#what"]{width:100px;height:80px;background-position:0 -814px}
+.md [href="#gununu"] {width:107px;height:80px;background-position:0 -894px}
+.md [href="#facepalm"]{width:80px;height:80px;background-position:0 -974px}
+.md [href="#nico-heart"]{width:100px;height:80px;background-position:0 -1054px}
+.md [href="#thumbs-up"]{width:120px;height:100px;background-position:0 -1134px}
+.md [href="#kukuku"]{width:100px;height:150px;background-position:0 -1234px}
 .md [href="#gendo-pls"],
 .md [href="#k-on-hug"],
 .md [href="#lewd"],
 .md [href="#nanami-hug"],
 .md [href="#yui-crying"],
-.md [href="#ok"] {
-	background-image:url(%%spritesheet1%%)
-}
-
-/** Spritesheet 2 **/
-.md [href="#stare"]{width:150px;height:100px;background-position:0 -780px}
-.md [href="#what"]{width:100px;height:80px;background-position:0 -1060px}
+.md [href="#ok"],
 .md [href="#stare"],
-.md [href="#what"] {
-	background-image:url(%%spritesheet2%%)
-}
-
-/** Spritesheet 3 **/
-.md [href="#gununu"]{background-image:url(%%spritesheet3%%);display:inline-block;width:107px;height:80px;background-position:0 -780px}
-
-
-/** Spritesheet 4 **/
-.md [href="#facepalm"]{width:80px;height:80px;background-position:0 0}
-.md [href="#nico-heart"]{width:100px;height:80px;background-position:0 -520px}
-.md [href="#thumbs-up"]{width:120px;height:100px;background-position:0 -1430px}
-.md [href="#kukuku"]{width:100px;height:150px;background-position:-170px -390px}
+.md [href="#what"],
+.md [href="#gununu"],
 .md [href="#facepalm"],
 .md [href="#nico-heart"],
 .md [href="#thumbs-up"],
 .md [href="#kukuku"] {
-	background-image:url(%%spritesheet4%%)
+	background-image:url(%%OldSheet1%%)
 }
 
-/** Spritesheet 5 **/
-.md [href="#kotori"]{width:85px;height:89px;background-position:-215px -5px}
-.md [href="#araragi-1"]{width:100px;height:50px;background-position:-5px -95px}
-.md [href="#deadpan"]{width:80px;height:85px;background-position:-300px -155px}
-.md [href="#head-tilt"]{width:121px;height:100px;background-position:-312px -290px}
-.md [href="#manly-tears"]{width:150px;height:100px;background-position:-445px -5px}
-.md [href="#not-raining"]{width:146px;height:100px;background-position:-480px -115px}
-.md [href="#ohmygod"]{width:175px;height:100px;background-position:-443px -290px}
-.md [href="#shock"]{width:170px;height:100px;background-position:-115px -400px}
-.md [href="#heart-thumbs-up"]{width:79px;height:100px;background-position:-295px -400px}
-.md [href="#wow-really"]{width:80px;height:85px;background-position:-564px -400px}
+/**Old Sheet 2**/
+.md [href="#kotori"]{width:85px;height:89px;background-position:0 0px}
+.md [href="#araragi-1"]{width:100px;height:50px;background-position:0 -89px}
+.md [href="#deadpan"]{width:80px;height:85px;background-position:0 -139px}
+.md [href="#head-tilt"]{width:121px;height:100px;background-position:0 -224px}
+.md [href="#manly-tears"]{width:150px;height:100px;background-position:0 -324px}
+.md [href="#not-raining"]{width:146px;height:100px;background-position:0 -424px}
+.md [href="#ohmygod"]{width:175px;height:100px;background-position:0 -524px}
+.md [href="#shock"]{width:170px;height:100px;background-position:0 -624px}
+.md [href="#heart-thumbs-up"]{width:79px;height:100px;background-position:0 -724px}
+.md [href="#wow-really"]{width:80px;height:85px;background-position:0 -824px}
 .md [href="#kotori"],
 .md [href="#araragi-1"],
 .md [href="#deadpan"],
@@ -1878,7 +1901,7 @@ to{background-position:0 0}}
 .md [href="#shock"],
 .md [href="#heart-thumbs-up"],
 .md [href="#wow-really"] {
-	background-image:url(%%spritesheet5%%)
+	background-image:url(%%OldSheet2%%)
 }
 
 /** Static Spritesheet 1 **/
