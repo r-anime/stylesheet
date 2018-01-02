@@ -148,7 +148,7 @@
 .author[href$="/Spiranix"]:not(.moderator){font-size: 0}
 .author[href$="/Spiranix"].moderator{font-size:0;color:#000000}
 .author[href$="/Spiranix"].moderator:before{content:"Spira the Duck"}
-.author[href$="/Spiranix"].moderator:after{color:#f7c800;content:"- Quack! 🦆";font-weight:bold}
+.author[href$="/Spiranix"].moderator:after{color:#f7c800;content:"- Quack! ✨";font-weight:bold}
 .author[href$="/SteamyTomato"]:after{content:" Fanart Contest Winner!";color:#37ada3;background:url(%%ui-elements%%) 0 -115px/128px no-repeat; display:inline-block;height:13px;min-width:13px;margin-left:.3em;margin-Bottom:.2em;text-indent:-9999em;vertical-align:middle;white-space:nowrap}
 .author[href$="/SteamyTomato"]:hover:after{text-indent:17px}
 .author[href$="/swisskid"]:after{content:" has an NTR fetish"}
