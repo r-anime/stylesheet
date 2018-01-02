@@ -2,6 +2,8 @@
 
 This repo contains the subreddit's stylesheet. It's a fun time.
 
+This repository uses a modified version of [Geo1088/reddit-stylesheet-sync](https://github.com/Geo1088/reddit-stylesheet-sync) to update changes live.
+
 ## TODO:
 
 - probably use Sass
