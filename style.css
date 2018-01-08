@@ -190,9 +190,9 @@
 
 /** customization stuff **/
 .titlebox .number:before {content: ""}
-.titlebox .number:after {content: " weebs"}
+.titlebox .number:after {content: " episodes until Gintama gets good"}
 .titlebox .users-online span.number:before {content: " "}
-.titlebox .users-online span.number:after {content: " weebs browsing reddit instead of watching anime"}
+.titlebox .users-online span.number:after {content: " samurai with silver souls"}
 .subscribers {display: block;}
 
 
