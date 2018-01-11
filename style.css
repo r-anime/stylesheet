@@ -198,13 +198,14 @@
 /** Temporary anniversary stuff **/
 .linkflair-anniversary p.title,
 .linkflair-anniversary a.title {
-	color: #0094FF;
+	color: #0094FF !important; /* TODO: separate :visited color */
 }
 .linkflair-anniversary .linkflairlabel {
 	display: inline;
 	background: none;
 	border: none;
 	font-size: inherit !important;
+	color: inherit;
 }
 .linkflair-anniversary .linkflairlabel:before { content: "[" }
 .linkflair-anniversary .linkflairlabel:after { content: "] " }
