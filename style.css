@@ -208,7 +208,7 @@
 	color: inherit;
 }
 .linkflair-anniversary .linkflairlabel:before { content: "[" }
-.linkflair-anniversary .linkflairlabel:after { content: "] " }
+.linkflair-anniversary .linkflairlabel:after { content: "]" }
 
 /**** STOP EDITING HERE ****/
 
