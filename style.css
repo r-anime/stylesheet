@@ -195,6 +195,14 @@
 .titlebox .users-online span.number:after {content: " samurai with Silver Souls"}
 .subscribers {display: block;}
 
+/** Temporary anniversary stuff **/
+.linkflair-anniversary p.title,
+.linkflair-anniversary a.title {
+	color: #0094FF;
+}
+.linkflair-anniversary .linkflairlabel { all: inherit }
+.linkflair-anniversary .linkflairlabel:before { content: "[" }
+.linkflair-anniversary .linkflairlabel:after { content: "] " }
 
 /**** STOP EDITING HERE ****/
 
