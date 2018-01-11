@@ -217,7 +217,7 @@
 	0% { background-position: 0 0 }
 	to { background-position: 300px -32400px }
 }
-@media (max-width: 1023px), (min-width: 1024px) {
+@media (max-width: 1023px), (min-width: 1025px) {
 	html:not(:lang(ns)) #header {
 		background-image: url(%%confetti%%);
 		background-repeat: repeat;
