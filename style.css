@@ -196,6 +196,7 @@
 .subscribers {display: block;}
 
 /** Temporary anniversary stuff **/
+/* Flairs */
 .linkflair-anniversary p.title,
 .linkflair-anniversary a.title {
 	color: #0094FF !important; /* TODO: separate :visited color */
@@ -211,6 +212,19 @@
 }
 .linkflair-anniversary .linkflairlabel:before { content: "[" }
 .linkflair-anniversary .linkflairlabel:after { content: "] " }
+/* Confetti */
+@keyframes confetti {
+	0% { background-position: 0 0 }
+	to { background-position: 300px -32400px }
+}
+html:not(:lang(ns)) #header {
+	background-image: url('https://b.thumbs.redditmedia.com/GFuX4vC7vA5rQov07AwOtucVQziIzA5GOoWf3d9d0QQ.png');
+	background-repeat: repeat;
+	background-size: 300px;
+	animation: confetti 4s steps(108) infinite
+}
+html:not(:lang(ns)) #header:not(:hover) { animation-play-state: paused }
+
 
 /**** STOP EDITING HERE ****/
 
