@@ -200,7 +200,12 @@
 .linkflair-anniversary a.title {
 	color: #0094FF;
 }
-.linkflair-anniversary .linkflairlabel { all: inherit }
+.linkflair-anniversary .linkflairlabel {
+	display: inline;
+	background: none;
+	border: none;
+	font-size: inherit !important;
+}
 .linkflair-anniversary .linkflairlabel:before { content: "[" }
 .linkflair-anniversary .linkflairlabel:after { content: "] " }
 
