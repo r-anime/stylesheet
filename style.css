@@ -1235,7 +1235,7 @@ a[href="/s"]:active::after {color: #FFF}
 	font-size: 14px;
 	font-style: normal;
 	cursor: pointer;
-	left: 445px
+	left: 496px
 }
 .side [href*="#d#"]+em:hover {
     transition: .2s .15s;
