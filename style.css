@@ -210,8 +210,8 @@
 	font-size: inherit !important;
 	color: inherit;
 }
-.linkflair-anniversary .linkflairlabel:before { content: "[" }
-.linkflair-anniversary .linkflairlabel:after { content: "] " }
+.linkflair-anniversary .linkflairlabel:not(:empty):before { content: "[" }
+.linkflair-anniversary .linkflairlabel:not(:empty):after { content: "] " }
 /* Confetti */
 @keyframes confetti {
 	0% { background-position: 0 0 }
