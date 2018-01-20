@@ -357,27 +357,27 @@ html #sr-header-area a.RESShortcutsCurrentSub {
 	margin: 0;
 	display: block;
 	z-index: 99;
-	width: 74px;
-	height: 90px
+	width: 125px;
+	height: 90px;
 }
 .pagename {
 	position: absolute;
 	bottom: 37px;
-	left: 88px;
+	left: 139px;
 	display: block;
 	color: #FFF;
 	font-weight: 400;
 	text-transform: capitalize;
 	font-variant: normal;
 	font-size: 34px;
-	font: normal 34px "Helvetica","Arial",sans-serif
+	font: normal 34px "Helvetica","Arial",sans-serif;
 }
 .pagename a {color: inherit}
 #header .tabmenu {
 	height: 35px;
 	position: absolute;
 	bottom: 0;
-	padding-left: 75px
+	padding-left: 126px;
 }
 #header .tabmenu li {
 	display: inline-block;
@@ -1235,7 +1235,7 @@ a[href="/s"]:active::after {color: #FFF}
 	font-size: 14px;
 	font-style: normal;
 	cursor: pointer;
-	left: 445px
+	left: 496px
 }
 .side [href*="#d#"]+em:hover {
     transition: .2s .15s;
