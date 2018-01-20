@@ -228,7 +228,7 @@
 	/* note about disabling confetti */
 	#header-bottom-left:after {
 		content: "ns.reddit.com/r/anime to disable";
-		font-eize: small;
+		font-size: small;
 		position: absolute;
 		bottom: 0;
 		right: 0;
@@ -1279,7 +1279,7 @@ a[href="/s"]:active::after {color: #FFF}
 	width: 48px
 }
 :lang(en) .comments-page .side [href$="#w"],
-:lang(en) .comments-page .side [href$="#w"]+em {left: 173px}
+:lang(en) .comments-page .side [href$="#w"]+em {left: 223px}
 :lang(en) .comments-page #header .tabmenu li:first-of-type {margin-right: 68px}
 :lang(en) body:not(.listing-page):not(.comments-page):not(.wiki-page) .side .md [href$="#w"]+em {display: none}
 .res-nightmode .side .md [href$="#wd"]+em {
