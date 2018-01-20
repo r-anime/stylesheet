@@ -1297,13 +1297,15 @@ html:not(:lang(en)) .side [href$="#w"]+em:after {
 }
 
 /** all the nightmode **/
-.res-nightmode #header-img-a:after {
+/* TODO: re-enable post anniversary */
+/* Can't just use this one because the images are different widths and it makes everything terrible */
+/* .res-nightmode #header-img-a:after {
     content: '';
     background: url(%%evilsnoo%%) bottom/contain;
 }
 .res-nightmode #header-img {
     display: none
-}
+} */
 .res-nightmode .side {
 	background: url(%%side-bg-dark%%) top/4px #1f1f1f!important;
 	border-color: #0f0f0f!important
