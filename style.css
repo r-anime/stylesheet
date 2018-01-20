@@ -225,8 +225,18 @@
 		animation: confetti 4s steps(108) infinite
 	}
 	html:not(:lang(ns)) #header:not(:hover) { animation-play-state: paused }
+	/* note about disabling confetti */
+	#header-bottom-left:after {
+		content: "ns.reddit.com/r/anime to disable";
+		font-eize: small;
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		color: #FFF;
+		opacity: 0.7;
+		padding: 2px 5px;
+	}
 }
-
 
 /**** STOP EDITING HERE ****/
 
