@@ -49,6 +49,7 @@
 .author[href$="/d0nkeh"]:after{content:"-sama"}
 .author[href$="/d0nkeh"]{color:brown;font-weight:bold;animation:spin 5s}
 .author[href$="/DancingQueen5961"]:after{content:" Good Smile Company"}
+.author[href$="/DragonsOnOurMountain"]:after{color:#E74C3C;content:" who has a few questions"}
 .author[href$="/DrJamesFox"]:after{color:#1e2237;content:" Ask me about K-on!"}
 .author[href$="/DrJWilson"]:after{color:#228B22;content:", PhD (Comfy Studies)"}
 .author[href$="/DrNyanpasu"]:after{color:#ff96ca;content:" loli-NEET"}@keyframes spin{0%{transform:rotate(0deg)}50%{transform:rotate(180deg)}}
@@ -117,6 +118,7 @@
 .author[href$="/peaceshot"]{color:#a300df}
 .author[href$="/pitman"]:after{color:#d57273;font-weight:Bold;content:url(%%pitman%%) " space intentionally left blank"}
 .author[href$="/pittman66"]:after{color:#3374FF;content:" Hazukashii serifu kinshi!"}
+.author[href$="/porpoiseoflife"]:after{color:#F2F3F4;content:" has tried it at home."}
 .author[href$="/Pyrao"]:after{content:"Punchaer"}
 .author[href$="/QFlux"]:after{content:", nobody's yandere boyfriend"}
 .author[href$="/QFlux"]:before{content:"Forever alone "}
