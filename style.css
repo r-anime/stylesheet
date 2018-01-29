@@ -45,8 +45,8 @@
 .author[href$="/Daniel_Is_I"]:before{content:"Daniel"}
 .author[href$="/Daniel_Is_I"]:after{font-weight: bold; color:#167a16; content: " Chart-sama "}
 .author[href$="/Daniel_Is_I"]{font-size:0}
-.author[href$="/Croutons5"]:before {font-size: 10.5px!important;color: #d11141;font-weight: bold;content:"Jimmy Crouton"}
-.author[href$="/Croutons5"]:after {font-size: 10.5px!important;color:#00aedb;font-weight: bold;content:"Boy Genius"}
+.author[href$="/Croutons5"]:before{font-size: 10.5px!important;color: #d11141;font-weight: bold;content:"Jimmy Crouton"}
+.author[href$="/Croutons5"]:after{font-size: 10.5px!important;color:#00aedb;font-weight: bold;content:"Boy Genius"}
 .author[href$="/Croutons5"]:{font-size:0}
 .author[href$="/d0nkeh"]:after{content:"-sama"}
 .author[href$="/d0nkeh"]{color:brown;font-weight:bold;animation:spin 5s}
