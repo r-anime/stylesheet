@@ -1103,7 +1103,7 @@ a[href="/s"]:active::after {color: #FFF}
 	cursor: default;
 	transition: 200ms 350ms
 }
-.flair:hover {
+.flair:before {
 	content: "";
 	display: inline-block;
 	width: 16px;
