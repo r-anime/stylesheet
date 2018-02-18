@@ -202,9 +202,9 @@
 
 /** customization stuff **/
 .titlebox .number:before {content: ""}
-.titlebox .number:after {content: " episodes until Gintama gets good"}
+.titlebox .number:after {content: " camping after seeing Yuru Camp"}
 .titlebox .users-online span.number:before {content: " "}
-.titlebox .users-online span.number:after {content: " samurai with Silver Souls"}
+.titlebox .users-online span.number:after {content: " are cold and regret it"}
 .subscribers {display: block;}
 
 /** Temporary anniversary stuff **/
