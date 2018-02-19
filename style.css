@@ -1147,6 +1147,10 @@ a[href="/s"]:active::after {color: #FFF}
 .flair-v-gkids {border-color: #000}
 .flair-v-gkids::before {background-position: -16px -64px}
 .flair-v-gkids::after {content: " - GKIDS (Verified)"; color: #000}
+.flair-v-trigger {border-color: #000}
+.vlair-v-trigger::before {background-position: -16px -80px}
+.flair-v-trigger::after {content: "- TRIGGER (Verified)"; color: #000}
+
 /* Reset things for other flair */
 [class="flair flair-skip7"] {display: none}
 
