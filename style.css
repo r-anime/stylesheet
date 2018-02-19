@@ -130,10 +130,8 @@
 .author[href$="/randomdudeman12"]:after{color:#9bc2cf;content:" *holds up spork*"}
 .author[href$="/RandomRedditorWithNo"]:after{color:#ff0000;content:"Flair"}
 .author[href$="/RandomRedditorWithNo"].moderator:after{content:"Chill"}
-.author[href$="/I_FAP_TO_LOL_HENTAI"]:not(.moderator){font-size: 0}
-.author[href$="/I_FAP_TO_LOL_HENTAI"]:not(.moderator):after{color:#;content:"I_FAP_TO_LOL(i)_HENTAI"}
-.author[href$="/I_FAP_TO_LOL_HENTAI"]:.moderator:after{color:#d20d0d;content:"I_FAP_TO_LOL(i)_HENTAI"}
-.author[href$="/I_FAP_TO_LOL_HENTAI"]:moderator:{font-size:0}
+.author[href$="/I_FAP_TO_LOL_HENTAI"]{font-size: 0}
+.author[href$="/I_FAP_TO_LOL_HENTAI"]:after{content:"I_FAP_TO_LOL(i)_HENTAI"}
 .author[href$="/RayLeeMental"]:after{content:" no Pico"}
 .author[href$="/readitmeow"]:after{content:" (^・・^)ﾉ"}
 .author[href$="/rpereyda"]:after{color:#f59719;content:" VP, VIZ | Sr. Advisor, Kitsu | Founder, Henshin"}
