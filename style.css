@@ -1195,6 +1195,8 @@ a[href="/s"]:active::after {color: #FFF}
 .linkflair-red a.title:hover { background: #ce223e }
 .linkflair-palered a.title:hover { background: #e35970 }
 .linkflair-palered a.title:before { content: "[Finished] " }
+.linkflair-ongoing a.title:hover { background: #e35970 }
+.linkflair-ongoing a.title:before { content: "[Ongoing] " }
 
 /** Post filter shit **/
 [lang="xn"] .link.over18,
