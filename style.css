@@ -205,49 +205,6 @@
 .titlebox .users-online span.number:after {content: " are cold and regret it"}
 .subscribers {display: block;}
 
-/** Temporary anniversary stuff **/
-/* Flairs */
-.linkflair-anniversary p.title,
-.linkflair-anniversary a.title {
-	color: #0094FF !important; /* TODO: separate :visited color */
-}
-.linkflair-anniversary .linkflairlabel {
-	margin: 0;
-	padding: 0;
-	display: inline;
-	background: none;
-	border: none;
-	font-size: inherit !important;
-	color: inherit;
-}
-.linkflair-anniversary .linkflairlabel:not(:empty):before { content: "[" }
-.linkflair-anniversary .linkflairlabel:not(:empty):after { content: "] " }
-/* Confetti */
-@keyframes confetti {
-	0% { background-position: 0 0 }
-	to { background-position: 300px -32400px }
-}
-@media (max-width: 1023px), (min-width: 1025px) {
-	html:not(:lang(ns)) #header {
-		background-image: url(%%confetti%%);
-		background-repeat: repeat;
-		background-size: 300px;
-		animation: confetti 4s steps(108) infinite
-	}
-	html:not(:lang(ns)) #header:not(:hover) { animation-play-state: paused }
-	/* note about disabling confetti */
-	#header-bottom-left:after {
-		content: "ns.reddit.com/r/anime to disable";
-		font-size: small;
-		position: absolute;
-		bottom: 0;
-		right: 0;
-		color: #FFF;
-		opacity: 0.7;
-		padding: 2px 5px;
-	}
-}
-
 /**** STOP EDITING HERE ****/
 
 /* general TODO: merge single-statement rules like display:none and margin:0 */
@@ -377,13 +334,13 @@ html #sr-header-area a.RESShortcutsCurrentSub {
 	margin: 0;
 	display: block;
 	z-index: 99;
-	width: 125px;
+	width: 74px;
 	height: 90px;
 }
 .pagename {
 	position: absolute;
 	bottom: 37px;
-	left: 139px;
+	left: 88px;
 	display: block;
 	color: #FFF;
 	font-weight: 400;
@@ -397,7 +354,7 @@ html #sr-header-area a.RESShortcutsCurrentSub {
 	height: 35px;
 	position: absolute;
 	bottom: 0;
-	padding-left: 126px;
+	padding-left: 75px;
 }
 #header .tabmenu li {
 	display: inline-block;
@@ -1265,7 +1222,7 @@ a[href="/s"]:active::after {color: #FFF}
 	font-size: 14px;
 	font-style: normal;
 	cursor: pointer;
-	left: 496px
+	left: 445px;
 }
 .side [href*="#d#"]+em:hover {
     transition: .2s .15s;
@@ -1299,7 +1256,7 @@ a[href="/s"]:active::after {color: #FFF}
 	width: 48px
 }
 :lang(en) .comments-page .side [href$="#w"],
-:lang(en) .comments-page .side [href$="#w"]+em {left: 223px}
+:lang(en) .comments-page .side [href$="#w"]+em {left: 173px}
 :lang(en) .comments-page #header .tabmenu li:first-of-type {margin-right: 68px}
 :lang(en) body:not(.listing-page):not(.comments-page):not(.wiki-page) .side .md [href$="#w"]+em {display: none}
 .res-nightmode .side .md [href$="#wd"]+em {
@@ -1317,15 +1274,13 @@ html:not(:lang(en)) .side [href$="#w"]+em:after {
 }
 
 /** all the nightmode **/
-/* TODO: re-enable post anniversary */
-/* Can't just use this one because the images are different widths and it makes everything terrible */
-/* .res-nightmode #header-img-a:after {
+.res-nightmode #header-img-a:after {
     content: '';
     background: url(%%evilsnoo%%) bottom/contain;
 }
 .res-nightmode #header-img {
     display: none
-} */
+}
 .res-nightmode .side {
 	background: url(%%side-bg-dark%%) top/4px #1f1f1f!important;
 	border-color: #0f0f0f!important
