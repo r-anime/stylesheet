@@ -72,6 +72,7 @@
 .author[href$="/geo1088"]:not(.moderator):after{content:" the Canary"}
 .author[href$="/geo1088"].moderator:after{content:"880Ɩoǝƃ ︵╰(=.=╰) "}
 .author[href$="/geo1088"].moderator{font-size:0}
+.author[href$="/GolgaTen"]:after{color:#E5A9F0;content:" the Second"}
 .author[href$="/greyflcn"]:before{content:"The amazing "}
 .author[href$="/grozzle"]:after{content:" grozzes"}
 .author[href$="/HaydenTheFox"]:after{content:" is foxy"}
