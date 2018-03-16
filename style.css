@@ -87,6 +87,7 @@
 .author[href$="/ImVoi"].moderator:after{content:"~";color:#000}
 .author[href$="/ImVoi"].moderator:before{content:"Voi";color:#000}
 .author[href$="/ImVoi"]{font-size:0;font-weight:Bold}
+.author[href$="/jake_j_jung"]:after{color:#8A2BE2;content:" Translator (Verified)"}
 .author[href$="/JTricks"]:before{content:"JToronto"}
 .author[href$="/JTricks"]:after{font-weight: bold; color: #ff2e2e; content: " is Best Girl of Canada "}
 .author[href$="/JTricks"]{font-size:0}
