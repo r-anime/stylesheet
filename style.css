@@ -1006,23 +1006,53 @@ a[href*="re-watch"].title:visited {color: #003d66!important}
 	height: 1px;
 	background-color: #cfcfcf
 }
-.res-nightmode .md hr {background-color: #000!important}
-.md p {margin: .5em 0}
-.md blockquote {border-color: #cfcfcf}
+.res-nightmode .md hr {
+	background-color: #000 !important
+}
+.md p {
+	margin: .5em 0
+}
+.md blockquote {
+	border-color: #cfcfcf
+}
+/* Link styles */
 .md a,
 .tagline a {color: #557eb8}
 .md a:hover,
 .tagline a:hover {color: #244573}
 .res-nightmode .md a:hover,
 .res-nightmode .tagline a:hover {color: #b8d0e8}
+/* Special user colors */
 a.author.submitter {color: #064dc0}
 a.author.moderator {color: #5dab00}
+
+/* Sidebar markdown headings */
 .side .md h1 {
 	background: #6a9de6;
 	margin: 10px -11px;
 	color: #FFF;
 	font-size: 1.5em;
 	font-weight: bold
+}
+/* Sidebar fullwidth tables */
+.side .md table {
+    width: calc(100% + 20px);
+    margin: 10px -10px;
+}
+.side .md td,
+.side .md th {
+    border-color: #CFCFCF;
+    border-left: 0;
+}
+.side .md tr :last-child {
+    border-right: 0;
+}
+/* Tables right after headings bump up against the heading */
+.side .md h1 + table {
+    margin-top: -10px;
+}
+.side .md h1 + table th {
+    border-top: 0;
 }
 
 /** spoiler hype **/
