@@ -134,7 +134,7 @@
 .author[href$="/RandomRedditorWithNo"]:after{color:#ff0000;content:"Flair"}
 .author[href$="/RandomRedditorWithNo"].moderator:after{content:"Chill"}
 .author[href$="/RX-Nota"]:after{color:#ff9c1c;content:" what do you do at the end of the world? Are you busy? Will you save us?"}
-.author[href$="RX-Nota"]{color:#ff9c1c}
+.author[href$="/RX-Nota"]{color:#ff9c1c}
 .author[href$="/I_FAP_TO_LOL_HENTAI"]{font-size: 0}
 .author[href$="/I_FAP_TO_LOL_HENTAI"]:after{content:"I_FAP_TO_LOL(i)_HENTAI"}
 .author[href$="/RayLeeMental"]:after{content:" no Pico"}
