@@ -814,6 +814,7 @@ body #progressIndicator {
 .thumbnail[href*="satire"] {background: 0 -490px}
 .thumbnail[href*="/wt"] {background: 0 -700px}
 .linkflair-green .thumbnail {background: 0 -210px}
+.thumbnail[href*="fanart"] {background: 0 -140px}
 .thumbnail[href*="spoiler"],
 .thumbnail.spoiler {background: 0 -630px}
 .thumbnail[href*="spoiler"][href*="episode"],
