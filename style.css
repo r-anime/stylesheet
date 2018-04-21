@@ -203,9 +203,9 @@
 
 /** customization stuff **/
 .titlebox .number:before {content: ""}
-.titlebox .number:after {content: " in the wrong timeline"}
+.titlebox .number:after {content: " people in the wrong world line"}
 .titlebox .users-online span.number:before {content: " "}
-.titlebox .users-online span.number:after {content: " are hacking to the gate"}
+.titlebox .users-online span.number:after {content: " people hacking to the gate"}
 .subscribers {display: block;}
 
 /**** STOP EDITING HERE ****/
