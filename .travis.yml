@@ -20,9 +20,10 @@ deploy:
   provider: script
   script: python .update/updateSubreddit.py anime
   skip_cleanup: true
-# All branches (including master) go to /r/animestaging for testing
+# All other branches go to /r/animestaging for testing
 - on:
     all_branches: true
+    condition: $TRAVIS_BRANCH != master
   provider: script
   script: python .update/updateSubreddit.py animestaging
   skip_cleanup: true
