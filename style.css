@@ -1844,6 +1844,7 @@ to{background-position:0 0}}
 .md [href="#shock"]{width:170px;height:100px;background-position:0 -624px}
 .md [href="#heart-thumbs-up"]{width:79px;height:100px;background-position:0 -724px}
 .md [href="#wow-really"]{width:80px;height:85px;background-position:0 -824px}
+.md [href="#mugistronk"]{width:145px;height:150px;background-position:0 -909px}
 .md [href="#kotori"],
 .md [href="#araragi-1"],
 .md [href="#deadpan"],
@@ -1853,7 +1854,8 @@ to{background-position:0 0}}
 .md [href="#ohmygod"],
 .md [href="#shock"],
 .md [href="#heart-thumbs-up"],
-.md [href="#wow-really"] {
+.md [href="#wow-really"],
+.md [href="#mugistronk"] {
 	background-image:url(%%OldSheet2%%)
 }
 
