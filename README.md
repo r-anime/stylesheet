@@ -1,4 +1,4 @@
-<img align="left" height="58" alt="snoo" src="http://geo1088.me/animeawards/img/reddit.png">
+<img align="right" height="150" alt="snoo" src="http://geo1088.me/animeawards/img/reddit.png">
 
 # [/r/anime](https://www.reddit.com/r/anime) stylesheet [![Build Status](https://travis-ci.org/r-anime/stylesheet.svg?branch=master)](https://travis-ci.org/r-anime/stylesheet)
 
