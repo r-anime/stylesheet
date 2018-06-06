@@ -31,12 +31,10 @@
 .author[href$="/BanjoTheBear"]:after{color:#7c759e;content:" Chuunibyou, gao gao~"}
 .author[href$="/basedbecker"]:after{content:"xXxfunk_m4st3r_<33xXx"}
 .author[href$="/basedbecker"]{font-size:0}
-.author[href$="/BBallHunter"]:not(.moderator){font-size:0}
-.author[href$="/BBallHunter"]:not(.moderator):before {font-size: 10.5px!important;color:#900;font-weight: bold;content:"BBall"}
-.author[href$="/BBallHunter"]:not(.moderator):after {font-size: 10.5px!important;color:#900;font-weight: bold;content:"Hunter"}
-.author[href$="/BBallHunter"]:not(.moderator):hover:before {color:#1E3160;font-weight: bold;content:"Hiatus";}
-.author[href$="/BBallHunter"]:not(.moderator):hover:before {color:#F05333;font-weight: bold;content:"x";}
-.author[href$="/BBallHunter"]:not(.moderator):hover:after {color:#0A7EC2;font-weight: bold;content:"Hunter";}
+.author[href$="/BBallHunter"]:after{content:"BBallHunter}
+.author[href$="/BBallHunter"]:hover:before {color:#F05333;font-weight: bold;content:"Hiatus x";}
+.author[href$="/BBallHunter"]:hover:after {color:#0A7EC2;font-weight: bold;content:"Hunter";}
+.author[href$="/BBallHunter"]{font-size:0}
 .author[href$="/Berzerker7"]:after{content:" has the best taste"}
 .author[href$="/biggyh"]:after{color:#f59719;content:" Viewster Brand + Social Manager"}
 .author[href$="/Bobduh"]:after{content:" (Essay) Builder"}
