@@ -33,7 +33,7 @@
 .author[href$="/basedbecker"]{font-size:0}
 .author[href$="/BBallHunter"]:after{content:"BBallHunter"}
 .author[href$="/BBallHunter"]:hover:before {color:#F05333;font-weight: bold;content:"Hiatus x";}
-.author[href$="/BBallHunter"]:hover:after {bold;content:" Hunter";}
+.author[href$="/BBallHunter"]:hover:after {color:#f0000;font-weight: bold;content:" Hunter";}
 .author[href$="/BBallHunter"]{font-size:0}
 .author[href$="/Berzerker7"]:after{content:" has the best taste"}
 .author[href$="/biggyh"]:after{color:#f59719;content:" Viewster Brand + Social Manager"}
