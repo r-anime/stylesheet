@@ -1,5 +1,5 @@
 .author[href$="/-momoyome-"]:after{color:#f00000;content:" fujoshi~"}
-.author[href$="/-Niernen"]:after{content:"-"}
+.author[href$="/-Niernen"]:after,
 .author[href$="/-Niernen"]:before{content:"-"}
 .author[href$="/3932695"]:after{content:"2"}
 .author[href$="/77remix"]:after{color:#000000;content:":Smells"}
@@ -77,7 +77,6 @@
 .author[href$="/geo1088"]:not(.moderator):after{content:" the Canary"}
 .author[href$="/geo1088"].moderator:after{content:"880Ɩoǝƃ ︵╰(=.=╰) "}
 .author[href$="/geo1088"].moderator{font-size:0}
-
 .author[href$="/greyflcn"]:before{content:"The amazing "}
 .author[href$="/grozzle"]:after{content:" grozzes"}
 .author[href$="/HaydenTheFox"]:after{content:" is foxy"}
@@ -267,7 +266,7 @@ body>.content,
 .author.moderator:before,
 .author.moderator:after,
 .author.submitter:before,
-.author.submitter:after { color: inherit }
+.author.submitter:after {color: inherit}
 
 /** Page header **/
 #header {
@@ -2395,7 +2394,7 @@ to{background-position:0 0}}
 .md [href="#kanyehidouyo"]{background:-0px -7747px;width:129px!important;height:145px!important}
 .md [href="#killitwithfire"]{background:-0px -3960px;height:118px!important}
 .md [href="#kms"]{background:-0px -5318px;height:104px!important}
-.md [href="#konhug"]{background:-0px -1343px;height:143px!important}
+.md [href$="#konhug"]{background:-0px -1343px;height:143px!important}
 .md [href="#konosubawot3"]{background:-0px -7599px;width:129px!important;height:148px!important}
 .md [href="#lewdgyaru"]{background:-0px -4655px;height:112px!important}
 .md [href="#lifeishard"]{background:-0px -464px;height:150px!important}
