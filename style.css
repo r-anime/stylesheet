@@ -1077,6 +1077,10 @@ a[href="/s"]::after{
 }
 a[href="/s"]:hover::after,
 a[href="/s"]:active::after {color: #FFF}
+/* QoL for mobile desktop users */
+a[href="/s"]:active {
+    pointer-events: none;
+}
 
 /** List flairs **/
 .flair {
