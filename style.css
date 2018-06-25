@@ -1092,8 +1092,8 @@ a[href="/s"]:active::after,
 a[href*="/s?"]:hover::after,
 a[href*="/s?"]:active::after {color: #FFF}
 /* QoL for mobile desktop users */
-a[href="/s"]:active,
-a[href*="/s?"]:active {
+a[href="/s"]:hover,
+a[href*="/s?"]:hover {
     pointer-events: none;
 }
 
@@ -1416,8 +1416,9 @@ html:not(:lang(en)) .side [href$="#w"]+em:after {
 	cursor: default;
 }
 .md [href^="#"]:hover,
-[href*="?utm_"][href*="#"] {
+[href*="?utm_"][href*="#"]:hover {
 	color: white;
+	pointer-events: none;
 }
 .md [href^="#"]:not([href="#s"]) > strong,
 [href*="?utm_"][href*="#"]:not([href$="#s"]) > strong {
