@@ -1396,7 +1396,36 @@ html:not(:lang(en)) .side [href$="#w"]+em:after {
 	border-color: #FFF
 }
 
-/** and here are comment faces and shit **/
+/**
+ * Dear future self,
+ *
+ * You're here either because Reddit made another DOM change that
+ * broke comment faces and you think you can fix them, or because you
+ * realized it's a massive chunk of code and you think you can
+ * optimize it. I promise you neither of these things are true, and
+ * what's more, neither are worth your time.
+ *
+ * Comment faces are a *massive* hack and supporting them involves
+ * incredibly annoying inconsistencies between browsers and platforms.
+ * What's more, they're also expected to run on the mobile desktop
+ * site, so they also have to work on touch screens and with all the
+ * silly inconcistencies mobile browsers have.
+ *
+ * Below here is the silliest bit of CSS I have ever engineered, and
+ * while I take pride in the fact that it works I encourage any other
+ * person who feels compelled to change this code to strongly
+ * reconsider their path in life before continuing. Every single bit
+ * of code here has a specific purpose, and changing any one part
+ * means trapping yourself in a complicated web of specificity
+ * interactions and the closest thing CSS has to RegExes. In fact,
+ * I can't think of a single case right now when it would be a good
+ * idea to fix this system instead of rewriting it or just moving to
+ * whatever the redesign has.
+ * 
+ * Also, it's probably at least 2013. Did you ever take that trip
+ * to Iceland?
+ */
+
 .md [href^="#"],
 [href*="?utm_"][href*="#"] {
 	display: inline-block;
