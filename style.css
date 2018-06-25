@@ -1435,7 +1435,7 @@ html:not(:lang(en)) .side [href$="#w"]+em:after {
 .md [href="#s"],
 .md [href*="#wiki_"] {
 	display: inline!important;
-	color: #0079d3!important;
+	color: #557eb8!important;
 	text-shadow: none!important;
 	cursor: pointer!important;
 	font-size: inherit!important;
