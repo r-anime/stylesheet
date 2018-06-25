@@ -1092,8 +1092,8 @@ a[href="/s"]:active::after,
 a[href*="/s?"]:hover::after,
 a[href*="/s?"]:active::after {color: #FFF}
 /* QoL for mobile desktop users */
-a[href="/s"]:hover,
-a[href*="/s?"]:hover {
+a[href="/s"]:active,
+a[href*="/s?"]:active {
     pointer-events: none;
 }
 
@@ -1418,6 +1418,9 @@ html:not(:lang(en)) .side [href$="#w"]+em:after {
 .md [href^="#"]:hover,
 [href*="?utm_"][href*="#"]:hover {
 	color: white;
+}
+.md [href^="#"]:active,
+[href*="?utm_"][href*="#"]:active {
 	pointer-events: none;
 }
 .md [href^="#"]:not([href="#s"]) > strong,
