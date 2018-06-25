@@ -1,7 +1,7 @@
 # Python is required for the deploy script
 language: python
 python:
-- '3.5'
+- '3.6'
 
 # The Sass part is the actual build
 # or might be... eventually...
