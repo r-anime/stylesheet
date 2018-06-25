@@ -1398,7 +1398,7 @@ html:not(:lang(en)) .side [href$="#w"]+em:after {
 
 /** and here are comment faces and shit **/
 .md [href^="#"],
-.md [href^="https://www.reddit.com/r/anime"][href*="#"] {
+[href^="https://www.reddit.com/r/anime"][href*="#"] {
 	display: inline-block;
 	position: relative;
 	background-image: url("%%brokencommentface%%");
@@ -1407,7 +1407,7 @@ html:not(:lang(en)) .side [href$="#w"]+em:after {
 	overflow: hidden;
 }
 .md [href^="#"]:not([href="#s"]),
-.md [href^="https://www.reddit.com/r/anime"][href*="#"]:not([href$="#s"]){
+[href^="https://www.reddit.com/r/anime"][href*="#"]:not([href$="#s"]){
 	text-align: center;
 	font-family: arial,sans-serif;
 	font-size: 18px;
@@ -1416,11 +1416,11 @@ html:not(:lang(en)) .side [href$="#w"]+em:after {
 	cursor: default;
 }
 .md [href^="#"]:hover,
-.md [href^="https://www.reddit.com/r/anime"][href*="#"] {
+[href^="https://www.reddit.com/r/anime"][href*="#"] {
 	color: white;
 }
 .md [href^="#"]:not([href="#s"]) > strong,
-.md [href^="https://www.reddit.com/r/anime"][href*="#"]:not([href$="#s"]) > strong {
+[href^="https://www.reddit.com/r/anime"][href*="#"]:not([href$="#s"]) > strong {
 	display: block;
 	width: 100%;
 	position: absolute;
@@ -1433,7 +1433,7 @@ html:not(:lang(en)) .side [href$="#w"]+em:after {
 .md [href^="#/"],
 .md [href^="#?"],
 .md [href="#s"],
-.md .toc [href] {
+.md [href*="#wiki_"] {
 	display: inline!important;
 	color: #0079d3!important;
 	text-shadow: none!important;
