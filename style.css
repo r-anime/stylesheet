@@ -1,3 +1,10 @@
+/*!
+ * /r/anime stylesheet
+ * maintained by /u/geo1088
+ * https://github.com/r-anime/stylesheet
+ * public domain
+ */
+
 .author[href$="/-momoyome-"]:after{color:#f00000;content:" fujoshi~"}
 .author[href$="/-Niernen"]:after,
 .author[href$="/-Niernen"]:before{content:"-"}
@@ -542,6 +549,7 @@ span.multi-count {margin: 0!important}
 	color: #000;
 	border: 1px solid #cfcfcf;
 	border-radius: 5px;
+	box-shadow: none; /* mobile safari override, smh */
 	padding: 0 40px 0 10px;
 	line-height: 30px;
 	width: 300px;
