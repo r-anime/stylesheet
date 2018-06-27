@@ -1139,8 +1139,6 @@ a[href*="/s?"]:active {
 	font-size: x-small!important;
 	transition-delay: 0s
 }
-/* default logo */
-.flair-custom::before {background-position: 0 -96px}
 /* list services */
 .flair-MAL::before {background-position: 0 0}
 .flair-HB::before {background-position: 0 -16px}
@@ -1148,6 +1146,7 @@ a[href*="/s?"]:active {
 .flair-AP::before {background-position: 0 -48px}
 .flair-ann::before {background-position: 0 -64px}
 .flair-anidb::before {background-position: 0 -80px}
+.flair-custom::before {background-position: 0 -96px}
 /* verification styles/logos */
 .flair-v-crunchy {border-color: #F78B24}
 .flair-v-crunchy::before {background-position: -16px 0}
@@ -1169,6 +1168,11 @@ a[href*="/s?"]:active {
 .flair-v-trigger {border-color: #000}
 .flair-v-trigger::before {background-position: -16px -80px}
 .flair-v-trigger::after {content: "- TRIGGER (Verified)"; color: #000}
+.flair-v-ea {border-color: #4d4d4d}
+.flair-v-ea::before {background-position: -16px -96px}
+.flair-v-ea::after {content: " - Eleven Arts (Verified)"; color: #4d4d4d}
+.flair-v-lan {border-color: #29362d}
+.flair-v-lan::before {background-position: -16px -112px}
 
 /* Reset things for other flair */
 [class="flair flair-skip7"] {display: none}
