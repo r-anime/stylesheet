@@ -1173,6 +1173,7 @@ a[href*="/s?"]:active {
 .flair-v-ea::after {content: " - Eleven Arts (Verified)"; color: #4d4d4d}
 .flair-v-lan {border-color: #29362d}
 .flair-v-lan::before {background-position: -16px -112px}
+.flair-v-lan::after {content: " - Studio LAN (Verified)"; color: #29362d}
 
 /* Reset things for other flair */
 [class="flair flair-skip7"] {display: none}
