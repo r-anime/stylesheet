@@ -1297,7 +1297,7 @@ a[href*="/s?"]:active {
 }
 .side [href*="#d#"] + strong:hover {
     transition: .2s .15s;
-    height: calc((35px * 11) + (25px * 2)); /* real men use manual calculations TODO */
+    height: 435px;
 }
 .side [href*="#d#"] + strong::after {
 	content: "wiki";
@@ -1322,6 +1322,8 @@ a[href*="/s?"]:active {
 	line-height: 25px;
 	font-style: normal;
 	font-weight: bold;
+	background: #446594;
+	cursor: default;
 }
 .side [href*="#d#"] + strong *:hover {background: #446594}
 .res-nightmode .side [href*="#d#"] + strong *,
