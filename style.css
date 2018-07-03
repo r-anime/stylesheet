@@ -1257,7 +1257,7 @@ a[href*="/s?"]:active {
 	text-align: center;
 	height: 35px;
 	display: table;
-	width: calc(100% - 361px)
+	width: calc(100% - 361px);
 }
 .side .md blockquote:first-child p {
 	display: table-cell;
@@ -1268,17 +1268,17 @@ a[href*="/s?"]:active {
 	padding: 0;
 	font-size: 13px;
 	line-height: 15px;
-	font-weight: 700
+	font-weight: 700;
 }
 .side .md blockquote:first-child a {
 	text-decoration: underline;
-	color: inherit
+	color: inherit;
 }
 .side .md blockquote:first-child a:hover {color: #EEE}
 
 /** dropdown shit hype **/
 /** TODO **/
-.side [href*="#d#"]+em {
+.side [href*="#d#"] + em {
 	position: absolute;
 	top: 80px;
 	height: 0;
@@ -1295,11 +1295,11 @@ a[href*="/s?"]:active {
 	cursor: pointer;
 	left: 445px;
 }
-.side [href*="#d#"]+em:hover {
+.side [href*="#d#"] + em:hover {
     transition: .2s .15s;
-    height: calc(35px * 9) /* real men use manual calculations TODO */
+    height: calc(35px * 11 + 25px * 2); /* real men use manual calculations TODO */
 }
-.side [href*="#d#"]+em::after {
+.side [href*="#d#"] + em::after {
 	content: "wiki";
 	position: absolute;
 	top: 0;
@@ -1307,31 +1307,36 @@ a[href*="/s?"]:active {
 	padding: 0 10px;
 	pointer-events: auto;
 	width: 48px;
-	background: url(%%ui-elements%%) -40px 15px/128px no-repeat padding-box content-box,border-box transparent
+	/* just trust me on this one */
+	background: url(%%ui-elements%%) -40px 15px/128px no-repeat padding-box content-box, border-box transparent;
 }
-.side [href*="#d#"]+em:hover::after {background-color: #4c71a5}
-.side [href*="#d#"]+em a {
+.side [href*="#d#"] + em:hover::after {background-color: #4c71a5}
+.side [href*="#d#"] + em * {
 	display: block;
 	padding: 0 10px;
 	color: #FFF;
 	background: #4c71a5;
-	pointer-events: auto
+	pointer-events: auto;
 }
-.side [href*="#d#"]+em a:hover {background: #446594}
-.res-nightmode .side [href*="#d#"]+em a,
-.res-nightmode .side [href*="#d#"]+em:hover::after {background-color: #273f5b!important}
-.res-nightmode .side [href*="#d#"]+em a:hover {background: #172f4b!important}
+.side [href*="#d#"] + em b {
+	line-height: 25px;
+}
+.side [href*="#d#"] + em *:hover {background: #446594}
+.res-nightmode .side [href*="#d#"] + em *,
+.res-nightmode .side [href*="#d#"] + em:hover::after {background-color: #273f5b !important}
+.res-nightmode .side [href*="#d#"] + em a:hover,
+.res-nightmode .side [href*="#d#"] + em b {background: #172f4b !important}
 :lang(en) .listing-page #header .tabmenu [href*="/wiki"],
 :lang(en) .wiki-page #header .tabmenu [href*="/wiki"] {
 	color: transparent;
-	width: 48px
+	width: 48px;
 }
 :lang(en) .comments-page .side [href$="#w"],
 :lang(en) .comments-page .side [href$="#w"]+em {left: 173px}
 :lang(en) .comments-page #header .tabmenu li:first-of-type {margin-right: 68px}
 :lang(en) body:not(.listing-page):not(.comments-page):not(.wiki-page) .side .md [href$="#w"]+em {display: none}
 .res-nightmode .side .md [href$="#wd"]+em {
-	background: #273f5b!important
+	background: #273f5b !important
 }
 html:not(:lang(en)) .side [href$="#w"]+em {
 	left: auto;
@@ -1350,25 +1355,25 @@ html:not(:lang(en)) .side [href$="#w"]+em:after {
     background: url(%%evilsnoo%%) bottom/contain;
 }
 .res-nightmode #header-img {
-    display: none
+    display: none;
 }
 .res-nightmode .side {
-	background: url(%%side-bg-dark%%) top/4px #1f1f1f!important;
-	border-color: #0f0f0f!important
+	background: url(%%side-bg-dark%%) top/4px #1f1f1f !important;
+	border-color: #0f0f0f !important;
 }
 .res-nightmode .titlebox,
 .res-nightmode .linkinfo {
 	box-shadow: inset 0 0 0 1px #0f0f0f;
-	background: #2f2f2f!important
+	background: #2f2f2f !important;
 }
 .res-nightmode .side .redditname,
 .res-nightmode .sidecontentbox .title,
 .res-nightmode .side .md-container .md h1,
-.res-nightmode .sidecontentbox .content {background-color: #445f7e!important}
+.res-nightmode .sidecontentbox .content {background-color: #445f7e !important}
 .res-nightmode .sidecontentbox .content {
-	background: #2f2f2f!important;
+	background: #2f2f2f !important;
 	box-shadow: 0 -5px #445f7e;
-	border-color: #0f0f0f!important
+	border-color: #0f0f0f !important;
 }
 .res-nightmode .subscribe-button .option,
 .res-nightmode .side a.helplink,
@@ -1405,7 +1410,7 @@ html:not(:lang(en)) .side [href$="#w"]+em:after {
 	border-color: #0f0f0f
 }
 .res-nightmode .reddit-infobar.with-icon::before {background-color: #2866a3}
-.res-nightmode .side .md *:not(a):not(hr) {background: transparent!important}
+.res-nightmode .side .md *:not(a):not(hr) {background: transparent}
 .res-nightmode .nsfw-stamp,.res-nightmode .link .buttons .first::before {
 	color: #FFF!important;
 	border-color: #FFF
