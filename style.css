@@ -1291,13 +1291,13 @@ a[href*="/s?"]:active {
 	transition: .2s 0s;
 	border-radius: 0 0 5px 5px;
 	font-size: 14px;
-	font-style: normal;
+	font-weight: normal;
 	cursor: pointer;
 	left: 445px;
 }
 .side [href*="#d#"] + strong:hover {
     transition: .2s .15s;
-    height: calc(35px * 11 + 25px * 2); /* real men use manual calculations TODO */
+    height: calc((35px * 11) + (25px * 2)); /* real men use manual calculations TODO */
 }
 .side [href*="#d#"] + strong::after {
 	content: "wiki";
@@ -1317,7 +1317,6 @@ a[href*="/s?"]:active {
 	color: #FFF;
 	background: #4c71a5;
 	pointer-events: auto;
-	font-weight: normal;
 }
 .side [href*="#d#"] + strong em {
 	line-height: 25px;
