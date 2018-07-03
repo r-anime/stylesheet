@@ -1297,7 +1297,7 @@ a[href*="/s?"]:active {
 }
 .side [href*="#d#"] + strong:hover {
     transition: .2s .15s;
-    height: 435px;
+    height: 470px;
 }
 .side [href*="#d#"] + strong::after {
 	content: "wiki";
