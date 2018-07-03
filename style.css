@@ -1278,7 +1278,7 @@ a[href*="/s?"]:active {
 
 /** dropdown shit hype **/
 /** TODO **/
-.side [href*="#d#"] + em {
+.side [href*="#d#"] + strong {
 	position: absolute;
 	top: 80px;
 	height: 0;
@@ -1295,11 +1295,11 @@ a[href*="/s?"]:active {
 	cursor: pointer;
 	left: 445px;
 }
-.side [href*="#d#"] + em:hover {
+.side [href*="#d#"] + strong:hover {
     transition: .2s .15s;
     height: calc(35px * 11 + 25px * 2); /* real men use manual calculations TODO */
 }
-.side [href*="#d#"] + em::after {
+.side [href*="#d#"] + strong::after {
 	content: "wiki";
 	position: absolute;
 	top: 0;
@@ -1310,40 +1310,43 @@ a[href*="/s?"]:active {
 	/* just trust me on this one */
 	background: url(%%ui-elements%%) -40px 15px/128px no-repeat padding-box content-box, border-box transparent;
 }
-.side [href*="#d#"] + em:hover::after {background-color: #4c71a5}
-.side [href*="#d#"] + em * {
+.side [href*="#d#"] + strong:hover::after {background-color: #4c71a5}
+.side [href*="#d#"] + strong * {
 	display: block;
 	padding: 0 10px;
 	color: #FFF;
 	background: #4c71a5;
 	pointer-events: auto;
+	font-weight: normal;
 }
-.side [href*="#d#"] + em b {
+.side [href*="#d#"] + strong em {
 	line-height: 25px;
+	font-style: normal;
+	font-weight: bold;
 }
-.side [href*="#d#"] + em *:hover {background: #446594}
-.res-nightmode .side [href*="#d#"] + em *,
-.res-nightmode .side [href*="#d#"] + em:hover::after {background-color: #273f5b !important}
-.res-nightmode .side [href*="#d#"] + em a:hover,
-.res-nightmode .side [href*="#d#"] + em b {background: #172f4b !important}
+.side [href*="#d#"] + strong *:hover {background: #446594}
+.res-nightmode .side [href*="#d#"] + strong *,
+.res-nightmode .side [href*="#d#"] + strong:hover::after {background-color: #273f5b !important}
+.res-nightmode .side [href*="#d#"] + strong a:hover,
+.res-nightmode .side [href*="#d#"] + strong em {background: #172f4b !important}
 :lang(en) .listing-page #header .tabmenu [href*="/wiki"],
 :lang(en) .wiki-page #header .tabmenu [href*="/wiki"] {
 	color: transparent;
 	width: 48px;
 }
 :lang(en) .comments-page .side [href$="#w"],
-:lang(en) .comments-page .side [href$="#w"]+em {left: 173px}
+:lang(en) .comments-page .side [href$="#w"] + strong {left: 173px}
 :lang(en) .comments-page #header .tabmenu li:first-of-type {margin-right: 68px}
-:lang(en) body:not(.listing-page):not(.comments-page):not(.wiki-page) .side .md [href$="#w"]+em {display: none}
-.res-nightmode .side .md [href$="#wd"]+em {
+:lang(en) body:not(.listing-page):not(.comments-page):not(.wiki-page) .side .md [href$="#w"] + strong {display: none}
+.res-nightmode .side .md [href$="#wd"] + strong {
 	background: #273f5b !important
 }
-html:not(:lang(en)) .side [href$="#w"]+em {
+html:not(:lang(en)) .side [href$="#w"] + strong {
 	left: auto;
 	right: 10px;
 	width: 300px;
 }
-html:not(:lang(en)) .side [href$="#w"]+em:after {
+html:not(:lang(en)) .side [href$="#w"] + strong::after {
 	content: "Frequently Used Wiki Pages";
 	background-image: none, none; /* TODO: reimplement the arrow here */
 	width: 300px;
