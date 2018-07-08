@@ -1533,7 +1533,7 @@ to{background-position:0 -6099px}}
 .md [href$="#fedup"]:hover{animation:fedup 2.4s steps(21);animation-fill-mode:forwards}
 @keyframes flattered{from{background-position:0 -7666px}
 to{background-position:0 -3638px}}
-.md [href="#dancewithit"]{height:179px;width:99px;background:url(%%FantaSheet%%) 0 -14492px no-repeat}
+.md [href="#dancewithit"]{height:179px;width:98px;background:url(%%FantaSheet%%) 0 -14492px no-repeat}
 .md [href="#dancewithit"]:hover{animation:dancewithit 2.4s steps(29); animation-fill-mode:forwards}
 @keyframes dancewithit{from{background-position:0 -14492px}to{background-position:0 -9332px}}
 .md [href$="#flattered"]{height:104px;width:191px;background:url(%%CokeSheet%%) -0px -7666px no-repeat}
