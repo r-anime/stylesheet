@@ -77,6 +77,8 @@
 .author[href$="/FAN_ROTOM_IS_SCARY"].moderator:after{content:": 『ZA PORISU』";color:#e393be}
 .author[href$="/FAN_ROTOM_IS_SCARY"].moderator:before{content:"JoJotom's Stand";color:#8e0b0b}
 .author[href$="/FAN_ROTOM_IS_SCARY"]{font-size:0}
+.author[href$="/FetchFrosh"]:after{color:#899b06;content:"FetchFrosh★Magica"}
+.author[href$="/FetchFrosh"]{font-size:0}
 .author[href$="/foamyfrog"]:after{content:" is new to the internet"}
 .author[href$="/FreeRobotFrost"]:after{color:#f00000;content:" ~survivor of yaoi~"}
 .author[href$="/g_suzuki"]:after{content:" Good Smile Company"}
@@ -215,9 +217,9 @@
 
 /** customization stuff **/
 .titlebox .number:before {content: ""}
-.titlebox .number:after {content: " people in the wrong world line"}
+.titlebox .number:after {content: " Stairs to the Dueling Arena"}
 .titlebox .users-online span.number:before {content: " "}
-.titlebox .users-online span.number:after {content: " people hacking to the gate"}
+.titlebox .users-online span.number:after {content: " seeking power to bring the World Revolution!"}
 .subscribers {display: block;}
 
 /**** STOP EDITING HERE ****/
