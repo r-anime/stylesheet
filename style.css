@@ -1493,16 +1493,17 @@ html:not(:lang(en)) .side [href$="#w"] + strong::after {
 .md [href^="#?"],
 .md [href="#s"],
 .md [href*="#wiki_"] {
-	display: inline!important;
-	color: #557eb8!important;
-	text-shadow: none!important;
-	cursor: pointer!important;
-	font-size: inherit!important;
-	text-align: inherit!important;
-	background: none!important;
-	position: static!important;
-	font-family: inherit!important;
-	overflow: visible!important
+	display: inline !important;
+	color: #557eb8 !important;
+	text-shadow: none !important;
+	cursor: pointer !important;
+	font-size: inherit !important;
+	text-align: inherit !important;
+	background: none !important;
+	position: static !important;
+	font-family: inherit !important;
+	overflow: visible !important;
+	pointer-events: all !important;
 }
 .md .voteWeight[style*="none"] {display: none!important}
 
