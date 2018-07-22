@@ -217,9 +217,9 @@
 
 /** customization stuff **/
 .titlebox .number:before {content: ""}
-.titlebox .number:after {content: " Stairs to the Dueling Arena"}
+.titlebox .number:after {content: " inside the walls"}
 .titlebox .users-online span.number:before {content: " "}
-.titlebox .users-online span.number:after {content: " seeking power to bring the World Revolution!"}
+.titlebox .users-online span.number:after {content: " fighting the enemies of humanity"}
 .subscribers {display: block;}
 
 /**** STOP EDITING HERE ****/
