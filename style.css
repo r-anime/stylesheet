@@ -108,7 +108,7 @@
 .author[href$="/JTricks"]{font-size:0}
 .author[href$="/Kagumi"]:not(.moderator):after{content:"Kagumi.moe♪"}
 .author[href$="/Kagumi"]:not(.moderator){font-size:0;color:#4c8ef7}
-.author[href$="/Kagumi"].moderator:before{color:#fff399;content:"Not a mod "}
+.author[href$="/Kagumi"].moderator:after{color:#ffab70;content:" in the Franxx"}
 .author[href$="/kaverik"]:after{content:"КOMЯДDE ☭ КДVEЯIК"}
 .author[href$="/kaverik"]{font-size:0;color:#F00}
 .author[href$="/kpenk"]:after{color:#fff399;content:" Kevin Penkin Official"}
