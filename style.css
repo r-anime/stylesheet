@@ -1257,7 +1257,7 @@ html:not(:lang(en)) .side [href$="#w"]+em:after {
 }
 
 /** Discord button **/
-.side [href*="discord"] {
+.side [href*="discord.gg"] {
   display: block;
   color: #FFF;
   padding-right: 9px;
@@ -1273,25 +1273,25 @@ html:not(:lang(en)) .side [href$="#w"]+em:after {
   align-items: center;
   transition: 200ms;
 }
-.side [href*="discord"]:hover {
+.side [href*="discord.gg"]:hover {
   color: #FFF;
   background: #557eb8;
   top: -2px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); 
 }
-.side [href*="discord"]:before {
+.side [href*="discord.gg"]:before {
   content: "";
   width: 45px;
-  height: 50px;
+  height: 44px;
   display: block;
   background: url(%%discord%%) 50%/contain no-repeat;
 }
-.side [href*="discord"] em {
+.side [href*="discord.gg"] em {
   display: block;
   font-weight: normal;
   opacity: 0.8;
 }
-.side [href*="discord"]:hover em {
+.side [href*="discord.gg"]:hover em {
   text-decoration: underline;
 }
 
