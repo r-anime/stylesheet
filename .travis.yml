@@ -1,7 +1,7 @@
 # Python is required for the deploy script
 language: python
 python:
-- '3.5'
+- '3.6'
 
 # The Sass part is the actual build
 # or might be... eventually...
@@ -20,9 +20,10 @@ deploy:
   provider: script
   script: python .update/updateSubreddit.py anime
   skip_cleanup: true
-# All branches (including master) go to /r/animestaging for testing
+# All other branches go to /r/animestaging for testing
 - on:
     all_branches: true
+    condition: $TRAVIS_BRANCH != master
   provider: script
   script: python .update/updateSubreddit.py animestaging
   skip_cleanup: true
