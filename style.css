@@ -1258,13 +1258,13 @@ a[href*="/s?"]:active {
 [lang="xb"] .link.linkflair-news,
 [lang="xf"] .link.linkflair-fanart,
 [lang="xc"] .link.linkflair-cosplay,
-[lang="xd"] .link.linkflair-clips,
+[lang="xd"] .link.linkflair-clip,
 [lang="xm"] .link.linkflair-official-media,
 [lang="xi"] .link.linkflair-identification,
 
 [lang="xa"] .link.linkflair-fanart,
 [lang="xa"] .link.linkflair-cosplay,
-[lang="xa"] .link.linkflair-clips,
+[lang="xa"] .link.linkflair-clip,
 [lang="xa"] .link.linkflair-official-media,
 [lang="xa"] .link.linkflair-identification {display: none}
 
