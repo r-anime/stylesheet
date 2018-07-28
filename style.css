@@ -862,24 +862,35 @@ a[href*="spoil"].title:link,
 .spoiler a.title:link {color: #cd0000!important}
 a[href*="spoil"].title:visited,
 .spoiler a.title:visited {color: #600!important}
+.linkflair-fanart ~ a.title:link,
 a[href*="fanart"].title:link,
 a[href*="fan_art"].title:link {color: #005900!important}
+.linkflair-fanart ~ a.title:visited,
 a[href*="fanart"].title:visited,
 a[href*="fan_art"].title:visited {color: #003e00!important}
+.res-nightmode .linkflair-fanart ~ a.title:link,
 .res-nightmode a[href*="fanart"].title:link,
 .res-nightmode a[href*="fan_art"].title:link {color: #019b00!important}
+.res-nightmode .linkflair-fanart ~ a.title:visited,
 .res-nightmode a[href*="fanart"].title:visited,
 .res-nightmode a[href*="fan_art"].title:visited {color: #347b34!important}
+.linkflair-wt ~ a.title:link,
 a[href*="watch_this"].title:link,
 a[href*="/wt"].title:link {color: #b29600!important}
+.linkflair-wt ~ a.title:visited,
 a[href*="watch_this"].title:visited,
 a[href*="/wt"].title:visited {color: #473c00!important}
+.linkflair-rewatch ~ a.title:link,
 a[href*="rewatch"].title:link,
 a[href*="re-watch"].title:link {color: #09f!important}
+.linkflair-rewatch ~ a.title:visited,
 a[href*="rewatch"].title:visited,
 a[href*="re-watch"].title:visited {color: #003d66!important}
+.linkflair-writing-club ~ a.title:link,
 a[href*="/writing_club"].title:link {color: #E55A76 !important}
+.linkflair-writing-club ~ a.title:visited,
 a[href*="/writing_club"].title:visited {color: #AF1C3A !important}
+
 /** Submit shit **/
 .submit-page>.content {
 	margin: 0 auto;
