@@ -1241,23 +1241,32 @@ a[href*="/s?"]:active {
 .linkflair-palered a.title:before { content: "[Finished] " }
 .linkflair-ongoing a.title:before { content: "[Ongoing] " }
 
-/** Post filter shit **/
+/*
+ * Post filter stuff
+ * xn - No NSFW
+ * xs - No Spoilers
+ * xb - No News
+ * xf - No Fanart
+ * xc - No Cosplay
+ * xd - No Clips
+ * xm - No Official Media
+ * xi - No Identification
+ * xa - No "Light Media" (Fanart, Cosplay, Clips, Official Media, Identification)
+ */
 [lang="xn"] .link.over18,
+[lang="xs"] .link.spoiler,
+[lang="xb"] .link.linkflair-news,
 [lang="xf"] .link.linkflair-fanart,
 [lang="xc"] .link.linkflair-cosplay,
-[lang="xd"] .link.linkflair-clip,
-[lang="xb"] .link.linkflair-fanart,
-[lang="xb"] .link.linkflair-cosplay,
-[lang="xa"] .link.over18,
+[lang="xd"] .link.linkflair-clips,
+[lang="xm"] .link.linkflair-official-media,
+[lang="xi"] .link.linkflair-identification,
+
 [lang="xa"] .link.linkflair-fanart,
 [lang="xa"] .link.linkflair-cosplay,
-[lang="xa"] .link.linkflair-clip {display: none}
-.linkflair-fanart .linkflairlabel,
-.linkflair-cosplay .linkflairlabel,
-.linkflair-clip .linkflairlabel, /* todo: why */
-.linkflair-wt .linkflairlabel,
-.linkflair-rewatch .linkflairlabel,
-.linkflair-discussion .linkflairlabel {display: none}
+[lang="xa"] .link.linkflair-clips,
+[lang="xa"] .link.linkflair-official-media,
+[lang="xa"] .link.linkflair-identification {display: none}
 
 /** Announcement banner **/
 .side .md blockquote:first-child {
@@ -1455,7 +1464,7 @@ html:not(:lang(en)) .side [href$="#w"] + strong::after {
 	width: 200px;
 	height: 65px;
 	box-shadow: inset 0 0 0 1px #BBB,0 2px 4px rgba(0,0,0,.2);
-    transition: .2s .15s;
+	transition: .2s .15s;
 }
 .side .md p:nth-last-of-type(2) strong {
 	position: absolute;
@@ -1496,7 +1505,7 @@ html:not(:lang(en)) .side [href$="#w"] + strong::after {
 .res-nightmode .side .md p:nth-last-of-type(2) strong {background-color: #445f7e!important}
 .res-nightmode .side .md p:nth-last-of-type(2):hover strong:after {background-color: #2b4665}
 
-/**
+/*
  * Dear future self,
  *
  * You're here either because Reddit made another DOM change that
