@@ -1126,7 +1126,7 @@ a[href*="/s?"]:active {
 	color: #3e5267 !important;
 	cursor: default;
 	transition: 200ms 350ms;
-	overflow: hidden !important;
+	overflow: visible !important;
 }
 .flair:before {
 	content: "";
