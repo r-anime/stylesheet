@@ -1123,13 +1123,14 @@ a[href*="/s?"]:active {
 	vertical-align: middle;
 	margin: 0 18px 0 4px;
 	padding: 0;
-	background-color: #f7f7f7;
-	border: 1px solid #6a9de6;
+	background-color: #f7f7f7 !important;
+	border: 1px solid #6a9de6 !important;
 	border-radius: 2px;
-	font-size: 0!important;
-	color: #3e5267;
+	font-size: 0 !important;
+	color: #3e5267 !important;
 	cursor: default;
-	transition: 200ms 350ms
+	transition: 200ms 350ms;
+	overflow: visible !important;
 }
 .flair:before {
 	content: "";
