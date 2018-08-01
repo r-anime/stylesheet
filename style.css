@@ -1240,12 +1240,6 @@ a[href*="/s?"]:active {
 [lang="xa"] .link.linkflair-fanart,
 [lang="xa"] .link.linkflair-cosplay,
 [lang="xa"] .link.linkflair-clip {display: none}
-.linkflair-fanart .linkflairlabel,
-.linkflair-cosplay .linkflairlabel,
-.linkflair-clip .linkflairlabel, /* todo: why */
-.linkflair-wt .linkflairlabel,
-.linkflair-rewatch .linkflairlabel,
-.linkflair-discussion .linkflairlabel {display: none}
 
 /** Announcement banner **/
 .side .md blockquote:first-child {
@@ -1449,7 +1443,7 @@ html:not(:lang(en)) .side [href$="#w"] + strong::after {
  * I can't think of a single case right now when it would be a good
  * idea to fix this system instead of rewriting it or just moving to
  * whatever the redesign has.
- * 
+ *
  * Also, it's probably at least 2013. Did you ever take that trip
  * to Iceland?
  */
