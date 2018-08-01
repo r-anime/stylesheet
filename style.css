@@ -1252,13 +1252,13 @@ a[href*="/s?"]:active {
 [lang="xc"] .link.linkflair-cosplay,
 [lang="xd"] .link.linkflair-clip,
 [lang="xm"] .link.linkflair-official-media,
-[lang="xi"] .link.linkflair-identification,
+[lang="xq"] .link.linkflair-question,
 
 [lang="xa"] .link.linkflair-fanart,
 [lang="xa"] .link.linkflair-cosplay,
 [lang="xa"] .link.linkflair-clip,
 [lang="xa"] .link.linkflair-official-media,
-[lang="xa"] .link.linkflair-identification {display: none}
+[lang="xa"] .link.linkflair-question {display: none}
 
 /** Announcement banner **/
 .side .md blockquote:first-child {
