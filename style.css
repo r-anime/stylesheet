@@ -868,10 +868,8 @@ body #progressIndicator {
 .linkflair-wt a.title:visited {color: #473c00!important}
 .linkflair-rewatch a.title:link {color: #09f!important}
 .linkflair-rewatch a.title:visited {color: #003d66!important}
-.linkflair-writing-club a.title:link,
-a[href*="/writing_club"].title:link {color: #E55A76 !important}
-.linkflair-writing-club a.title:visited,
-a[href*="/writing_club"].title:visited {color: #AF1C3A !important}
+.linkflair-writing-club a.title:link {color: #E55A76 !important}
+.linkflair-writing-club a.title:visited {color: #AF1C3A !important}
 
 /** Submit shit **/
 .submit-page>.content {
