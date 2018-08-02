@@ -1454,7 +1454,7 @@ html:not(:lang(en)) .side [href$="#w"] + strong::after {
 }
 .side .md p:nth-last-of-type(2):hover {
 	width: 200px;
-	height: 65px;
+	height: 365px;
 	box-shadow: inset 0 0 0 1px #BBB,0 2px 4px rgba(0,0,0,.2);
 	transition: .2s .15s;
 }
