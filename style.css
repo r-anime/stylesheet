@@ -556,7 +556,14 @@ span.multi-count {margin: 0!important}
 	box-shadow: none !important; /* mobile safari override, smh */
 	padding: 0 40px 0 10px;
 	line-height: 30px;
-	width: 300px;
+	margin-left: 45px;
+	width: 255px;
+	position: relative;
+	z-index: 0;
+	transition:
+		z-index 0s .2s,
+		margin-left .2s,
+		width .2s;
 }
 .res-nightmode #search input[type="text"] {
 	background: #2f2f2f!important;
@@ -566,7 +573,13 @@ span.multi-count {margin: 0!important}
 	border-color: #6a9de6;
 	outline: 0;
 	box-shadow: 0 0 3px #6a9de6;
+	width: 300px;
+	margin-left: 0;
 	z-index: 2;
+	transition:
+		z-index 0s 0s,
+		margin-left .2s,
+		width .2s;
 }
 #searchexpando {
 	margin-top: 10px;
@@ -845,28 +858,19 @@ body #progressIndicator {
 }
 
 /** Title colors **/
-a[href*="spoil"].title:link,
 .spoiler a.title:link {color: #cd0000!important}
-a[href*="spoil"].title:visited,
 .spoiler a.title:visited {color: #600!important}
-a[href*="fanart"].title:link,
-a[href*="fan_art"].title:link {color: #005900!important}
-a[href*="fanart"].title:visited,
-a[href*="fan_art"].title:visited {color: #003e00!important}
-.res-nightmode a[href*="fanart"].title:link,
-.res-nightmode a[href*="fan_art"].title:link {color: #019b00!important}
-.res-nightmode a[href*="fanart"].title:visited,
-.res-nightmode a[href*="fan_art"].title:visited {color: #347b34!important}
-a[href*="watch_this"].title:link,
-a[href*="/wt"].title:link {color: #b29600!important}
-a[href*="watch_this"].title:visited,
-a[href*="/wt"].title:visited {color: #473c00!important}
-a[href*="rewatch"].title:link,
-a[href*="re-watch"].title:link {color: #09f!important}
-a[href*="rewatch"].title:visited,
-a[href*="re-watch"].title:visited {color: #003d66!important}
-a[href*="/writing_club"].title:link {color: #E55A76 !important}
-a[href*="/writing_club"].title:visited {color: #AF1C3A !important}
+.linkflair-fanart a.title:link {color: #005900!important}
+.linkflair-fanart a.title:visited {color: #003e00!important}
+.res-nightmode .linkflair-fanart a.title:link {color: #019b00!important}
+.res-nightmode .linkflair-fanart a.title:visited {color: #347b34!important}
+.linkflair-wt a.title:link {color: #b29600!important}
+.linkflair-wt a.title:visited {color: #473c00!important}
+.linkflair-rewatch a.title:link {color: #09f!important}
+.linkflair-rewatch a.title:visited {color: #003d66!important}
+.linkflair-writing-club a.title:link {color: #E55A76 !important}
+.linkflair-writing-club a.title:visited {color: #AF1C3A !important}
+
 /** Submit shit **/
 .submit-page>.content {
 	margin: 0 auto;
@@ -1229,17 +1233,32 @@ a[href*="/s?"]:active {
 .linkflair-palered a.title:before { content: "[Finished] " }
 .linkflair-ongoing a.title:before { content: "[Ongoing] " }
 
-/** Post filter shit **/
+/*
+ * Post filter stuff
+ * xn - No NSFW
+ * xs - No Spoilers
+ * xb - No News
+ * xf - No Fanart
+ * xc - No Cosplay
+ * xd - No Clips
+ * xm - No Official Media
+ * xi - No Identification
+ * xa - No "Light Media" (Fanart, Cosplay, Clips, Official Media, Identification)
+ */
 [lang="xn"] .link.over18,
+[lang="xs"] .link.spoiler,
+[lang="xb"] .link.linkflair-news,
 [lang="xf"] .link.linkflair-fanart,
 [lang="xc"] .link.linkflair-cosplay,
 [lang="xd"] .link.linkflair-clip,
-[lang="xb"] .link.linkflair-fanart,
-[lang="xb"] .link.linkflair-cosplay,
-[lang="xa"] .link.over18,
+[lang="xm"] .link.linkflair-official-media,
+[lang="xq"] .link.linkflair-question,
+
 [lang="xa"] .link.linkflair-fanart,
 [lang="xa"] .link.linkflair-cosplay,
-[lang="xa"] .link.linkflair-clip {display: none}
+[lang="xa"] .link.linkflair-clip,
+[lang="xa"] .link.linkflair-official-media,
+[lang="xa"] .link.linkflair-question {display: none}
 
 /** Announcement banner **/
 .side .md blockquote:first-child {
@@ -1418,7 +1437,67 @@ html:not(:lang(en)) .side [href$="#w"] + strong::after {
 	border-color: #FFF
 }
 
-/**
+/* Filter dropdown */
+.side .md p:nth-last-of-type(2) {
+	position: absolute;
+	top: 125px;
+	margin: 0 -11px;
+	padding: 35px 0 0;
+	background: #FFF;
+	border-radius: 5px;
+	box-shadow: inset 0 0 0 1px #BBB;
+	width: 35px;
+	height: 0;
+	overflow: hidden;
+	transition: .2s 0s;
+	z-index:1;
+}
+.side .md p:nth-last-of-type(2):hover {
+	width: 200px;
+	height: 365px;
+	box-shadow: inset 0 0 0 1px #BBB,0 2px 4px rgba(0,0,0,.2);
+	transition: .2s .15s;
+}
+.side .md p:nth-last-of-type(2) strong {
+	position: absolute;
+	top: 0;
+	width: 130px;
+	padding: 0 35px;
+	background: #6a9de6;
+	line-height: 35px;
+	color: #FFF;
+	font-size: 18px;
+	font-weight: bold;
+	text-align: center;
+}
+.side .md p:nth-last-of-type(2) strong:after {
+	content: "";
+	position: absolute;
+	left: 0;
+	background: url(%%ui-elements%%) 70px 70px/128px;
+	width: 35px;
+	height: 35px;
+	transition: .2s;
+}
+.side .md p:nth-last-of-type(2):hover strong:after {background-color: #557eb8}
+.side .md p:nth-last-of-type(2) em,.side .md p:nth-last-of-type(2) a {
+	display: block;
+	line-height: 30px;
+	font-size: 16px;
+	text-align: center;
+}
+.side .md p:nth-last-of-type(2) em {
+	font-weight: bold;
+	font-style: normal;
+}
+.res-nightmode .side .md p:nth-last-of-type(2) {
+	background: #2f2f2f!important;
+	box-shadow: inset 0 0 0 1px #000;
+}
+.res-nightmode .side .md p:nth-last-of-type(2) strong {background-color: #445f7e!important}
+.res-nightmode .side .md p:nth-last-of-type(2):hover strong:after {background-color: #2b4665}
+
+/*
  * Dear future self,
  *
  * You're here either because Reddit made another DOM change that
