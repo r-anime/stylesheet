@@ -1188,7 +1188,19 @@ a[href*="/s?"]:active {
 /* Reset things for other flair */
 [class="flair flair-skip7"] {display: none}
 
-/** Mod use post flairs **/
+/** Post flairs **/
+.linkflairlabel {
+  vertical-align: middle;
+  border: none;
+  font-size: 12px;
+  text-align: center;
+  padding: 2px 6px;
+  position: relative;
+  top: -2px;
+  border-radius: 5px;
+  height: 16px;
+  line-height: 16px;
+}
 .linkflair-misleading .linkflairlabel {
 	color: #e02424!important;
 	font-weight: 900;
