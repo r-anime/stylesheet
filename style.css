@@ -62,13 +62,14 @@
 .author[href$="/Daniel_Is_I"]:before{content:"Daniel"}
 .author[href$="/Daniel_Is_I"]:after{font-weight: bold; color:#167a16; content: " Chart-sama "}
 .author[href$="/Daniel_Is_I"]{font-size:0}
+@keyframes spin{0%{transform:rotate(0deg)}50%{transform:rotate(180deg)}}
 .author[href$="/d0nkeh"]:after{content:"-sama"}
 .author[href$="/d0nkeh"]{color:brown;font-weight:bold;animation:spin 5s}
 .author[href$="/DancingQueen5961"]:after{content:" Good Smile Company"}
 .author[href$="/DragonsOnOurMountain"]:after{color:#E74C3C;content:" who has a few questions"}
 .author[href$="/DrJamesFox"]:after{color:#1e2237;content:" Ask me about K-on!"}
 .author[href$="/DrJWilson"]:after{color:#228B22;content:", PhD (Comfy Studies)"}
-.author[href$="/DrNyanpasu"]:after{color:#ff96ca;content:" loli-NEET"}@keyframes spin{0%{transform:rotate(0deg)}50%{transform:rotate(180deg)}}
+/*.author[href$="/DrNyanpasu"]:after{color:#ff96ca;content:" loli-NEET"}*/
 .author[href$="/Earth2Mars"]:after{color:#ff923f;content:" WAKE ME UP waaake me up insiiide"}
 .author[href$="/Earth2Mars"]:before{content:"Fanart Contest Winner! ";color:#00e6b8;background:url(%%ui-elements%%) 0 -115px/128px no-repeat; display:inline-block;height:13px;min-width:13px;margin-right:.3em;margin-Bottom:.2em;text-indent:-9999em;vertical-align:middle;white-space:nowrap}
 .author[href$="/Earth2Mars"]:hover:before{text-indent:17px}
