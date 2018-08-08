@@ -1205,22 +1205,22 @@ a[href*="/s?"]:active {
 }
 
 /* Colors pulled from redesign */
-.linkflair-discussion   .linkflairlabel {background: #7193FF}
-.linkflair-rewatch      .linkflairlabel {background: #0079D3}
-.linkflair-media        .linkflairlabel {background: #0AA18F}
-.linkflair-news         .linkflairlabel {background: #FF4500}
-.linkflair-video        .linkflairlabel {background: #CC3600}
-.linkflair-fanart       .linkflairlabel {background: #73AD34}
-.linkflair-cosplay      .linkflairlabel {background: #CC5289}
-.linkflair-wt           .linkflairlabel {background: #CCAC2B}
-.linkflair-writing      .linkflairlabel {background: #DDBD37}
-.linkflair-clip         .linkflairlabel {background: #00A6A5}
-.linkflair-satire       .linkflairlabel {background: #6B6031}
-.linkflair-question     .linkflairlabel {background: #9E8D49}
-.linkflair-contest      .linkflairlabel {background: #007373}
-.linkflair-misc         .linkflairlabel {background: #646D73}
-.linkflair-writing-club .linkflairlabel {background: #E55A76}
-.linkflair-episode      .linkflairlabel {background: #005BA1}
+.linkflair-discussion     .linkflairlabel {background: #7193FF}
+.linkflair-rewatch        .linkflairlabel {background: #0079D3}
+.linkflair-official-media .linkflairlabel {background: #0AA18F}
+.linkflair-news           .linkflairlabel {background: #FF4500}
+.linkflair-video          .linkflairlabel {background: #CC3600}
+.linkflair-fanart         .linkflairlabel {background: #73AD34}
+.linkflair-cosplay        .linkflairlabel {background: #CC5289}
+.linkflair-wt             .linkflairlabel {background: #CCAC2B}
+.linkflair-writing        .linkflairlabel {background: #DDBD37}
+.linkflair-clip           .linkflairlabel {background: #00A6A5}
+.linkflair-satire         .linkflairlabel {background: #6B6031}
+.linkflair-question       .linkflairlabel {background: #9E8D49}
+.linkflair-contest        .linkflairlabel {background: #007373}
+.linkflair-misc           .linkflairlabel {background: #646D73}
+.linkflair-writing-club   .linkflairlabel {background: #E55A76}
+.linkflair-episode        .linkflairlabel {background: #005BA1}
 
 /* "Misleading" flair - meant to be edited to make corrections to titles */
 .linkflair-misleading .linkflairlabel {
