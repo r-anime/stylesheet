@@ -1284,7 +1284,7 @@ a[href*="/s?"]:active {
  * xm - No Official Media
  * xq - No Questions
  * xr - No Recommendations
- * xa - No "Light Media" (Fanart, Cosplay, Clips, Official Media, questions, recommendations)
+ * xa - No "Light Media" (Fanart, Cosplay, Clips, Official Media, Questions, Recommendations)
  */
 :lang(xn) .link.over18,
 :lang(xs) .link.spoiler,
@@ -1537,7 +1537,7 @@ html:not(:lang(en)) .side [href$="#w"] + strong::after {
 }
 .side .md p:nth-last-of-type(2):hover {
 	width: 200px;
-	height: 815px;
+	height: 870px;
 	box-shadow: inset 0 0 0 1px #BBB,0 2px 4px rgba(0,0,0,.2);
 	transition: .2s .15s;
 }
