@@ -1279,8 +1279,9 @@ a[href*="/s?"]:active {
  * xc - No Cosplay
  * xd - No Clips
  * xm - No Official Media
- * xi - No Identification
- * xa - No "Light Media" (Fanart, Cosplay, Clips, Official Media, Identification)
+ * xq - No Questions
+ * xr - No Recommendations
+ * xa - No "Light Media" (Fanart, Cosplay, Clips, Official Media, questions, recommendations)
  */
 :lang(xn) .link.over18,
 :lang(xs) .link.spoiler,
@@ -1290,11 +1291,13 @@ a[href*="/s?"]:active {
 :lang(xd) .link.linkflair-clip,
 :lang(xm) .link.linkflair-official-media,
 :lang(xq) .link.linkflair-question,
+:lang(xr) .link.linkflair-recommendation,
 
 :lang(xa) .link.linkflair-fanart,
 :lang(xa) .link.linkflair-cosplay,
 :lang(xa) .link.linkflair-clip,
 :lang(xa) .link.linkflair-official-media,
+:lang(xa) .link.linkflair-recommendation,
 :lang(xa) .link.linkflair-question {display: none}
 
 /** Announcement banner **/
