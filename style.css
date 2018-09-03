@@ -1222,6 +1222,8 @@ a[href*="/s?"]:active {
 .linkflair-misc           .linkflairlabel {background: #646D73}
 .linkflair-writing-club   .linkflairlabel {background: #E55A76}
 .linkflair-episode        .linkflairlabel {background: #005BA1}
+.linkflair-weekly         .linkflairlabel {background: #FF56CC}
+.linkflair-reccomendation .linkflairlabel {background: #373C3F}
 
 /* "Misleading" flair - meant to be edited to make corrections to titles */
 .linkflair-misleading .linkflairlabel {
