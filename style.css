@@ -119,7 +119,8 @@
 .author[href$="/Lanth"]:after{content:" likes shounen-ai"}
 .author[href$="/LordTakuro"]:after{color:#ff7feb;content:" is a Hero"}@keyframes color-change{0%{color:#ff69b4}50%{color:white}100%{color:#ff69b4}}
 .author[href$="/lukeatlook"]:after{color:#00e500;content:"atthisflowchart"}
-.author[href$="/Mage_of_Shadows"]:after{color:#e8a394;content:" gets the reference"}
+.author[href$="/Mage_of_Shadows"]:not(.moderator):after{color:#e8a394;content:" gets the reference"}
+.author[href$="/Mage_of_Shadows"].moderator:before{color:#8A0408;content:"Adbanture Time with "}
 .author[href$="/MissyPie"]:after{color:#ffb6c1;content:" *:・ﾟ✧*:・ﾟ✧"}
 .author[href$="/MissyPie"]:before{color:#ffb6c1;content:"(ﾉ·ヮ·)ﾉ*:・ﾟ✧ "}
 .author[href$="/MissyPie"]{color:#ff69b4;font-weight:bold;animation:color-change 9s}
