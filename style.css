@@ -120,7 +120,10 @@
 .author[href$="/LordTakuro"]:after{color:#ff7feb;content:" is a Hero"}@keyframes color-change{0%{color:#ff69b4}50%{color:white}100%{color:#ff69b4}}
 .author[href$="/lukeatlook"]:after{color:#00e500;content:"atthisflowchart"}
 .author[href$="/Mage_of_Shadows"]:not(.moderator):after{color:#e8a394;content:" gets the reference"}
-.author[href$="/Mage_of_Shadows"].moderator:before{color:#8A0408;content:"Adbanture Time with "}
+.author[href$="/Mage_of_Shadows"].moderator:before{content:"Mage"}
+.author[href$="/Mage_of_Shadows"].moderator:after{content:"_of_shadows"}
+.author[href$="/Mage_of_Shadows"].moderator:hover:after{opacity:0;transition: 0.3s}
+.author[href$="/Mage_of_Shadows"].moderator{font-size:0}
 .author[href$="/MissyPie"]:after{color:#ffb6c1;content:" *:・ﾟ✧*:・ﾟ✧"}
 .author[href$="/MissyPie"]:before{color:#ffb6c1;content:"(ﾉ·ヮ·)ﾉ*:・ﾟ✧ "}
 .author[href$="/MissyPie"]{color:#ff69b4;font-weight:bold;animation:color-change 9s}
