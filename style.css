@@ -2081,6 +2081,7 @@ to{background-position:0 0}}
 .md [href$="#heart-thumbs-up"]{width:79px;height:100px;background-position:0 -2108px}
 .md [href$="#wow-really"]{width:80px;height:85px;background-position:0 -2208px}
 .md [href$="#mugistronk"]{width:145px;height:150px;background-position:0 -2293px}
+.md [href$="#lesbians"](width:180px;height:101px;background-position:0 -2442px}
 .md [href$="#gendo-pls"],
 .md [href$="#k-on-hug"],
 .md [href$="#lewd"],
@@ -2104,7 +2105,8 @@ to{background-position:0 0}}
 .md [href$="#shock"],
 .md [href$="#heart-thumbs-up"],
 .md [href$="#wow-really"],
-.md [href$="#mugistronk"]{
+.md [href$="#mugistronk"],
+.md [href$="#lesbians"]{
 	background-image:url(%%oldsheet%%)
 }
 
