@@ -864,7 +864,8 @@ body #progressIndicator {
 }
 
 /** Title colors **/
-.spoiler a.title:link {color: #cd0000!important}
+.spoiler a.title:link {color: #cd0000}
+.res-nightmode .spoiler a.title:link {color: red}
 .spoiler a.title:visited {color: #600!important}
 .linkflair-fanart a.title:link {color: #005900!important}
 .linkflair-fanart a.title:visited {color: #003e00!important}
