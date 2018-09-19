@@ -1794,6 +1794,10 @@ to{background-position:0 0}}
 to{background-position:0 0}}
 .md [href$="#hyoukawink"]{height:120px;width:191px;background:url(%%SoloSheet%%) -0px -1342px no-repeat}
 .md [href$="#hyoukawink"]:hover{animation:hyoukawink 1.8s steps(11);animation-fill-mode:forwards}
+@keyframes hyoukanod{from{background-position:0 -1342px}
+to{background-position:0 0}}
+.md [href$="#hyoukanod"]{height:120px;width:191px;background:url(%%SoloSheet%%) -0px -1342px no-repeat}
+.md [href$="#hyoukanod"]:hover{animation:hyoukanod 1.8s steps(11);animation-fill-mode:forwards}
 @keyframes yousaidsomethingdumb{from{background-position:0 -8847px}
 to{background-position:0 -3604px}}
 .md [href$="#yousaidsomethingdumb"]{height:105px;width:191px;background:url(%%SoloSheet%%) -0px -8847px no-repeat}
