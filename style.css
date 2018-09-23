@@ -243,6 +243,9 @@
 	padding-right: 122px;
 	text-indent: 17px;
 }
+/* Comment authors' names are bold, so we need more space */
+.comment .author[href$="/SteamyTomato"]:hover:after,
+.comment .author[href$="/Earth2Mars"]:hover:before {padding-right: 136px}
 .author[href$="/Earth2Mars"]:before {color: #00E6B8}
 
 /** customization stuff **/
