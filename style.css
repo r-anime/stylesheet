@@ -51,8 +51,6 @@
 .author[href$="/Buttered_Toast_1"]:after{color:#b20047;content:" l'artiste"}
 .author[href$="/cdsboy"]:after{color:#f00000!important;content:" doesn't read the subreddit"}
 .author[href$="/Chariotwheel"]:before{color:#ff8894;content:"Shiny "}
-.author[href$="/cheesewoo"]:after{content:' Fanart Contest Winner!';color:#ffb973;background:url(%%ui-elements%%) 0 -115px/128px no-repeat;display:inline-block;height:13px;min-width:13px;margin-left:.3em;margin-Bottom:.2em;text-indent:-9999em;vertical-align:middle;white-space:nowrap}
-.author[href$="/cheesewoo"]:hover:after{text-indent:17px}
 .author[href$="/chickenwinger"]:after{content:" treads lightly"}
 .author[href$="/Classyfish"]:after{content:" Steals Art to Karmawhore"}
 .author[href$="/Cottonteeth"]:after{content:" ;_;"}
@@ -219,6 +217,7 @@
 
 /** Fanart contest flairs **/
 .author[href$="/SteamyTomato"]:after,
+.author[href$="/cheesewoo"]:after,
 .author[href$="/Earth2Mars"]:before {
 	/*
 	 * Hack: In order to clip the spritesheet to only the part we need, we use
@@ -239,14 +238,18 @@
 	white-space: nowrap;
 }
 .author[href$="/SteamyTomato"]:hover:after,
+.author[href$="/cheesewoo"]:hover:after,
 .author[href$="/Earth2Mars"]:hover:before {
 	padding-right: 122px;
 	text-indent: 17px;
 }
 /* Comment authors' names are bold, so we need more space */
 .comment .author[href$="/SteamyTomato"]:hover:after,
+.comment .author[href$="/cheesewoo"]:hover:after,
 .comment .author[href$="/Earth2Mars"]:hover:before {padding-right: 136px}
+/* Custom colors */
 .author[href$="/Earth2Mars"]:before {color: #00E6B8}
+.author[href$="/cheesewoo"]:after {color: #ffb973}
 
 /** customization stuff **/
 .titlebox .number:before {content: ""}
