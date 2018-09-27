@@ -1488,6 +1488,8 @@ html:not(:lang(en)) .side [href$="#w"] + strong::after {
   text-decoration: underline;
 }
 
+/*Watch Macross btw*/
+.RESMacroDropdownTitle: before{content:"Super Dimension Fortress "}
 
 /** all the nightmode **/
 .res-nightmode #header-img-a:after {
@@ -1646,6 +1648,9 @@ html:not(:lang(en)) .side [href$="#w"] + strong::after {
  * to Iceland?
  */
 
+/*
+* r u ok?
+*/
 .md [href^="#"],
 [href*="?utm_"][href*="#"] {
 	display: inline-block;
