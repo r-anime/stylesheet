@@ -1489,7 +1489,7 @@ html:not(:lang(en)) .side [href$="#w"] + strong::after {
 }
 
 /*Watch Macross btw*/
-.RESMacroDropdownTitle: before{content:"Super Dimension Fortress "}
+/*.RESMacroDropdownTitle: before{content:"Super Dimension Fortress "} */
 
 /** all the nightmode **/
 .res-nightmode #header-img-a:after {
