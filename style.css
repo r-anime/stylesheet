@@ -752,6 +752,7 @@ body>.content .spacer {margin: 0}
 .organic-listing .link.promotedlink {padding: 5px 10px 5px 15px}
 .organic-listing .sponsored-tagline {margin: 5px 0}
 .promotedlink .thumbnail {border-radius: 5px}
+.gold-accent.comment-visits-box {display: block}
 .comment .midcol {
 	margin: 0;
 	padding: 0;
