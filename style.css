@@ -253,9 +253,9 @@
 
 /** customization stuff **/
 .titlebox .number:before {content: ""}
-.titlebox .number:after {content: " citizens in space"}
+.titlebox .number:after {content: " waiting for a quest"}
 .titlebox .users-online span.number:before {content: " "}
-.titlebox .users-online span.number:after {content: " employees of Technora's Space Debris Section"}
+.titlebox .users-online span.number:after {content: " analysing Goblin Slayer"}
 .subscribers {display: block;}
 
 /**** STOP EDITING HERE ****/
