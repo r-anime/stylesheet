@@ -253,9 +253,9 @@
 
 /** customization stuff **/
 .titlebox .number:before {content: ""}
-.titlebox .number:after {content: " waiting for a quest"}
+.titlebox .number:after {content: " awaiting a guild quest"}
 .titlebox .users-online span.number:before {content: " "}
-.titlebox .users-online span.number:after {content: " analysing Goblin Slayer"}
+.titlebox .users-online span.number:after {content: " professionally analysing Goblin Slayer"}
 .subscribers {display: block;}
 
 /**** STOP EDITING HERE ****/
