@@ -253,9 +253,9 @@
 
 /** customization stuff **/
 .titlebox .number:before {content: ""}
-.titlebox .number:after {content: " awaiting a guild quest"}
+.titlebox .number:after {content: " Shots Taken"}
 .titlebox .users-online span.number:before {content: " "}
-.titlebox .users-online span.number:after {content: " professionally analysing Goblin Slayer"}
+.titlebox .users-online span.number:after {content: " Part of Goblin Slayer Thread Drinking Game"}
 .subscribers {display: block;}
 
 /**** STOP EDITING HERE ****/
