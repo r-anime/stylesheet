@@ -121,6 +121,8 @@
 .author[href$="/Mage_of_Shadows"].moderator:after{content:"_of_Shadows"}
 .author[href$="/Mage_of_Shadows"].moderator:hover:after{opacity:0;transition: 0.5s}
 .author[href$="/Mage_of_Shadows"].moderator{font-size:0}
+.author[href$="/MetaThPr4h"]{color:#E4B400}
+.author[href$="/MetaThPr4h"]:after{color:#EC768C;content:" です"}
 .author[href$="/MissyPie"]:after{color:#ffb6c1;content:" *:・ﾟ✧*:・ﾟ✧"}
 .author[href$="/MissyPie"]:before{color:#ffb6c1;content:"(ﾉ·ヮ·)ﾉ*:・ﾟ✧ "}
 .author[href$="/MissyPie"]{color:#ff69b4;font-weight:bold;animation:color-change 9s}
