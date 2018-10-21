@@ -1652,7 +1652,7 @@ html:not(:lang(en)) .side [href$="#w"] + strong::after {
  */
 
 .md [href^="#"],
-.md [href*="?utm_"][href*="#"] {
+[href*="?utm_"][href*="#"] {
 	display: inline-block;
 	position: relative;
 	background-image: url("%%brokencommentface%%");
@@ -1661,7 +1661,7 @@ html:not(:lang(en)) .side [href$="#w"] + strong::after {
 	overflow: hidden;
 }
 .md [href^="#"]:not([href="#s"]),
-.md [href*="?utm_"][href*="#"]:not([href$="#s"]){
+[href*="?utm_"][href*="#"]:not([href$="#s"]){
 	text-align: center;
 	font-family: arial,sans-serif;
 	font-size: 18px;
@@ -1670,15 +1670,15 @@ html:not(:lang(en)) .side [href$="#w"] + strong::after {
 	cursor: default;
 }
 .md [href^="#"]:hover,
-.md [href*="?utm_"][href*="#"]:hover {
+[href*="?utm_"][href*="#"]:hover {
 	color: white;
 }
 .md [href^="#"]:active,
-.md [href*="?utm_"][href*="#"]:active {
+[href*="?utm_"][href*="#"]:active {
 	pointer-events: none;
 }
 .md [href^="#"]:not([href="#s"]) > strong,
-.md [href*="?utm_"][href*="#"]:not([href$="#s"]) > strong {
+[href*="?utm_"][href*="#"]:not([href$="#s"]) > strong {
 	display: block;
 	width: 100%;
 	position: absolute;
