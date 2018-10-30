@@ -255,9 +255,9 @@
 
 /** customization stuff **/
 .titlebox .number:before {content: ""}
-.titlebox .number:after {content: " Aboard the SDF-1 Macross"}
+.titlebox .number:after {content: " weeaBOOs"}
 .titlebox .users-online span.number:before {content: " "}
-.titlebox .users-online span.number:after {content: " exclaiming their Deculture"}
+.titlebox .users-online span.number:after {content: " disguising cosplay as Halloween costumes"}
 .subscribers {display: block;}
 
 /**** STOP EDITING HERE ****/
