@@ -362,7 +362,7 @@ body>.content,
 }
 #sr-header-area .drop-choices {
 	border: 0;
-	background: #fc8c1b !important;
+	background: #557EB8  !important;
 }
 html #sr-header-area a.RESShortcutsCurrentSub {
 	color: inherit!important;
@@ -807,10 +807,10 @@ body>.content .spacer {margin: 0}
     color: #B7B7B7;
 }
 .comment .expand:hover:before {
-    border-left: 1px solid #ffa941;
+    border-left: 1px solid #6A9DE6;
 }
 .comment .expand:hover:after {
-    color: #ffa941;
+    color: #6A9DE6;
 }
 .comment.collapsed .expand:after { content: "[+]" }
 .comment.collapsed .expand { bottom: 20px }
@@ -1459,7 +1459,7 @@ html:not(:lang(en)) .side [href$="#w"] + strong::after {
   padding-right: 9px;
   font-weight: bold;
   line-height: 20px;
-  background: #ffa941;
+  background: #6A9DE6;
   position: relative;
   top: 0;
   line-height: 18px;
