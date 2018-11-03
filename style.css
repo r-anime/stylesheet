@@ -137,6 +137,7 @@
 .author[href$="/NotTheRealMorty"].moderator:after{Content:"NTRMorty";font-weight:bold}
 .author[href$="/NotTheRealMorty"].moderator{font-size:0}
 .author[href$="/Obviouslynotafaggot"]:after{content:" ヽ( ﾟヮﾟ)ﾉ"}
+.author[href$="/PandavengerX"]:before{color:#ffe135;content:"99th Generation, "}
 .author[href$="/peaceshot"]:after{content:" - 01 OVA"}
 .author[href$="/peaceshot"]:before{content:"[Mori] "}
 .author[href$="/peaceshot"]{color:#a300df}
