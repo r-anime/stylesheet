@@ -256,9 +256,9 @@
 
 /** customization stuff **/
 .titlebox .number:before {content: ""}
-.titlebox .number:after {content: " weeaBOOs"}
+.titlebox .number:after {content: " Super Peace Busters"}
 .titlebox .users-online span.number:before {content: " "}
-.titlebox .users-online span.number:after {content: " disguising cosplay as Halloween costumes"}
+.titlebox .users-online span.number:after {content: " searching for the flower they saw that day"}
 .subscribers {display: block;}
 
 /**** STOP EDITING HERE ****/
