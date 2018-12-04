@@ -257,9 +257,9 @@
 
 /** customization stuff **/
 .titlebox .number:before {content: ""}
-.titlebox .number:after {content: " Super Peace Busters"}
+.titlebox .number:after {content: " Spying on the Other Side of the Wall"}
 .titlebox .users-online span.number:before {content: " "}
-.titlebox .users-online span.number:after {content: " searching for the flower they saw that day"}
+.titlebox .users-online span.number:after {content: " Bullying Beatrice"}
 .subscribers {display: block;}
 
 /**** STOP EDITING HERE ****/
