@@ -257,9 +257,9 @@
 
 /** customization stuff **/
 .titlebox .number:before {content: ""}
-.titlebox .number:after {content: " Key Animations drawn by Musashino Animation"}
+.titlebox .number:after {content: " Frames Drawn by Musashino Animation"}
 .titlebox .users-online span.number:before {content: " "}
-.titlebox .users-online span.number:after {content: " Sets of The Third Girls Aerial Squad sold"}
+.titlebox .users-online span.number:after {content: " Sets of Exodus! sold"}
 .subscribers {display: block;}
 
 /**** STOP EDITING HERE ****/
