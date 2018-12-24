@@ -884,7 +884,7 @@ body #progressIndicator {
 .thumbnail[href*="spoiler"],
 .thumbnail.spoiler {background: 0 -630px}
 .thumbnail[href*="spoiler"][href*="episode"],
-[data-author="Holo_of_Yoitsu"] .thumbnail {background: 0 -70px}
+[data-author="AutoLovepon"] .thumbnail {background: 0 -70px}
 .thumbnail[href*="rewatch"] {background: 0 -420px} /* blaze it lmao */
 .thumbnail.nsfw {background: 0 -280px}
 [data-author="AutoModerator"] .thumbnail {background: 0 -770px}
