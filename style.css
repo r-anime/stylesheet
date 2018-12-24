@@ -1396,6 +1396,7 @@ a[href*="/s?"]:active {
 	cursor: pointer;
 	left: 445px;
 }
+.pinHeader-header .side [href*="#d#"] + strong {position: fixed} /* RES BetteReddit Pinned Header support */
 .side [href*="#d#"] + strong:hover {
     transition: .2s .15s;
     height: 470px;
