@@ -102,6 +102,7 @@
 .author[href$="/ImVoi"].moderator:before{content:"Voi";color:#000}
 .author[href$="/ImVoi"]{font-size:0;font-weight:Bold}
 .author[href$="/jake_j_jung"]:after{color:#8A2BE2;content:" Translator (Verified)"}
+.author[href$="/jiecut"]:after{color:#d20808;content:" you to pieces"}
 .author[href$="/JTricks"]:before{content:"JToronto"}
 .author[href$="/JTricks"]:after{font-weight: bold; color: #ff2e2e; content: " is Best Girl of Canada "}
 .author[href$="/JTricks"]{font-size:0}
@@ -114,6 +115,7 @@
 .author[href$="/Lanth"]:after{content:" likes shounen-ai"}
 .author[href$="/LordTakuro"]:after{color:#ff7feb;content:" is a Hero"}@keyframes color-change{0%{color:#ff69b4}50%{color:white}100%{color:#ff69b4}}
 .author[href$="/lukeatlook"]:after{color:#00e500;content:"atthisflowchart"}
+.author[href$="/MAD_SCIENTIST_001"]:before{color:#8d8d8d;content:"Lab Member Codename: "}
 .author[href$="/Mage_of_Shadows"]:not(.moderator):after{color:#e8a394;content:" gets the reference"}
 .author[href$="/Mage_of_Shadows"].moderator:before{content:"Mage"}
 .author[href$="/Mage_of_Shadows"].moderator:after{content:"_of_Shadows"}
@@ -129,6 +131,7 @@
 .author[href$="/Namrhof"]:after{color:#f0f;content:" please respond."}
 .author[href$="/Nankaina"]:after{color:#f00000;content:" ~crazy scotsman"}
 .author[href$="/neito"]:after{color:#f3c!important;content:" You Are Responsible for What You Have Tamed"}
+.author[href$="/notathrowaway75"]:before{content:"...76...77..."}
 .author[href$="/NotTheRealMorty"]:not(.moderator){font-size: 0}
 .author[href$="/NotTheRealMorty"]:not(.moderator):before{content: "NTRMorty"}
 .author[href$="/NotTheRealMorty"]:not(.moderator):after{color:#ff8000;font-weight: bold; content:" Shinobu Best Character 2017 "}
