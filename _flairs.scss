@@ -42,6 +42,7 @@
 .author[href$="/Berzerker7"]:after{content:" has the best taste"}
 .author[href$="/biggyh"]:after{color:#f59719;content:" Viewster Brand + Social Manager"}
 .author[href$="/Buttered_Toast_1"]:after{color:#b20047;content:" l'artiste"}
+.author[href$="/cdsboy"]:afrter{color:#f00000!important;content:" doesn't read the subreddit"}
 .author[href$="/Chariotwheel"]:before{color:#ff8894;content:"Shiny "}
 .author[href$="/Cottonteeth"]:after{content:" ;_;"}
 .author[href$="/cptn_garlock"]:after{color:#45539e;content:" went down with his ship"}
@@ -110,7 +111,7 @@
 .author[href$="/NotTheRealMorty"]:not(.moderator){font-size: 0}
 .author[href$="/NotTheRealMorty"]:not(.moderator):before{content: "NTRMorty"}
 .author[href$="/NotTheRealMorty"]:not(.moderator):after{color:#ff8000;font-weight: bold; content:" Shinobu Best Character 2017 "}
-.author[href$="/NotTheRealMorty"].moderator:after{Content:"NTRMorty";font-weight:bold}
+.author[href$="/NotTheRealMorty"].moderator:after{content:"NTRMorty";font-weight:bold}
 .author[href$="/NotTheRealMorty"].moderator{font-size:0}
 .author[href$="/Obviouslynotafaggot"]:after{content:" ヽ( ﾟヮﾟ)ﾉ"}
 .author[href$="/PandavengerX"]:before{color:#ffe135;content:"99th Generation, "}
@@ -157,6 +158,9 @@
 .author[href$="/Thrasher439"]:after{color:#118570;content:" the Third!"}
 .author[href$="/Thrasher439"]:before{color:#000000;content:"Thrasher"}
 .author[href$="/Thrasher439"]{font-size:0}
+.author[href$="/tl-notes"]:after{content:": keikaku means plan)"}
+.author[href$="/tl-notes"]:before{content:"("}
+.author[href$="/tl-notes"]{text-shadow:-1px -1px #000,0 -1px #000,1px -1px #000,0 1px #000,1px 0 #000,-1px 0 #000,-1px 1px #000,1px 1px #000;color:#e6cfa3!important}
 .author[href$="/Tora_the_Tiger"]:before,
 .author[href$="/tundranocaps"]:after{color:#f3c;content:" watches you everywhere"}
 .author[href$="/twoduy"]:after{color:#ff69b4;content:" Professor in Moeology"}
