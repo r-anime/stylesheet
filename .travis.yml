@@ -13,7 +13,7 @@ install:
 # The Sass part is the actual build
 # Since Reddit doesn't accept @charset, we have to strip it out
 script:
-- sass main.scss style.css && sed -i /@charset/d" style.css
+- sass main.scss style.css && sed -i "/@charset/d" style.css
 
 deploy:
 # Updates on master go to /r/anime
