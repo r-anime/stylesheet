@@ -34,7 +34,7 @@ stylesheet_file = open(os.path.join(os.getcwd(), "style.css"), "r")
 stylesheet = compress(stylesheet_file.read()) # minify
 # stylesheet = stylesheet_file.read() # don't minify
 stylesheet_file.close()
-print("Got and minified stylesheet.")
+print("Got and minified stylesheet. Length={}".format(len(stylesheet)))
 
 # Push the stylesheet to the subreddit
 print("Writing stylesheet to /r/{}".format(sub_name))
