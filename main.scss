@@ -5,6 +5,10 @@
  * public domain
  */
 
-@import "src/everything";
+// @import "src/everything";
 @import "flairs";
 @import "subcount";
+
+body {
+	background: red;
+}
