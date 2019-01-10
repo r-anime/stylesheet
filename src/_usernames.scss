@@ -1,0 +1,22 @@
+// Custom colors for user roles
+a.author.submitter {color: #064dc0}
+a.author.moderator {color: #5dab00}
+
+// Common styles for making user "flairs" work
+.author {
+	display: inline-block;
+	margin-right: 0
+}
+.author + * {margin-left: .5em} // Extra spacing for
+.author::before,
+.author::after {font-size: small}
+.tagline .author::before,
+.tagline .author::after,
+.bottom .author::before,
+.bottom .author::after,
+.parent .author::before,
+.parent .author::after {font-size: x-small}
+.author.moderator:before,
+.author.moderator:after,
+.author.submitter:before,
+.author.submitter:after {color: inherit}
