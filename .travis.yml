@@ -3,15 +3,17 @@ language: python
 python:
 - '3.6'
 
-# The Sass part is the actual build
-# or might be... eventually...
+# TODO: ruby sass is deprecated, probably switch to the npm version since that's
+# easy to install and still supported i think
 install:
 - rvm install 2.4.1
 - gem install sass
 - pip install -r .update/requirements.txt
 
+# The Sass part is the actual build
+# Since Reddit doesn't accept @charset, we have to strip it out
 script:
-- sass main.scss style.css
+- sass main.scss | sed "/@charset/d" > style.css
 
 deploy:
 # Updates on master go to /r/anime
