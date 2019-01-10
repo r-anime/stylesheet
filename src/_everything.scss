@@ -34,24 +34,6 @@ body>.content,
 .res-nightmode body,
 .res-nightmode body>.content {background: #2f2f2f!important}
 
-/** User title maintenance **/
-.author {
-	display: inline-block;
-	margin-right: 0
-}
-.author+* {margin-left: .5em}
-.author::before,
-.author::after {font-size: small}
-.tagline .author::before,
-.tagline .author::after,
-.bottom .author::before,
-.bottom .author::after,
-.parent .author::before,
-.parent .author::after {font-size: x-small}
-.author.moderator:before,
-.author.moderator:after,
-.author.submitter:before,
-.author.submitter:after {color: inherit}
 
 /** Page header **/
 #header {
@@ -821,9 +803,6 @@ body #progressIndicator {
 .tagline a:hover {color: #244573}
 .res-nightmode .md a:hover,
 .res-nightmode .tagline a:hover {color: #b8d0e8}
-/* Special user colors */
-a.author.submitter {color: #064dc0}
-a.author.moderator {color: #5dab00}
 
 /* Sidebar markdown headings */
 .side .md h1 {
