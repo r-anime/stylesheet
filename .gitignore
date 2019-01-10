@@ -6,3 +6,5 @@ Desktop.ini
 .sass-cache
 style.css
 style.css.map
+# IDE stuff
+.idea
