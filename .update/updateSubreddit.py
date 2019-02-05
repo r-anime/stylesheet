@@ -8,6 +8,7 @@ client_id = os.environ['REDDIT_CLIENT_ID']
 client_secret = os.environ['REDDIT_CLIENT_SECRET']
 username = os.environ['REDDIT_USERNAME']
 password = os.environ['REDDIT_PASSWORD']
+redirect_uri = os.environ['REDDIT_REDIRECT_URI']
 try:
     sub_name = sys.argv[1]
 except Exception:
@@ -26,6 +27,7 @@ r = praw.Reddit(
     client_secret=client_secret,
     username=username,
     password=password,
+    redirect_uri=redirect_uri,
     user_agent="script:geo1088/reddit-stylesheet-sync:v1.0 (written by /u/geo1088; run by /u/{})".format(username))
 try:
     print("Logged into Reddit as /u/{}".format(r.user.me().name))
