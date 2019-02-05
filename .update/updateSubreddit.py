@@ -27,7 +27,12 @@ r = praw.Reddit(
     username=username,
     password=password,
     user_agent="script:geo1088/reddit-stylesheet-sync:v1.0 (written by /u/geo1088; run by /u/{})".format(username))
-print("Logged into Reddit as /u/{}".format(username))
+try:
+    print("Logged into Reddit as /u/{}".format(r.user.me().name))
+except Exception as e:
+    print(f"Failed to log in as /u/{username}:")
+    print(e)
+    exit(1)
 
 # Read stylesheet and minify it
 stylesheet_file = open(os.path.join(os.getcwd(), "style.css"), "r")
@@ -46,7 +51,8 @@ try:
     sub.wiki['config/stylesheet'].edit(stylesheet, edit_msg)
 except Exception as e:
     print("Ran into an error while uploading stylesheet; aborting.")
-    raise e
+    print(e)
+    exit(1)
 
 print("That's a wrap")
 
