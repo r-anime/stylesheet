@@ -1386,7 +1386,7 @@ html:not(:lang(en)) .side [href$="#w"] + strong::after {
 	height: 152px;
 	overflow: hidden;
 }
-.md [href^="#"][href*="reddit.com/r/anime"]:not([href="#s"]),
+.md [href^="#"]:not([href="#s"]),
 [href*="?utm_"][href*="#"][href*="reddit.com/r/anime"]:not([href$="#s"]){
 	text-align: center;
 	font-family: arial,sans-serif;
@@ -1395,15 +1395,15 @@ html:not(:lang(en)) .side [href$="#w"] + strong::after {
 	text-shadow: 1px 1px #000,1px -1px #000,-1px 1px #000,-1px -1px #000,0 1px #000,0 -1px #000,1px 0 #000,-1px 0 #000;
 	cursor: default;
 }
-.md [href^="#"][href*="reddit.com/r/anime"]:hover,
+.md [href^="#"]:hover,
 [href*="?utm_"][href*="#"][href*="reddit.com/r/anime"]:hover {
 	color: white;
 }
-.md [href^="#"][href*="reddit.com/r/anime"]:active,
+.md [href^="#"]:active,
 [href*="?utm_"][href*="#"][href*="reddit.com/r/anime"]:active {
 	pointer-events: none;
 }
-.md [href^="#"][href*="reddit.com/r/anime"]:not([href="#s"]) > strong,
+.md [href^="#"]:not([href="#s"]) > strong,
 [href*="?utm_"][href*="#"][href*="reddit.com/r/anime"]:not([href$="#s"]) > strong {
 	display: block;
 	width: 100%;
