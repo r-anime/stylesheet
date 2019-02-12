@@ -1412,7 +1412,7 @@ html:not(:lang(en)) .side [href$="#w"] + strong::after {
 	font-weight: inherit
 }
 // Specific things to override
-.md [href="#"],
+.md [href$="#"],
 .md [href^="#!"],
 .md [href^="#res:"],
 .md [href^="#/"],
