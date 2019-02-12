@@ -1378,7 +1378,7 @@ html:not(:lang(en)) .side [href$="#w"] + strong::after {
  */
 
 .md [href^="#"],
-[href*="?utm_"][href*="#"] {
+[href*="?utm_"][href*="#"][href*="reddit.com/r/anime"] {
 	display: inline-block;
 	position: relative;
 	background-image: url("%%brokencommentface%%");
@@ -1386,8 +1386,8 @@ html:not(:lang(en)) .side [href$="#w"] + strong::after {
 	height: 152px;
 	overflow: hidden;
 }
-.md [href^="#"]:not([href="#s"]),
-[href*="?utm_"][href*="#"]:not([href$="#s"]){
+.md [href^="#"][href*="reddit.com/r/anime"]:not([href="#s"]),
+[href*="?utm_"][href*="#"][href*="reddit.com/r/anime"]:not([href$="#s"]){
 	text-align: center;
 	font-family: arial,sans-serif;
 	font-size: 18px;
@@ -1395,22 +1395,23 @@ html:not(:lang(en)) .side [href$="#w"] + strong::after {
 	text-shadow: 1px 1px #000,1px -1px #000,-1px 1px #000,-1px -1px #000,0 1px #000,0 -1px #000,1px 0 #000,-1px 0 #000;
 	cursor: default;
 }
-.md [href^="#"]:hover,
-[href*="?utm_"][href*="#"]:hover {
+.md [href^="#"][href*="reddit.com/r/anime"]:hover,
+[href*="?utm_"][href*="#"][href*="reddit.com/r/anime"]:hover {
 	color: white;
 }
-.md [href^="#"]:active,
-[href*="?utm_"][href*="#"]:active {
+.md [href^="#"][href*="reddit.com/r/anime"]:active,
+[href*="?utm_"][href*="#"][href*="reddit.com/r/anime"]:active {
 	pointer-events: none;
 }
-.md [href^="#"]:not([href="#s"]) > strong,
-[href*="?utm_"][href*="#"]:not([href$="#s"]) > strong {
+.md [href^="#"][href*="reddit.com/r/anime"]:not([href="#s"]) > strong,
+[href*="?utm_"][href*="#"][href*="reddit.com/r/anime"]:not([href$="#s"]) > strong {
 	display: block;
 	width: 100%;
 	position: absolute;
 	bottom: 4px;
 	font-weight: inherit
 }
+// Specific things to override
 .md [href="#"],
 .md [href^="#!"],
 .md [href^="#res:"],
@@ -1432,7 +1433,7 @@ html:not(:lang(en)) .side [href$="#w"] + strong::after {
 }
 .md .voteWeight[style*="none"] {display: none!important}
 
-/** Comment faces! something something urban's domain - he writes shit code but we love him anyway <3 **/
+// Comment faces! something something urban's domain - he writes shit code but we love him anyway <3
 
 /** Animated Set #1 **/
 @keyframes breakingnews{from{background-position:0 -9197px}
