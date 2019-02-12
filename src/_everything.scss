@@ -1378,7 +1378,7 @@ html:not(:lang(en)) .side [href$="#w"] + strong::after {
  */
 
 .md [href^="#"],
-[href*="?utm_"][href*="#"][href*="reddit.com/r/anime"] {
+[href*="&utm_"][href*="#"][href*="reddit.com/r/anime"] {
 	display: inline-block;
 	position: relative;
 	background-image: url("%%brokencommentface%%");
@@ -1387,7 +1387,7 @@ html:not(:lang(en)) .side [href$="#w"] + strong::after {
 	overflow: hidden;
 }
 .md [href^="#"]:not([href="#s"]),
-[href*="?utm_"][href*="#"][href*="reddit.com/r/anime"]:not([href$="#s"]){
+[href*="&utm_"][href*="#"][href*="reddit.com/r/anime"]:not([href$="#s"]){
 	text-align: center;
 	font-family: arial,sans-serif;
 	font-size: 18px;
@@ -1396,15 +1396,15 @@ html:not(:lang(en)) .side [href$="#w"] + strong::after {
 	cursor: default;
 }
 .md [href^="#"]:hover,
-[href*="?utm_"][href*="#"][href*="reddit.com/r/anime"]:hover {
+[href*="&utm_"][href*="#"][href*="reddit.com/r/anime"]:hover {
 	color: white;
 }
 .md [href^="#"]:active,
-[href*="?utm_"][href*="#"][href*="reddit.com/r/anime"]:active {
+[href*="&utm_"][href*="#"][href*="reddit.com/r/anime"]:active {
 	pointer-events: none;
 }
 .md [href^="#"]:not([href="#s"]) > strong,
-[href*="?utm_"][href*="#"][href*="reddit.com/r/anime"]:not([href$="#s"]) > strong {
+[href*="&utm_"][href*="#"][href*="reddit.com/r/anime"]:not([href$="#s"]) > strong {
 	display: block;
 	width: 100%;
 	position: absolute;
