@@ -1223,13 +1223,14 @@ a[href*="/s?"]:active {
 	bottom: 4px;
 	font-weight: inherit
 }
-.md [href="#"],
-.md [href^="#!"],
-.md [href^="#res:"],
-.md [href^="#/"],
-.md [href^="#?"],
-.md [href="#s"],
-.md [href*="#wiki_"] {
+.md [href="#"], // Empty link
+.md [href^="#!"], // Toolbox links
+.md [href^="#res:"], // RES links
+.md [href^="#/"], // Empty link (for markdown)
+.md [href$="#/"], // utm version of the above
+.md [href^="#?"], // ?
+.md [href="#s"], // Old spoiler style
+.md [href*="#wiki_"] { // Wiki TOC
 	display: inline !important;
 	color: #557eb8 !important;
 	text-shadow: none !important;
