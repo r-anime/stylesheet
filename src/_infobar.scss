@@ -1,13 +1,21 @@
 // The whole infobar is wrapped in a blockquote at the start of the sidebar
+// All the !important in this file is to pverride the resets the comment face
+// code puts on certain types of links; they're all there for a reason
+$dropdown-shadow: 0 0 4px #AAA;
+$infobar-height: 55px;
+$infobar-inner-height: 45px;
+$infobar-button-height: 35px;
+$infobar-padding-vertical: ($infobar-height - $infobar-inner-height) / 2;
+
 .side .md > :first-child {
 	position: absolute;
-	top: 115px;
+	top: $header-height;
 	left: 0;
-	right: 321px;
-	height: 55px;
+	right: $sidebar-width;
+	height: $infobar-height;
 	margin: 0;
 	border: 0;
-	padding: 0 0 0 20px;
+	padding: 0 0 0 10px;
 	display: flex;
 	align-items: center;
 	font-size: 14px;
@@ -17,13 +25,12 @@
 	> p {
 		margin: 0 5px 0 0;
 		padding: 0;
-		height: 35px;
-		line-height: 35px;
+		height: $infobar-button-height;
+		line-height: $infobar-button-height;
 		position: relative;
 
 		// All links in dropdowns
 		a {
-			// !important to override comment face resets
 			display: block !important;
 			width: auto !important;
 			height: auto !important;
@@ -33,9 +40,11 @@
 
 		// Top-level links get styles on hover
 		&:hover > a {
-			background: #557eb8 !important;
+			background: #6a9de6 !important;
 			color: #FFF !important;
 			border-radius: 5px 5px 0 0;
+			position: relative !important;
+			z-index: 2;
 			&:only-child {
 				border-radius: 5px;
 			}
@@ -45,23 +54,22 @@
 		em {
 			position: absolute;
 			top: 35px;
-			background: #6a9de6;
-			color: #FFF;
+			background: #FFF;
 			white-space: nowrap;
 			height: 0;
 			overflow: hidden;
 			z-index: 1;
+			font-style: normal;
+			border-radius: 0 0 5px 5px;
 
-			a {
-				color: inherit;
-			}
 			a:hover {
-				background: #557eb8;
+				text-decoration: underline;
 			}
 		}
 		&:hover em {
 			height: auto;
-			border-top: 5px solid #557eb8;
+			border-top: 5px solid #6a9de6;
+			box-shadow: $dropdown-shadow;
 		}
 
 	}
@@ -84,14 +92,14 @@
 			border-color: #DDD;
 			border-bottom: 1px solid #DDD;
 			border-bottom-left-radius: 5px;
-			box-shadow: 0 0 3px #DDD;
+			box-shadow: $dropdown-shadow;
 		}
 
 		// Entries may or may not be inside links, so we duplicate some styles
 		p {
-			flex: 0 0 45px;
+			flex: 0 0 $infobar-inner-height;
 			margin: 0;
-			padding: 5px 0;
+			padding: $infobar-padding-vertical 0;
 			line-height: 20px;
 			animation: reorder 12s infinite;
 		}
@@ -139,7 +147,7 @@
 		order: 0;
 	}
 	24.99% {
-		margin-top: -55px;
+		margin-top: -$infobar-height;
 		order: 0;
 	}
 	25%, 49.99%, 99.99% {

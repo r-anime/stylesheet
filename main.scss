@@ -5,6 +5,9 @@
  * public domain
  */
 
+// Variable definitions
+@import "src/vars";
+
 // Customizations
 @import "subcount"; // Contains the sidebar subscriber/online user phrases
 @import "flairs"; // User CSS flair texts, etc.
