@@ -36,7 +36,9 @@
 		}
 
 		a {
-			display: block;
+			// !important to override comment face resets
+			display: block !important;
+			width: auto !important;
 			padding: 0 5px;
 			white-space: nowrap;
 		}
