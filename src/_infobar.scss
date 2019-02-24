@@ -15,37 +15,55 @@
 
 	// Dropdowns
 	> p {
-		margin: 0 10px 0 0;
+		margin: 0 5px 0 0;
 		padding: 0;
 		height: 35px;
 		line-height: 35px;
 		position: relative;
 
-		em {
-			position: absolute;
-			top: 35px;
-			background: orange;
-			white-space: nowrap;
-			height: 0;
-			overflow: hidden;
-			z-index: 1;
-		}
-		&:hover em {
-			height: auto;
-			border-top: 5px solid green;
-		}
-
+		// All links in dropdowns
 		a {
 			// !important to override comment face resets
 			display: block !important;
 			width: auto !important;
-			padding: 0 5px;
+			height: auto !important;
+			padding: 0 10px;
 			white-space: nowrap;
 		}
-		&:hover a,
-		a:hover {
-			background: green;
+
+		// Top-level links get styles on hover
+		&:hover > a {
+			background: #557eb8 !important;
+			color: #FFF !important;
+			border-radius: 5px 5px 0 0;
+			&:only-child {
+				border-radius: 5px;
+			}
 		}
+
+		// The dropdown content
+		em {
+			position: absolute;
+			top: 35px;
+			background: #6a9de6;
+			color: #FFF;
+			white-space: nowrap;
+			height: 0;
+			overflow: hidden;
+			z-index: 1;
+
+			a {
+				color: inherit;
+			}
+			a:hover {
+				background: #557eb8;
+			}
+		}
+		&:hover em {
+			height: auto;
+			border-top: 5px solid #557eb8;
+		}
+
 	}
 
 	// Scrolling announcements banner
@@ -55,6 +73,8 @@
 		align-self: stretch;
 		margin: 0;
 		padding: 0 15px;
+		display: flex;
+		flex-direction: column;
 		border-left: 1px solid #EEE;
 		position: relative;
 		overflow: hidden;
@@ -69,10 +89,11 @@
 
 		// Entries may or may not be inside links, so we duplicate some styles
 		p {
-			height: 45px;
+			flex: 0 0 45px;
 			margin: 0;
 			padding: 5px 0;
 			line-height: 20px;
+			animation: reorder 12s infinite;
 		}
 		p,
 		p > a {
@@ -83,7 +104,11 @@
 			align-self: stretch;
 		}
 		&:hover p {
+			// Border between items
 			box-shadow: 0 1px #EEE;
+			// Animation freezing
+			animation-play-state: paused;
+			margin-top: 0 !important;
 		}
 
 		// For small text on the second line of the announcement
@@ -93,25 +118,42 @@
 			opacity: 0.8;
 			color: #000;
 		}
-		// Scroll only when it's not expanded
-		&:not(:hover) p:first-child {
-			animation: scroll 12s infinite;
+		// Each thing has its own delay
+		p:nth-child(2) {
+			animation-delay: 3s;
+		}
+		p:nth-child(3) {
+			animation-delay: 6s;
+		}
+		p:nth-child(4) {
+			animation-delay: 9s;
 		}
 	}
 }
 
-// The animation just works by setting a negative top margin on the first <p>
-@keyframes scroll {
-	from, 20%, to {
+// Each item sets a negative offset on itself to scroll to the next item, then
+// moves itself to the end of the list and slowly moves back up to the top..
+@keyframes reorder {
+	from, 22% {
 		margin-top: 0;
+		order: 0;
 	}
-	25%, 45% {
+	24.99% {
 		margin-top: -55px;
+		order: 0;
 	}
-	50%, 70% {
-		margin-top: -110px;
+	25%, 49.99%, 99.99% {
+		margin-top: 0;
+		order: 3;
 	}
-	75%, 90% {
-		margin-top: -165px;
+	50%, 74.99% {
+		order: 2;
+	}
+	75%, 99.99% {
+		order: 1;
+	}
+	to {
+		order: 0;
+		margin-top: 0;
 	}
 }
