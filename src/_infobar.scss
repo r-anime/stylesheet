@@ -1,0 +1,114 @@
+// The whole infobar is wrapped in a blockquote at the start of the sidebar
+.side .md > :first-child {
+	position: absolute;
+	top: 115px;
+	left: 0;
+	right: 321px;
+	height: 55px;
+	margin: 0;
+	border: 0;
+	padding: 0 0 0 20px;
+	display: flex;
+	align-items: center;
+	font-size: 14px;
+	z-index: 1;
+
+	// Dropdowns
+	> p {
+		margin: 0 10px 0 0;
+		padding: 0;
+		height: 35px;
+		line-height: 35px;
+		position: relative;
+
+		em {
+			position: absolute;
+			top: 35px;
+			background: orange;
+			white-space: nowrap;
+			height: 0;
+			overflow: hidden;
+			z-index: 1;
+		}
+		&:hover em {
+			height: auto;
+			border-top: 5px solid green;
+		}
+
+		a {
+			display: block;
+			padding: 0 5px;
+		}
+		&:hover a,
+		a:hover {
+			background: green;
+		}
+	}
+
+	// Scrolling announcements banner
+	blockquote {
+		order: 1;
+		flex: 0 1 100%;
+		align-self: stretch;
+		margin: 0;
+		padding: 0 15px;
+		border-left: 1px solid #EEE;
+		position: relative;
+		overflow: hidden;
+		&:hover {
+			height: 165px;
+			background: #FFF;
+			border-color: #DDD;
+			border-bottom: 1px solid #DDD;
+			border-bottom-left-radius: 5px;
+			box-shadow: 0 0 3px #DDD;
+		}
+
+		// Entries may or may not be inside links, so we duplicate some styles
+		p {
+			height: 45px;
+			margin: 0;
+			padding: 5px 0;
+			line-height: 20px;
+		}
+		p,
+		p > a {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			justify-content: center;
+			align-self: stretch;
+		}
+		&:hover p {
+			box-shadow: 0 1px #EEE;
+		}
+
+		// For small text on the second line of the announcement
+		em {
+			margin-top: 2px;
+			font-size: smaller;
+			opacity: 0.8;
+			color: #000;
+		}
+		// Scroll only when it's not expanded
+		&:not(:hover) p:first-child {
+			animation: scroll 12s infinite;
+		}
+	}
+}
+
+// The animation just works by setting a negative top margin on the first <p>
+@keyframes scroll {
+	from, 20%, to {
+		margin-top: 0;
+	}
+	25%, 45% {
+		margin-top: -55px;
+	}
+	50%, 70% {
+		margin-top: -110px;
+	}
+	75%, 90% {
+		margin-top: -165px;
+	}
+}
