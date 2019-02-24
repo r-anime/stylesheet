@@ -29,6 +29,14 @@ $infobar-padding-vertical: ($infobar-height - $infobar-inner-height) / 2;
 		line-height: $infobar-button-height;
 		position: relative;
 
+		// Sub-headings
+		strong {
+			display:block;
+			line-height: 25px;
+			padding: 0 10px;
+			border-bottom: 1px solid #EEE;
+		}
+
 		// All links in dropdowns
 		a {
 			display: block !important;
