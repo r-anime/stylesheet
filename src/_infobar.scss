@@ -58,6 +58,18 @@ $infobar-padding-vertical: ($infobar-height - $infobar-inner-height) / 2;
 			}
 		}
 
+		// Top-level dropdowns get little indicators
+		> a::after {
+			display: inline-block;
+			content: "";
+			width: 5px;
+			height: 5px;
+			margin-left: 7px;
+			border-right: 2px solid currentcolor;
+			border-bottom: 2px solid currentcolor;
+			transform: rotate(45deg) translate(-2px, -2px);
+		}
+
 		// The dropdown content
 		em {
 			position: absolute;
@@ -148,7 +160,7 @@ $infobar-padding-vertical: ($infobar-height - $infobar-inner-height) / 2;
 }
 
 // Each item sets a negative offset on itself to scroll to the next item, then
-// moves itself to the end of the list and slowly moves back up to the top..
+// moves itself to the end of the list and slowly moves back up to the top.
 @keyframes reorder {
 	from, 22% {
 		margin-top: 0;
