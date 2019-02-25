@@ -689,7 +689,6 @@ body #progressIndicator {
 
 .sheets { margin-right: 321px }
 .wiki-page .wiki-page-content {margin: 25px 356px 0 35px}
-.wiki-page .side .blockquote :first-child {display: none}
 .wiki-page>.content {margin-top: 0}
 .wiki-page>.content>span {
 	display: block;
@@ -1140,7 +1139,6 @@ a[href*="/s?"]:active {
 .res-nightmode.res #sr-header-area {background-color: #2b4665}
 .res-nightmode .morelink a:hover,
 .res-nightmode .morelink a::after {background-color: #2b4665}
-.res-nightmode .side .md blockquote:first-child {background-color: #445f7e!important}
 .res-nightmode .wiki-page>.content>span {background-color: #445f7e}
 .res-nightmode .content .link {border-color: #0f0f0f} /* bulky selector to override weird report res style */
 .res-nightmode .link.RES-keyNav-activeThing {background: #373737}

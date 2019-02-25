@@ -2,6 +2,7 @@
 // All the !important in this file is to pverride the resets the comment face
 // code puts on certain types of links; they're all there for a reason
 $dropdown-shadow: 0 0 4px #AAA;
+$dropdown-shadow-nightmode: 0 0 4px #000;
 $infobar-height: 55px;
 $infobar-inner-height: 45px;
 $infobar-button-height: 35px;
@@ -183,5 +184,29 @@ $infobar-padding-vertical: ($infobar-height - $infobar-inner-height) / 2;
 	to {
 		order: 0;
 		margin-top: 0;
+	}
+}
+
+// Nightmode styles yeet
+.res-nightmode .side .md > :first-child {
+	blockquote {
+		border-color: #0f0f0f;
+	}
+	blockquote em {
+		color: #FFF;
+	}
+	blockquote:hover,
+	> p:hover em {
+		background: #2f2f2f;
+		box-shadow:$dropdown-shadow-nightmode;
+	}
+	blockquote:hover p {
+		box-shadow: 0 1px #000;
+	}
+	> p:hover > a {
+		background: #445f7e !important;
+	}
+	> P:hover em {
+		border-color: #445f7e;
 	}
 }
