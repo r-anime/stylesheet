@@ -7,6 +7,7 @@ $infobar-height: 55px;
 $infobar-inner-height: 45px;
 $infobar-button-height: 35px;
 $infobar-padding-vertical: ($infobar-height - $infobar-inner-height) / 2;
+$hover-delay: 150ms;
 
 .side .md > :first-child {
 	position: absolute;
@@ -45,10 +46,12 @@ $infobar-padding-vertical: ($infobar-height - $infobar-inner-height) / 2;
 			height: auto !important;
 			padding: 0 10px;
 			white-space: nowrap;
+			transition: 0s;
 		}
 
 		// Top-level links get styles on hover
 		&:hover > a {
+			transition-delay: $hover-delay;
 			background: #6a9de6 !important;
 			color: #FFF !important;
 			border-radius: 5px 5px 0 0;
@@ -82,12 +85,16 @@ $infobar-padding-vertical: ($infobar-height - $infobar-inner-height) / 2;
 			z-index: 1;
 			font-style: normal;
 			border-radius: 0 0 5px 5px;
+			transition: 0s;
+			opacity: 0;
 
 			a:hover {
 				text-decoration: underline;
 			}
 		}
 		&:hover em {
+			transition-delay: $hover-delay;
+			opacity: 1;
 			height: auto;
 			border-top: 5px solid #6a9de6;
 			box-shadow: $dropdown-shadow;
@@ -107,7 +114,10 @@ $infobar-padding-vertical: ($infobar-height - $infobar-inner-height) / 2;
 		border-left: 1px solid #EEE;
 		position: relative;
 		overflow: hidden;
+		height: $infobar-height;
+		transition: 0s;
 		&:hover {
+			transition-delay: $hover-delay;
 			height: 220px;
 			background: #FFF;
 			border-color: #DDD;
