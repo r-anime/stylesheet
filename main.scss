@@ -5,6 +5,9 @@
  * public domain
  */
 
+// Variable definitions
+@import "src/vars";
+
 // Customizations
 @import "subcount"; // Contains the sidebar subscriber/online user phrases
 @import "flairs"; // User CSS flair texts, etc.
@@ -13,4 +16,5 @@
 @import "src/usernames"; // User flairs,
 @import "src/markdown"; // Generic markdown styles
 @import "src/sidebar"; // Sidebar-specific styles, including markdown hacks
+@import "src/infobar"; // Fancy announcements thing at the top of the sub
 @import "src/everything"; // Everything else (will eventually not exist)

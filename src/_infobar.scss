@@ -1,0 +1,187 @@
+// The whole infobar is wrapped in a blockquote at the start of the sidebar
+// All the !important in this file is to pverride the resets the comment face
+// code puts on certain types of links; they're all there for a reason
+$dropdown-shadow: 0 0 4px #AAA;
+$infobar-height: 55px;
+$infobar-inner-height: 45px;
+$infobar-button-height: 35px;
+$infobar-padding-vertical: ($infobar-height - $infobar-inner-height) / 2;
+
+.side .md > :first-child {
+	position: absolute;
+	top: $header-height;
+	left: 0;
+	right: $sidebar-width;
+	height: $infobar-height;
+	margin: 0;
+	border: 0;
+	padding: 0 0 0 10px;
+	display: flex;
+	align-items: center;
+	font-size: 14px;
+	z-index: 1;
+
+	// Dropdowns
+	> p {
+		margin: 0 5px 0 0;
+		padding: 0;
+		height: $infobar-button-height;
+		line-height: $infobar-button-height;
+		position: relative;
+
+		// Sub-headings
+		strong {
+			display:block;
+			line-height: 25px;
+			padding: 0 10px;
+			border-bottom: 1px solid #EEE;
+		}
+
+		// All links in dropdowns
+		a {
+			display: block !important;
+			width: auto !important;
+			height: auto !important;
+			padding: 0 10px;
+			white-space: nowrap;
+		}
+
+		// Top-level links get styles on hover
+		&:hover > a {
+			background: #6a9de6 !important;
+			color: #FFF !important;
+			border-radius: 5px 5px 0 0;
+			position: relative !important;
+			z-index: 2;
+			&:only-child {
+				border-radius: 5px;
+			}
+		}
+
+		// Top-level dropdowns get little indicators
+		> a::after {
+			display: inline-block;
+			content: "";
+			width: 5px;
+			height: 5px;
+			margin-left: 7px;
+			border-right: 2px solid currentcolor;
+			border-bottom: 2px solid currentcolor;
+			transform: rotate(45deg) translate(-2px, -2px);
+		}
+
+		// The dropdown content
+		em {
+			position: absolute;
+			top: 35px;
+			background: #FFF;
+			white-space: nowrap;
+			height: 0;
+			overflow: hidden;
+			z-index: 1;
+			font-style: normal;
+			border-radius: 0 0 5px 5px;
+
+			a:hover {
+				text-decoration: underline;
+			}
+		}
+		&:hover em {
+			height: auto;
+			border-top: 5px solid #6a9de6;
+			box-shadow: $dropdown-shadow;
+		}
+
+	}
+
+	// Scrolling announcements banner
+	blockquote {
+		order: 1;
+		flex: 0 1 100%;
+		align-self: stretch;
+		margin: 0;
+		padding: 0 15px;
+		display: flex;
+		flex-direction: column;
+		border-left: 1px solid #EEE;
+		position: relative;
+		overflow: hidden;
+		&:hover {
+			height: 220px;
+			background: #FFF;
+			border-color: #DDD;
+			border-bottom: 1px solid #DDD;
+			border-bottom-left-radius: 5px;
+			box-shadow: $dropdown-shadow;
+		}
+
+		// Entries may or may not be inside links, so we duplicate some styles
+		p {
+			flex: 0 0 $infobar-inner-height;
+			margin: 0;
+			padding: $infobar-padding-vertical 0;
+			line-height: 20px;
+			animation: reorder 12s infinite;
+		}
+		p,
+		p > a {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			justify-content: center;
+			align-self: stretch;
+		}
+		&:hover p {
+			// Border between items
+			box-shadow: 0 1px #EEE;
+			// Animation freezing
+			animation-play-state: paused;
+			margin-top: 0 !important;
+		}
+
+		// For small text on the second line of the announcement
+		em {
+			margin-top: 2px;
+			font-size: smaller;
+			opacity: 0.8;
+			color: #000;
+		}
+		// Each thing has its own delay
+		p:nth-child(2) {
+			animation-delay: 3s;
+		}
+		p:nth-child(3) {
+			animation-delay: 6s;
+		}
+		p:nth-child(4) {
+			animation-delay: 9s;
+		}
+	}
+}
+
+// Each item sets a negative offset on itself to scroll to the next item, then
+// moves itself to the end of the list and slowly moves back up to the top.
+@keyframes reorder {
+	from, 22% {
+		margin-top: 0;
+		order: 0;
+	}
+	24.99% {
+		margin-top: -$infobar-height;
+		order: 0;
+	}
+	25%, 49.99%, 99.99% {
+		margin-top: 0;
+		order: 3;
+	}
+	50%, 74.99% {
+		order: 2;
+	}
+	75%, 99.99% {
+		order: 1;
+	}
+	to {
+		order: 0;
+		margin-top: 0;
+	}
+}

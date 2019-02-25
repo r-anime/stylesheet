@@ -233,7 +233,6 @@ html #sr-header-area a.RESShortcutsCurrentSub {
 span.multi-count {margin: 0!important}
 .users-online {
 	display: inline;
-	margin-bottom: 10px
 }
 .titlebox .word {display: none}
 .titlebox .bottom {
@@ -285,7 +284,6 @@ span.multi-count {margin: 0!important}
 .sidecontentbox a.helplink,
 .side .md h1 a,
 .sidecontentbox .title .collapse-button {
-	display: inline;
 	color: #FFF;
 	background: #557eb8;
 	font-family: "Verdana",sans-serif;
@@ -313,14 +311,6 @@ span.multi-count {margin: 0!important}
 	box-shadow: none !important; /* mobile safari override, smh */
 	padding: 0 40px 0 10px;
 	line-height: 30px;
-	margin-left: 45px;
-	width: 255px;
-	position: relative;
-	z-index: 0;
-	transition:
-		z-index 0s .2s,
-		margin-left .2s,
-		width .2s;
 }
 .res-nightmode #search input[type="text"] {
 	background: #2f2f2f!important;
@@ -330,13 +320,7 @@ span.multi-count {margin: 0!important}
 	border-color: #6a9de6;
 	outline: 0;
 	box-shadow: 0 0 3px #6a9de6;
-	width: 300px;
-	margin-left: 0;
-	z-index: 2;
-	transition:
-		z-index 0s 0s,
-		margin-left .2s,
-		width .2s;
+	transition: 200ms;
 }
 #searchexpando {
 	margin-top: 10px;
@@ -1067,117 +1051,6 @@ a[href*="/s?"]:active {
 :lang(xa) .link.linkflair-recommendation,
 :lang(xa) .link.linkflair-question {display: none}
 
-/** Announcement banner **/
-.side .md blockquote:first-child {
-	position: absolute;
-	top: 115px;
-	left: 0;
-	margin: 10px;
-	padding: 0 10px;
-	background: #6a9de6;
-	border-left: 0;
-	border-radius: 5px;
-	color: #FFF;
-	text-align: center;
-	height: 35px;
-	display: table;
-	width: calc(100% - 361px);
-}
-.side .md blockquote:first-child p {
-	display: table-cell;
-	vertical-align: middle;
-	text-align: center;
-	position: static;
-	margin: 0;
-	padding: 0;
-	font-size: 13px;
-	line-height: 15px;
-	font-weight: 700;
-}
-.side .md blockquote:first-child a {
-	text-decoration: underline;
-	color: inherit;
-}
-.side .md blockquote:first-child a:hover {color: #EEE}
-
-/** dropdown shit hype **/
-/** TODO **/
-.side [href*="#d#"] + strong {
-	position: absolute;
-	top: 80px;
-	height: 0;
-	padding: 35px 0 0;
-	line-height: 35px;
-	z-index: 100;
-	color: #FFF;
-	overflow: hidden;
-	pointer-events: none;
-	transition: .2s 0s;
-	border-radius: 0 0 5px 5px;
-	font-size: 14px;
-	font-weight: normal;
-	cursor: pointer;
-	left: 445px;
-}
-.pinHeader-header .side [href*="#d#"] + strong {position: fixed} /* RES BetteReddit Pinned Header support */
-.side [href*="#d#"] + strong:hover {
-    transition: .2s .15s;
-    height: 470px;
-}
-.side [href*="#d#"] + strong::after {
-	content: "wiki";
-	position: absolute;
-	top: 0;
-	left: 0;
-	padding: 0 10px;
-	pointer-events: auto;
-	width: 48px;
-	/* just trust me on this one */
-	background: url(%%ui-elements%%) -40px 15px/128px no-repeat padding-box content-box, border-box transparent;
-}
-.side [href*="#d#"] + strong:hover::after {background-color: #4c71a5}
-.side [href*="#d#"] + strong * {
-	display: block;
-	padding: 0 10px;
-	color: #FFF;
-	background: #4c71a5;
-	pointer-events: auto;
-}
-.side [href*="#d#"] + strong em {
-	line-height: 25px;
-	font-style: normal;
-	font-weight: bold;
-	background: #446594;
-	cursor: default;
-}
-.side [href*="#d#"] + strong *:hover {background: #446594}
-.res-nightmode .side [href*="#d#"] + strong *,
-.res-nightmode .side [href*="#d#"] + strong:hover::after {background-color: #273f5b !important}
-.res-nightmode .side [href*="#d#"] + strong a:hover,
-.res-nightmode .side [href*="#d#"] + strong em {background: #172f4b !important}
-:lang(en) .listing-page #header .tabmenu [href*="/wiki"],
-:lang(en) .wiki-page #header .tabmenu [href*="/wiki"] {
-	color: transparent;
-	width: 48px;
-}
-:lang(en) .comments-page .side [href$="#w"],
-:lang(en) .comments-page .side [href$="#w"] + strong {left: 173px}
-:lang(en) .comments-page #header .tabmenu li:first-of-type {margin-right: 68px}
-:lang(en) body:not(.listing-page):not(.comments-page):not(.wiki-page) .side .md [href$="#w"] + strong {display: none}
-.res-nightmode .side .md [href$="#wd"] + strong {
-	background: #273f5b !important
-}
-html:not(:lang(en)) .side [href$="#w"] + strong {
-	left: auto;
-	right: 10px;
-	width: 300px;
-}
-html:not(:lang(en)) .side [href$="#w"] + strong::after {
-	content: "Frequently Used Wiki Pages";
-	background-image: none, none; /* TODO: reimplement the arrow here */
-	width: 300px;
-}
-
 /** Discord button **/
 .side [href*="discord.gg"] {
   display: block;
@@ -1287,66 +1160,6 @@ html:not(:lang(en)) .side [href$="#w"] + strong::after {
 	border-color: #FFF
 }
 
-/* Filter dropdown */
-.side .md p:nth-last-of-type(2) {
-	position: absolute;
-	top: 125px;
-	margin: 0 -11px;
-	padding: 35px 0 0;
-	background: #FFF;
-	border-radius: 5px;
-	box-shadow: inset 0 0 0 1px #BBB;
-	width: 35px;
-	height: 0;
-	overflow: hidden;
-	transition: .2s 0s;
-	z-index:1;
-}
-.side .md p:nth-last-of-type(2):hover {
-	width: 200px;
-	height: 870px;
-	box-shadow: inset 0 0 0 1px #BBB,0 2px 4px rgba(0,0,0,.2);
-	transition: .2s .15s;
-}
-.side .md p:nth-last-of-type(2) strong {
-	position: absolute;
-	top: 0;
-	width: 130px;
-	padding: 0 35px;
-	background: #6a9de6;
-	line-height: 35px;
-	color: #FFF;
-	font-size: 18px;
-	font-weight: bold;
-	text-align: center;
-}
-.side .md p:nth-last-of-type(2) strong:after {
-	content: "";
-	position: absolute;
-	left: 0;
-	background: url(%%ui-elements%%) 70px 70px/128px;
-	width: 35px;
-	height: 35px;
-	transition: .2s;
-}
-.side .md p:nth-last-of-type(2):hover strong:after {background-color: #557eb8}
-.side .md p:nth-last-of-type(2) em,.side .md p:nth-last-of-type(2) a {
-	display: block;
-	line-height: 30px;
-	font-size: 16px;
-	text-align: center;
-}
-.side .md p:nth-last-of-type(2) em {
-	font-weight: bold;
-	font-style: normal;
-}
-.res-nightmode .side .md p:nth-last-of-type(2) {
-	background: #2f2f2f!important;
-	box-shadow: inset 0 0 0 1px #000;
-}
-.res-nightmode .side .md p:nth-last-of-type(2) strong {background-color: #445f7e!important}
-.res-nightmode .side .md p:nth-last-of-type(2):hover strong:after {background-color: #2b4665}
-
 /*
  * Dear future self,
  *
@@ -1412,13 +1225,14 @@ html:not(:lang(en)) .side [href$="#w"] + strong::after {
 	font-weight: inherit
 }
 // Specific things to override
-.md [href$="#"],
-.md [href^="#!"],
-.md [href^="#res:"],
-.md [href^="#/"],
-.md [href^="#?"],
-.md [href="#s"],
-.md [href*="#wiki_"] {
+.md [href="#"], // Empty link
+.md [href^="#!"], // Toolbox links
+.md [href^="#res:"], // RES links
+.md [href^="#/"], // Empty link (for markdown)
+.md [href$="#/"], // utm version of the above
+.md [href^="#?"], // ?
+.md [href="#s"], // Old spoiler style
+.md [href*="#wiki_"] { // Wiki TOC
 	display: inline !important;
 	color: #557eb8 !important;
 	text-shadow: none !important;
@@ -2512,5 +2326,5 @@ A short time later, the husband returns with a dozen cartons of milk.
 “Why did you buy a dozen cartons of milk?” the wife asks.
 He replies, “They had eggs.”
 
-Why is this here? 
+Why is this here?
 Well you see, the real joke is always in the comments.*/
