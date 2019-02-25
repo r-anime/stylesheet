@@ -1243,6 +1243,17 @@ a[href*="/s?"]:active {
 	overflow: visible !important;
 	pointer-events: all !important;
 }
+// nightmode lul
+.res-nightmode .md [href="#"],
+.res-nightmode .md [href^="#!"],
+.res-nightmode .md [href^="#res:"],
+.res-nightmode .md [href^="#/"],
+.res-nightmode .md [href$="#/"],
+.res-nightmode .md [href^="#?"],
+.res-nightmode .md [href="#s"],
+.res-nightmode .md [href*="#wiki_"] {
+	color: #8cb3d9 !important;
+}
 .md .voteWeight[style*="none"] {display: none!important}
 
 // Comment faces! something something urban's domain - he writes shit code but we love him anyway <3
