@@ -59,7 +59,7 @@ $infobar-padding-vertical: ($infobar-height - $infobar-inner-height) / 2;
 		}
 
 		// Top-level dropdowns get little indicators
-		> a::after {
+		> a:not(:only-child)::after {
 			display: inline-block;
 			content: "";
 			width: 5px;
