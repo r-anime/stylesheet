@@ -157,7 +157,8 @@
 .author[href$="/Supremegypsy"]:not(.moderator):after{font-size: 10.5px!important;content:"";}
 .author[href$="/Supremegypsy"]:not(.moderator):hover:before {font-size: 10.5px!important;color:#12b699;font-weight: bold;border-radius: 3px;content:"The Supremegy*sy arrives."}
 .author[href$="/Supremegypsy"]:not(.moderator):hover:after {color:#FFFFFF; text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;content:" Hero kenzan! Hero kenzan! Hero kenzan!";}
-.author[href$="/Supremegypsy"].moderator:after{font-weight:bold;content:"Butterfly Gypsy"}
+.author[href$="/Supremegypsy"].moderator:after{font-size: 10.5px!important;color:#ffffff;content:"Butterfly Gypsy";background-color: #228822;border-radius: 3px;}
+.author[href$="/Supremegypsy"].moderator{font-size:0}
 .author[href$="/swisskid"]:after{content:" has an NTR fetish"}
 .author[href$="/Taiboss"]:after{color:#d21f57;content:" Tai x Aru 4 lyfe"}
 .author[href$="/TheEnigmaBlade"]:after{color:#ab3020;content:" the Wise Wolf"}
