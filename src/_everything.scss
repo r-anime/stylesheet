@@ -26,7 +26,11 @@ body>.content,
 	border-left: 0;
 	border-right: 0;
 }
-.infobar.listingsignupbar { margin: -2px 0 !important }
+.infobar.listingsignupbar {
+	margin: 0 !important;
+	height: 120px;
+	border-top: 1px solid #EFEFEF;
+}
 .listingsignupbar__container { padding: 28px 18px }
 /** Base nightmode text coloring **/
 /*.res-nightmode :not(time):not(select):not(option),*/
@@ -406,7 +410,7 @@ span.multi-count {margin: 0!important}
 .thing .arrow.upmod {background-position: -113px 0!important}
 .thing .arrow.downmod {background-position: -113px -14px!important}
 .link.RES-keyNav-activeThing {background: #f0f3fc}
-/* we can get rid of this next one right TODO */
+// we can get rid of this next one right TODO
 .link {
 	margin: 0;
     border-top: 1px solid #efefef;
@@ -419,7 +423,6 @@ span.multi-count {margin: 0!important}
 	border-right: 0;
 }
 .link ~ .link.last-clicked {margin-top: -1px}
-/*.link .midcol,.midcol-spacer {width: 45px}*/
 .link .thumbnail {
 	margin: 0 10px 0 0;
 	min-width: 70px
@@ -439,18 +442,18 @@ span.multi-count {margin: 0!important}
 	background: #f7f7f7;
 	border-color: #cfcfcf
 }
-/* pinned links - v.redd.it */
+/* links pinned to top of page - v.redd.it */
 .pinnable-content.pinned {
 	background: #FFF !important;
 	border-bottom: 1px solid #CFCFCF;
-}.pinned .thing { border: 0 }
+}
+.pinned .thing { border: 0 }
 .pinned .thumbnail { margin: 0 }
 
 .organic-listing {
 	margin: 0;
-	border-right: 0;
-	border-left: 0;
-	border-color: #cfcfcf
+	border: 0;
+	border-top: 1px solid #cfcfcf;
 }
 .organic-listing .help {margin: 5px}
 body>.content .spacer {margin: 0}
