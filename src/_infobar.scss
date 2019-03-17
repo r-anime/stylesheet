@@ -52,15 +52,11 @@ $hover-delay: 150ms; // delay before dropdowns trigger
 
 		// Top-level links get styles on hover
 		&:hover > a {
-			transition-delay: $hover-delay;
 			background: #6a9de6 !important;
 			color: #FFF !important;
-			border-radius: 5px 5px 0 0;
+			border-radius: 5px;
 			position: relative !important;
 			z-index: 2;
-			&:only-child {
-				border-radius: 5px;
-			}
 		}
 
 		// Top-level dropdowns get little indicators
@@ -78,16 +74,14 @@ $hover-delay: 150ms; // delay before dropdowns trigger
 		// The dropdown content
 		em {
 			position: absolute;
-			top: 35px;
+			top: 30px; // TODO
 			background: #FFF;
 			white-space: nowrap;
-			height: 0;
-			overflow: hidden;
-			z-index: 1;
+			display: block;
 			font-style: normal;
 			border-radius: 0 0 5px 5px;
-			transition: 0s;
-			opacity: 0;
+			transition: visibility 0s;
+			visibility: hidden;
 
 			a:hover {
 				text-decoration: underline;
@@ -95,8 +89,7 @@ $hover-delay: 150ms; // delay before dropdowns trigger
 		}
 		&:hover em {
 			transition-delay: $hover-delay;
-			opacity: 1;
-			height: auto;
+			visibility: visible;
 			border-top: 5px solid #6a9de6;
 			box-shadow: $dropdown-shadow;
 		}
