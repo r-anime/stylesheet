@@ -287,7 +287,8 @@ span.multi-count {margin: 0!important}
 }
 .sidecontentbox a.helplink,
 .side .md h1 a,
-.sidecontentbox .title .collapse-button {
+.sidecontentbox .title .collapse-button,
+.side .subscribe-button .option {
 	color: #FFF;
 	background: #557eb8;
 	font-family: "Verdana",sans-serif;
@@ -1219,6 +1220,7 @@ a[href*="/s?"]:active {
 .md [href^="#"]:hover,
 [href*="&utm_"][href*="#"][href*="reddit.com/r/anime"]:not([href$="#"]):hover {
 	color: white;
+	text-decoration: none;
 }
 .md [href^="#"]:active,
 [href*="&utm_"][href*="#"][href*="reddit.com/r/anime"]:not([href$="#"]):active {
@@ -1252,6 +1254,11 @@ a[href*="/s?"]:active {
 	font-family: inherit !important;
 	overflow: visible !important;
 	pointer-events: all !important;
+
+	// oh right, this is why i didn't want to do text underlines for shit
+	&:hover {
+		text-decoration: underline !important;
+	}
 }
 // nightmode lul
 .res-nightmode .md [href="#"],
