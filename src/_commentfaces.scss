@@ -1,0 +1,1166 @@
+/*
+ * Dear future self,
+ *
+ * You're here either because Reddit made another DOM change that
+ * broke comment faces and you think you can fix them, or because you
+ * realized it's a massive chunk of code and you think you can
+ * optimize it. I promise you neither of these things are true, and
+ * what's more, neither are worth your time.
+ *
+ * Comment faces are a *massive* hack and supporting them involves
+ * incredibly annoying inconsistencies between browsers and platforms.
+ * What's more, they're also expected to run on the mobile desktop
+ * site, so they also have to work on touch screens and with all the
+ * silly inconcistencies mobile browsers have.
+ *
+ * Below here is the silliest bit of CSS I have ever engineered, and
+ * while I take pride in the fact that it works I encourage any other
+ * person who feels compelled to change this code to strongly
+ * reconsider their path in life before continuing. Every single bit
+ * of code here has a specific purpose, and changing any one part
+ * means trapping yourself in a complicated web of specificity
+ * interactions and the closest thing CSS has to RegExes. In fact,
+ * I can't think of a single case right now when it would be a good
+ * idea to fix this system instead of rewriting it or just moving to
+ * whatever the redesign has.
+ *
+ * Also, it's probably at least 2013. Did you ever take that trip
+ * to Iceland?
+ */
+
+ .md [href^="#"] {
+	display: inline-block;
+	position: relative;
+	background-image: url("%%brokencommentface%%");
+	width: 120px;
+	height: 152px;
+	overflow: hidden;
+}
+.md [href^="#"]:not([href="#s"]) {
+	text-align: center;
+	font-family: arial,sans-serif;
+	font-size: 18px;
+	color: white;
+	text-shadow: 1px 1px #000,1px -1px #000,-1px 1px #000,-1px -1px #000,0 1px #000,0 -1px #000,1px 0 #000,-1px 0 #000;
+	cursor: default;
+}
+.md [href^="#"]:hover {
+	color: white;
+	text-decoration: none;
+}
+.md [href^="#"]:active {
+	pointer-events: none;
+}
+.md [href^="#"]:not([href="#s"]) > strong {
+	display: block;
+	width: 100%;
+	position: absolute;
+	bottom: 4px;
+	font-weight: inherit
+}
+// Specific things to override
+.md [href="#"], // Empty link
+.md [href^="#!"], // Toolbox links
+.md [href^="#res:"], // RES links
+.md [href^="#/"], // Empty link (for markdown)
+.md [href$="#/"], // utm version of the above
+.md [href^="#?"], // ?
+.md [href="#s"], // Old spoiler style
+.md [href*="#wiki_"] { // Wiki TOC
+	display: inline !important;
+	color: #557eb8 !important;
+	text-shadow: none !important;
+	cursor: pointer !important;
+	font-size: inherit !important;
+	text-align: inherit !important;
+	background: none !important;
+	position: static !important;
+	font-family: inherit !important;
+	overflow: visible !important;
+	pointer-events: all !important;
+
+	// oh right, this is why i didn't want to do text underlines for shit
+	&:hover {
+		text-decoration: underline !important;
+	}
+
+	.res-nightmode & {
+		color: #8cb3d9 !important;
+	}
+}
+.md .voteWeight[style*="none"] {display: none!important}
+
+// Comment faces! something something urban's domain - he writes shit code but we love him anyway <3
+
+/** Animated Set #1 **/
+@keyframes breakingnews{from{background-position:0 -9197px}
+to{background-position:0 -8387px}}
+.md [href$="#breakingnews"]{height:133px;width:176px;background:url(%%FantaSheet%%) -0px -9197px no-repeat}
+.md [href$="#breakingnews"]:hover{animation:breakingnews .5s steps(6) infinite}
+@keyframes brofist{from{background-position:0 -3852px}
+to{background-position:0 -1712px}}
+.md [href$="#brofist"]{height:105px;width:190px;background:url(%%FantaSheet%%) -0px -3852px no-repeat}
+.md [href$="#brofist"]:hover{animation:brofist 1.68s steps(20);animation-fill-mode:forwards}
+@keyframes cokemasterrace{from{background-position:0 -856px}
+to{background-position:0 -0px}}
+.md [href$="#cokemasterrace"]{height:105px;width:191px;background:url(%%FantaSheet%%) -0px -856px no-repeat}
+.md [href$="#cokemasterrace"]:hover{animation:cokemasterrace 1.14s steps(8);animation-fill-mode:forwards}
+@keyframes curious{from{background-position:0 -5992px}
+to{background-position:0 -3959px}}
+.md [href$="#curious"]{height:105px;width:191px;background:url(%%FantaSheet%%) -0px -5992px no-repeat}
+.md [href$="#curious"]:hover{animation:curious 1.6s steps(19);animation-fill-mode:forwards}
+@keyframes evilgrin{from{background-position:0 -1605px}
+to{background-position:0 -963px}}
+.md [href$="#evilgrin"]{height:105px;width:191px;background:url(%%FantaSheet%%) -0px -1605px no-repeat}
+.md [href$="#evilgrin"]:hover{animation:evilgrin .56s steps(6);animation-fill-mode:forwards}
+@keyframes fedup{from{background-position:0 -8283px}
+to{background-position:0 -6099px}}
+.md [href$="#fedup"]{height:102px;width:185px;background:url(%%FantaSheet%%) -0px -8283px no-repeat}
+.md [href$="#fedup"]:hover{animation:fedup 2.4s steps(21);animation-fill-mode:forwards}
+@keyframes flattered{from{background-position:0 -7666px}
+to{background-position:0 -3638px}}
+.md [href="#dancewithit"]{height:179px;width:98px;background:url(%%FantaSheet%%) 0 -14492px no-repeat}
+.md [href="#dancewithit"]:hover{animation:dancewithit 2.4s steps(29); animation-fill-mode:forwards}
+@keyframes dancewithit{from{background-position:0 -14492px}to{background-position:0 -9332px}}
+.md [href$="#flattered"]{height:104px;width:191px;background:url(%%CokeSheet%%) -0px -7666px no-repeat}
+.md [href$="#flattered"]:hover{animation:flattered 2.34s steps(38);animation-fill-mode:forwards}
+@keyframes flyingbunsofdoom{from{background-position:0 -1177px}
+to{background-position:0 -0px}}
+.md [href$="#flyingbunsofdoom"]{height:105px;width:190px;background:url(%%CokeSheet%%) -0px -1177px no-repeat}
+.md [href$="#flyingbunsofdoom"]:hover{animation:flyingbunsofdoom 1.2s steps(11);animation-fill-mode:forwards}
+@keyframes forgotkeys{from{background-position:0 -8949px}
+to{background-position:0 -7772px}}
+.md [href$="#forgotkeys"]{height:105px;width:190px;background:url(%%CokeSheet%%) -0px -8949px no-repeat}
+.md [href$="#forgotkeys"]:hover{animation:forgotkeys .9s steps(11);animation-fill-mode:forwards}
+@keyframes garlock{from{background-position:0 -2140px}
+to{background-position:0 -1284px}}
+.md [href$="#garlock"]{height:105px;width:191px;background:url(%%CokeSheet%%) -0px -2140px no-repeat}
+.md [href$="#garlock"]:hover{animation:garlock .72s steps(8);animation-fill-mode:forwards}
+@keyframes giveuponlife{from{background-position:0 -3531px}
+to{background-position:0 -2247px}}
+.md [href$="#giveuponlife"]{height:105px;width:191px;background:url(%%CokeSheet%%) -0px -3531px no-repeat}
+.md [href$="#giveuponlife"]:hover{animation:giveuponlife 1.69s steps(12);animation-fill-mode:forwards}
+@keyframes helmetbro{from{background-position:0 -10396px}
+to{background-position:0 -9056px}}
+.md [href$="#helmetbro"]{height:132px;width:177px;background:url(%%CokeSheet%%) -0px -10396px no-repeat}
+.md [href$="#helmetbro"]:hover{animation:helmetbro 1.0s steps(10);animation-fill-mode:forwards}
+@keyframes idoruwinkdesu{from{background-position:0 -1498px}
+to{background-position:0 -0px}}
+.md [href$="#idoruwinkdesu"]{height:105px;width:190px;background:url(%%AnythingButPepsiSheet%%) -0px -1498px no-repeat}
+.md [href$="#idoruwinkdesu"]:hover{animation:idoruwinkdesu 1.05s steps(14);animation-fill-mode:forwards}
+@keyframes justno{from{background-position:0 -9050px}
+to{background-position:0 -7490px}}
+.md [href$="#justno"]{height:102px;width:191px;background:url(%%AnythingButPepsiSheet%%) -0px -9050px no-repeat}
+.md [href$="#justno"]:hover{animation:justno 1.72s steps(15);animation-fill-mode:forwards}
+@keyframes missedthepoint{from{background-position:0 -4066px}
+to{background-position:0 -1605px}}
+.md [href$="#missedthepoint"]{height:105px;width:191px;background:url(%%AnythingButPepsiSheet%%) -0px -4066px no-repeat}
+.md [href$="#missedthepoint"]:hover{animation:missedthepoint 2.4s steps(23);animation-fill-mode:forwards}
+@keyframes hajimepout{from{background-position:0 -3497px}
+to{background-position:0 -1464px}}
+.md [href$="#hajimepout"]{height:105px;width:191px;background:url(%%SoloSheet%%) -0px -3497px no-repeat}
+.md [href$="#hajimepout"]:hover{animation:hajimepout 1.74s steps(19);animation-fill-mode:forwards}
+@keyframes nuidideverythingright{from{background-position:0 -5885px}
+to{background-position:0 -5243px}}
+.md [href$="#nuidideverythingright"]{height:105px;width:191px;background:url(%%AnythingButPepsiSheet%%) -0px -5885px no-repeat}
+.md [href$="#nuidideverythingright"]:hover{animation:nuidideverythingright .5s steps(6);animation-fill-mode:forwards}
+@keyframes rerorero{from{background-position:0 -6634px}
+to{background-position:0 -0px}}
+.md [href$="#rerorero"]{height:105px;width:191px;background:url(%%MountainDewSheet%%) -0px -6634px no-repeat}
+.md [href$="#rerorero"]:hover{animation:rerorero 4.4s steps(62) infinite}
+@keyframes scrumptiouslymoe{from{background-position:0 -11021px}
+to{background-position:0 -6741px}}
+.md [href$="#scrumptiouslymoe"]{height:105px;width:191px;background:url(%%MountainDewSheet%%) -0px -11021px no-repeat}
+.md [href$="#scrumptiouslymoe"]:hover{animation:scrumptiouslymoe 3.28s steps(40);animation-fill-mode:forwards}
+@keyframes slapbet{from{background-position:0 -11984px}
+to{background-position:0 -11128px}}
+.md [href$="#slapbet"]{height:105px;width:191px;background:url(%%MountainDewSheet%%) -0px -11984px no-repeat}
+.md [href$="#slapbet"]:hover{animation:slapbet .72s steps(8) infinite}
+@keyframes watchadoin{from{background-position:0 -10914px}
+to{background-position:0 -8774px}}
+.md [href$="#watchadoin"]{height:105px;width:191px;background:url(%%GingerAleSheet%%) -0px -10914px no-repeat}
+.md [href$="#watchadoin"]:hover{animation:watchadoin 2.1s steps(20) infinite}
+.wiki-page[class*="commentface"] table strong{display:block;text-align:center}
+@keyframes torrentialdownpour{from{background-position:0 -8667px}
+to{background-position:0 -3210px}}
+.md [href$="#torrentialdownpour"]{height:105px;width:191px;background:url(%%GingerAleSheet%%) -0px -8667px no-repeat}
+.md [href$="#torrentialdownpour"]:hover{animation:torrentialdownpour 3.64s steps(51)}
+@keyframes slightoverreaction{from{background-position:0 -13375px}
+to{background-position:0 -5136px}}
+.md [href$="#slightoverreaction"]{height:105px;width:191px;background:url(%%DrPepperSheet%%) -0px -13375px no-repeat}
+.md [href$="#slightoverreaction"]:hover{animation:slightoverreaction 6.24s steps(77) infinite}
+@keyframes prelenny{from{background-position:0 -7323px}
+to{background-position:0 -6313px}}
+.md [href$="#prelenny"]{height:99px;width:191px;background:url(%%MotherSheet%%) -0px -7323px no-repeat}
+.md [href$="#prelenny"]:hover{animation:prelenny 1.1s steps(10)}
+@keyframes volibearQ{from{background-position:0 -6206px}
+to{background-position:0 -3317px}}
+.md [href$="#volibearQ"]{height:105px;width:191px;background:url(%%MotherSheet%%) -0px -6206px no-repeat}
+.md [href$="#volibearQ"]:hover{animation:volibearQ 1.72s steps(27);animation-fill-mode:forwards}
+@keyframes mywaifumadeyouasandwich{from{background-position:0 -8708px}
+to{background-position:0 -7424px}}
+.md [href$="#mywaifumadeyouasandwich"]{height:105px;width:190px;background:url(%%MotherSheet%%) -0px -8708px no-repeat}
+.md [href$="#mywaifumadeyouasandwich"]:hover{animation:mywaifumadeyouasandwich 1.3s steps(12);animation-fill-mode:forwards}
+@keyframes urbansmile{from{background-position:0 -11522px}
+to{background-position:0 -8954px}}
+.md [href$="#urbansmile"]{height:105px;width:191px;background:url(%%SoloSheet%%) 0 -11522px no-repeat}
+.md [href$="#urbansmile"]:hover{animation:urbansmile 1.46s steps(24);animation-fill-mode:forwards}
+@keyframes anko{from{background-position:0 -1498px}
+to{background-position:0 0}}
+.md [href$="#anko"]{height:105px;width:191px;background:url(%%DrPepperSheet%%) -0px -1498px no-repeat}
+.md [href$="#anko"]:hover{animation:anko 1.8s steps(14);animation-fill-mode:forwards}
+@keyframes hyoukawink{from{background-position:0 -1342px}
+to{background-position:0 0}}
+.md [href$="#hyoukawink"]{height:120px;width:191px;background:url(%%SoloSheet%%) -0px -1342px no-repeat}
+.md [href$="#hyoukawink"]:hover{animation:hyoukawink 1.8s steps(11);animation-fill-mode:forwards}
+@keyframes hyoukanod{from{background-position:0 -1342px}
+to{background-position:0 0}}
+.md [href$="#hyoukanod"]{height:120px;width:191px;background:url(%%SoloSheet%%) -0px -1342px no-repeat}
+.md [href$="#hyoukanod"]:hover{animation:hyoukanod 1.8s steps(11);animation-fill-mode:forwards}
+@keyframes yousaidsomethingdumb{from{background-position:0 -8847px}
+to{background-position:0 -3604px}}
+.md [href$="#yousaidsomethingdumb"]{height:105px;width:191px;background:url(%%SoloSheet%%) -0px -8847px no-repeat}
+.md [href$="#yousaidsomethingdumb"]:hover{animation:yousaidsomethingdumb 2.5s steps(49);animation-fill-mode:forwards}
+@keyframes banjo{from{background-position:0 -5029px}
+to{background-position:0 -1605px}}
+.md [href$="#banjo"]{height:105px;width:191px;background:url(%%DrPepperSheet%%) -0px -5029px no-repeat}
+.md [href$="#banjo"]:hover{animation:banjo 1.44s steps(32);animation-fill-mode:forwards}
+@keyframes peasants{from{background-position:0 -13769px}
+to{background-position:0 -11629px}}
+.md [href$="#peasants"]{height:105px;width:190px;background:url(%%SoloSheet%%) -0px -13769px no-repeat}
+.md [href$="#peasants"]:hover{animation:peasants 1.2s steps(20);animation-fill-mode:forwards}
+@keyframes excitedyui{from{background-position:0 0}
+to{background-position:0 -1148px}}
+.md [href$="#excitedyui"]{height:162px;width:122px;background:url(%%animatedsheet1%%) -0px 0 no-repeat}
+.md [href$="#excitedyui"]:hover{animation:excitedyui .8s steps(7) infinite}
+
+/** Animated Set #2 **/
+@keyframes budgetsmile{from{background-position:0 -6634px}
+to{background-position:0 0}}
+.md [href$="#budgetsmile"]{height:105px;width:190px;background:url(%%budgetsheet%%) -0px -6634px no-repeat}
+.md [href$="#budgetsmile"]:hover{animation:budgetsmile 3.78s steps(62);animation-fill-mode:forwards}
+@keyframes elsiesigh{from{background-position:0 -3008px}
+to{background-position:0 -1296px}}
+.md [href$="#elsiesigh"]{height:105px;width:190px;background:url(%%RedBullSheet%%) -0px -3008px no-repeat}
+.md [href$="#elsiesigh"]:hover{animation:elsiesigh 2.04s steps(16);animation-fill-mode:forwards}
+@keyframes hnng{from{background-position:0 -3115px}
+to{background-position:0 -8144px}}
+.md [href$="#hnng"]{height:105px;width:190px;background:url(%%RedBullSheet%%) -0px -3115px no-repeat}
+.md [href$="#hnng"]:hover{animation:hnng 4.8s steps(47);animation-fill-mode:forwards}
+@keyframes shittaste{from{background-position:0 -13167px}
+to{background-position:0 -11247px}}
+.md [href$="#shittaste"]{height:78px;width:190px;background:url(%%RedBullSheet%%) -0px -13167px no-repeat}
+.md [href$="#shittaste"]:hover{animation:shittaste 1.96s steps(24);animation-fill-mode:forwards}
+@keyframes taigasigh{from{background-position:0 -1188px}
+to{background-position:0 0}}
+.md [href$="#taigasigh"]{height:106px;width:190px;background:url(%%RedBullSheet%%) -0px -1188px no-repeat}
+.md [href$="#taigasigh"]:hover{animation:taigasigh 1.68s steps(11);animation-fill-mode:forwards}
+@keyframes woo{from{background-position:0 -9214px}
+to{background-position:0 -8251px}}
+.md [href$="#woo"]{height:105px;width:190px;background:url(%%RedBullSheet%%) -0px -9214px no-repeat}
+.md [href$="#woo"]:hover{animation:woo 1.0s steps(9) infinite}
+@keyframes yuitears{from{background-position:0 -11140px}
+to{background-position:0 -9321px}}
+.md [href$="#yuitears"]{height:105px;width:190px;background:url(%%RedBullSheet%%) -0px -11140px no-repeat}
+.md [href$="#yuitears"]:hover{animation:yuitears 2.16s steps(17) infinite}
+@keyframes kurisudisappointed{from{background-position:0 -1441px}
+to{background-position:0 0}}
+.md [href$="#kurisudisappointed"]{height:129px;width:190px;background:url(%%MonsterSheet%%) -0px -1441px no-repeat}
+.md [href$="#kurisudisappointed"]:hover{animation:kurisudisappointed 1.63s steps(11);animation-fill-mode:forwards}
+@keyframes kobeniblush{from{background-position:0 -5568px}
+to{background-position:0 -1572px}}
+.md [href$="#kobeniblush"]{height:109px;width:190px;background:url(%%MonsterSheet%%) -0px -5568px no-repeat}
+.md [href$="#kobeniblush"]:hover{animation:kobeniblush 1.48s steps(36);animation-fill-mode:forwards}
+@keyframes moeshitarcher{from{background-position:0 -18174px}
+to{background-position:0 -10894px}}
+.md [href$="#moeshitarcher"]{height:138px;width:150px;background:url(%%MonsterSheet%%) -0px -18174px no-repeat}
+.md [href$="#moeshitarcher"]:hover{animation:moeshitarcher 2.24s steps(52);animation-fill-mode:forwards}
+@keyframes kinirohug{from{background-position:0 -8033px}
+to{background-position:0 -5679px}}
+.md [href$="#kinirohug"]{height:105px;width:190px;background:url(%%MonsterSheet%%) -0px -8033px no-repeat}
+.md [href$="#kinirohug"]:hover{animation:kinirohug 2.3s steps(22);animation-fill-mode:forwards}
+@keyframes panic{from{background-position:0 -10792px}
+to{background-position:0 -8140px}}
+.md [href$="#panic"]{height:100px;width:190px;background:url(%%MonsterSheet%%) -0px -10792px no-repeat}
+.md [href$="#panic"]:hover{animation:panic 2.7s steps(26) infinite}
+@keyframes frustration{from{background-position:0 -6894px}
+to{background-position:0 -4968px}}
+.md [href$="#frustration"]{height:105px;width:190px;background:url(%%7upSheet%%) -0px -6894px no-repeat}
+.md [href$="#frustration"]:hover{animation:frustration 1.9s steps(18);animation-fill-mode:forwards}
+@keyframes laughter{from{background-position:0 -4860px}
+to{background-position:0 0}}
+.md [href$="#laughter"]{height:106px;width:190px;background:url(%%7upSheet%%) -0px -4860px no-repeat}
+.md [href$="#laughter"]:hover{animation:laughter 4.6s steps(45) infinite}
+@keyframes oilup{from{background-position:0 -15681px}
+to{background-position:0 -13421px}}
+.md [href$="#oilup"]{height:111px;width:150px;background:url(%%7upSheet%%) -0px -15681px no-repeat}
+.md [href$="#oilup"]:hover{animation:oilup 1.89s steps(20);animation-fill-mode:forwards}
+@keyframes popcorn{from{background-position:0 -13314px}
+to{background-position:0 -7108px}}
+.md [href$="#popcorn"]{height:105px;width:190px;background:url(%%7upSheet%%) -0px -13314px no-repeat}
+.md [href$="#popcorn"]:hover{animation:popcorn 5.81s steps(58);animation-fill-mode:forwards}
+@keyframes imdone{from{background-position:0 -14486px}
+to{background-position:0 -8774px}}
+.md [href$="#imdone"]{height:100px;width:190px;background:url(%%KoolAidSheet%%) -0px -14486px no-repeat}
+.md [href$="#imdone"]:hover{animation:imdone 6.3s steps(56);animation-fill-mode:forwards}
+@keyframes unsure{from{background-position:0 -6848px}
+to{background-position:0 0}}
+.md [href$="#unsure"]{height:105px;width:190px;background:url(%%KoolAidSheet%%) -0px -6848px no-repeat}
+.md [href$="#unsure"]:hover{animation:unsure 3.82s steps(64) infinite}
+@keyframes wallbang{from{background-position:0 -8667px}
+to{background-position:0 -6955px}}
+.md [href$="#wallbang"]{height:105px;width:190px;background:url(%%KoolAidSheet%%) -0px -8667px no-repeat}
+.md [href$="#wallbang"]:hover{animation:wallbang 1s steps(16) infinite}
+@keyframes fistbump{from{background-position:0 -8128px}
+to{background-position:0 -4704px}}
+.md [href$="#fistbump"]{height:105px;width:190px;background:url(%%LemonLimeBittersSheet%%) -0px -8128px no-repeat}
+.md [href$="#fistbump"]:hover{animation:fistbump 2.5s steps(32);animation-fill-mode:forwards}
+@keyframes grouphug{from{background-position:0 -12515px}
+to{background-position:0 -8235px}}
+.md [href$="#grouphug"]{height:105px;width:190px;background:url(%%LemonLimeBittersSheet%%) -0px -12515px no-repeat}
+.md [href$="#grouphug"]:hover{animation:grouphug 4.92s steps(40);animation-fill-mode:forwards}
+@keyframes hahahawhat{from{background-position:0 -14064px}
+to{background-position:0 -12622px}}
+.md [href$="#hahahawhat"]{height:101px;width:190px;background:url(%%LemonLimeBittersSheet%%) -0px -14064px no-repeat}
+.md [href$="#hahahawhat"]:hover{animation:hahahawhat 1.5s steps(14);animation-fill-mode:forwards}
+@keyframes nosebleed{from{background-position:0 -4387px}
+to{background-position:0 0}}
+.md [href$="#nosebleed"]{height:105px;width:190px;background:url(%%AlmdudlerSheet%%) -0px -4387px no-repeat}
+.md [href$="#nosebleed"]:hover{animation:nosebleed 4.6s steps(41);animation-fill-mode:forwards}
+@keyframes elsienopesout{from{background-position:0 -13856px}
+to{background-position:0 -8132px}}
+.md [href$="#elsienopesout"]{height:104px;width:190px;background:url(%%AlmdudlerSheet%%) -0px -13856px no-repeat}
+.md [href$="#elsienopesout"]:hover{animation:elsienopesout 5.5s steps(54);animation-fill-mode:forwards}
+@keyframes feelsgoodman{from{background-position:0 -15138px}
+to{background-position:0 -13962px}}
+.md [href$="#feelsgoodman"]{height:96px;width:190px;background:url(%%AlmdudlerSheet%%) -0px -15138px no-repeat}
+.md [href$="#feelsgoodman"]:hover{animation:feelsgoodman 1.3s steps(12);animation-fill-mode:forwards}
+@keyframes shutupandtakemymoney{from{background-position:0 -8025px}
+to{background-position:0 -4494px}}
+.md [href$="#shutupandtakemymoney"]{height:105px;width:190px;background:url(%%AlmdudlerSheet%%) -0px -8025px no-repeat}
+.md [href$="#shutupandtakemymoney"]:hover{animation:shutupandtakemymoney 1.36s steps(33) infinite}
+@keyframes combo{from{background-position:0 -2568px}
+to{background-position:0 0}}
+.md [href$="#combo"]{height:105px;width:190px;background:url(%%BigRedSheet%%) -0px -2568px no-repeat}
+.md [href$="#combo"]:hover{animation:combo 2.5s steps(24);animation-fill-mode:forwards}
+@keyframes abandonthread{from{background-position:0 -8598px}
+to{background-position:0 -6206px}}
+.md [href$="#abandonthread"]{height:102px;width:190px;background:url(%%BigRedSheet%%) -0px -8598px no-repeat}
+.md [href$="#abandonthread"]:hover{animation:abandonthread 2.16s steps(23) infinite}
+@keyframes shirouthumbsup{from{background-position:0 -6099px}
+to{background-position:0 -2675px}}
+.md [href$="#shirouthumbsup"]{height:105px;width:190px;background:url(%%BigRedSheet%%) -0px -6099px no-repeat}
+.md [href$="#shirouthumbsup"]:hover{animation:shirouthumbsup 1.32s steps(32);animation-fill-mode:forwards}
+@keyframes kayosmile{from{background-position:0 -8288px}
+to{background-position:0 0}}
+.md [href$="#kayosmile"]{height:110px;width:190px;background:url(%%SurgeSheet%%) -0px -8288px no-repeat}
+.md [href$="#kayosmile"]:hover{animation:kayosmile 3.1s steps(74);animation-fill-mode:forwards}
+@keyframes mandom{from{background-position:0 -16185px}
+to{background-position:0 -13728px}}
+.md [href$="#mandom"]{height:187px;width:150px;background:url(%%SurgeSheet%%) -0px -16185px no-repeat}
+.md [href$="#mandom"]:hover{animation:mandom .92s steps(13);animation-fill-mode:forwards}
+@keyframes megumin{from{background-position:0 -13622px}
+to{background-position:0 -11396px}}
+.md [href$="#megumin"]{height:104px;width:190px;background:url(%%SurgeSheet%%) -0px -13622px no-repeat}
+.md [href$="#megumin"]:hover{animation:megumin 2.5s steps(21);animation-fill-mode:forwards}
+@keyframes niconicono{from{background-position:0 -11289px}
+to{background-position:0 -8400px}}
+.md [href$="#niconicono"]{height:105px;width:190px;background:url(%%SurgeSheet%%) -0px -11289px no-repeat}
+.md [href$="#niconicono"]:hover{animation:niconicono 2.07s steps(27);animation-fill-mode:forwards}
+
+/** Animated Set #3 **/
+@keyframes akkotears{from{background-position:0 -3300px}
+to{background-position:0 0}}
+.md [href$="#akkotears"]{height:148px;width:150px;background:url(%%anim1%%) 0 -3300px no-repeat}
+.md [href$="#akkotears"]:hover{animation:akkotears 1.44s steps(22) infinite}
+@keyframes aliens{from{background-position:0 -10618px}
+to{background-position:0 -9658px}}
+.md [href$="#aliens"]{height:118px;width:150px;background:url(%%anim1%%) 0 -10618px no-repeat}
+.md [href$="#aliens"]:hover{animation:aliens .5s steps(8) infinite}
+@keyframes angrypout{from{background-position:0 -4950px}
+to{background-position:0 -3450px}}
+.md [href$="#angrypout"]{height:148px;width:150px;background:url(%%anim1%%) 0 -4950px no-repeat}
+.md [href$="#angrypout"]:hover{animation:angrypout 1.0s steps(10);animation-fill-mode:forwards}
+@keyframes blankblink{from{background-position:0 -7200px}
+to{background-position:0 -5100px}}
+.md [href$="#blankblink"]{height:138px;width:150px;background:url(%%anim1%%) 0 -7200px no-repeat}
+.md [href$="#blankblink"]:hover{animation:blankblink 1.12s steps(15) infinite}
+@keyframes criticism{from{background-position:0 -6276px}
+to{background-position:0 -1684px}}
+.md [href$="#criticism"]{height:111px;width:150px;background:url(%%anim3%%) 0 -6276px no-repeat}
+.md [href$="#criticism"]:hover{animation:criticism 2.5s steps(41);animation-fill-mode:forwards}
+@keyframes emptyinside{from{background-position:0 -9536px}
+to{background-position:0 -7340px}}
+.md [href$="#emptyinside"]{height:120px;width:150px;background:url(%%anim1%%) 0 -9536px no-repeat}
+.md [href$="#emptyinside"]:hover{animation:emptyinside .76s steps(18);animation-fill-mode:forwards}
+@keyframes comfortfood{from{background-position:0 -10102px}
+to{background-position:0 -8744px}}
+.md [href$="#comfortfood"]{height:95px;width:178px;background:url(%%anim2%%) 0 -10102px no-repeat}
+.md [href$="#comfortfood"]:hover{animation:comfortfood 1.46s steps(14) infinite}
+@keyframes trynottocry{from{background-position:0 -4300px}
+to{background-position:0 -2400px}}
+.md [href$="#trynottocry"]{height:98px;width:178px;background:url(%%anim6%%) 0 -4300px no-repeat}
+.md [href$="#trynottocry"]:hover{animation:trynottocry 2s steps(19);animation-fill-mode:forwards}
+@keyframes dekuhype{from{background-position:0 -1232px}
+to{background-position:0 0}}
+.md [href$="#dekuhype"]{height:110px;width:178px;background:url(%%anim2%%) 0 -1232px no-repeat}
+.md [href$="#dekuhype"]:hover{animation:dekuhype .96s steps(11) infinite}
+@keyframes emiliaohdear{from{background-position:0 -1744px}
+to{background-position:0 -1344px}}
+.md [href$="#emiliaohdear"]{height:98px;width:178px;background:url(%%anim2%%) 0 -1744px no-repeat}
+.md [href$="#emiliaohdear"]:hover{animation:emiliaohdear .35s steps(4);animation-fill-mode:forwards}
+@keyframes hugbear{from{background-position:0 -4344px}
+to{background-position:0 -1844px}}
+.md [href$="#hugbear"]{height:98px;width:178px;background:url(%%anim2%%) 0 -4344px no-repeat}
+.md [href$="#hugbear"]:hover{animation:hugbear 1.25s steps(25);animation-fill-mode:forwards}
+@keyframes lolipolice{from{background-position:0 -4944px}
+to{background-position:0 -4444px}}
+.md [href$="#lolipolice"]{height:98px;width:178px;background:url(%%anim2%%) 0 -4944px no-repeat}
+.md [href$="#lolipolice"]:hover{animation:lolipolice .36s steps(5) infinite}
+@keyframes mashiroglare{from{background-position:0 -1600px}
+to{background-position:0 0}}
+.md [href$="#mashiroglare"]{height:98px;width:178px;background:url(%%anim4%%) 0 -1600px no-repeat}
+.md [href$="#mashiroglare"]:hover{animation:mashiroglare .68s steps(16);animation-fill-mode:forwards}
+@keyframes lwahorror{from{background-position:0 -6944px}
+to{background-position:0 -5044px}}
+.md [href$="#lwahorror"]{height:98px;width:178px;background:url(%%anim2%%) 0 -6944px no-repeat}
+.md [href$="#lwahorror"]:hover{animation:lwahorror 2.0s steps(19);animation-fill-mode:forwards}
+@keyframes lwahorror2{from{background-position:0 -8644px}
+to{background-position:0 -7044px}}
+.md [href$="#lwahorror2"]{height:98px;width:178px;background:url(%%anim2%%) 0 -8644px no-repeat}
+.md [href$="#lwahorror2"]:hover{animation:lwahorror2 1.7s steps(16);animation-fill-mode:forwards}
+@keyframes salt{from{background-position:0 -2800px}
+to{background-position:0 -1700px}}
+.md [href$="#salt"]{height:98px;width:178px;background:url(%%anim4%%) 0 -2800px no-repeat}
+.md [href$="#salt"]:hover{animation:salt .84s steps(11) infinite}
+@keyframes modabuse{from{background-position:0 -1176px}
+to{background-position:0 0}}
+.md [href$="#modabuse"]{height:145px;width:150px;background:url(%%anim3%%) 0 -1176px no-repeat}
+.md [href$="#modabuse"]:hover{animation:modabuse .8s steps(8) infinite}
+/** #hisocuck has no keyframe??? **/
+.md [href$="#hisocuck"]{height:122px;width:150px;background:url(%%anim3%%) 0 -1447px no-repeat}
+.md [href$="#hisocuck"]:hover{background:url(%%anim3%%) 0 -1323px no-repeat}
+@keyframes salutegeo{from{background-position:0 -4100px}
+to{background-position:0 -2900px}}
+.md [href$="#salutegeo"]{height:98px;width:178px;background:url(%%anim4%%) 0 -4100px no-repeat}
+.md [href$="#salutegeo"]:hover{animation:salutegeo 1.3s steps(12);animation-fill-mode:forwards}
+@keyframes shitposting{from{background-position:0 -6100px}
+to{background-position:0 -4200px}}
+.md [href$="#shitposting"]{height:98px;width:178px;background:url(%%anim4%%) 0 -6100px no-repeat}
+.md [href$="#shitposting"]:hover{animation:shitposting 2.6s steps(19) infinite}
+@keyframes squee{from{background-position:0 -7800px}
+to{background-position:0 -6200px}}
+.md [href$="#squee"]{height:98px;width:178px;background:url(%%anim4%%) 0 -7800px no-repeat}
+.md [href$="#squee"]:hover{animation:squee 1.7s steps(16);animation-fill-mode:forwards}
+@keyframes terror{from{background-position:0 -2300px}
+to{background-position:0 0}}
+.md [href$="#terror"]{height:98px;width:178px;background:url(%%anim6%%) 0 -2300px no-repeat}
+.md [href$="#terror"]:hover{animation:terror 2.4s steps(23);animation-fill-mode:forwards}
+@keyframes awe{from{background-position:0 -4900px}
+to{background-position:0 -2800px}}
+.md [href$="#awe"]{height:98px;width:178px;background:url(%%anim5%%) 0 -4900px no-repeat}
+.md [href$="#awe"]:hover{animation:awe 2.42s steps(21) infinite}
+@keyframes wow{from{background-position:0 -2700px}
+to{background-position:0 0}}
+.md [href$="#wow"]{height:98px;width:178px;background:url(%%anim5%%) 0 -2700px no-repeat}
+.md [href$="#wow"]:hover{animation:wow 1.68s steps(27);animation-fill-mode:forwards}
+@keyframes nyanpasu{from{background-position:0 -8162px}
+to{background-position:0 -4400px}}
+.md [href$="#nyanpasu"]{height:169px;width:150px;background:url(%%anim6%%) 0 -8162px no-repeat}
+.md [href$="#nyanpasu"]:hover{animation:nyanpasu 2.64s steps(22);animation-fill-mode:forwards}
+@keyframes wallpunch{from{background-position:0 -9197px}
+to{background-position:0 -8333px}}
+.md [href$="#wallpunch"]{height:106px;width:150px;background:url(%%anim6%%) 0 -9197px no-repeat}
+.md [href$="#wallpunch"]:hover{animation:wallpunch .9s steps(8);animation-fill-mode:forwards}
+@keyframes doggo{from{background-position:0 -1768px}
+to{background-position:0 0}}
+.md [href$="#doggo"]{height:101px;width:183px;background:url(%%doggo%%) -0px -1768px no-repeat}
+.md [href$="#doggo"]:hover{animation:doggo 2.07s steps(17);animation-fill-mode:forwards}
+@keyframes headpat{from{background-position:0 -9700px}
+to{background-position:0 0}}
+.md [href$="#headpat"]{height:98px;width:235px;background:url(%%anim7%%) 0 -9700px no-repeat}
+.md [href$="#headpat"]:hover{animation:headpat 7.76s steps(97) infinite}
+
+/** Old Sheet **/
+.md [href$="#gendo-pls"]{width:171px;height:114px;background-position:0 0px}
+.md [href$="#k-on-hug"]{width:180px;height:120px;background-position:0 -114px}
+.md [href$="#lewd"]{width:100px;height:150px;background-position:0 -234px}
+.md [href$="#nanami-hug"]{width:120px;height:150px;background-position:0 -384px}
+.md [href$="#yui-crying"]{width:80px;height:80px;background-position:0 -534px}
+.md [href$="#ok"]{width:100px;height:100px;background-position:0 -614px}
+.md [href$="#stare"]{width:150px;height:100px;background-position:0 -714px}
+.md [href$="#what"]{width:100px;height:80px;background-position:0 -814px}
+.md [href$="#gununu"] {width:107px;height:80px;background-position:0 -894px}
+.md [href$="#facepalm"]{width:80px;height:80px;background-position:0 -974px}
+.md [href$="#nico-heart"]{width:100px;height:80px;background-position:0 -1054px}
+.md [href$="#thumbs-up"]{width:120px;height:100px;background-position:0 -1134px}
+.md [href$="#kukuku"]{width:100px;height:150px;background-position:0 -1234px}
+.md [href$="#kotori"]{width:85px;height:89px;background-position:0 -1384px}
+.md [href$="#araragi-1"]{width:100px;height:50px;background-position:0 -1473px}
+.md [href$="#deadpan"]{width:80px;height:85px;background-position:0 -1523px}
+.md [href$="#head-tilt"]{width:121px;height:100px;background-position:0 -1608px}
+.md [href$="#manly-tears"]{width:150px;height:100px;background-position:0 -1708px}
+.md [href$="#not-raining"]{width:146px;height:100px;background-position:0 -1808px}
+.md [href$="#ohmygod"]{width:175px;height:100px;background-position:0 -1908px}
+.md [href$="#shock"]{width:170px;height:100px;background-position:0 -2008px}
+.md [href$="#heart-thumbs-up"]{width:79px;height:100px;background-position:0 -2108px}
+.md [href$="#wow-really"]{width:80px;height:85px;background-position:0 -2208px}
+.md [href$="#mugistronk"]{width:145px;height:150px;background-position:0 -2293px}
+.md [href$="#lesbians"]{width:180px;height:101px;background-position:0 -2442px}
+.md [href$="#konosubawot4"]{width:129px;height:166px;background-position:0 -2543px}
+.md [href$="#gendo-pls"],
+.md [href$="#k-on-hug"],
+.md [href$="#lewd"],
+.md [href$="#nanami-hug"],
+.md [href$="#yui-crying"],
+.md [href$="#ok"],
+.md [href$="#stare"],
+.md [href$="#what"],
+.md [href$="#gununu"],
+.md [href$="#facepalm"],
+.md [href$="#nico-heart"],
+.md [href$="#thumbs-up"],
+.md [href$="#kukuku"],
+.md [href$="#kotori"],
+.md [href$="#araragi-1"],
+.md [href$="#deadpan"],
+.md [href$="#head-tilt"],
+.md [href$="#manly-tears"],
+.md [href$="#not-raining"],
+.md [href$="#ohmygod"],
+.md [href$="#shock"],
+.md [href$="#heart-thumbs-up"],
+.md [href$="#wow-really"],
+.md [href$="#mugistronk"],
+.md [href$="#lesbians"],
+.md [href$="#konosubawot4"]{
+	background-image:url(%%oldsheet%%)
+}
+
+/** Static Spritesheet 1 **/
+.md [href$="#badassmugi"]{background:0 -2922px}
+.md [href$="#banjoisahellofadrug"]{background:0 -3022px}
+.md [href$="#bearhug"]{background:0 -3122px}
+.md [href$="#bearwithme"]{background:0 -3222px}
+.md [href$="#biribiricat"]{background:0 -3322px}
+.md [href$="#csikon"]{background:0 -3622px}
+.md [href$="#elsieqq"]{background:0 -3922px}
+.md [href$="#flclawe"]{height:133px!important;background:0 -841px}
+.md [href$="#haruhiisnotamused"]{background:0 -4222px}
+.md [href$="#hisokaclown"]{background:0 -4422px}
+.md [href$="#hanasakueurgh"]{background:0 -4122px}
+.md [href$="#jibrilaww"]{background:0 -4622px}
+.md [href$="#jibrilfetish"]{background:0 -4722px}
+.md [href$="#katoupls"]{background:0 -4922px}
+.md [href$="#mechablush"]{background:0 -5222px}
+.md [href$="#miiaembarassed"]{background:0 -5422px}
+.md [href$="#misakiteehee"]{background:0 -5622px}
+.md [href$="#misakiwink"]{background:0 -5722px}
+.md [href$="#nononkek"]{background:0 -5822px}
+.md [href$="#ohgodwhathaveidone"]{background:0 -6022px}
+.md [href$="#smugpoint"]{background:0 -6622px}
+.md [href$="#smugshinobu"]{background:0 -6722px}
+.md [href$="#SPORTS"]{background:0 -6922px}
+.md [href$="#whowouldathunkit"]{background:0 -7822px}
+.md [href$="#yandereyuno"]{background:0 -8022px}
+.md [href$="#cup2"]{background:0 -3722px}
+.md [href$="#annoyedkirito"]{height:113px!important;background:0 -2472px}
+.md [href$="#bestiathumbsup"]{height:133px!important;background:0 -706px}
+.md [href$="#crazedlaugh"]{height:119px!important;background:0 -1879px}
+.md [href$="#cup1"]{height:124px!important;background:0 -1508px}
+.md [href$="#gintamaspillage"]{height:129px!important;background:0 -1377px}
+.md [href$="#hunchedover"]{height:141px!important;background:0 -144px}
+.md [href$="#hypeoverload"]{width:125px!important;height:150px!important;background:0 -8122px}
+.md [href$="#infernocopu"]{width:125px!important;height:123px!important;background:0 -8274px}
+.md [href$="#niatilt"]{height:114px!important;background:0 -2704px}
+.md [href$="#nosepick"]{height:116px!important;background:0 -2119px}
+.md [href$="#mug1"]{height:131px!important;background:0 -1111px}
+.md [href$="#mug3"]{height:131px!important;background:0 -1244px}
+.md [href$="#badassmugi"],
+.md [href$="#banjoisahellofadrug"],
+.md [href$="#bearhug"],
+.md [href$="#bearwithme"],
+.md [href$="#biribiricat"],
+.md [href$="#csikon"],
+.md [href$="#elsieqq"],
+.md [href$="#haruhiisnotamused"],
+.md [href$="#hisokaclown"],
+.md [href$="#hanasakueurgh"],
+.md [href$="#jibrilaww"],
+.md [href$="#jibrilfetish"],
+.md [href$="#katoupls"],
+.md [href$="#mechablush"],
+.md [href$="#miiaembarassed"],
+.md [href$="#misakiteehee"],
+.md [href$="#misakiwink"],
+.md [href$="#nononkek"],
+.md [href$="#ohgodwhathaveidone"],
+.md [href$="#smugpoint"],
+.md [href$="#smugshinobu"],
+.md [href$="#SPORTS"],
+.md [href$="#whowouldathunkit"],
+.md [href$="#yandereyuno"],
+.md [href$="#cup2"],
+.md [href$="#annoyedkirito"],
+.md [href$="#bestiathumbsup"],
+.md [href$="#flclawe"],
+.md [href$="#crazedlaugh"],
+.md [href$="#cup1"],
+.md [href$="#gintamaspillage"],
+.md [href$="#hunchedover"],
+.md [href$="#hypeoverload"],
+.md [href$="#infernocopu"],
+.md [href$="#niatilt"],
+.md [href$="#nosepick"],
+.md [href$="#mug1"],
+.md [href$="#mug3"] {
+	background-image:url(%%StaticSpriteSheet1%%);width:178px;height:98px
+}
+
+/** Static Spritesheet 2 **/
+.md [href$="#akyuusqueel"],
+.md [href$="#arakawascream"],
+.md [href$="#asunanotamused"],
+.md [href$="#barakamonnotcool"],
+.md [href$="#bestiacheckyourprivilage"],
+.md [href$="#chiyomad"],
+.md [href$="#comewithmeifyouwanttobebestgirl"],
+.md [href$="#crazyhatgirlexcited"],
+.md [href$="#disbelief"],
+.md [href$="#dontdometh"],
+.md [href$="#duckhue"],
+.md [href$="#embarassedisla"],
+.md [href$="#gintamacrushed"],
+.md [href$="#gintamasunlight"],
+.md [href$="#gintamathispleasesme"],
+.md [href$="#happypoi"],
+.md [href$="#izananotthisshitagain"],
+.md [href$="#katoupout"],
+.md [href$="#nocomment"],
+.md [href$="#kumikouninterested"],
+.md [href$="#kyonfacepalm"],
+.md [href$="#maidshock"],
+.md [href$="#marikalewd"],
+.md [href$="#mug2"],
+.md [href$="#nichijouqq"],
+.md [href$="#rengehype"],
+.md [href$="#scaredmio"],
+.md [href$="#sheerdisgust"],
+.md [href$="#smugillya"],
+.md [href$="#smuglancer"],
+.md [href$="#thoughtful"],
+.md [href$="#trollarcher"],
+.md [href$="#uglycry"],
+.md [href$="#vashheadscratch"],
+.md [href$="#WRYYY"],
+.md [href$="#yuruyuriapprove"],
+.md [href$="#happydera"],
+.md [href$="#holdme"],
+.md [href$="#misakaheh"],
+.md [href$="#ohnoudidnt"],
+.md [href$="#teehee"],
+.md [href$="#tiredfate"],
+.md [href$="#chitogheh"] {
+	background-image:url(%%StaticSpriteSheet2%%);width:178px;height:98px
+}
+.md [href$="#akyuusqueel"]{width:129px;height:121px;background-position:0 -8621px}
+.md [href$="#arakawascream"]{width:143px;height:117px;background-position:0 -7733px}
+.md [href$="#asunanotamused"]{width:125px;height:118px;background-position:0 -10136px}
+.md [href$="#barakamonnotcool"]{background-position:0 -400px}
+.md [href$="#bestiacheckyourprivilage"]{width:123px;height:106px;background-position:0 -10615px}
+.md [href$="#chiyomad"]{background-position:0 -700px}
+.md [href$="#comewithmeifyouwanttobebestgirl"]{background-position:0 -800px}
+.md [href$="#crazyhatgirlexcited"]{background-position:0 -1000px}
+.md [href$="#disbelief"]{width:125px;height:119px;background-position:0 -10015px}
+.md [href$="#dontdometh"]{width:143px;height:96px;background-position:0 -8410px}
+.md [href$="#duckhue"]{width:143px;height:122px;background-position:0 -7485px}
+.md [href$="#embarassedisla"]{background-position:0 -1100px}
+.md [href$="#gintamacrushed"]{background-position:0 -1600px}
+.md [href$="#gintamasunlight"]{background-position:0 -2000px}
+.md [href$="#gintamathispleasesme"]{width:143px;height:141px;background-position:0 -6403px}
+.md [href$="#happypoi"]{width:143px;height:142px;background-position:0 -6259px}
+.md [href$="#izananotthisshitagain"]{width:125px;height:135px;background-position:0 -9616px}
+.md [href$="#katoupout"]{background-position:0 -2300px}
+.md [href$="#nocomment"]{background-position:0 -2400px}
+.md [href$="#kumikouninterested"]{width:125px;height:140px;background-position:0 -9336px}
+.md [href$="#kyonfacepalm"]{background-position:0 -2500px}
+.md [href$="#maidshock"]{width:107px;height:106px;background-position:0 -10978px}
+.md [href$="#marikalewd"]{width:125px;height:157px;background-position:0 -8864px}
+.md [href$="#mug2"]{width:143px;height:105px;background-position:0 -8198px}
+.md [href$="#nichijouqq"]{width:123px;height:118px;background-position:0 -8744px}
+.md [href$="#rengehype"]{background-position:0 -3000px}
+.md [href$="#scaredmio"]{width:123px;height:154px;background-position:0 -10822px}
+.md [href$="#sheerdisgust"]{width:143px;height:158px;background-position:0 -6097px}
+.md [href$="#smugillya"]{width:142px;height:128px;background-position:0 -7228px}
+.md [href$="#smuglancer"]{width:143px;height:122px;background-position:0 -7609px}
+.md [href$="#thoughtful"]{width:143px;height:114px;background-position:0 -7852px}
+.md [href$="#trollarcher"]{width:125px;height:154px;background-position:0 -9180px}
+.md [href$="#uglycry"]{background-position:0 -4000px}
+.md [href$="#vashheadscratch"]{width:143px;height:103px;background-position:0 -8305px}
+.md [href$="#WRYYY"]{background-position:0 -4100px}
+.md [href$="#yuruyuriapprove"]{background-position:0 -4400px}
+.md [href$="#happydera"]{background-position:0 -4500px}
+.md [href$="#holdme"]{background-position:0 -4600px}
+.md [href$="#misakaheh"]{background-position:0 -4700px}
+.md [href$="#ohnoudidnt"]{background-position:0 -4800px}
+.md [href$="#teehee"]{width:155px;height:122px;background-position:0 -5408px}
+.md [href$="#tiredfate"]{background-position:0 -5200px}
+.md [href$="#chitogheh"]{background-position:0 0}
+
+/** Cream Soda Sheet 1 **/
+.md [href$="#amurodealwithit"]{background:0 -323px}
+.md [href$="#antabaka"]{background:0 -569px}
+.md [href$="#badtaste"]{background:0 -815px}
+.md [href$="#brokenkokoro"]{background:0 -1061px}
+.md [href$="#calmdown"]{background:0 -1184px}
+.md [href$="#chinosmirk"]{background:0 -1307px}
+.md [href$="#concealedexcitement"]{background:0 -1430px}
+.md [href$="#cup3"]{background:0 -1553px}
+.md [href$="#cup6"]{background:0 -1676px}
+.md [href$="#didyouseriouslyjustsaythat"]{background:0 -1799px}
+.md [href$="#displeasedasuka"]{background:0 -1922px}
+.md [href$="#edneedsdis"]{background:0 -2045px}
+.md [href$="#exciteutawarerumono"]{background:0 -2291px}
+.md [href$="#faito"]{background:0 -2414px}
+.md [href$="#forbiddenlove"]{background:0 -2537px}
+.md [href$="#ginapproves"]{background:0 -2660px}
+.md [href$="#goblet1"]{background:0 -2783px}
+.md [href$="#happysaitama"]{background:0 -3029px}
+.md [href$="#helmetgril"]{background:0 -3275px}
+.md [href$="#howcouldyou"]{background:0 -3398px}
+.md [href$="#igiveup"]{background:0 -3521px}
+.md [href$="#ilovethiskindofshit"]{background:0 -3767px}
+.md [href$="#juice1"]{background:0 -3890px}
+.md [href$="#konosubawot"]{width:129px!important;height:167px!important;background:0 -0px}
+.md [href$="#konosubawot2"]{width:129px!important;height:152px!important;background:0 -169px}
+.md [href$="#kukuku2"]{background:0 -4013px}
+.md [href$="#kumikolook"]{background:0 -4136px}
+.md [href$="#kumikotears"]{background:0 -4259px}
+.md [href$="#miyamoriunimpressed"]{background:0 -4874px}
+.md [href$="#mug4"]{background:0 -5120px}
+.md [href$="#mug5"]{background:0 -5243px}
+.md [href$="#mug7"]{background:0 -5366px}
+.md [href$="#noice"]{background:0 -5612px}
+.md [href$="#notaccordingtokeikaku"]{background:0 -5735px}
+.md [href$="#oooreally"]{background:0 -6104px}
+.md [href$="#osomatsurage"]{background:0 -6227px}
+.md [href$="#papithumbsup"]{background:0 -6350px}
+.md [href$="#pleasetellmemore"]{width:129px!important;height:119px!important;background:0 -6596px}
+.md [href$="#psh-mongrels"]{background:0 -6719px}
+.md [href$="#rinkek"]{background:0 -6842px}
+.md [href$="#saberawe"]{width:106px!important;height:137px!important;background:0 -9142px}
+.md [href$="#saitamadeathstare"]{background:0 -7088px}
+.md [href$="#salute"]{background:0 -7211px}
+.md [href$="#schemingsaten"]{background:0 -7334px}
+.md [href$="#shinjimug"]{background:0 -7457px}
+.md [href$="#smugasuna"]{background:0 -7703px}
+.md [href$="#spookyglasses"]{background:0 -7826px}
+.md [href$="#tamakoapple"]{background:0 -7949px}
+.md [href$="#tearsofabestgirl"]{background:0 -8072px}
+.md [href$="#thisisfine"]{width:129px!important;height:98px!important;background:0 -9041px}
+.md [href$="#uglycry"]{background:0 -8195px}
+.md [href$="#whatisthisguydoing"]{background:0 -8318px}
+.md [href$="#yuishrug"]{background:0 -8564px}
+.md [href$="#yunosunglasses"]{width:105px!important;height:121px!important;background:0 -9281px}
+.md [href$="#amurodealwithit"],
+.md [href$="#antabaka"],
+.md [href$="#badtaste"],
+.md [href$="#brokenkokoro"],
+.md [href$="#calmdown"],
+.md [href$="#chinosmirk"],
+.md [href$="#concealedexcitement"],
+.md [href$="#cup3"],
+.md [href$="#cup6"],
+.md [href$="#didyouseriouslyjustsaythat"],
+.md [href$="#displeasedasuka"],
+.md [href$="#edneedsdis"],
+.md [href$="#exciteutawarerumono"],
+.md [href$="#faito"],
+.md [href$="#forbiddenlove"],
+.md [href$="#ginapproves"],
+.md [href$="#goblet1"],
+.md [href$="#happysaitama"],
+.md [href$="#helmetgril"],
+.md [href$="#howcouldyou"],
+.md [href$="#igiveup"],
+.md [href$="#ilovethiskindofshit"],
+.md [href$="#juice1"],
+.md [href$="#konosubawot"],
+.md [href$="#konosubawot2"],
+.md [href$="#kukuku2"],
+.md [href$="#kumikolook"],
+.md [href$="#kumikotears"],
+.md [href$="#miyamoriunimpressed"],
+.md [href$="#mug4"],
+.md [href$="#mug5"],
+.md [href$="#mug7"],
+.md [href$="#noice"],
+.md [href$="#notaccordingtokeikaku"],
+.md [href$="#oooreally"],
+.md [href$="#osomatsurage"],
+.md [href$="#papithumbsup"],
+.md [href$="#pleasetellmemore"],
+.md [href$="#psh-mongrels"],
+.md [href$="#rinkek"],
+.md [href$="#saberawe"],
+.md [href$="#saitamadeathstare"],
+.md [href$="#salute"],
+.md [href$="#schemingsaten"],
+.md [href$="#shinjimug"],
+.md [href$="#smugasuna"],
+.md [href$="#spookyglasses"],
+.md [href$="#tamakoapple"],
+.md [href$="#tearsofabestgirl"],
+.md [href$="#thisisfine"],
+.md [href$="#uglycry"],
+.md [href$="#whatisthisguydoing"],
+.md [href$="#yuishrug"],
+.md [href$="#yunosunglasses"] {
+	background-image:url(%%CreamSodaSheet%%);width:129px;height:121px
+}
+
+/** Root Beer **/
+.md [href$="#annoyedmayaka"]{background:0 -0px}
+.md [href$="#annoyedsaber"]{background:0 -100px}
+.md [href$="#banhammer"]{background:0 -200px}
+.md [href$="#bitchplease"]{background:0 -400px}
+.md [href$="#cheekygahara"]{background:0 -700px}
+.md [href$="#crumblingdespair"]{background:0 -900px}
+.md [href$="#cup4"]{background:0 -1000px}
+.md [href$="#cup5"]{background:0 -1100px}
+.md [href$="#delicioustears"]{background:0 -1200px}
+.md [href$="#donewiththisshit"]{background:0 -1400px}
+.md [href$="#firstthinginthemorning"]{background:0 -1600px}
+.md [href$="#fuckyou"]{background:0 -1800px}
+.md [href$="#giveitback"]{background:0 -2000px}
+.md [href$="#glasses-push"]{background:0 -2100px}
+.md [href$="#hackadollthumbsup"]{background:0 -2200px}
+.md [href$="#healthypasstimes"]{background:0 -2300px}
+.md [href$="#hououinseesit"]{background:0 -2500px}
+.md [href$="#justasplanned"]{background:0 -2700px}
+.md [href$="#kaorusmile"]{background:0 -2800px}
+.md [href$="#keikaku"]{background:0 -2900px}
+.md [href$="#killuadisgust"]{width:143px!important;height:140px!important;background:0 -8942px}
+.md [href$="#konodioda"]{background:0 -3000px}
+.md [href$="#kotourashock"]{background:0 -3100px}
+.md [href$="#kurokokek"]{background:0 -3300px}
+.md [href$="#labmembernumber009"]{background:0 -3400px}
+.md [href$="#lovenectar"]{background:0 -3600px}
+.md [href$="#meguminthumbsup"]{background:0 -3800px}
+.md [href$="#minoridenied"]{background:0 -3900px}
+.md [href$="#mitsukishock"]{background:0 -4000px}
+.md [href$="#mug6"]{background:0 -4100px}
+.md [href$="#overwhelmed"]{background:0 -4400px}
+.md [href$="#peace"]{background:0 -4500px}
+.md [href$="#plebgetawayfromme"]{background:0 -4600px}
+.md [href$="#poltears"]{background:0 -4700px}
+.md [href$="#quality"]{background:0 -4800px}
+.md [href$="#recoil"]{background:0 -4900px}
+.md [href$="#saehug"]{background:0 -5000px}
+.md [href$="#saesmile"]{background:0 -5100px}
+.md [href$="#sciencebringspeopletogether"]{width:176px!important;height:98px!important;background:0 -5200px}
+.md [href$="#schwing"]{background:0 -5300px}
+.md [href$="#shatteredsaten"]{background:0 -5400px}
+.md [href$="#shirayukidetermined"]{background:0 -5500px}
+.md [href$="#shirayukidizzyblush"]{background:0 -5600px}
+.md [href$="#shirayukidrunk"]{background:0 -5700px}
+.md [href$="#shirayukieavesdrop"]{background:0 -5800px}
+.md [href$="#shirayukifuckinreally"]{background:0 -5900px}
+.md [href$="#shirayukismile"]{background:0 -6000px}
+.md [href$="#smughaikyuu"]{background:0 -6300px}
+.md [href$="#smugobi"]{background:0 -6400px}
+.md [href$="#takaradasalute"]{background:0 -6500px}
+.md [href$="#takasakiapproves"]{background:0 -6600px}
+.md [href$="#thinkingtoohard"]{background:0 -6800px}
+.md [href$="#TOMODA"]{background:0 -7000px}
+.md [href$="#toradorable"]{background:0 -7100px}
+.md [href$="#toradorasalute"]{background:0 -7200px}
+.md [href$="#triggeredkillua"]{background:0 -7300px}
+.md [href$="#trollnui"]{background:0 -7400px}
+.md [href$="#utahapraises"]{background:0 -7700px}
+.md [href$="#waah"]{background:0 -7900px}
+.md [href$="#watashihasdeclined"]{background:0 -8000px}
+.md [href$="#watashiworried"]{background:0 -8100px}
+.md [href$="#whatamireading"]{background:0 -8200px}
+.md [href$="#annoyedmayaka"],
+.md [href$="#annoyedsaber"],
+.md [href$="#banhammer"],
+.md [href$="#bitchplease"],
+.md [href$="#cheekygahara"],
+.md [href$="#crumblingdespair"],
+.md [href$="#cup4"],
+.md [href$="#cup5"],
+.md [href$="#delicioustears"],
+.md [href$="#donewiththisshit"],
+.md [href$="#firstthinginthemorning"],
+.md [href$="#fuckyou"],
+.md [href$="#giveitback"],
+.md [href$="#glasses-push"],
+.md [href$="#hackadollthumbsup"],
+.md [href$="#healthypasstimes"],
+.md [href$="#hououinseesit"],
+.md [href$="#justasplanned"],
+.md [href$="#kaorusmile"],
+.md [href$="#keikaku"],
+.md [href$="#killuadisgust"],
+.md [href$="#konodioda"],
+.md [href$="#kotourashock"],
+.md [href$="#kurokokek"],
+.md [href$="#labmembernumber009"],
+.md [href$="#lovenectar"],
+.md [href$="#meguminthumbsup"],
+.md [href$="#minoridenied"],
+.md [href$="#mitsukishock"],
+.md [href$="#mug6"],
+.md [href$="#overwhelmed"],
+.md [href$="#peace"],
+.md [href$="#plebgetawayfromme"],
+.md [href$="#poltears"],
+.md [href$="#quality"],
+.md [href$="#recoil"],
+.md [href$="#saehug"],
+.md [href$="#saesmile"],
+.md [href$="#sciencebringspeopletogether"],
+.md [href$="#schwing"],
+.md [href$="#shatteredsaten"],
+.md [href$="#shirayukidetermined"],
+.md [href$="#shirayukidizzyblush"],
+.md [href$="#shirayukidrunk"],
+.md [href$="#shirayukieavesdrop"],
+.md [href$="#shirayukifuckinreally"],
+.md [href$="#shirayukismile"],
+.md [href$="#smughaikyuu"],
+.md [href$="#smugobi"],
+.md [href$="#takaradasalute"],
+.md [href$="#takasakiapproves"],
+.md [href$="#thinkingtoohard"],
+.md [href$="#TOMODA"],
+.md [href$="#toradorable"],
+.md [href$="#toradorasalute"],
+.md [href$="#triggeredkillua"],
+.md [href$="#trollnui"],
+.md [href$="#utahapraises"],
+.md [href$="#waah"],
+.md [href$="#watashihasdeclined"],
+.md [href$="#watashiworried"],
+.md [href$="#whatamireading"] {
+	background-image:url(%%RootBeerSheet%%);width:178px;height:98px
+}
+
+/** Lenin Sheet 2 **/
+.md [href$="#konosubot"]{width:128px;height:151px;background:-166px -457px}
+.md [href$="#lewdbot"]{width:151px;height:148px;background:0 -5px}
+.md [href$="#hardtruthbot"]{width:151px;height:148px;background:0 -157px}
+.md [href$="#blushubot"]{width:154px;height:148px;background:0 -309px}
+.md [href$="#yanderebot"]{width:128px;height:148px;background:0 -461px}
+.md [href$="#bot-chan"]{width:120px;height:148px;background:-153px -5px}
+.md [href$="#heartbot"]{width:113px;height:148px;background:-160px -157px}
+.md [href$="#konosubot"],
+.md [href$="#lewdbot"],
+.md [href$="#hardtruthbot"],
+.md [href$="#blushubot"],
+.md [href$="#yanderebot"],
+.md [href$="#bot-chan"],
+.md [href$="#heartbot"] {
+	background-image:url(%%leninadesheet2%%)
+}
+
+/** STAT 1 **/
+.md [href$="#adminsdidwhat"]{background:-0px -845px}
+.md [href$="#airfist"]{background:-0px -945px}
+.md [href$="#arresteddevelopment"]{background:-0px -1045px}
+.md [href$="#comfy"]{background:-0px -1145px}
+.md [href$="#saikikek"]{background:-0px -1245px}
+.md [href$="#cooresto"]{background:-0px -1345px}
+.md [href$="#ero"]{background:-0px -1445px}
+.md [href$="#everythingisfine"]{background:-0px -1545px}
+.md [href$="#frockychou"]{background:-0px -1645px}
+.md [href$="#fujostare"]{background:-0px -1745px}
+.md [href$="#gabdisgust"]{background:-0px -1845px}
+.md [href$="#happykaoru"]{background:-0px -1945px}
+.md [href$="#KUSOTTARE"]{background:-0px -2045px}
+.md [href$="#mmmmyrgh"]{background:-0px -2145px}
+.md [href$="#naziloli"]{background:-0px -2245px}
+.md [href$="#mangaka"]{background:-0px -2345px}
+.md [href$="#ohfuck"]{background:-0px -2445px}
+.md [href$="#ohshit"]{background:-0px -2545px}
+.md [href$="#ok_hand"]{background:-0px -2645px}
+.md [href$="#peacepeace"]{background:-0px -2745px}
+.md [href$="#protest"]{background:-0px -2845px}
+.md [href$="#ptsd"]{background:-0px -2945px}
+.md [href$="#sadholo"]{background:-0px -3045px}
+.md [href$="#shh"]{background:-0px -3145px}
+.md [href$="#shhbabe"]{background:-0px -3245px}
+.md [href$="#sleepingcutie"]{background:-0px -3345px}
+.md [href$="#whatdidijustread"]{background:-0px -3445px}
+.md [href$="#wideeyed"]{background:-0px -3545px}
+.md [href$="#nottodisushittoagen"]{background:-0px -744px;height:101px!important}
+.md [href$="#megubeer"]{background:-0px -642px;height:102px!important}
+.md [href$="#instillfear"]{background:-0px -436px;height:103px!important}
+.md [href$="#rec"]{background:-0px -539px;height:103px!important}
+.md [href$="#sweating"]{background:-0px -331px;height:105px!important}
+.md [href$="#teekyuuhype"]{background:-0px -224px;height:107px!important}
+.md [href$="#whisperwhisper"]{background:-0px -116px;height:108px!important}
+.md [href$="#getout"]{background:-0px -0px;height:116px!important}
+.md [href$="#adminsdidwhat"],
+.md [href$="#airfist"],
+.md [href$="#arresteddevelopment"],
+.md [href$="#comfy"],
+.md [href$="#saikikek"],
+.md [href$="#cooresto"],
+.md [href$="#ero"],
+.md [href$="#everythingisfine"],
+.md [href$="#frockychou"],
+.md [href$="#fujostare"],
+.md [href$="#gabdisgust"],
+.md [href$="#happykaoru"],
+.md [href$="#KUSOTTARE"],
+.md [href$="#mmmmyrgh"],
+.md [href$="#naziloli"],
+.md [href$="#mangaka"],
+.md [href$="#ohfuck"],
+.md [href$="#ohshit"],
+.md [href$="#ok_hand"],
+.md [href$="#peacepeace"],
+.md [href$="#protest"],
+.md [href$="#ptsd"],
+.md [href$="#sadholo"],
+.md [href$="#shh"],
+.md [href$="#shhbabe"],
+.md [href$="#sleepingcutie"],
+.md [href$="#whatdidijustread"],
+.md [href$="#wideeyed"],
+.md [href$="#nottodisushittoagen"],
+.md [href$="#megubeer"],
+.md [href$="#instillfear"],
+.md [href$="#rec"],
+.md [href$="#sweating"],
+.md [href$="#teekyuuhype"],
+.md [href$="#whisperwhisper"],
+.md [href$="#getout"] {
+	background-image:url(%%stat1%%);width:178px;height:100px
+}
+
+/** STAT 2**/
+.md [href$="#annoyedkiki"]{background:-0px -4989px;height:110px!important}
+.md [href$="#assman"]{background:-0px -2715px;height:128px!important}
+.md [href$="#biiru"]{background:-0px -1909px;height:138px!important}
+.md [href$="#blindinglight"]{background:-0px -614px;height:148px!important}
+.md [href$="#cantbehelped"]{background:-0px -3475px;height:124px!important}
+.md [href$="#cateyes"]{background:-0px -6834px;width:129px!important;height:158px!important}
+.md [href$="#cup7"]{background:-0px -314px;height:150px!important}
+.md [href$="#cup8"]{background:-0px -7892px;width:129px!important;height:144px!important}
+.md [href$="#cup9"]{background:-0px -4767px;height:111px!important}
+.md [href$="#datass"]{background:-0px -3841px;height:119px!important}
+.md [href$="#dejected"]{background:-0px -1054px;height:145px!important}
+.md [href$="#dubs"]{background:-0px -7147px;width:129px!important;height:152px!important}
+.md [href$="#eheheh"]{background:-0px -5422px;height:102px!important}
+.md [href$="#etotamadunno"]{background:-0px -762px;height:146px!important}
+.md [href$="#eyythisguy"]{background:-0px -2453px;height:133px!important}
+.md [href$="#feelingloved"]{background:-0px -2971px;height:127px!important}
+.md [href$="#fingertwirl"]{background:-0px -6006px;width:129px!important;height:172px!important}
+.md [href$="#fujoship"]{background:-0px -4078px}
+.md [href$="#girlishploy"]{background:-0px -5524px;height:102px!important}
+.md [href$="#happyrem"]{background:-0px -3098px;height:126px!important}
+.md [href$="#hellopolice"]{background:-0px -5728px;height:100px!important}
+.md [href$="#illyastare"]{background:-0px -1486px;height:142px!important}
+.md [href$="#judgesucy"]{background:-0px -4194px}
+.md [href$="#kannathumbs"]{background:-0px -0px;height:162px!important}
+.md [href$="#kanyehidouyo"]{background:-0px -7747px;width:129px!important;height:145px!important}
+.md [href$="#killitwithfire"]{background:-0px -3960px;height:118px!important}
+.md [href$="#kms"]{background:-0px -5318px;height:104px!important}
+.md [href$="#konhug"]{background:-0px -1343px;height:143px!important}
+.md [href$="#konosubawot3"]{background:-0px -7599px;width:129px!important;height:148px!important}
+.md [href$="#lewdgyaru"]{background:-0px -4655px;height:112px!important}
+.md [href$="#lifeishard"]{background:-0px -464px;height:150px!important}
+.md [href$="#loli_ok"]{background:-0px -2319px;height:134px!important}
+.md [href$="#loliwave"]{background:-0px -6178px;width:129px!important;height:168px!important}
+.md [href$="#makicry"]{background:-0px -7450px;width:129px!important;height:149px!important}
+.md [href$="#megushock"]{background:-0px -1199px;height:144px!important}
+.md [href$="#mindblank"]{background:-0px -3350px;height:125px!important}
+.md [href$="#modsalute"]{background:-0px -3224px;height:126px!important}
+.md [href$="#morethanonewaifu"]{background:-0px -5209px;height:109px!important}
+.md [href$="#mug10"]{background:-0px -6992px;width:129px!important;height:155px!important}
+.md [href$="#mug8"]{background:-0px -1628px;height:142px!important}
+.md [href$="#mug9"]{background:-0px -5828px;width:129px!important;height:178px!important}
+.md [href$="#nerr"]{background:-0px -3599px;height:122px!important}
+.md [href$="#nichijouthumbs"]{background:-0px -2047px;height:137px!important}
+.md [href$="#nicoheart"]{background:-0px -2586px;height:129px!important}
+.md [href$="#nicoisdone"]{background:-0px -7299px;width:129px!important;height:151px!important}
+.md [href$="#niconoo"]{background:-0px -5626px;height:102px!important}
+.md [href$="#nosenpai"]{background:-0px -162px;height:152px!important}
+.md [href$="#ohdear"]{background:-0px -6675px;width:129px!important;height:159px!important}
+.md [href$="#selfcontrol"]{background:-0px -4310px}
+.md [href$="#sideeyes"]{background:-0px -6514px;width:129px!important;height:161px!important}
+.md [href$="#smugrose"]{background:-0px -4878px;height:111px!important}
+.md [href$="#sowwy"]{background:-0px -908px;height:146px!important}
+.md [href$="#surprisedhifumi"]{background:-0px -3721px;height:120px!important}
+.md [href$="#taigaheadache"]{background:-0px -4426px}
+.md [href$="#tomato"]{background:-0px -2184px;height:135px!important}
+.md [href$="#towel"]{background:-0px -6346px;width:129px!important;height:168px!important}
+.md [href$="#urarahype"]{background:-0px -1770px;height:139px!important}
+.md [href$="#usamiwink"]{background:-0px -5099px;height:110px!important}
+.md [href$="#uwaa"]{background:-0px -4542px;height:113px!important}
+.md [href$="#zetsuboushta"]{background:-0px -2843px;height:128px!important}
+.md [href$="#cup8"],
+.md [href$="#kanyehidouyo"],
+.md [href$="#konosubawot3"],
+.md [href$="#makicry"],
+.md [href$="#nicoisdone"],
+.md [href$="#dubs"],
+.md [href$="#mug10"],
+.md [href$="#cateyes"],
+.md [href$="#ohdear"],
+.md [href$="#sideeyes"],
+.md [href$="#loliwave"],
+.md [href$="#towel"],
+.md [href$="#fingertwirl"],
+.md [href$="#mug9"],
+.md [href$="#hellopolice"],
+.md [href$="#eheheh"],
+.md [href$="#girlishploy"],
+.md [href$="#niconoo"],
+.md [href$="#kms"],
+.md [href$="#morethanonewaifu"],
+.md [href$="#annoyedkiki"],
+.md [href$="#usamiwink"],
+.md [href$="#cup9"],
+.md [href$="#smugrose"],
+.md [href$="#lewdgyaru"],
+.md [href$="#uwaa"],
+.md [href$="#fujoship"],
+.md [href$="#judgesucy"],
+.md [href$="#selfcontrol"],
+.md [href$="#taigaheadache"],
+.md [href$="#killitwithfire"],
+.md [href$="#datass"],
+.md [href$="#surprisedhifumi"],
+.md [href$="#nerr"],
+.md [href$="#cantbehelped"],
+.md [href$="#mindblank"],
+.md [href$="#happyrem"],
+.md [href$="#modsalute"],
+.md [href$="#feelingloved"],
+.md [href$="#assman"],
+.md [href$="#zetsuboushta"],
+.md [href$="#nicoheart"],
+.md [href$="#eyythisguy"],
+.md [href$="#loli_ok"],
+.md [href$="#tomato"],
+.md [href$="#nichijouthumbs"],
+.md [href$="#biiru"],
+.md [href$="#urarahype"],
+.md [href$="#illyastare"],
+.md [href$="#mug8"],
+.md [href$="#konhug"],
+.md [href$="#megushock"],
+.md [href$="#dejected"],
+.md [href$="#etotamadunno"],
+.md [href$="#sowwy"],
+.md [href$="#blindinglight"],
+.md [href$="#cup7"],
+.md [href$="#lifeishard"],
+.md [href$="#nosenpai"],
+.md [href$="#kannathumbs"] {
+	background-image:url(%%stat2%%);width:150px;height:116px
+}
