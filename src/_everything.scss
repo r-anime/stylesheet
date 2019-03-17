@@ -410,12 +410,13 @@ span.multi-count {margin: 0!important}
 .thing .arrow.upmod {background-position: -113px 0!important}
 .thing .arrow.downmod {background-position: -113px -14px!important}
 .link.RES-keyNav-activeThing {background: #f0f3fc}
-// we can get rid of this next one right TODO
-.link {
+// Link body styles
+.link,
+.organic-listing .link.promotedlink {
 	margin: 0;
     border-top: 1px solid #efefef;
 	border-bottom: 1px solid #efefef;
-	padding: 5px
+	padding: 5px 0;
 }
 .link ~ .link:not(.last-clicked) {border-top: 0}
 .link.last-clicked {
@@ -457,7 +458,6 @@ span.multi-count {margin: 0!important}
 }
 .organic-listing .help {margin: 5px}
 body>.content .spacer {margin: 0}
-.organic-listing .link.promotedlink {padding: 5px 10px 5px 15px}
 .organic-listing .sponsored-tagline {margin: 5px 0}
 .promotedlink .thumbnail {border-radius: 5px}
 .gold-accent.comment-visits-box {display: block}
