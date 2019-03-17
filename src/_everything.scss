@@ -781,11 +781,18 @@ body #progressIndicator {
 }
 /* Link styles */
 .md a,
-.tagline a {color: #557eb8}
+.tagline a {
+	color: #557eb8;
+}
 .md a:hover,
-.tagline a:hover {color: #244573}
+.tagline a:hover {
+	color: #244573;
+	text-decoration: underline;
+}
 .res-nightmode .md a:hover,
-.res-nightmode .tagline a:hover {color: #b8d0e8}
+.res-nightmode .tagline a:hover {
+	color: #b8d0e8;
+}
 
 /* Sidebar markdown headings */
 .side .md h1 {
