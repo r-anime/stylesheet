@@ -13,9 +13,9 @@
 @import "flairs"; // User CSS flair texts, etc.
 
 // Main theme style
+@import "src/everything"; // Everything that isn't somewhere else yet
 @import "src/usernames"; // User flairs,
 @import "src/markdown"; // Generic markdown styles
 @import "src/sidebar"; // Sidebar-specific styles, including markdown hacks
 @import "src/infobar"; // Fancy announcements thing at the top of the sub
 @import "src/commentfaces"; // Comment faces, static and animated
-@import "src/everything"; // Everything else (will eventually not exist)

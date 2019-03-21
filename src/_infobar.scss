@@ -31,6 +31,7 @@ $hover-delay: 150ms; // delay before dropdowns trigger
 		height: $infobar-button-height;
 		line-height: $infobar-button-height;
 		position: relative;
+		z-index: 1; // appear above the other things
 
 		// Sub-headings
 		strong {
@@ -160,6 +161,25 @@ $hover-delay: 150ms; // delay before dropdowns trigger
 		}
 		p:nth-child(4) {
 			animation-delay: $info-entry-period * 3;
+		}
+	}
+}
+
+// Small screen styles
+@media (max-width: 1300px) {
+	body > .content {
+		padding-top: 110px;
+	}
+	.side .md > :first-child {
+		padding-top: 10px;
+		flex-wrap: wrap;
+		blockquote {
+			flex: 1 1 100%;
+			margin-top: 10px;
+			margin-left: -10px;
+			border-left: 0;
+			border-top: 1px solid #EEE;
+			text-align: center;
 		}
 	}
 }
