@@ -842,7 +842,7 @@ a[href*="/s?"] {
 	background: #000;
 	padding: 1px 0 1px 3px;
 	cursor: text;
-	border-radius: 2px
+	border-radius: 2px;
 }
 a[href="/s"]:hover,
 a[href*="/s?"]:hover {color: #f44!important}
@@ -851,7 +851,8 @@ a[href*="/s?"]::after {
 	content: attr(title);
 	background: inherit;
 	color: #000;
-	padding: 0 10px
+	padding: 0 10px;
+	text-decoration: none;
 }
 a[href="/s"]:hover::after,
 a[href="/s"]:active::after,
