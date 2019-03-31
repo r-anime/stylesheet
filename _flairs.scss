@@ -35,8 +35,8 @@
 .author[href$="/Bainos"]::after {content: "Hirasawa Yui";font-weight:bold}
 .author[href$="/BanjoTheBear"] {font-size: 0}
 .author[href$="/BanjoTheBear"]::after {content: "Takanashi Rikka";font-weight:bold}
-.author[href$="/basedbecker"]:after{content:"xXxfunk_m4st3r_<33xXx"}
-.author[href$="/basedbecker"]{font-size:0}
+.author[href$="/basedbecker"] {font-size: 0}
+.author[href$="/basedbecker"]::after {content: "Houtarou Oreki";font-weight:bold}
 .author[href$="/BBallHunter"]:after{content:"BBallHunter"}
 .author[href$="/BBallHunter"]:hover:before {color:#F05333;font-weight: bold;content:"Hiatus x";}
 .author[href$="/BBallHunter"]:hover:after {color:#f00000;font-weight: bold;content:" Hunter";}
@@ -96,11 +96,8 @@
 .author[href$="/LordTakuro"]:after{color:#ff7feb;content:" is a Hero"}@keyframes color-change{0%{color:#ff69b4}50%{color:white}100%{color:#ff69b4}}
 .author[href$="/lukeatlook"]:after{color:#00e500;content:"atthisflowchart"}
 .author[href$="/MAD_SCIENTIST_001"]:before{color:#8d8d8d;content:"Lab Member Codename: "}
-.author[href$="/Mage_of_Shadows"]:not(.moderator):after{color:#E4B400;content:" wants a guy friend too"}
-.author[href$="/Mage_of_Shadows"].moderator:before{content:"Mage"}
-.author[href$="/Mage_of_Shadows"].moderator:after{content:"_of_Shadows"}
-.author[href$="/Mage_of_Shadows"].moderator:hover:after{opacity:0;transition: 0.5s}
-.author[href$="/Mage_of_Shadows"].moderator{font-size:0}
+.author[href$="/Mage_of_Shadows"] {font-size: 0}
+.author[href$="/Mage_of_Shadows"]::after {content: "Kamio Misuzu";font-weight:bold}
 .author[href$="/MetaThPr4h"]{color:#E4B400}
 .author[href$="/MetaThPr4h"]:after{color:#EC768C;content:" です"}
 .author[href$="/MissyPie"]:after{color:#ffb6c1;content:" *:・ﾟ✧*:・ﾟ✧"}
@@ -108,7 +105,7 @@
 .author[href$="/MissyPie"]{color:#ff69b4;font-weight:bold;animation:color-change 9s}
 .author[href$="/myanimelistllc"]:after{color:#009;content:" Staff of MAL"}
 .author[href$="/neito"] {font-size: 0}
-.author[href$="/neito"]::after {content: "Nishimiya Shouko";font-weight:bold}
+.author[href$="/neito"]::after {content: "Hidaka Yumemi";font-weight:bold}
 .author[href$="/notathrowaway75"]:after{content:"...76...77..."}
 .author[href$="/NotTheRealMorty"]:not(.moderator){font-size: 0}
 .author[href$="/NotTheRealMorty"]:not(.moderator):before{content: "NTRMorty"}
@@ -161,7 +158,7 @@
 .author[href$="/tundranocaps"]:after{color:#f3c;content:" watches you everywhere"}
 .author[href$="/twoduy"]:after{color:#ff69b4;content:" Professor in Moeology"}
 .author[href$="/urban287"] {font-size: 0}
-.author[href$="/urban287"]::after {content: "Evergarden Violet";font-weight:bold}
+.author[href$="/urban287"]::after {content: "Chitanda Eru";font-weight:bold}
 .author[href$="/VincentBlack96"]{font-size:0}
 .author[href$="/VincentBlack96"]:before{color: #3698e1; content: "Vincent"}
 .author[href$="/VincentBlack96"]:after{color: #000; content: "Black96"}
