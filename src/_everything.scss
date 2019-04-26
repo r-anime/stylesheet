@@ -941,6 +941,7 @@ a[href*="/s?"]:active {
 .flair-v-kadokawa::after {content: " - Kadokawa (Verified)"; color: #2C3086}
 .flair-v-fathomevents {border-color: #FF7006}
 .flair-v-fathomevents::before {background-position: -32px -48px}
+.flair-v-fathomevents::after {content: " - Fathom Events (Verified)"; color: #FF7006}
 
 /* Reset things for other flair */
 [class="flair flair-skip7"] {display: none}
