@@ -939,6 +939,8 @@ a[href*="/s?"]:active {
 .flair-v-kadokawa {border-color: #2C3086}
 .flair-v-kadokawa::before {background-position: -32px 0}
 .flair-v-kadokawa::after {content: " - Kadokawa (Verified)"; color: #2C3086}
+.flair-v-fathomevents {border-color: #FF7006}
+.flair-v-fathomevents::after {color: #FF7006}
 
 /* Reset things for other flair */
 [class="flair flair-skip7"] {display: none}
