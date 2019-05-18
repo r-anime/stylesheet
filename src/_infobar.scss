@@ -219,11 +219,11 @@ $hover-delay: 150ms; // delay before dropdowns trigger
 	blockquote em {
 		color: #FFF;
 	}
-	blockquote:hover,
-	> p:hover em {
-		background: #2f2f2f;
-		box-shadow:$dropdown-shadow-nightmode;
-	}
+	// blockquote:hover,
+	// > p:hover em {
+	// 	background: #2f2f2f;
+	// 	box-shadow:$dropdown-shadow-nightmode;
+	// }
 	blockquote:hover p {
 		box-shadow: 0 1px #000;
 	}
