@@ -1044,6 +1044,7 @@ a[href*="/s?"]:active {
  * xm - No Official Media
  * xq - No Questions
  * xr - No Recommendations
+ * xe - No Memes
  * xa - No "Light Media" (Fanart, Cosplay, Clips, Official Media, Questions, Recommendations)
  */
 :lang(xn) .link.over18,
@@ -1057,6 +1058,7 @@ a[href*="/s?"]:active {
 :lang(xm) .link.linkflair-official-media,
 :lang(xq) .link.linkflair-question,
 :lang(xr) .link.linkflair-recommendation,
+:lang(xe) .link.linkflair-meme,
 
 :lang(xa) .link.linkflair-fanart,
 :lang(xa) .link.linkflair-fanart-oc,
@@ -1065,6 +1067,7 @@ a[href*="/s?"]:active {
 :lang(xa) .link.linkflair-clip,
 :lang(xa) .link.linkflair-official-media,
 :lang(xa) .link.linkflair-recommendation,
+:lang(xa) .link.linkflair-meme,
 :lang(xa) .link.linkflair-question {display: none}
 
 /** Discord button **/
