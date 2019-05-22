@@ -29,7 +29,8 @@
 .author[href$="/AutoModerator"]:after{font-weight:bold; color: #8000FF; content: " Best Mod 2017 "}
 .author[href$="/AutoModerator"]:before{content:"Bot-chan"}
 .author[href$="/AutoModerator"]{font-size:0}
-.author[href$="/Bainos"]:not(.moderator):after{color:#9cc344;content:"'s snapping";font-style:italic}
+.author[href$="/Bainos"]:not(.moderator):after{color:#9cc344;content:", the merciful";font-style:italic}
+.author[href$="/Bainos"].moderator:after{content:", the merciless";font-style:italic}
 .author[href$="/babydave371"]:before{color:#E74C3C;content:"Royal Space Force Officer "}
 .author[href$="/babydave371"]:after{color:#F4D03F;content:"babydave371"}
 .author[href$="/babydave371"]{font-size:0}
