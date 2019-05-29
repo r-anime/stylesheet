@@ -62,6 +62,7 @@
 .md [href="#"], // Empty link
 .md [href^="#!"], // Toolbox links
 .md [href^="#res:"], // RES links
+.md [href^="#gear"], // RES gear icon
 .md [href^="#/"], // Empty link (for markdown)
 .md [href$="#/"], // utm version of the above
 .md [href^="#?"], // ?
