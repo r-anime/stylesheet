@@ -7,7 +7,9 @@ a.author.moderator {color: #5dab00}
 	display: inline-block;
 	margin-right: 0
 }
-.author + * {margin-left: .5em} // Extra spacing for
+// This is a default reddit style, but sometimes we make the font-size 0, so we
+// use rem instead of em (they're equivalent in this context)
+.author {margin-right: .5rem}
 .author::before,
 .author::after {font-size: small}
 .tagline .author::before,
