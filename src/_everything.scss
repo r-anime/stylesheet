@@ -901,7 +901,7 @@ a[href*="/s?"]:active {
 	font-size: x-small!important;
 	transition-delay: 0s
 }
-/* list services */
+// List services
 .flair-MAL::before {background-position: 0 0}
 .flair-HB::before {background-position: 0 -16px}
 .flair-ANI::before {background-position: 0 -32px}
@@ -909,7 +909,7 @@ a[href*="/s?"]:active {
 .flair-ann::before {background-position: 0 -64px}
 .flair-anidb::before {background-position: 0 -80px}
 .flair-custom::before {background-position: 0 -96px}
-/* verification styles/logos */
+// Verification/service logo styles
 .flair-v-crunchy {border-color: #F78B24}
 .flair-v-crunchy::before {background-position: -16px 0}
 .flair-v-crunchy::after {content: " - Crunchyroll (Verified)"; color: #F78B24}
@@ -942,6 +942,10 @@ a[href*="/s?"]:active {
 .flair-v-fathomevents {border-color: #FF7006}
 .flair-v-fathomevents::before {background-position: -32px -48px}
 .flair-v-fathomevents::after {content: " - Fathom Events (Verified)"; color: #FF7006}
+// Awards flairs!
+.flair-a-amq {border-color: #DF6975}
+.flair-a-amq::before {background-position: -32px -64px}
+.flair-a-amq::after {content: " - 1mil celebration AMQ participant!", color: #DF6975}
 
 /* Reset things for other flair */
 [class="flair flair-skip7"] {display: none}
