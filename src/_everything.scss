@@ -945,7 +945,7 @@ a[href*="/s?"]:active {
 // Awards flairs!
 .flair-a-amq {border-color: #DF6975}
 .flair-a-amq::before {background-position: -32px -64px}
-.flair-a-amq::after {content: " - 1mil celebration AMQ participant!", color: #DF6975}
+.flair-a-amq::after {content: " - 1mil celebration AMQ participant!"; color: #DF6975}
 
 /* Reset things for other flair */
 [class="flair flair-skip7"] {display: none}
