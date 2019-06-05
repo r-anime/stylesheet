@@ -14,3 +14,11 @@
 	border-radius: 5px;
 	background: url(%%sidebar%%) center/contain;
 }
+
+// Border radius for the Reddit premium banner - we can't remove it, but we can make it look good
+.premium-banner::before {
+	border-radius: 3px;
+}
+.premium-banner-outer {
+	border-radius: 5px;
+}
