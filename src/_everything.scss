@@ -1,8 +1,9 @@
-/* general TODO: merge single-statement rules like display:none and margin:0 */
+/* general TODO: merge single-statement rules like margin:0 */
 
 /** Base styles **/
 
 // 1rem = 10px
+// TODO: actually use this in places
 html {font-size: 62.5%}
 
 // Reset some margins
@@ -12,13 +13,15 @@ body > .content {
 }
 
 // Get rid of unnecessary backgrounds that Reddit applies
-body>.content,
+body > .content,
 .side .titlebox form.toggle,
 .side .leavemoderator,
 .sidebox,
 .sidebox .spacer,
 .icon-menu a,
-#sr-header-area * {background-color: transparent!important}
+#sr-header-area * {
+	background-color: transparent !important;
+}
 
 // Generic elements with rounded corners
 .infobar, .rounded, .reddit-infobar {
@@ -255,7 +258,9 @@ span.multi-count {margin: 0!important}
 .users-online {
 	display: inline;
 }
-.titlebox .word {display: none}
+.titlebox .word {
+	@extend %display-none;
+}
 .titlebox .bottom {
 	border-color: #cfcfcf;
 	margin: 10px 0 -10px;
@@ -264,7 +269,9 @@ span.multi-count {margin: 0!important}
 }
 .res-nightmode .titlebox .bottom {border-color: #000}
 .titlebox .bottom .author::after {font-size: 0}
-.titlebox .bottom .flair {display: none}
+.titlebox .bottom .flair {
+	@extend %display-none;
+}
 .titlebox .bottom .age {
 	font-size: x-small;
 	float: none;
@@ -293,7 +300,9 @@ span.multi-count {margin: 0!important}
 	border-bottom-right-radius: 5px;
 	padding: 10px
 }
-.sidebox.create {display: none}
+.sidebox.create {
+	@extend %display-none;
+}
 
 /* Common small buttons and stuff */
 /* TODO: Also integrate subscribe button */
@@ -364,7 +373,9 @@ span.multi-count {margin: 0!important}
 	top: 0;
 	transition: top 200ms
 }
-.morelink .nub {display: none}
+.morelink .nub {
+	@extend %display-none;
+}
 .morelink a {
 	color: #FFF;
 	display: block;
@@ -660,7 +671,9 @@ body #progressIndicator {
 	content: 'You are submitting a text-based post. Speak your mind. A title and a text body are both required. Beginning your title with "vote up if" is violation of intergalactic law.';
 	font-size: small
 }
-#text-field .roundfield-description {display: none}
+#text-field .roundfield-description {
+	@extend %display-none;
+}
 .submit-page ul.formtab {
 	padding: 0;
 	margin: 0;
@@ -965,7 +978,9 @@ a[href*="/s?"]:active {
 .flair-a-amq::after {content: " - 1mil celebration AMQ participant!"; color: #67B5EF}
 
 /* Reset things for other flair */
-[class="flair flair-skip7"] {display: none}
+[class="flair flair-skip7"] {
+	@extend %display-none;
+}
 
 /** Post flairs **/
 .linkflairlabel {
@@ -1020,7 +1035,7 @@ a[href*="/s?"]:active {
 .linkflair-blue .linkflairlabel,
 .linkflair-red .linkflairlabel,
 .linkflair-palered .linkflairlabel {
-	display: none;
+	@extend %display-none;
 }
 .linkflair-green a.title,
 .linkflair-blue a.title,
@@ -1086,7 +1101,9 @@ a[href*="/s?"]:active {
 :lang(xa) .link.linkflair-clip,
 :lang(xa) .link.linkflair-official-media,
 :lang(xa) .link.linkflair-recommendation,
-:lang(xa) .link.linkflair-question {display: none}
+:lang(xa) .link.linkflair-question {
+	@extend %display-none;
+}
 
 /** Discord button **/
 .side [href*="discord.gg"] {
@@ -1136,7 +1153,7 @@ a[href*="/s?"]:active {
     background: url(%%evilsnoo%%) bottom/contain;
 }
 .res-nightmode #header-img {
-    display: none;
+    @extend %display-none;
 }
 .res-nightmode .side {
 	background: url(%%side-bg-dark%%) top/4px #1f1f1f !important;
