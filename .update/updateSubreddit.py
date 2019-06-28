@@ -3,6 +3,24 @@
 import praw, os, sys
 from csscompressor import compress
 
+# Pass --dry as the first argument to compress without uploading
+dry_run = sys.argv[1] == "--dry"
+if dry_run:
+    # Remove the argument so the subreddit parameter still works
+    sys.argv.pop(1)
+
+# Read stylesheet and minify it
+stylesheet_file = open(os.path.join(os.getcwd(), "style.css"), "r")
+stylesheet = compress(stylesheet_file.read()) # minify
+# stylesheet = stylesheet_file.read() # don't minify
+stylesheet_file.close()
+print(f"Got and minified stylesheet. Length={len(stylesheet)}")
+
+# Don't continue if we're dry running
+if dry_run:
+    print("Dry run; not writing stylesheet to subreddit")
+    exit(0)
+
 # Read config from environment variables
 client_id = os.environ['REDDIT_CLIENT_ID']
 client_secret = os.environ['REDDIT_CLIENT_SECRET']
@@ -30,26 +48,17 @@ r = praw.Reddit(
     redirect_uri=redirect_uri,
     user_agent="script:geo1088/reddit-stylesheet-sync:v1.0 (written by /u/geo1088; run by /u/{})".format(username))
 try:
-    print("Logged into Reddit as /u/{}".format(r.user.me().name))
+    print(f"Logged into Reddit as /u/{r.user.me().name}")
 except Exception as e:
     print(f"Failed to log in as /u/{username}:")
     print(e)
     exit(1)
 
-# Read stylesheet and minify it
-stylesheet_file = open(os.path.join(os.getcwd(), "style.css"), "r")
-stylesheet = compress(stylesheet_file.read()) # minify
-# stylesheet = stylesheet_file.read() # don't minify
-stylesheet_file.close()
-print("Got and minified stylesheet. Length={}".format(len(stylesheet)))
-
 # Push the stylesheet to the subreddit
-print("Writing stylesheet to /r/{}".format(sub_name))
+print(f"Writing stylesheet to /r/{sub_name}")
 sub = r.subreddit(sub_name)
 try:
-    edit_msg = "https://github.com/{}/compare/{}".format(
-        os.environ['TRAVIS_REPO_SLUG'],
-        os.environ['TRAVIS_COMMIT_RANGE'])
+    edit_msg = f"https://github.com/{os.environ['TRAVIS_REPO_SLUG']}/compare/{os.environ['TRAVIS_COMMIT_RANGE']}"
     sub.wiki['config/stylesheet'].edit(stylesheet, edit_msg)
 except Exception as e:
     print("Ran into an error while uploading stylesheet; aborting.")
