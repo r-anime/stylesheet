@@ -1,0 +1,16 @@
+// Applies nightmode styles to an element
+@mixin nightmode {
+	.res-nightmode & {
+		@content;
+	}
+}
+
+// Applies standard rounded corners to an element
+%rounded {
+	border-radius: 5px;
+}
+
+// Hides an element
+%display-none {
+	display: none;
+}

@@ -1,11 +1,17 @@
 /* general TODO: merge single-statement rules like display:none and margin:0 */
 
 /** Base styles **/
+
+// 1rem = 10px
 html {font-size: 62.5%}
-body>.content {
+
+// Reset some margins
+body > .content {
 	margin: 0;
 	padding: 55px 0 10px;
 }
+
+// Get rid of unnecessary backgrounds that Reddit applies
 body>.content,
 .side .titlebox form.toggle,
 .side .leavemoderator,
@@ -13,13 +19,23 @@ body>.content,
 .sidebox .spacer,
 .icon-menu a,
 #sr-header-area * {background-color: transparent!important}
-#search input[type="submit"] {margin-left: -25px}
-.infobar,.rounded {border-radius: 5px}
-.infobar {margin-right: 321px}
-.reddit-infobar {
-	margin: 0 331px 10px 10px;
-	border-radius: 5px
+
+// Generic elements with rounded corners
+.infobar, .rounded, .reddit-infobar {
+	border-radius: 5px;
 }
+
+// Leave space for the sidebar next to infobars at the top of the page
+.infobar {
+	margin-right: $sidebar-width;
+}
+
+// Special infobars have different styles for some reason
+.reddit-infobar {
+	margin: 0 ($sidebar-width + 10px) 10px 10px;
+}
+
+// Make the "Welcome to Reddit" banners full-width
 .infobar.welcome, .infobar.listingsignupbar {
 	margin: 0;
 	border-radius: 0;
@@ -32,7 +48,8 @@ body>.content,
 	border-top: 1px solid #EFEFEF;
 }
 .listingsignupbar__container { padding: 28px 18px }
-/** Base nightmode text coloring **/
+
+// Base nightmode text coloring
 /*.res-nightmode :not(time):not(select):not(option),*/
 .res-nightmode .pagename a {color: #FFF}
 .res-nightmode body,

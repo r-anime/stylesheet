@@ -6,7 +6,9 @@
  */
 
 // Variable definitions
-@import "src/vars";
+@import "src/util/vars";
+// Mixins used for stuff
+@import "src/util/mixins";
 
 // Customizations
 @import "subcount"; // Contains the sidebar subscriber/online user phrases

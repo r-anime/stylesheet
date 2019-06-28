@@ -1,18 +1,8 @@
 // Contains sidebar styles, including sidebar-specific markdown styles
 
-// This is sidebar image stuffs
-#search {
-	margin-bottom: 270px;
-}
-
-.side .md [href*='#sidebarimg'] {
-	position: absolute;
-	top: 170px;
-	right: 10px;
-	width: 300px;
-	height: 250px;
-	border-radius: 5px;
-	background: url(%%sidebar%%) center/contain;
+// Align the search icon better with our search style
+#search input[type="submit"] {
+	margin-left: -25px
 }
 
 // Border radius for the Reddit premium banner - we can't remove it, but we can make it look good
@@ -21,4 +11,22 @@
 }
 .premium-banner-outer {
 	border-radius: 5px;
+}
+
+/** Sidebar image **/
+
+// Leave room at the top for it
+#search {
+	margin-bottom: 270px; // 250px image + padding
+}
+
+// The actual image element
+.side .md [href*='#sidebarimg'] {
+	position: absolute;
+	top: 170px;
+	right: 10px;
+	width: 300px;
+	height: 250px;
+	border-radius: 5px;
+	background: url(%%sidebar%%) center/contain;
 }
