@@ -17,7 +17,8 @@
 // Main theme style
 @import "src/everything"; // Everything that isn't somewhere else yet
 @import "src/usernames"; // Compatibility styles for all usernames
-@import "src/linkflair"; // Link flair, including
+@import "src/linkflair"; // Link flair, including mod-only things
+@import "src/userflair"; // User flair, for list services
 @import "src/markdown"; // Generic markdown styles
 @import "src/sidebar"; // Sidebar-specific styles, including markdown hacks
 @import "src/infobar"; // Fancy announcements thing at the top of the sub
