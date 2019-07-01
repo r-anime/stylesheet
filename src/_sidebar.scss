@@ -61,14 +61,14 @@ $sidebar-image-height: 250px;
 	top: 170px;
 	right: 10px;
 	width: 300px;
-	height: $sidebar-image-width;
+	height: $sidebar-image-height;
 	border-radius: 5px;
 	background: url(%%sidebar%%) center/contain;
 }
 
 // Leave room at the top of the sidebar for the image
 #search {
-	margin-bottom: $sidebar-image-width + 20px;
+	margin-bottom: $sidebar-image-height + 20px;
 }
 
 // Discord button
