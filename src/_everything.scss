@@ -1,10 +1,10 @@
-/* general TODO: merge single-statement rules like margin:0 */
-
 /** Base styles **/
 
 // 1rem = 10px
 // TODO: actually use this in places
-html {font-size: 62.5%}
+html {
+	font-size: 62.5%;
+}
 
 // Reset some margins
 body > .content {
@@ -979,129 +979,6 @@ a[href*="/s?"]:active {
 
 /* Reset things for other flair */
 [class="flair flair-skip7"] {
-	@extend %display-none;
-}
-
-/** Post flairs **/
-.linkflairlabel {
-	vertical-align: middle;
-	border: none;
-	font-size: 12px;
-	text-align: center;
-	padding: 2px 6px;
-	position: relative;
-	top: -2px;
-	margin-top: 1px;
-	border-radius: 5px;
-	height: 16px;
-	line-height: 16px;
-	color: #FFF !important; // !important for nightmode
-}
-
-// Colors pulled from redesign, !important for nightmode
-.linkflair-discussion     .linkflairlabel {background: #7193FF !important}
-.linkflair-rewatch        .linkflairlabel {background: #0079D3 !important}
-.linkflair-official-media .linkflairlabel {background: #0AA18F !important}
-.linkflair-news           .linkflairlabel {background: #FF4500 !important}
-.linkflair-video          .linkflairlabel {background: #CC3600 !important}
-.linkflair-fanart         .linkflairlabel {background: #73AD34 !important}
-.linkflair-fanart-oc      .linkflairlabel {background: #94e044 !important}
-.linkflair-fanart-misc    .linkflairlabel {background: #349e48 !important}
-.linkflair-cosplay        .linkflairlabel {background: #CC5289 !important}
-.linkflair-wt             .linkflairlabel {background: #CCAC2B !important}
-.linkflair-writing        .linkflairlabel {background: #DDBD37 !important}
-.linkflair-clip           .linkflairlabel {background: #00A6A5 !important}
-.linkflair-satire         .linkflairlabel {background: #6B6031 !important}
-.linkflair-question       .linkflairlabel {background: #9E8D49 !important}
-.linkflair-contest        .linkflairlabel {background: #007373 !important}
-.linkflair-misc           .linkflairlabel {background: #646D73 !important}
-.linkflair-writing-club   .linkflairlabel {background: #E55A76 !important}
-.linkflair-episode        .linkflairlabel {background: #005BA1 !important}
-.linkflair-weekly         .linkflairlabel {background: #FF56CC !important}
-.linkflair-recommendation .linkflairlabel {background: #373C3F !important}
-.linkflair-meme           .linkflairlabel {background: #800080 !important}
-
-/* "Misleading" flair - meant to be edited to make corrections to titles */
-.linkflair-misleading .linkflairlabel {
-	color: #e02424!important;
-	font-weight: 900;
-	background: white!important;
-	max-width: none;
-	box-shadow: inset 0 0 0 1px currentcolor;
-}
-
-/* Announcement/AMA flairs */
-.linkflair-green .linkflairlabel,
-.linkflair-blue .linkflairlabel,
-.linkflair-red .linkflairlabel,
-.linkflair-palered .linkflairlabel {
-	@extend %display-none;
-}
-.linkflair-green a.title,
-.linkflair-blue a.title,
-.linkflair-red a.title,
-.linkflair-palered a.title {
-	display: inline-block;
-	padding: 2px 5px;
-	border-radius: 5px;
-	color: white !important;
-}
-.linkflair-green a.title {
-	background: #46b141;
-	border: 1px solid #090;
-}
-.linkflair-blue a.title {
-	background: #6a9de6;
-	border: 1px solid #557eb8;
-}
-.linkflair-red a.title {
-	background: #de3954;
-	border: 1px solid #ce223e;
-}
-.linkflair-palered a.title {
-	background: #e97b8d;
-	border: 1px solid #e35970;
-}
-.linkflair-green a.title:hover { background: #090 }
-.linkflair-blue a.title:hover { background: #557eb8 }
-.linkflair-red a.title:hover { background: #ce223e }
-.linkflair-palered a.title:hover { background: #e35970 }
-.linkflair-palered a.title:before { content: "[Finished] " }
-.linkflair-ongoing a.title:before { content: "[Ongoing] " }
-
-/*
- * Post filter stuff
- * xn - No NSFW
- * xs - No Spoilers
- * xb - No News
- * xf - No Fanart
- * xc - No Cosplay
- * xd - No Clips
- * xm - No Official Media
- * xq - No Questions
- * xr - No Recommendations
- * xa - No "Light Media" (Fanart, Cosplay, Clips, Official Media, Questions, Recommendations)
- */
-:lang(xn) .link.over18,
-:lang(xs) .link.spoiler,
-:lang(xb) .link.linkflair-news,
-:lang(xf) .link.linkflair-fanart,
-:lang(xf) .link.linkflair-fanart-oc,
-:lang(xf) .link.linkflair-fanart-misc,
-:lang(xc) .link.linkflair-cosplay,
-:lang(xd) .link.linkflair-clip,
-:lang(xm) .link.linkflair-official-media,
-:lang(xq) .link.linkflair-question,
-:lang(xr) .link.linkflair-recommendation,
-
-:lang(xa) .link.linkflair-fanart,
-:lang(xa) .link.linkflair-fanart-oc,
-:lang(xa) .link.linkflair-fanart-misc,
-:lang(xa) .link.linkflair-cosplay,
-:lang(xa) .link.linkflair-clip,
-:lang(xa) .link.linkflair-official-media,
-:lang(xa) .link.linkflair-recommendation,
-:lang(xa) .link.linkflair-question {
 	@extend %display-none;
 }
 

@@ -5,9 +5,9 @@
  * public domain
  */
 
-// Variable definitions
+// Global variable definitions
 @import "src/util/vars";
-// Mixins used for stuff
+// Mixins and placeholders
 @import "src/util/mixins";
 
 // Customizations
@@ -16,7 +16,8 @@
 
 // Main theme style
 @import "src/everything"; // Everything that isn't somewhere else yet
-@import "src/usernames"; // User flairs,
+@import "src/usernames"; // Compatibility styles for all usernames
+@import "src/linkflair"; // Link flair, including
 @import "src/markdown"; // Generic markdown styles
 @import "src/sidebar"; // Sidebar-specific styles, including markdown hacks
 @import "src/infobar"; // Fancy announcements thing at the top of the sub
