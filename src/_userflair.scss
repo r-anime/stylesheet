@@ -84,10 +84,8 @@
 // Awards flairs!
 .flair-a-amq {border-color: #67B5EF}
 .flair-a-amq::before {background-position: -32px -64px}
-.flair-a-amq::after {content: " - 1mil celebration AMQ participant!"; color: #67B5EF}
 .flair-a-1milquiz {border-color: #fed635}
 .flair-a-1milquiz::before {background-position: -32px -80px}
-.flair-a-1milquiz {content: " - 1mil quiz top 12!"; color: #fed635}
 
 // If the only flair class someone has is the skip7 one, just hide the flair
 [class="flair flair-skip7"] {
