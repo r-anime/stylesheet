@@ -1,5 +1,5 @@
 $sidebar-image-height: 83px;
-$sidebar-image-other-height: 150px;
+$sidebar-image-other-height: 300px;
 
 // Align the search icon better with our search style
 #search input[type="submit"] {
@@ -74,7 +74,7 @@ $sidebar-image-other-height: 150px;
 
 // Leave room at the top of the sidebar for the image
 #search {
-	margin-bottom: $sidebar-image-height + 20px;
+	margin-bottom: 10px + $sidebar-image-height + 10px + $sidebar-image-other-height + 10px;
 }
 
 // Discord button
