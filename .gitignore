@@ -2,9 +2,13 @@
 Thumbs.db
 Desktop.ini
 .DS_Store
-# sass artifacts
-.sass-cache
+# build artifacts
 *.css
-*.css.map
+subreddit_data.yml
+css_validation_result.html
 # IDE stuff
 .idea
+.vscode
+.env
+env
+*.pyc
