@@ -1,31 +1,19 @@
-# Python is required for the deploy script
 language: python
 python:
 - '3.6'
 
-# TODO: ruby sass is deprecated, probably switch to the npm version since that's
-# easy to install and still supported i think
 install:
-- rvm install 2.4.1
-- gem install sass
-- pip install -r .update/requirements.txt
+- pip install -r utils/requirements.txt
 
-# The Sass part is the actual build
-# Since Reddit doesn't accept @charset, we have to strip it out
 script:
-- sass main.scss style.css && sed -i "/@charset/d" style.css
+# Updates on master go to /r/anime
+- if [ "$TRAVIS_BRANCH" = "master" ]; then python utils/build.py --subreddit_name anime; fi
+# All other branches go to /r/animestaging for testing
+- if [ "$TRAVIS_BRANCH" != "master" ]; then python utils/build.py --subreddit_name animestaging; fi
 
 deploy:
-# Updates on master go to /r/anime
-- on:
-    branch: master
-  provider: script
-  script: python .update/updateSubreddit.py anime
-  skip_cleanup: true
-# All other branches go to /r/animestaging for testing
 - on:
     all_branches: true
-    condition: $TRAVIS_BRANCH != master
   provider: script
-  script: python .update/updateSubreddit.py animestaging
+  script: python utils/update.py
   skip_cleanup: true
