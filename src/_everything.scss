@@ -195,7 +195,7 @@ html #sr-header-area a.RESShortcutsCurrentSub {
 	margin: 0;
 	padding: 10px;
 	width: 300px;
-	background: url(%%side-bg%%) top/4px #f7f7f7;
+	background: repeating-linear-gradient(45deg, #f7f7f7, #f7f7f7 2px, #e9e9e9 2px, #e9e9e9 2.8px) 0/4px 4px;
 	border: 1px solid #cfcfcf;
 	border-top: 0;
 	border-right: 0;
@@ -396,7 +396,7 @@ span.multi-count {margin: 0!important}
 	height: 35px;
 	top: 0;
 	right: 0;
-	background: url(%%ui-elements%%) -58px -93px/128px no-repeat,#557eb8;
+	background: url("images/general.png") -58px -93px/128px no-repeat,#557eb8;
 	border-top-right-radius: 5px;
 	border-bottom-right-radius: 5px
 }
@@ -432,7 +432,7 @@ span.multi-count {margin: 0!important}
 	background: #f7f7f7;
 	border-bottom: 1px solid #efefef
 }
-.thing .arrow {background: url(%%ui-elements%%) 0 0/128px!important}
+.thing .arrow {background: url("images/general.png") 0 0/128px!important}
 .thing .arrow.up {background-position: -98px 0!important}
 .thing .arrow.down {background-position: -98px -14px!important}
 .thing .arrow.upmod {background-position: -113px 0!important}
@@ -609,24 +609,24 @@ body #progressIndicator {
     border-color: #000 !important;
 }
 /** Thumbnail shit **/
-.thumbnail.self {background: 0 -560px}
-.thumbnail[href*="recom"] {background: 0 -350px}
-.thumbnail[href*="cosplay"] {background: 0 -0px}
-.thumbnail[href*="satire"] {background: 0 -490px}
-.thumbnail[href*="/wt"] {background: 0 -700px}
-.linkflair-green .thumbnail {background: 0 -210px}
-.thumbnail[href*="fanart"] {background: 0 -140px}
+.thumbnail.self {background: 0 -1084px}
+.thumbnail[href*="recom"] {background: 0 -874px}
+.thumbnail[href*="cosplay"] {background: 0 -524px}
+.thumbnail[href*="satire"] {background: 0 -1014px}
+.thumbnail[href*="/wt"] {background: 0 -1224px}
+.linkflair-green .thumbnail {background: 0 -734px}
+.thumbnail[href*="fanart"] {background: 0 -664px}
 .thumbnail[href*="spoiler"],
-.thumbnail.spoiler {background: 0 -630px}
+.thumbnail.spoiler {background: 0 -1154px}
 .thumbnail[href*="spoiler"][href*="episode"],
-[data-author="AutoLovepon"] .thumbnail {background: 0 -70px}
-.thumbnail[href*="rewatch"] {background: 0 -420px} /* blaze it lmao */
-.thumbnail.nsfw {background: 0 -280px}
-[data-author="AutoModerator"] .thumbnail {background: 0 -770px}
+[data-author="AutoLovepon"] .thumbnail {background: 0 -594px}
+.thumbnail[href*="rewatch"] {background: 0 -944px} /* blaze it lmao */
+.thumbnail.nsfw {background: 0 -804px}
+[data-author="AutoModerator"] .thumbnail {background: 0 -1294px}
 .thumbnail.self,
 .thumbnail.nsfw,
 .thumbnail.spoiler {
-	background-image: url(%%thumbnail%%)!important;
+	background-image: url("images/general.png")!important;
 	height: 70px
 }
 
@@ -833,13 +833,13 @@ body #progressIndicator {
 /** all the nightmode **/
 .res-nightmode #header-img-a:after {
     content: '';
-    background: url(%%evilsnoo%%) bottom/contain;
+    background: url("images/general.png") 0 -172px/128px;
 }
 .res-nightmode #header-img {
     @extend %display-none;
 }
 .res-nightmode .side {
-	background: url(%%side-bg-dark%%) top/4px #1f1f1f !important;
+	background: repeating-linear-gradient(45deg, #1f1f1f, #1f1f1f 2px, #282828 2px, #282828 2.8px) 0/4px 4px;
 	border-color: #0f0f0f !important;
 }
 .res-nightmode .titlebox,
