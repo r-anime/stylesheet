@@ -13,8 +13,8 @@ allowed_image_formats:
   - JPEG
   - PNG
 
-# The maximum file size of Reddit Stylesheet Image
-max_image_size: 512000
+# The maximum file size of Reddit Stylesheet Image (500KB - estimated overhead)
+max_image_size: 511500
 
 # The maximum image width of Reddit Stylesheet Image
 max_image_width: 16384
