@@ -4,4 +4,4 @@
 
 This repo contains the subreddit's stylesheet. It's a fun time.
 
-This repository uses a modified version of [Geo1088/reddit-stylesheet-sync](https://github.com/Geo1088/reddit-stylesheet-sync) to update changes live.
+Commits to this repository are automatically built and pushed to the subreddit, based on [Geo1088/reddit-stylesheet-sync](https://github.com/Geo1088/reddit-stylesheet-sync) and heavily improved by [/u/vaclav-2012](https://www.reddit.com/user/vaclav-2012).
