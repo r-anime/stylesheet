@@ -247,7 +247,28 @@ $animation-identifiers: ();
 	}
 }
 
-$aligned-positions: ();
+$aligned-positions-even: ();
+$aligned-positions-odd: ();
+
+// Returns the map of aligned Comment Faces for the given position and the parity of the given height.
+@function get-aligned-comment-faces($position, $height) {
+	@if ($height % 2 == 0) {
+		@return map-get($aligned-positions-even, $position);
+	} @else {
+		@return map-get($aligned-positions-odd, $position);
+	}
+}
+
+// Returns x-position for Comment Faces of even height (the vertical position is 50% by default) and both x-position and
+// zero y-position for Comment Faces of odd height (aligned to the top because 50% position is rendered inconsistently
+// in case of odd image height).
+@function static-cf-position($position, $height) {
+	@if ($height % 2 == 0) {
+		@return format-px($position);
+	} @else {
+		@return unquote(format-px($position) + " 0");
+	}
+}
 
 // Creates a map of Comment Faces aligned to the same position. Only Comment Faces grouped with default dimensions are
 // included.
@@ -258,9 +279,11 @@ $aligned-positions: ();
 		$default-height: nth(map-get($group, "default"), 2);
 
 		@each $comment-face, $attributes in map-get($group, "items") {
-			@if map-get($attributes, "width") == $default-width and map-get($attributes, "height") == $default-height {
+			$width: map-get($attributes, "width");
+			$height: map-get($attributes, "height");
+			@if $width == $default-width and $height == $default-height {
 				$position: compact-position(map-get($attributes, "position"), $total-width);
-				$aligned-comment-faces: map-get($aligned-positions, $position);
+				$aligned-comment-faces: get-aligned-comment-faces($position, $height);
 
 				@if not $aligned-comment-faces {
 					$aligned-comment-faces: $comment-face;
@@ -268,7 +291,11 @@ $aligned-positions: ();
 					$aligned-comment-faces: append($aligned-comment-faces, $comment-face);
 				}
 
-				$aligned-positions: map-merge($aligned-positions, ($position: $aligned-comment-faces));
+				@if ($height % 2 == 0) {
+					$aligned-positions-even: map-merge($aligned-positions-even, ($position: $aligned-comment-faces));
+				} @else {
+					$aligned-positions-odd: map-merge($aligned-positions-odd, ($position: $aligned-comment-faces));
+				}
 			}
 		}
 	}
@@ -301,28 +328,43 @@ $aligned-positions: ();
 			@if $width == $default-width and $height == $default-height {
 				@extend %default-#{$index};
 
-				@if not map-get($aligned-positions, $background-position) {
-					background-position: format-px($background-position)
+				@if not get-aligned-comment-faces($background-position, $height) {
+					background-position: static-cf-position($background-position, $height)
 				}
 			} @else {
 				width: #{$width}px;
 				height: #{$height}px;
-				background: image-url($sprite-sheet) format-px($background-position)
+				background: image-url($sprite-sheet) static-cf-position($background-position, $height)
 			}
 		}
 	}
 }
 
-// Generates background positions of aligned Comment Faces.
-@each $position, $aligned-comment-faces in $aligned-positions {
+// Generates background positions of aligned Comment Faces of even height.
+@each $position, $aligned-comment-faces in $aligned-positions-even {
 	@if ($position != 0) {
-		%aligned-position#{$position} {
+		%aligned-position-even#{$position} {
 			background-position: format-px($position)
 		}
 
 		@each $comment-face in $aligned-comment-faces {
 			#{cf-selector($comment-face)} {
-				@extend %aligned-position#{$position};
+				@extend %aligned-position-even#{$position};
+			}
+		}
+	}
+}
+
+// Generates background positions of aligned Comment Faces of odd height.
+@each $position, $aligned-comment-faces in $aligned-positions-odd {
+	@if ($position != 0) {
+		%aligned-position-odd#{$position} {
+			background-position: unquote(format-px($position) + " 0")
+		}
+
+		@each $comment-face in $aligned-comment-faces {
+			#{cf-selector($comment-face)} {
+				@extend %aligned-position-odd#{$position};
 			}
 		}
 	}
