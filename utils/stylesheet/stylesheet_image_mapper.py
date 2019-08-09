@@ -1,9 +1,14 @@
 """Provide the StylesheetImageMapper class."""
 import logging
+import string
 
 from stylesheet import LocalStylesheetImage, StylesheetData
 
 logger = logging.getLogger(__name__)
+
+# Alphabet of characters valid in Reddit image names
+alphabet = string.digits + string.ascii_letters
+alphabet_length = len(alphabet)
 
 
 class StylesheetImageMapper:
@@ -23,8 +28,8 @@ class StylesheetImageMapper:
         """
         string = ""
         while number > 0:
-            number, remainder = divmod(number - 1, 26)
-            string = chr(97 + remainder) + string
+            number, remainder = divmod(number - 1, alphabet_length)
+            string = alphabet[remainder] + string
         return string
 
     def _match_image(self, local_image: LocalStylesheetImage,
