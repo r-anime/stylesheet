@@ -23,9 +23,7 @@ class StylesheetImageMapper:
         self._unnamed_images = []
 
     def _alpha_base(self, number):
-        """Convert the provided decimal number into base-26 alphabet number
-        string.
-        """
+        """Convert the provided decimal number into alphabet number string."""
         string = ""
         while number > 0:
             number, remainder = divmod(number - 1, alphabet_length)
@@ -100,8 +98,8 @@ class StylesheetImageMapper:
 
     def _prepare_available_reddit_names(self):
         """Build a `list` of available Reddit Names as an ascending series of
-        base-26 alphabet number strings while leaving out the names that are
-        already used.
+        alphabet number strings while leaving out the names that are already
+        used.
         """
         available_reddit_names = []
         min_usage_count, update_count = 0, False

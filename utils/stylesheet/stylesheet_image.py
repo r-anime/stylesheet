@@ -51,8 +51,8 @@ class StylesheetImage:
         """Return the name of the image used by Reddit.
 
         Note: Reddit Names are supposed to be as short as possible to reduce
-        the size of CSS. It is recommended to use base-26 alphabet number
-        strings (e.g. 'a', 'b', ..., 'aa', 'ab', ...).
+        the size of CSS. Names are case-sensitive and can contain any
+        alphanumeric characters.
         """
         return self._reddit_name
 

@@ -20,6 +20,9 @@
 	}
 }
 
+// Functions for @keyframes names - not the same as the image names, which are
+// handled through the update script.
+
 // Converts the number into alphabet letter.
 @function char($number) {
 	@return str-slice("abcdefghijklmnopqrstuvwxyz", $number + 1, $number + 1);
