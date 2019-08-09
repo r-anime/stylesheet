@@ -6,6 +6,10 @@ Desktop.ini
 *.css
 subreddit_data.yml
 css_validation_result.html
+# stuff that shows up in local testing
+.sass-cache
+*.css
+*.css.map
 # IDE stuff
 .idea
 .vscode
