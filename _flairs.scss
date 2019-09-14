@@ -60,7 +60,7 @@
 .author[href$="/DrJamesFox"]:after{color:#1e2237;content:" Ask me about K-on!"}
 .author[href$="/DrJWilson"]:after{color:#228B22;content:", PhD (Comfy Studies)"}
 /*.author[href$="/DrNyanpasu"]:after{color:#ff96ca;content:" loli-NEET"}*/
-/*.author[href$="/Durinthal"]:not(.moderator):before{color:#bba598;content:"Spice and "}*/
+.author[href$="/Durinthal"]:not(.moderator):before{color:#B5A642;content:"Hibike! "}
 .author[href$="/Durinthal"].moderator:before{content:"NRX-055 "}
 .author[href$="/FAN_ROTOM_IS_SCARY"]:not(.moderator):after{content:"Rotom";color:#149cd8}
 .author[href$="/FAN_ROTOM_IS_SCARY"]:not(.moderator):before{content:"Non Non Biyo";color:#e15499}
@@ -109,7 +109,10 @@
 .author[href$="/MissyPie"]:after{color:#ffb6c1;content:" *:・ﾟ✧*:・ﾟ✧"}
 .author[href$="/MissyPie"]:before{color:#ffb6c1;content:"(ﾉ·ヮ·)ﾉ*:・ﾟ✧ "}
 .author[href$="/MissyPie"]{color:#ff69b4;font-weight:bold;animation:color-change 9s}
+.author[href$="/mpp00"]:after{color:#622e67;content:" of the Rebellion"}
 .author[href$="/myanimelistllc"]:after{color:#009;content:" Staff of MAL"}
+.author[href$="/n7combatwombat"]:before{color:#cd312f;content:"I'm "}
+.author[href$="/n7combatwombat"]:after{color:#cd312f;content:" and this is my favorite sub on Reddit"}
 .author[href$="/neito"]:after{color:#f3c!important;content:" You Are Responsible for What You Have Tamed"}
 .author[href$="/notathrowaway75"]:after{content:"...76...77..."}
 .author[href$="/NotTheRealMorty"]:not(.moderator){font-size: 0}
@@ -195,6 +198,7 @@
 .author[href$="/Xinil"]:after{color:#009;content:" Founder of MAL"}
 .author[href$="/xRichard"]:before{content:"se"}
 .author[href$="/zhongzhen93"]:after{color:#333333;content:" SOS Brigade Director"}
+.author[href$="/Zylda"]:before{color:#feda39;content:"The Legend of "}
 
 // Fanart contest flairs
 .author[href$="/SteamyTomato"]:after,
