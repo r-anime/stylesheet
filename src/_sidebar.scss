@@ -57,15 +57,15 @@ $sidebar-image-other-height: 300px;
 }
 
 // Sidebar images
-.side [href*='#sidebarimg'] {
-	position: absolute;
-	top: 170px;
-	right: 10px;
-	width: 300px;
-	height: $sidebar-image-height;
-	border-radius: 5px;
-	background: url("images/sidebar.png") center/contain;
-}
+//.side [href*='#sidebarimg'] {
+//	position: absolute;
+//	top: 170px;
+//	right: 10px;
+//	width: 300px;
+//	height: $sidebar-image-height;
+//	border-radius: 5px;
+//	background: url("images/sidebar.png") center/contain;
+//}
 .side [href*="#sidebarimg2"] {
 	top: 170px + 10px + $sidebar-image-height;
 	height: $sidebar-image-other-height;
