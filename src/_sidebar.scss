@@ -126,6 +126,10 @@ $sidebar-image-other-height: 300px;
 .side [href*="https://twitter.com"]:before {
 	background:  url("images/general.png")  -48px -128px/128px no-repeat;
 }
+
+.side [href*="https://twitter.com"]:hover {
+	background: #198bd1;
+}
  
 
 
