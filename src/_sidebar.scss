@@ -102,7 +102,7 @@ $sidebar-image-other-height: 300px;
 }
 .side [href*="discord.gg"]:before, .side [href*="https://twitter.com"]:before {
 	content: "";
-	width: 45px;
+	width: 47px;
 	height: 44px;
 	display: block;
 	background:  url("images/general.png")  0 -128px/128px no-repeat;
@@ -124,7 +124,7 @@ $sidebar-image-other-height: 300px;
 }
 
 .side [href*="https://twitter.com"]:before {
-	width: 39px;
+	width: 41px;
 	background:  url("images/general.png")  -50px -128px/128px no-repeat;
 }
 
