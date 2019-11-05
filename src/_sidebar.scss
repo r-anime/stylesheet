@@ -105,7 +105,7 @@ $sidebar-image-other-height: 300px;
 	width: 45px;
 	height: 44px;
 	display: block;
-	background: url(%%general%%) 0 -128px/128px no-repeat;
+	background:  url("images/general.png")  0 -128px/128px no-repeat;
 }
 .side [href*="discord.gg"] em, .side [href*="https://twitter.com"] em {
 	display: block;
@@ -124,7 +124,7 @@ $sidebar-image-other-height: 300px;
 }
 
 .side [href*="https://twitter.com"]:before {
-	background: url(%%general%%) -48px -128px/128px no-repeat;
+	background:  url("images/general.png")  -48px -128px/128px no-repeat;
 }
  
 
