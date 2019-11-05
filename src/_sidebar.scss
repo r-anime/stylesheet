@@ -77,8 +77,8 @@ $sidebar-image-other-height: 300px;
 	margin-bottom: 10px + $sidebar-image-height + 10px + $sidebar-image-other-height + 10px;
 }
 
-// Discord button
-.side [href*="discord.gg"] {
+//Discord and Twitter Buttons
+.side [href*="discord.gg"], .side [href*="https://twitter.com"] {
 	display: block;
 	color: #FFF;
 	padding-right: 9px;
@@ -94,24 +94,38 @@ $sidebar-image-other-height: 300px;
 	align-items: center;
 	transition: 200ms;
 }
-.side [href*="discord.gg"]:hover {
+.side [href*="discord.gg"]:hover, .side [href*="https://twitter.com"]:hover {
 	color: #FFF;
 	background: #557eb8;
 	top: -2px;
 	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
-.side [href*="discord.gg"]:before {
+.side [href*="discord.gg"]:before, .side [href*="https://twitter.com"]:before {
 	content: "";
 	width: 45px;
 	height: 44px;
 	display: block;
-	background: url("images/general.png") 0 -128px/128px no-repeat;
+	background: url(%%general%%) 0 -128px/128px no-repeat;
 }
-.side [href*="discord.gg"] em {
+.side [href*="discord.gg"] em, .side [href*="https://twitter.com"] em {
 	display: block;
 	font-weight: normal;
 	opacity: 0.8;
 }
-.side [href*="discord.gg"]:hover em {
+.side [href*="discord.gg"]:hover em,.side [href*="https://twitter.com"]:hover em {
 	text-decoration: underline;
 }
+
+
+/*twitter styling */
+.side [href*="https://twitter.com"] {
+    padding: 0px 0px 0px 10px;
+    background: #1DA1F2;
+}
+
+.side [href*="https://twitter.com"]:before {
+	background: url(%%general%%) -48px -128px/128px no-repeat;
+}
+ 
+
+
