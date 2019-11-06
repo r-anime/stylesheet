@@ -77,8 +77,8 @@ $sidebar-image-other-height: 0px;
 	margin-bottom: 10px + $sidebar-image-height + 10px + $sidebar-image-other-height + 10px;
 }
 
-//Discord and Twitter Buttons
-.side [href*="discord.gg"], .side [href*="https://twitter.com"] {
+// Discord and Twitter buttons
+.side [href*="discord.gg"], .side [href*="twitter.com"] {
 	display: block;
 	color: #FFF;
 	padding-right: 9px;
@@ -94,41 +94,41 @@ $sidebar-image-other-height: 0px;
 	align-items: center;
 	transition: 200ms;
 }
-.side [href*="discord.gg"]:hover, .side [href*="https://twitter.com"]:hover {
+.side [href*="discord.gg"]:hover, .side [href*="twitter.com"]:hover {
 	color: #FFF;
 	background: #557eb8;
 	top: -2px;
 	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
-.side [href*="discord.gg"]:before, .side [href*="https://twitter.com"]:before {
+.side [href*="discord.gg"]:before, .side [href*="twitter.com"]:before {
 	content: "";
 	width: 47px;
 	height: 44px;
 	display: block;
-	background:  url("images/general.png")  0 -128px/128px no-repeat;
+	background: url("images/general.png") 0 -128px/128px no-repeat;
 }
-.side [href*="discord.gg"] em, .side [href*="https://twitter.com"] em {
+.side [href*="discord.gg"] em, .side [href*="twitter.com"] em {
 	display: block;
 	font-weight: normal;
 	opacity: 0.8;
 }
-.side [href*="discord.gg"]:hover em,.side [href*="https://twitter.com"]:hover em {
+.side [href*="discord.gg"]:hover em, .side [href*="twitter.com"]:hover em {
 	text-decoration: underline;
 }
 
 
-/*twitter styling */
-.side [href*="https://twitter.com"] {
+// Twitter-specific styling, overrides some of the above
+.side [href*="twitter.com"] {
     padding: 0px 0px 0px 10px;
     background: #1DA1F2;
 }
 
-.side [href*="https://twitter.com"]:before {
+.side [href*="twitter.com"]:before {
 	width: 41px;
 	background:  url("images/general.png")  -50px -128px/128px no-repeat;
 }
 
-.side [href*="https://twitter.com"]:hover {
+.side [href*="twitter.com"]:hover {
 	background: #198bd1;
 }
  
