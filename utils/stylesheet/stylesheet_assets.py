@@ -45,7 +45,7 @@ class StylesheetAssets:
         pattern = r"url\(\"" + self.relative_images_dir \
             + r"\/([\w_-]+.(?:" + extensions + r"))\"\)"
 
-        return re.compile(pattern)
+        return re.compile(pattern, re.I)
 
     @property
     def relative_images_dir(self):

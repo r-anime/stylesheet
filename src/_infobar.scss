@@ -204,7 +204,7 @@ $hover-delay: 150ms; // delay before dropdowns trigger
 // Small screen styles
 @media (max-width: 1300px) {
 	body > .content {
-		padding-top: 2 * $infobar-height;
+		padding-top: 2 * $infobar-height + 6px; // TODO: why is this +6px necessary?
 	}
 	.side .md > :first-child {
 		padding-top: 10px;

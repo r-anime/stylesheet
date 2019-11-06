@@ -1,5 +1,5 @@
-$sidebar-image-height: 83px;
-$sidebar-image-other-height: 300px;
+$sidebar-image-height: 300px;
+$sidebar-image-other-height: 0px;
 
 // Align the search icon better with our search style
 #search input[type="submit"] {
@@ -66,11 +66,11 @@ $sidebar-image-other-height: 300px;
 	border-radius: 5px;
 	background: url("images/sidebar.png") center/contain;
 }
-.side [href*="#sidebarimg2"] {
-	top: 170px + 10px + $sidebar-image-height;
-	height: $sidebar-image-other-height;
-	background-image: url("images/sidebar2.png");
-}
+//.side [href*="#sidebarimg2"] {
+//	top: 170px + 10px + $sidebar-image-height;
+//	height: $sidebar-image-other-height;
+//	background-image: url("images/sidebar2.png");
+//}
 
 // Leave room at the top of the sidebar for the image
 #search {
