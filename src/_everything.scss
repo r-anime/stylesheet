@@ -226,6 +226,34 @@ html #sr-header-area a.RESShortcutsCurrentSub {
 	font-weight: 700
 }
 .side .redditname a {color: inherit}
+
+// Add an image as the redditname
+$redditname-original-height: 124px;
+$redditname-original-width: 534px; // width *before* doubling the size for night
+$redditname-height: 62px;
+$redditname-width: $redditname-original-width * $redditname-height / $redditname-original-height;
+$redditname-top: 18px;
+$redditname-left: 80px;
+
+#header .redditname {
+    position: absolute;
+    display: block;
+    top:$redditname-top;
+    left: $redditname-left;
+    font-size:0;
+    height: $redditname-height;
+    width: $redditname-width;
+}
+
+#header .redditname a {
+    background-image: url("images/redditname.png");
+    background-size: auto $redditname-height;
+    //background-position: 0% 0%;
+    background-repeat: no-repeat;
+    display: block;
+    height: $redditname-height;
+}
+
 .subscribers {display: block;}
 .side .subscribe-button {
 	position: relative;
