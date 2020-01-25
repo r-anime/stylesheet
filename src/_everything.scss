@@ -904,7 +904,7 @@ body #progressIndicator {
 	box-shadow: inset 2px 2px 2px -1px rgba(0,0,0,0.2), 1px 1px 1px #2f2f2f
 }
 .res-nightmode.res #header {background-color: #445f7e}
-.res-nightmode #header .redditname a {background-position: 0px -$redditname-height}
+.res-nightmode #header .redditname a {background-position: -$redditname-width 0px}
 .res-nightmode #header-bottom-left {box-shadow: inset 0 -35px #2b4665}
 .res-nightmode.res #sr-header-area {background-color: #2b4665}
 .res-nightmode .morelink a:hover,
