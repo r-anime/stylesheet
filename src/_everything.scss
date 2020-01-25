@@ -753,6 +753,14 @@ body #progressIndicator {
 .submit_text.enabled {display: block}
 .c-form-group:empty {margin-bottom: 0}
 
+.spacer:nth-child(1) {order:1;}
+.spacer:nth-child(2) {order:4;}
+.spacer:nth-child(3) {order:6;}
+.spacer:nth-child(4) {order:2;}
+.spacer:nth-child(5) {order:6;}
+.spacer:nth-child(6) {order:7;}
+#newlink-with-image-upload{order:3;}
+
 /** Wiki **/
 
 .sheets { margin-right: 321px }
