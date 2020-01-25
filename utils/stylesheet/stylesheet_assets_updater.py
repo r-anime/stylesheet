@@ -94,6 +94,9 @@ class StylesheetAssetsUpdater:
         LocalStylesheetImage class.
         """
         try:
+            # Required to first delete image to push limit from 49 to 50
+            subreddit.remove_image(local_image.reddit_name)
+
             image_url = subreddit.upload_image(
                 reddit_name=local_image.reddit_name,
                 path=local_image.path,
