@@ -88,6 +88,10 @@
 	border-color: #e35970;
 	&:hover {background: #e35970}
 }
+.linkflair-misleading {
+	background: #ed9191;
+}
+
 
 // Add text to the title for certain things
 .linkflair-palered a.title:before {content: "[Finished] "}
