@@ -204,14 +204,19 @@ $hover-delay: 150ms; // delay before dropdowns trigger
 // Small screen styles
 @media (max-width: 1300px) {
 	body > .content {
-		padding-top: 2 * $infobar-height + 6px; // TODO: why is this +6px necessary?
+		// The infobar sections are stacked on top of each other with a 1px border between them,
+		// the content needs to make room
+		padding-top: 2 * $infobar-height + 1px;
 	}
+
 	.side .md > :first-child {
-		padding-top: 10px;
 		flex-wrap: wrap;
+		// Wrapped flex containers can't use flexbox to vertically align within a wrapped row, so
+		// we have to manually add padding to the top of the buttons and margin to the bottom
+		padding-top: $infobar-padding-vertical;
 		blockquote {
 			flex: 1 1 100%;
-			margin-top: 10px;
+			margin-top: $infobar-padding-vertical;
 			margin-left: -10px;
 			border-left: 0;
 			border-top: 1px solid #EEE;
