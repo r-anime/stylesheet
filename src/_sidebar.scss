@@ -14,6 +14,11 @@ $sidebar-image-other-height: 0px;
 	border-radius: 5px;
 }
 
+// If an ad doesn't load, get rid of the big gap it leaves behind
+.ad-container:empty {
+	display: none;
+}
+
 // Markdown headings
 .side .md h1 {
 	background: #6a9de6;
@@ -131,6 +136,3 @@ $sidebar-image-other-height: 0px;
 .side .titlebox [href*="twitter.com/RedditChan"]:hover {
 	background: #198bd1;
 }
- 
-
-
