@@ -138,7 +138,7 @@ $sidebar-image-other-height: 0px;
 }
 
 // Temporary page header stuff, not sufficiently generalized for reuse
-.side .md[href*="#header"] {
+.side .md [href*="#header"] {
 	position: absolute;
 	top: 18px; // sub bar height
 	left: 200px;
