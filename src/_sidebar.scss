@@ -143,7 +143,7 @@ $sidebar-image-other-height: 0px;
 	top: 18px; // sub bar height
 	left: 200px; // just happens to work nicely
 	width: 604px; // hardcoded image width, whatever
-	height: 115px - 18px - 35px - 26px; // all space between sub bar and tabs
+	height: 115px - 18px - 35px; // all space between sub bar and tabs
 	z-index: 99; // same as header z-index, shows up on top because later in the HTML
 	font-size: 0; // image contains text, text is included just for screen readers or whatever
 }
