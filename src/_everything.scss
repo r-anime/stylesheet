@@ -60,17 +60,17 @@ body > .content,
 
 
 /** Page header **/
-//$banner-height: 62px;
-//$banner-top: 18px;
-//$banner-left: 400px;
+$banner-height: 62px;
+$banner-top: 18px;
+$banner-left: 200px;
 
 #header {
 	height: 115px;
 	background-color: #6a9de6;
-	//background-repeat: no-repeat;
-	//background-image: url("images/banner.png");
-	//background-position: $banner-left $banner-top;
-	//background-size: auto $banner-height;
+	background-repeat: no-repeat;
+	background-image: url("images/banner.png");
+	background-position: $banner-left $banner-top;
+	background-size: auto $banner-height;
 	border-bottom: 0;
 	box-shadow: 0 1px 2px rgba(0,0,0,0.2)
 }
