@@ -136,3 +136,15 @@ $sidebar-image-other-height: 0px;
 .side .titlebox [href*="twitter.com/RedditChan"]:hover {
 	background: #198bd1;
 }
+
+// Temporary page header stuff, not sufficiently generalized for reuse
+.side .md[href*="#header"] {
+	position: absolute;
+	top: 18px; // sub bar height
+	left: 200px;
+	right: 0;
+	height: calc(115px - 18px - 35px); // al space between sub bar and tabs
+	background: url(images/homu.png) no-repeat;
+	z-index: 99;
+	font-size: 0;
+}
