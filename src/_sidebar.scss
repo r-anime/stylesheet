@@ -137,14 +137,13 @@ $sidebar-image-other-height: 0px;
 	background: #198bd1;
 }
 
-// Temporary page header stuff, not sufficiently generalized for reuse
+// Temporary page header link, not sufficiently generalized for reuse
 .side .md [href*="#header"] {
 	position: absolute;
-	top: 18px; // sub bar height
+	top: 18px + 26px; // sub bar height
 	left: 200px;
 	right: 0;
-	height: calc(115px - 18px - 35px); // al space between sub bar and tabs
-	background: url("images/homu.png") no-repeat;
+	height: 115px - 18px - 35px - 26px; // al space between sub bar and tabs
 	z-index: 99;
 	font-size: 0;
 }
