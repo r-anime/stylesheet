@@ -177,15 +177,21 @@ $hover-delay: 150ms; // delay before dropdowns trigger
 		}
 
 		// LIVE label for AMA announcements
-		[href$="#live"]::after {
-			content: "LIVE";
-			padding: 2px 4px;
-			border: 1px solid red;
-			color: red;
-			border-radius: 5px;
-			position:absolute;
-			right: 10px;
-			font-size: x-small;
+		[href$="#live"] {
+			padding-left: 45px;
+
+			&::after {
+				content: "LIVE";
+				padding: 2px 0;
+				border: 1px solid currentcolor;
+				color: #ce223e;
+				border-radius: 5px;
+				position:absolute;
+				left: 0;
+				font-size: x-small;
+				width: 30px;
+				text-align: center;
+			}
 		}
 	}
 
