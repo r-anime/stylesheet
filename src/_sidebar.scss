@@ -67,11 +67,11 @@ $sidebar-image-other-height: 0px;
 // Leave appropriate room at the top of the sidebar for the
 // image + the absolutely-positioned search bar
 .side {
-	padding-top: 115px + 10px + 35px + 10px + $sidebar-image-height + 10px + $sidebar-image-other-height + 10px;
+	padding-top: 10px + 35px + 10px + $sidebar-image-height + 10px + $sidebar-image-other-height + 10px;
 }
 // Search bar isn't there on search pages, it's moved to #content
 .search-page .side {
-	padding-top: 115px + 10px + $sidebar-image-height + 10px + $sidebar-image-other-height + 10px;
+	padding-top: 10px + $sidebar-image-height + 10px + $sidebar-image-other-height + 10px;
 }
 
 // Position the image
