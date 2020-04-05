@@ -67,9 +67,12 @@ $sidebar-image-other-height: -10px; // set to -10px when not being used
 // Leave appropriate room at the top of the sidebar for the
 // image + the absolutely-positioned search bar
 .side {
-	padding-top: 10px + 35px + 10px + $sidebar-image-height + 10px + $sidebar-image-other-height + 10px;
+	padding-top: 10px + 35px + 10px + $sidebar-image-height + 10px + $sidebar-image-other-height;
 }
 // Search bar isn't there on search pages, it's moved to #content
+// Also on search pages the submit buttons are the first .spacers which means they don't have
+// the normal 10px top margin which means we need to add 10 more px
+// This is kinda messy now but it works nobody can jusge me
 .search-page .side {
 	padding-top: 10px + $sidebar-image-height + 10px + $sidebar-image-other-height + 10px;
 }
