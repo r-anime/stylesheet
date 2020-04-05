@@ -1,5 +1,5 @@
 $sidebar-image-height: 300px;
-$sidebar-image-other-height: 0px;
+$sidebar-image-other-height: -10px; // set to -10px when not being used
 
 // Align the search icon better with our search style
 #search input[type="submit"] {
@@ -77,12 +77,17 @@ $sidebar-image-other-height: 0px;
 // Position the image
 .side [href*='#sidebarimg'] {
 	position: absolute;
-	top: 170px;
+	top: 115px + 10px + 35px + 10px;
 	right: 10px;
 	width: 300px;
 	height: $sidebar-image-height;
 	border-radius: 5px;
 	background: url("images/sidebar.png") center/contain;
+	
+	// Again, search bar isn't there on search pages
+	.search-page & {
+		top: 115px + 10px;
+	}
 }
 //.side [href*="#sidebarimg2"] {
 //	top: 170px + 10px + $sidebar-image-height;
