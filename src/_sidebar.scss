@@ -62,6 +62,19 @@ $sidebar-image-other-height: 0px;
 }
 
 // Sidebar images
+// TODO: lots of hardcoding, don't we have variables for some of this stuff
+
+// Leave appropriate room at the top of the sidebar for the
+// image + the absolutely-positioned search bar
+.side {
+	padding-top: 115px + 10px + 35px + 10px + $sidebar-image-height + 10px + $sidebar-image-other-height + 10px;
+}
+// Search bar isn't there on search pages, it's moved to #content
+.search-page .side {
+	padding-top: 115px + 10px + $sidebar-image-height + 10px + $sidebar-image-other-height + 10px;
+}
+
+// Position the image
 .side [href*='#sidebarimg'] {
 	position: absolute;
 	top: 170px;
@@ -77,9 +90,10 @@ $sidebar-image-other-height: 0px;
 //	background-image: url("images/sidebar2.png");
 //}
 
-// Leave room at the top of the sidebar for the image
+// Move the search bar above the image
 #search {
-	margin-bottom: 10px + $sidebar-image-height + 10px + $sidebar-image-other-height + 10px;
+	position: absolute;
+	top: 125px;
 }
 
 // Discord and Twitter buttons
