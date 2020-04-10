@@ -92,11 +92,11 @@ $sidebar-image-other-height: -10px; // set to -10px when not being used
 		top: 115px + 10px;
 	}
 }
-//.side [href*="#sidebarimg2"] {
-//	top: 170px + 10px + $sidebar-image-height;
-//	height: $sidebar-image-other-height;
-//	background-image: url("images/sidebar2.png");
-//}
+.side [href*="#sidebarimg2"] {
+	top: 170px + 10px + $sidebar-image-height;
+	height: $sidebar-image-other-height;
+	background-image: url("images/sidebar2.png");
+}
 
 // Move the search bar above the image
 .side #search {
