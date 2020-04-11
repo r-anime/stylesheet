@@ -1996,94 +1996,8 @@ div.titlebox span.word {
     top: -3px
 }
 
-.side .md .-blocks,
-.side .md .-lists,
-.side .md blockquote,
-.side .md ol,
-.side .md p,
-.side .md pre,
-.side .md table,
-.side .md ul {
-    color: #292f34;
-    font-size: 13px;
-    font: 13px/1.45 Lato, Arial, sans-serif
-}
-
-.side .titlebox .md h1 {
-    line-height: 18px;
-    margin: .5em 0 0!important;
-    text-align: center
-}
-
-.side .titlebox .md h2 {
-    margin: 16px 0 2px
-}
-
-.side .titlebox .md h3 a {
-    padding: 12px 16px;
-    width: 100%;
-    border-radius: 2px;
-    background-color: #4c6aa5;
-    transition: all .25s ease;
-    color: #fff;
-    box-shadow: 0 1px 5px rgba(0, 0, 0, .24);
-    display: block;
-    margin: 1.5em 0;
-    font-size: 12px
-}
-
-.side .titlebox .md h3 a:hover {
-    background-color: #5a72ee;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, .54)
-}
-
-.side .titlebox .md h3 a:active {
-    background-color: #4059db;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, .54)
-}
-
-.side .titlebox .md h4 a,
-.wiki-page .wiki-page-content .md.wiki h4 {
-    padding: 12px 16px;
-    background-color: #fff;
-    border: 1px solid #d4d4d4;
-    border-radius: 2px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, .12);
-    color: #737373;
-    font-weight: 700;
-    transition: all .15s ease;
-    display: block;
-    margin: 1.5em 0;
-    font-size: 12px
-}
-
-.side .titlebox h4 a:hover,
-.wiki-page .wiki-page-content .md.wiki h4:hover {
-    box-shadow: 0 3px 8px rgba(0, 0, 0, .24);
-    color: #4d5763
-}
-
-.side .titlebox h4 a:active,
-.wiki-page .wiki-page-content .md.wiki h4:active {
-    background-color: #e5e5e5;
-    color: #999;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, .36)
-}
-
 .md hr {
     border: 1px solid #e5e5e5
-}
-
-.side #moderation_tools .title .collapse-button {
-    color: #112c5f;
-    vertical-align: middle;
-    border-radius: 1px;
-    border: 1px solid #d8d8d8
-}
-
-.side .sidecontentbox .content {
-    border: none;
-    padding: 8px 12px
 }
 
 .sidebox.create .morelink a {
@@ -2133,18 +2047,6 @@ div.titlebox span.word {
 .account-activity-box a,
 .gadget .right {
     text-transform: uppercase
-}
-
-.side:after {
-    display: block;
-    margin: 0;
-    padding: 10px 0;
-    color: #24a0ed;
-    font: 16px Lato, Arial, sans-serif;
-    position: absolute;
-    width: 300px;
-    border: 1px solid rgba(0, 0, 0, .06);
-    text-align: center
 }
 
 .commentarea .menuarea span.dropdown-title.lightdrop:first-letter,
@@ -3477,10 +3379,6 @@ ul.image-preview-list li {
     font-size: 12px
 }
 
-.side .flair:before {
-    margin-left: 0
-}
-
 .listing-page .comment {
     margin-left: 0;
     padding: 16px 16px 16px 8px
@@ -4124,29 +4022,12 @@ body:not(.search-page) .morelink {
     top: 592px
 }
 
-.side::before {
-    content: none
-}
-
 #search,
 .morelink,
 .side .titlebox h1.redditname,
 .subscribers,
 .titlebox .fancy-toggle-button {
     margin-top: -178px
-}
-
-.side {
-    margin-top: 202px
-}
-
-.side .titlebox h1.redditname:before {
-    background-color: #112c5f
-}
-
-.side .titlebox h1.redditname a,
-.titlebox span.subscribers {
-    color: #fff
 }
 
 .content .infobar,
@@ -4238,180 +4119,13 @@ body .content .sitetable .link .title a:hover {
     background-color: transparent
 }
 
-.side .md>blockquote {
-    margin: 10px 0;
-    border: none;
-    background: #fff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, .16);
-    padding: 0;
-    position: relative
-}
-
-.side .md blockquote h1,
-.side .md blockquote p {
-    padding: 10px 16px;
-    margin: 0
-}
-
-.side .md blockquote h1 {
-    font-size: 13px;
-    text-transform: uppercase;
-    color: #fff;
-    font-weight: 400;
-    background: #112c5f
-}
-
-.side .md blockquote>table {
-    margin: 0
-}
-
-.side .md blockquote table td,
-.side .md blockquote table th,
-.side .md blockquote table tr {
-    border-color: #fff
-}
-
-.side .md blockquote:nth-of-type(3) h2 {
-    background: #fdfdfd;
-    border-bottom: 1px solid rgba(0, 0, 0, .1);
-    font-family: Helvetica, sans-serif;
-    font-size: 12px;
-    margin: 5px 0 0;
-    padding: 10px 10px 10px 20px;
-    position: relative;
-    transition: .2s all linear
-}
-
-.side .md blockquote:nth-of-type(3) h2:last-of-type {
-    border-bottom: none
-}
-
-.side .md blockquote:nth-of-type(3) h2+blockquote {
-    background: #fdfdfd;
-    border: 1px solid rgba(0, 0, 0, .1);
-    border-top-width: 0;
-    border-bottom-width: 0;
-    margin: 0;
-    padding: 0 10px;
-    max-height: 0;
-    overflow: hidden;
-    transition: .3s
-}
-
-.side .md blockquote:nth-of-type(3) h2+blockquote:hover,
-.side .md blockquote:nth-of-type(3) h2:hover+blockquote {
-    max-height: 300px;
-    padding: 10px;
-    border: none;
-    background: #e8ebef;
-    border-left: 2px solid #112c5f
-}
-
-.side .md p del {
-    position: absolute;
-    top: 788px;
-    z-index: 10;
-    width: 300px;
-    text-align: center;
-    color: #555;
-    text-decoration: none;
-    display: block;
-    padding: 3px 0;
-    height: auto
-}
-
 .single-page .side .md p del {
     top: 900px
-}
-
-.side .md>blockquote:nth-of-type(10) {
-    background: #fff!important;
-    height: 320px;
-    overflow: hidden;
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    margin: 0;
-    padding: 0;
-    width: 100%
-}
-
-.side .md>blockquote:nth-of-type(10) p {
-    overflow: hidden;
-    display: block;
-    height: 100%;
-    margin: 0;
-    padding: 0
-}
-
-.side .md blockquote:nth-of-type(10) p code {
-    background-position: center bottom;
-    background-size: cover;
-    border: none;
-    position: absolute;
-    font-size: 0;
-    width: 100%;
-    height: 100%;
-    display: block;
-    animation: headerfade 32s infinite;
-    opacity: 0;
-    margin: 0;
-    padding: 0
-}
-
-.side .md ol {
-    padding: 0 0 8px 30px;
-    margin-bottom: 10px
-}
-
-.side .md ol li {
-    padding: 5px 16px 5px 4px
-}
-
-.side .md ol li p {
-    padding: 0
-}
-
-.side .md blockquote p a[href*="search?q="] {
-    background: #f30;
-    text-shadow: 0 0 5px rgba(0, 0, 0, .3);
-    width: 49%;
-    display: inline-block;
-    padding: 7px 0;
-    margin: 2px 0;
-    text-align: center;
-    height: auto;
-    color: #fff;
-    opacity: .85;
-    transition: all .2s ease-in-out
-}
-
-.side .md blockquote p a[href*="search?q="]:hover {
-    opacity: 1
-}
-
-.side .md blockquote:nth-of-type(6) a {
-    background: url("images/flags.png") 0 -1800px no-repeat;
-    background-position: center;
-    margin: 8px 6px;
-    font-size: 0;
-    width: 28%;
-    height: 50px;
-    display: inline-block;
-    color: #ad4d4d;
-    border-radius: 4px;
-    padding: 2px 4px;
-    box-shadow: inset 0 0 1px 1px rgba(0, 0, 0, .1)
 }
 
 .leavemoderator,
 .titlebox form.toggle {
     background-color: transparent
-}
-
-.side .titlebox .md h2 {
-    margin: 16px 0 2px
 }
 
 .wiki-page .wiki-page-content .md.wiki h4 {
@@ -4440,31 +4154,6 @@ body>.content .link .rank {
 
 .comments-page .side .linkinfo .date:first-letter {
     text-transform: capitalize
-}
-
-.side .flair:before {
-    margin-left: 0
-}
-
-.side .md table {
-    width: 100%
-}
-
-.side a[href*="#gr"] {
-    width: 100%;
-    background: #333;
-    display: block;
-    overflow: hidden;
-    text-align: center;
-    color: #fff;
-    border-radius: 4px;
-    padding: 8px 0;
-    margin: 5px 0;
-    transition: all .2s ease-in-out
-}
-
-.side a[href*="#gr"]:hover {
-    background: #666
 }
 
 .sidebox.hohoho .morelink {
@@ -4525,15 +4214,6 @@ div.side .md>blockquote ul li a:hover {
     border-radius: 2px;
     padding: 2px 4px;
     z-index: 10
-}
-
-.side h1.redditname a {
-    visibility: hidden
-}
-
-.side h1.redditname a:before {
-    visibility: visible;
-    content: "bih"
 }
 
 html:lang(dm) .md pre code,
