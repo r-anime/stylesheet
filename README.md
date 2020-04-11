@@ -1,6 +1,6 @@
 <img align="left" alt="logo" src="https://i.imgur.com/3ziz46S.png">
 
-# [r/bih](https://www.reddit.com/r/bih) stylesheet [![Build Status](https://travis-ci.com/kenanjapalak/rbih-stylesheet.svg?token=mvqKBetgB5ssLFUJUqAp&branch=master)](https://travis-ci.com/github/kenanjapalak/rbih-stylesheet)
+# [r/bih](https://www.reddit.com/r/bih) stylesheet [![Build Status](https://travis-ci.com/r-bih/stylesheet.svg?branch=master)](https://travis-ci.com/github/r-bih/stylesheet)
 
 This repo contains the subreddit's stylesheet.
 
