@@ -105,7 +105,58 @@
 }
 
 .side {
+    margin: 282px 25px 108px 0;
+    padding: 0;
+    background: 0;
+    width: 300px
+}
+
+.side {
     margin-top: 202px
+}
+
+.side .spacer {
+    margin: 0 0 16px
+}
+
+.side:before {
+    height: 192px;
+    background: url(%%6%%);
+    content: "";
+    display: block;
+    position: absolute;
+    top: 100px;
+    width: 300px;
+    z-index: 1;
+    border-radius: 2px;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12)
+}
+
+.side .titlebox h1.redditname:before {
+    content: " ";
+    position: absolute;
+    display: block;
+    width: 300px;
+    z-index: -1;
+    height: 76px;
+    margin-top: -16px;
+    margin-left: 0;
+    background: #fff;
+    border-radius: 0 0 2px 2px;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14)
+}
+
+.side .titlebox h1.redditname {
+    margin-bottom: 6px;
+    position: absolute;
+    top: 308px;
+    z-index: 100;
+    font-family: Lato, Arial, sans-serif
+}
+
+.side .titlebox h1.redditname a {
+    color: #333;
+    margin-left: 14px
 }
 
 .side .titlebox h1.redditname:before {
