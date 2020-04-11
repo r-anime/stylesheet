@@ -1607,57 +1607,6 @@ div.commentarea div.RES-keyNav-activeElement .md {
     background-color: rgba(0, 0, 0, .05)
 }
 
-.side {
-    margin: 282px 25px 108px 0;
-    padding: 0;
-    background: 0 0;
-    width: 300px
-}
-
-.side .spacer {
-    margin: 0 0 16px
-}
-
-.side:before {
-    height: 192px;
-    background: url("images/sidebarimg.png");
-    content: "";
-    display: block;
-    position: absolute;
-    top: 100px;
-    width: 300px;
-    z-index: 1;
-    border-radius: 2px;
-    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12)
-}
-
-.side .titlebox h1.redditname:before {
-    content: " ";
-    position: absolute;
-    display: block;
-    width: 300px;
-    z-index: -1;
-    height: 76px;
-    margin-top: -16px;
-    margin-left: 0;
-    background: #fff;
-    border-radius: 0 0 2px 2px;
-    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, .14)
-}
-
-.side .titlebox h1.redditname {
-    margin-bottom: 6px;
-    position: absolute;
-    top: 308px;
-    z-index: 100;
-    font-family: Lato, Arial, sans-serif
-}
-
-.side .titlebox h1.redditname a {
-    color: #333;
-    margin-left: 14px
-}
-
 .disabled .morelink a,
 .titlebox h1 {
     color: #4d5763
@@ -3524,25 +3473,8 @@ ul.image-preview-list li {
     background-color: transparent
 }
 
-.flair {
-    border: none;
-    border-radius: 0;
-    font: 400 12px Lato, Arial, sans-serif;
-    background: 0 0;
-    color: #98abba;
-    padding-left: 0;
-    margin-right: inherit
-}
-
 .link .flair {
     font-size: 12px
-}
-
-.flair:before {
-    margin-right: 3px;
-    height: auto;
-    content: "- ";
-    margin-left: 4px
 }
 
 .side .flair:before {
@@ -4887,137 +4819,6 @@ body .content .sitetable .link .title a:hover {
     color: #112c5f
 }
 
-.entry>.title>.linkflairlabel.linkflair-image,
-.flairselector .linkflair-image .linkflairlabel,
-.linkflair-image .title .linkflairlabel,
-.side .md blockquote p a[href*="%22meta"] {
-    background-color: #1f8b4c
-}
-
-.entry>.title>.linkflairlabel.linkflair-image,
-.flairselector .linkflair-image .linkflairlabel,
-.linkflair-image .title .linkflairlabel,
-.side .md blockquote p a[href*="%22discussion"] {
-    background-color: #1f8b4c
-}
-
-.entry>.title>.linkflairlabel.linkflair-image,
-.flairselector .linkflair-image .linkflairlabel,
-.linkflair-image .title .linkflairlabel,
-.side .md blockquote p a[href*="%22ask"] {
-    background-color: #1f8b4c
-}
-
-.entry>.title>.linkflairlabel.linkflair-image,
-.flairselector .linkflair-image .linkflairlabel,
-.linkflair-image .title .linkflairlabel,
-.side .md blockquote p a[href*="%22ama"] {
-    background-color: #1f8b4c
-}
-
-.entry>.title>.linkflairlabel.linkflair-image,
-.flairselector .linkflair-image .linkflairlabel,
-.linkflair-image .title .linkflairlabel,
-.side .md blockquote p a[href*="%22event"] {
-    background-color: #1f8b4c
-}
-
-.entry>.title>.linkflairlabel.linkflair-image,
-.flairselector .linkflair-image .linkflairlabel,
-.linkflair-image .title .linkflairlabel,
-.side .md blockquote p a[href*="%22politics"] {
-    background-color: #112c5f
-}
-
-.entry>.title>.linkflairlabel.linkflair-image,
-.flairselector .linkflair-image .linkflairlabel,
-.linkflair-image .title .linkflairlabel,
-.side .md blockquote p a[href*="%22economy"] {
-    background-color: #112c5f
-}
-
-.entry>.title>.linkflairlabel.linkflair-image,
-.flairselector .linkflair-image .linkflairlabel,
-.linkflair-image .title .linkflairlabel,
-.side .md blockquote p a[href*="%22technology"] {
-    background-color: #112c5f
-}
-
-.entry>.title>.linkflairlabel.linkflair-image,
-.flairselector .linkflair-image .linkflairlabel,
-.linkflair-image .title .linkflairlabel,
-.side .md blockquote p a[href*="%22sports"] {
-    background-color: #112c5f
-}
-
-.entry>.title>.linkflairlabel.linkflair-image,
-.flairselector .linkflair-image .linkflairlabel,
-.linkflair-image .title .linkflairlabel,
-.side .md blockquote p a[href*="%22news"] {
-    background-color: #112c5f
-}
-
-.entry>.title>.linkflairlabel.linkflair-image,
-.flairselector .linkflair-image .linkflairlabel,
-.linkflair-image .title .linkflairlabel,
-.side .md blockquote p a[href*="%22video"] {
-    background-color: #f7d117
-}
-
-.entry>.title>.linkflairlabel.linkflair-image,
-.flairselector .linkflair-image .linkflairlabel,
-.linkflair-image .title .linkflairlabel,
-.side .md blockquote p a[href*="%22photo"] {
-    background-color: #f7d117
-}
-
-.entry>.title>.linkflairlabel.linkflair-image,
-.flairselector .linkflair-image .linkflairlabel,
-.linkflair-image .title .linkflairlabel,
-.side .md blockquote p a[href*="%22arts"] {
-    background-color: #f7d117
-}
-
-.entry>.title>.linkflairlabel.linkflair-image,
-.flairselector .linkflair-image .linkflairlabel,
-.linkflair-image .title .linkflairlabel,
-.side .md blockquote p a[href*="%22travel"] {
-    background-color: #f7d117
-}
-
-.entry>.title>.linkflairlabel.linkflair-image,
-.flairselector .linkflair-image .linkflairlabel,
-.linkflair-image .title .linkflairlabel,
-.side .md blockquote p a[href*="%22food"] {
-    background-color: #f7d117
-}
-
-.entry>.title>.linkflairlabel.linkflair-image,
-.flairselector .linkflair-image .linkflairlabel,
-.linkflair-image .title .linkflairlabel,
-.side .md blockquote p a[href*="%22humor"] {
-    background-color: #f7d117
-}
-
-.linkflairlabel {
-    padding: 1px 6px;
-    height: 18px;
-    border-radius: 1px;
-    border: 0 solid;
-    color: #fff;
-    font: normal normal 14px Calibri, Arial, sans-serif;
-    cursor: default;
-    vertical-align: middle;
-    position: relative;
-    top: 0;
-    background: #738491
-}
-
-.linkflair-mod .linkflairlabel {
-    background: #1f8b4c;
-    color: #fff
-}
-
 .flairselector {
     position: fixed;
     top: 20%!important;
@@ -5170,58 +4971,6 @@ body .content .sitetable .link .title a:hover {
 .flairselector li a {
     color: #738491!important;
     font-size: 11px
-}
-
-.linkflair-red .linkflairlabel {
-    background-color: #fe4a49
-}
-
-.linkflair-green .linkflairlabel {
-    background-color: #1f8b4c
-}
-
-.linkflair-blue .linkflairlabel {
-    background-color: #112c5f
-}
-
-.linkflair-purple .linkflairlabel {
-    background-color: #f7d117
-}
-
-.linkflair-yellow .linkflairlabel {
-    background-color: #f1c40f
-}
-
-.linkflair-navy .linkflairlabel {
-    background-color: #034c3c
-}
-
-.linkflair-gray .linkflairlabel {
-    background-color: #797d81
-}
-
-.linkflair-brown .linkflairlabel {
-    background-color: #9e643c
-}
-
-.linkflair-ruby .linkflairlabel {
-    background-color: #aa4465
-}
-
-.linkflair-orange .linkflairlabel {
-    background-color: #e74c3c
-}
-
-.linkflair-pink .linkflairlabel {
-    background-color: #d84797
-}
-
-.linkflair-black .linkflairlabel {
-    background-color: #001011
-}
-
-.linkflair-violet .linkflairlabel {
-    background-color: #8a89c0
 }
 
 .link {
