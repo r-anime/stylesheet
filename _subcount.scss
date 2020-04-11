@@ -1,5 +1,9 @@
-// Subscriber and current user flavor texts
+// Subscriber and current user flavor texts.
 //.titlebox .number:before {content: ""}*/
-.titlebox .number:after {content: " waiting for the hero"}
+div.titlebox span.number:after {
+    content: " subscribers"
+}
 //.titlebox .users-online span.number:before {content: ""}*/
-.titlebox .users-online span.number:after {content: " tasting iron in their blood"}
+.titlebox .users-online .number:after {
+    content: " users online"
+}

@@ -5,21 +5,20 @@ python:
 install:
 - pip install -r utils/requirements.txt
 
-# Updates on master go to /r/anime
-# All other branches go to /r/animestaging for testing
+# Updates on master go to /r/bih
+# All other branches go to /r/bihstaging for testing
 # Pull requests are validated only
 script:
 - |
   if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then
     if [ "$TRAVIS_BRANCH" = "master" ]; then
-      python utils/build.py --subreddit_name anime;
+      python utils/build.py --subreddit_name bih;
     else
-      python utils/build.py --subreddit_name animestaging;
+      python utils/build.py --subreddit_name bihstaging;
     fi
   else
     python utils/validate.py;
   fi
-
 deploy:
 - on:
     all_branches: true

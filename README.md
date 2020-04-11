@@ -1,7 +1,7 @@
-<img align="left" alt="snoo" src="https://files.catbox.moe/zo0m5c.png">
+<img align="left" alt="logo" src="https://i.imgur.com/3ziz46S.png">
 
-# [/r/anime](https://www.reddit.com/r/anime) stylesheet [![Build Status](https://travis-ci.org/r-anime/stylesheet.svg?branch=master)](https://travis-ci.org/r-anime/stylesheet)
+# [r/bih](https://www.reddit.com/r/bih) stylesheet [![Build Status](https://travis-ci.com/kenanjapalak/rbih-stylesheet.svg?token=mvqKBetgB5ssLFUJUqAp&branch=master)](https://travis-ci.com/github/kenanjapalak/rbih-stylesheet)
 
-This repo contains the subreddit's stylesheet. It's a fun time.
+This repo contains the subreddit's stylesheet.
 
-Commits to this repository are automatically built and pushed to the subreddit, based on [Geo1088/reddit-stylesheet-sync](https://github.com/Geo1088/reddit-stylesheet-sync) and heavily improved by [/u/vaclav-2012](https://www.reddit.com/user/vaclav-2012).
+Commits to this repository are automatically built and pushed to the subreddit, based on [Geo1088/reddit-stylesheet-sync](https://github.com/Geo1088/reddit-stylesheet-sync).
