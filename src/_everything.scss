@@ -968,7 +968,6 @@ body .content .sitetable .link .title a:hover {
     padding: 0 0px;
     border-radius: 0px;
     font-weight: 700;
-    margin-left: 4px
 }
 
 .tagline .userattrs .moderator {
@@ -3370,7 +3369,8 @@ ul.image-preview-list li {
 }
 
 .link .flair {
-    font-size: 12px
+    font-size: 12px;
+    margin-top: 0px!important;
 }
 
 .listing-page .comment {
