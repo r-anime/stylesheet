@@ -8,7 +8,7 @@
 .side .md ul {
     color: #292f34;
     font-size: 13px;
-    font: 13px/1.45 Lato, Arial, sans-serif
+    font-family: "Segoe UI","Helvetica Neue","Lucida Sans Unicode",Arial,serif
 }
 
 .side .titlebox .md h1 {
@@ -362,6 +362,49 @@
 .sidecontentbox a.helplink {
     float: inherit!important
 }
+
+
+// Discord button
+.side .titlebox [href*="discord.gg/rmKNjY4B"] {
+    display: block;
+    color: #FFF;
+    padding-right: 9px;
+    font-weight: bold;
+    background: #7289da;
+    position: relative;
+    top: 0;
+    line-height: 18px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 200ms
+}
+
+.side .titlebox [href*="discord.gg/rmKNjY4B"]:hover {
+	color: #FFF;
+	background: #557eb8;
+	top: -2px;
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.side .titlebox [href*="discord.gg/rmKNjY4B"]:before {
+    content: "";
+    width: 47px;
+    height: 44px;
+    display: block;
+    background: url("images/spritesheet.png") 0 -264x;
+}
+
+.side .titlebox [href*="discord.gg/rmKNjY4B"] em {
+	display: block;
+	font-weight: normal;
+	opacity: 0.8;
+}
+.side .titlebox [href*="discord.gg/rmKNjY4B"]:hover em {
+	text-decoration: underline;
+}
+
 
 .entry>.title>.linkflairlabel.linkflair-image,
 .flairselector .linkflair-image .linkflairlabel,
