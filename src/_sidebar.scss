@@ -119,8 +119,8 @@
     margin: 0 0 16px
 }
 
-.side:before {
-}
+// .side:before {
+// }
 
 .side .titlebox h1.redditname:before {
     content: " ";
@@ -177,7 +177,7 @@
     font-size: 13px;
     text-transform: uppercase;
     color: #fff;
-    font-weight: 400;
+    font-weight: bold;
     background: #112c5f
 }
 
@@ -357,6 +357,10 @@
 .side h1.redditname a:before {
     visibility: visible;
     content: "bih"
+}
+
+.sidecontentbox a.helplink {
+    float: inherit!important
 }
 
 .entry>.title>.linkflairlabel.linkflair-image,

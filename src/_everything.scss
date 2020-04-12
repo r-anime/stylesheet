@@ -1818,7 +1818,7 @@ div.titlebox span.word {
 }
 
 #search #searchexpando {
-    position: absolute;
+    position: sticky;
     z-index: 1;
     background: #edf1f3;
     border: none;
@@ -2028,7 +2028,9 @@ div.titlebox span.word {
 }
 
 .sidecontentbox .title h1 {
-    color: #fff
+    color: #fff;
+    font-weight: bold;
+    font-family: arial,verdana,helvetica, sans-serif
 }
 
 .icon-menu a {
@@ -2682,8 +2684,7 @@ body.mod-toolbox .tb-action-button {
 
 .comment .flat-list li a[onclick*=reply] {
     color: #112C5F;
-    font-weight: 700;
-    font-size: 11px
+    font-weight: 700
 }
 
 .deepthread a {
