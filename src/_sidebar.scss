@@ -405,12 +405,21 @@
 	text-decoration: underline;
 }
 
+/*
+Post flair colors
+#f3a0de
+#42b96d
+#3f6dda
+#efe259
+#f04d4d
+#7cddea
+*/
 
 .entry>.title>.linkflairlabel.linkflair-image,
 .flairselector .linkflair-image .linkflairlabel,
 .linkflair-image .title .linkflairlabel,
-.side .md blockquote p a[href*="%22umjetnost"] {
-    background-color: #f3a0de
+.side .md blockquote p a[href*="%22meta"] {
+    background-color: #42b96d
 }
 
 .entry>.title>.linkflairlabel.linkflair-image,
@@ -430,34 +439,6 @@
 .entry>.title>.linkflairlabel.linkflair-image,
 .flairselector .linkflair-image .linkflairlabel,
 .linkflair-image .title .linkflairlabel,
-.side .md blockquote p a[href*="%22događaj"] {
-    background-color: #42b96d
-}
-
-.entry>.title>.linkflairlabel.linkflair-image,
-.flairselector .linkflair-image .linkflairlabel,
-.linkflair-image .title .linkflairlabel,
-.side .md blockquote p a[href*="%22ekonomija"] {
-    background-color: #3f6dda
-}
-
-.entry>.title>.linkflairlabel.linkflair-image,
-.flairselector .linkflair-image .linkflairlabel,
-.linkflair-image .title .linkflairlabel,
-.side .md blockquote p a[href*="%22hrana"] {
-    background-color: #f3a0de
-}
-
-.entry>.title>.linkflairlabel.linkflair-image,
-.flairselector .linkflair-image .linkflairlabel,
-.linkflair-image .title .linkflairlabel,
-.side .md blockquote p a[href*="%22humor"] {
-    background-color: #efe259
-}
-
-.entry>.title>.linkflairlabel.linkflair-image,
-.flairselector .linkflair-image .linkflairlabel,
-.linkflair-image .title .linkflairlabel,
 .side .md blockquote p a[href*="%22vijesti"] {
     background-color: #3f6dda
 }
@@ -465,22 +446,8 @@
 .entry>.title>.linkflairlabel.linkflair-image,
 .flairselector .linkflair-image .linkflairlabel,
 .linkflair-image .title .linkflairlabel,
-.side .md blockquote p a[href*="%22fotografija"] {
+.side .md blockquote p a[href*="%22mediji"] {
     background-color: #f04d4d
-}
-
-.entry>.title>.linkflairlabel.linkflair-image,
-.flairselector .linkflair-image .linkflairlabel,
-.linkflair-image .title .linkflairlabel,
-.side .md blockquote p a[href*="%22politika"] {
-    background-color: #3f6dda
-}
-
-.entry>.title>.linkflairlabel.linkflair-image,
-.flairselector .linkflair-image .linkflairlabel,
-.linkflair-image .title .linkflairlabel,
-.side .md blockquote p a[href*="%22šitpost"] {
-    background-color: #efe259
 }
 
 .entry>.title>.linkflairlabel.linkflair-image,
@@ -493,27 +460,13 @@
 .entry>.title>.linkflairlabel.linkflair-image,
 .flairselector .linkflair-image .linkflairlabel,
 .linkflair-image .title .linkflairlabel,
-.side .md blockquote p a[href*="%22tehnologija"] {
-    background-color: #7cddea
-}
-
-.entry>.title>.linkflairlabel.linkflair-image,
-.flairselector .linkflair-image .linkflairlabel,
-.linkflair-image .title .linkflairlabel,
-.side .md blockquote p a[href*="%22putovanje"] {
+.side .md blockquote p a[href*="%22kultura"] {
     background-color: #f3a0de
 }
 
 .entry>.title>.linkflairlabel.linkflair-image,
 .flairselector .linkflair-image .linkflairlabel,
 .linkflair-image .title .linkflairlabel,
-.side .md blockquote p a[href*="%22video"] {
-    background-color: #f04d4d
-}
-
-.entry>.title>.linkflairlabel.linkflair-image,
-.flairselector .linkflair-image .linkflairlabel,
-.linkflair-image .title .linkflairlabel,
-.side .md blockquote p a[href*="%22meta"] {
-    background-color: #42b96d
+.side .md blockquote p a[href*="%22humor"] {
+    background-color: #efe259
 }
