@@ -119,9 +119,6 @@
     margin: 0 0 16px
 }
 
-// .side:before {
-// }
-
 .side .titlebox h1.redditname:before {
     content: " ";
     position: absolute;
@@ -363,8 +360,6 @@
     float: inherit!important
 }
 
-
-// Discord button
 .side .titlebox [href*="discord.gg/rmKNjY4B"] {
     display: block;
     color: #FFF;
@@ -393,7 +388,7 @@
     width: 47px;
     height: 44px;
     display: block;
-    background: url("images/spritesheet.png") 0 -264x;
+    background: url("images/spritesheet.png") 0 -264px;
 }
 
 .side .titlebox [href*="discord.gg/rmKNjY4B"] em {
