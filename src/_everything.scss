@@ -1099,7 +1099,6 @@ body .content .sitetable .link .title a:hover {
     border-radius: 2px;
     color: #738491;
     font: bold 11px Lato, Arial, sans-serif;
-    padding: 2px 8px;
     position: absolute;
     right: 32px;
     text-transform: capitalize;
@@ -4747,7 +4746,8 @@ body .content .sitetable .link .title a:hover {
 }
 
 .flairrichtext {
-    vertical-align: top!important
+    vertical-align: top!important;
+    padding: 0 0 0 0px!important;
 }
 
 .flairemoji {
