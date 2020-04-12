@@ -958,7 +958,6 @@ body .content .sitetable .link .title a:hover {
 }
 
 .tagline .userattrs {
-    font-size: 0
 }
 
 .tagline .userattrs>* {
@@ -982,7 +981,7 @@ body .content .sitetable .link .title a:hover {
 }
 
 .tagline .userattrs .submitter {
-    background: #24a0ed
+    background: #ffffff
 }
 
 .tagline .userattrs .friend {
@@ -2578,15 +2577,11 @@ div.titlebox span.word {
 
 .comment .score {
     font-size: inherit;
-    font-weight: 700;
-    color: #738491
+    marin-left: 5px;
 }
 
 .comment .score:before {
-    content: "• ";
-    margin: 0 2px;
-    vertical-align: middle;
-    line-height: 14px
+
 }
 
 .res-nightmode .reason-popup .selectable-reason.reason-selected .styled-reason {
@@ -4757,5 +4752,12 @@ body .content .sitetable .link .title a:hover {
 }
 
 .flairemoji {
-    vertical-align: top!important
+    vertical-align: top!important;
+    background-size: cover!important;
+    height: 16px!important;
+    width: 20px!important;
+}
+
+.tagline .submitter, .search-result-meta .submitter {
+  color: #112c5f
 }
