@@ -17,13 +17,13 @@ a {
 }
 
 ::-moz-selection {
-    background: #0079d3;
+    background: #112c5f;
     text-shadow: none;
     color: #010007
 }
 
 ::selection {
-    background: #0079d3;
+    background: #112c5f;
     text-shadow: none;
     color: #010007
 }
@@ -821,8 +821,8 @@ body .content .sitetable .link .title a:hover {
 }
 
 .expando-button:hover {
-    background-color: #0079d3;
-    border-color: #0079d3
+    background-color: #112c5f;
+    border-color: #112c5f
 }
 
 .expando-button.crosspost.collapsed,
@@ -957,8 +957,8 @@ body .content .sitetable .link .title a:hover {
     margin-right: inherit
 }
 
-.tagline .userattrs {
-}
+// .tagline .userattrs {
+// }
 
 .tagline .userattrs>* {
     cursor: help;
@@ -1818,6 +1818,8 @@ div.titlebox span.word {
 }
 
 #search #searchexpando {
+    position: absolute;
+    z-index: 1;
     background: #edf1f3;
     border: none;
     border-radius: 0 0 2px 2px;
@@ -2486,7 +2488,7 @@ div.titlebox span.word {
 
 .res-nightmode .submit-page #newlink.submit.content .btn,
 .res-nightmode .submit-page #url-field button {
-    background-color: #0079d3!important
+    background-color: #112c5f!important
 }
 
 .res-nightmode #newlink-with-image-upload .image-upload-drop-target,
@@ -2578,9 +2580,8 @@ div.titlebox span.word {
     margin-left: 5px;
 }
 
-.comment .score:before {
-
-}
+// .comment .score:before {
+// }
 
 .res-nightmode .reason-popup .selectable-reason.reason-selected .styled-reason {
     background-color: rgba(0, 0, 0, .25)
@@ -2779,7 +2780,7 @@ body.mod-toolbox .tb-action-button {
 }
 
 .read-next .read-next-button {
-    background-color: #0079d3;
+    background-color: #112c5f;
     color: #010007;
     font: 10px/16px monospace;
     height: 16px;
@@ -2821,7 +2822,7 @@ body.mod-toolbox .tb-action-button {
     position: relative;
     padding: 0;
     border: none;
-    background: #0079d3;
+    background: #112c5f;
     border-radius: 2px;
     box-shadow: 0 1px 4px 0 rgba(0, 0, 0, .14)
 }
@@ -3077,7 +3078,7 @@ body #newlink-with-image-upload .file-upload-button {
 
 .combined-search-page .search-result-subreddit .search-subscribe-button .add,
 .combined-search-page .search-result-subreddit .search-subscribe-button .add:active {
-    background: #0079d3;
+    background: #112c5f;
     border: none;
     border-radius: 2px
 }
@@ -3333,7 +3334,7 @@ ul.image-preview-list li {
 .subreddit-rules-page .subreddit-rule-add-form-buttons button,
 .subreddit-rules-page .subreddit-rule-buttons button {
     padding: 0 16px;
-    background: #0079d3;
+    background: #112c5f;
     border: none;
     border-radius: 2px;
     color: #010007;
@@ -4046,11 +4047,11 @@ body button {
 .morelink:hover,
 .side .titlebox .md h3 a:hover,
 body button:hover {
-    background-color: #fff!important
+    background-color: #153475!important
 }
 
 .morelink:hover a {
-    color: #fff
+    color: #153475
 }
 
 .btn:active,
@@ -4174,7 +4175,6 @@ div.side .md>blockquote ul {
     display: block;
     background-repeat: no-repeat;
     background-position: left top;
-    vertical-align: middle;
     border: 0 solid #ddd;
     cursor: default;
     margin: 0;
