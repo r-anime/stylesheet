@@ -1840,7 +1840,7 @@ div.titlebox span.word {
 }
 
 .morelink {
-    background: #355C7D;
+    background: #2a363b;
     height: 36px;
     border-radius: 2px;
     font-size: 14px;
@@ -1853,7 +1853,8 @@ div.titlebox span.word {
 }
 
 .morelink:hover {
-    background: #153475
+    background: #2a363b;
+    opacity: 0.8
 }
 
 .morelink:active {
