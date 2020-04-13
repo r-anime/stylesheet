@@ -1676,13 +1676,14 @@ div.titlebox span.word {
 }
 
 .titlebox .fancy-toggle-button .active.add {
-    background: #2A363B;
+    background: #355c7d;
+    opacity: 0.8;
     color: #fff
 }
 
 .titlebox .fancy-toggle-button .active.add:hover {
-    background: #292f34;
-    opacity: 0.8
+    background: #355c7d;
+    opacity: 1.0
 }
 
 .titlebox .fancy-toggle-button .active.add:active {
@@ -1840,7 +1841,8 @@ div.titlebox span.word {
 }
 
 .morelink {
-    background: #2a363b;
+    background: #355c7d;
+    opacity: 0.8;
     height: 36px;
     border-radius: 2px;
     font-size: 14px;
@@ -1853,12 +1855,12 @@ div.titlebox span.word {
 }
 
 .morelink:hover {
-    background: #2a363b;
-    opacity: 0.8
+    background: #355c7d;
+    opacity: 1.0
 }
 
 .morelink:active {
-    background: #2A363B;
+    background: #355c7d;
     box-shadow: 0 4px 5px 0 rgba(0, 0, 0, .14), 0 1px 10px 0 rgba(0, 0, 0, .12), 0 2px 4px -1px rgba(0, 0, 0, .2)
 }
 
