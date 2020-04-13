@@ -1693,13 +1693,14 @@ div.titlebox span.word {
 }
 
 .titlebox .fancy-toggle-button .active.remove {
-    background: rgba(0, 0, 0, .24);
+    background: #d35274;
     color: #fff;
     box-shadow: none
 }
 
 .titlebox .fancy-toggle-button .active.remove:hover {
-    background: rgba(0, 0, 0, .32)
+    background: #d35274;
+    opacity: 0.8
 }
 
 .titlebox .fancy-toggle-button .active.remove:active {
