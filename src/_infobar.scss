@@ -1,13 +1,10 @@
-// The whole infobar is wrapped in a blockquote at the start of the sidebar
-// All the !important in this file is to pverride the resets the comment face
-// code puts on certain types of links; they're all there for a reason
 $dropdown-shadow: 0 0 4px #AAA;
 $dropdown-shadow-nightmode: 0 0 4px #000;
 $infobar-height: 45px;
 $infobar-button-height: 30px;
 $infobar-padding-vertical: ($infobar-height - $infobar-button-height) / 2;
-$info-entry-period: 5.5s; // time for a single thing to be displayed
-$hover-delay: 150ms; // delay before dropdowns trigger
+$info-entry-period: 5.5s;
+$hover-delay: 150ms;
 
 .side .md > :first-child {
 	position: absolute;
@@ -21,20 +18,15 @@ $hover-delay: 150ms; // delay before dropdowns trigger
 	display: flex;
 	align-items: center;
 	font-size: 14px;
-	// Dropdowns appear over the "Welcome to Reddit" banner and comment field
-	// placeholder when logged out
 	z-index: 3;
-
-	// Dropdowns
 	> p {
 		margin: 0;
 		padding: 0;
 		height: $infobar-button-height;
 		line-height: $infobar-button-height;
 		position: relative;
-		z-index: 1; // appear above the other things
+		z-index: 1; 
 
-		// Sub-headings
 		strong {
 			display: block;
 			line-height: 25px;
@@ -42,7 +34,6 @@ $hover-delay: 150ms; // delay before dropdowns trigger
 			border-bottom: 1px solid #EEE;
 		}
 
-		// All links in dropdowns
 		a {
 			display: block !important;
 			width: auto !important;
@@ -52,7 +43,6 @@ $hover-delay: 150ms; // delay before dropdowns trigger
 			transition: 0s;
 		}
 
-		// Top-level links get styles on hover
 		&:hover > a {
 			background: #6a9de6 !important;
 			color: #FFF !important;
@@ -64,7 +54,6 @@ $hover-delay: 150ms; // delay before dropdowns trigger
 			}
 		}
 
-		// Top-level dropdowns get little indicators
 		> a:not(:only-child)::after {
 			display: inline-block;
 			content: "";
@@ -76,7 +65,6 @@ $hover-delay: 150ms; // delay before dropdowns trigger
 			transform: rotate(45deg) translate(-2px, -2px);
 		}
 
-		// The dropdown content
 		em {
 			position: absolute;
 			top: $infobar-button-height - 5px; // TODO
@@ -99,7 +87,6 @@ $hover-delay: 150ms; // delay before dropdowns trigger
 		}
 	}
 
-	// Scrolling announcements banner
 	blockquote {
 		order: 1;
 		flex: 0 1 100%;
@@ -126,14 +113,11 @@ $hover-delay: 150ms; // delay before dropdowns trigger
 			border-color: #0f0f0f;
 		}
 
-		// Entries may or may not be inside links, so we duplicate some styles
 		p {
 			flex: 0 0 $infobar-height;
 			margin: 0;
 			line-height: 1.3;
 			animation: reorder ($info-entry-period * 4) infinite;
-			// Allow custom labels to be positioned relative to the individual
-			// link rather than the page
 			position: relative;
 		}
 		p,
@@ -145,9 +129,7 @@ $hover-delay: 150ms; // delay before dropdowns trigger
 			align-self: stretch;
 		}
 		&:hover p {
-			// Border between items
 			box-shadow: 0 1px #EEE;
-			// Animation freezing
 			animation-play-state: paused;
 			margin-top: 0 !important;
 			@include nightmode {
@@ -155,7 +137,6 @@ $hover-delay: 150ms; // delay before dropdowns trigger
 			}
 		}
 
-		// For small text on the second line of the announcement
 		em {
 			font-size: smaller;
 			opacity: 0.8;
@@ -165,7 +146,6 @@ $hover-delay: 150ms; // delay before dropdowns trigger
 			}
 		}
 
-		// Each thing has its own delay
 		p:nth-child(2) {
 			animation-delay: $info-entry-period;
 		}
@@ -176,7 +156,6 @@ $hover-delay: 150ms; // delay before dropdowns trigger
 			animation-delay: $info-entry-period * 3;
 		}
 
-		// LIVE label for AMA announcements
 		[href$="#live"] {
 			padding-left: 45px;
 
@@ -195,7 +174,6 @@ $hover-delay: 150ms; // delay before dropdowns trigger
 		}
 	}
 
-	// Misc nightmode styles
 	@include nightmode {
 		blockquote:hover,
 		> p:hover em {
@@ -205,22 +183,17 @@ $hover-delay: 150ms; // delay before dropdowns trigger
 	}
 }
 
-// Small screen styles
 @media (max-width: 1300px) {
 	body > .content {
-		// The infobar sections are stacked on top of each other with a 1px border between them,
-		// the content needs to make room
 		padding-top: 2 * $infobar-height + 1px;
 	}
 	.side .md > :first-child {
 		flex-wrap: wrap;
-		// Wrapped flex containers can't use flexbox to vertically align within a wrapped row, so
-		// we add padding to the top of the container and margin to the element in the second row
 		padding-top: $infobar-padding-vertical;
 		blockquote {
 			flex: 1 1 100%;
 			margin-top: $infobar-padding-vertical;
-			margin-left: -5px; // alignment with other text, TODO: can we put this in terms of variables?
+			margin-left: -5px; 
 			border-left: 0;
 			border-top: 1px solid #EEE;
 			text-align: center;
@@ -228,8 +201,6 @@ $hover-delay: 150ms; // delay before dropdowns trigger
 	}
 }
 
-// Each item sets a negative offset on itself to scroll to the next item, then
-// moves itself to the end of the list and slowly moves back up to the top.
 @keyframes reorder {
 	from, 22% {
 		margin-top: 0;
