@@ -962,10 +962,6 @@ body .content .sitetable .link .title a:hover {
     font-weight: 700;
 }
 
-.tagline .userattrs .moderator {
-    background: #2A363B
-}
-
 .tagline .userattrs .admin {
     background: #f44336
 }
@@ -1651,7 +1647,7 @@ div.titlebox span.word {
 .titlebox .fancy-toggle-button {
     margin: 0;
     position: absolute;
-    margin-left: 208px;
+    margin-left: 168px;
     top: 314px;
     z-index: 100;
     text-align: center;
@@ -1661,7 +1657,7 @@ div.titlebox span.word {
     display: block;
     border: none;
     height: 32px;
-    width: 57px;
+    width: 116px;
     border-radius: 2px;
     line-height: 30px;
     background-image: none!important;
@@ -1685,7 +1681,8 @@ div.titlebox span.word {
 }
 
 .titlebox .fancy-toggle-button .active.add:hover {
-    background: #2ecc71
+    background: #292f34;
+    opacity: 0.8
 }
 
 .titlebox .fancy-toggle-button .active.add:active {
