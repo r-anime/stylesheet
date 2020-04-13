@@ -1653,13 +1653,15 @@ div.titlebox span.word {
     position: absolute;
     margin-left: 208px;
     top: 314px;
-    z-index: 100
+    z-index: 100;
+    text-align: center;
 }
 
 .titlebox .fancy-toggle-button .active {
     display: block;
     border: none;
     height: 32px;
+    width: 57px;
     border-radius: 2px;
     line-height: 30px;
     background-image: none!important;
@@ -1696,7 +1698,6 @@ div.titlebox span.word {
 .titlebox .fancy-toggle-button .active.remove {
     background: rgba(0, 0, 0, .24);
     color: #fff;
-    margin-left: -14px;
     box-shadow: none
 }
 
