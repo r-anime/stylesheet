@@ -71,7 +71,7 @@ body .btn,
 body button {
     margin: 4px 16px 4px 0;
     padding: 0 16px;
-    background: #355C7D;
+    background: #2a363b;
     border: none;
     border-radius: 2px;
     color: #fff;
@@ -2013,7 +2013,7 @@ div.titlebox span.word {
 }
 
 .sidecontentbox .title {
-    background: #355C7D;
+    background: #2a363b;
     padding: 10px 12px;
     text-align: center
 }
@@ -4481,10 +4481,6 @@ body .content .sitetable .link .title a:hover {
 }
 
 .flairselector {
-    position: fixed;
-    top: 20%!important;
-    left: 50%!important;
-    margin-left: -125px;
     padding: 16px!important;
     width: 250px!important;
     border: none;
@@ -4624,8 +4620,7 @@ body .content .sitetable .link .title a:hover {
 }
 
 .flairselector .flairoptionpane ul li.flairsample-right {
-    padding: 5px 0!important;
-    border: none
+    border: none;
 }
 
 .flairselector form .flairselection a.author,
