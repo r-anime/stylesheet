@@ -1,0 +1,256 @@
+// The whole infobar is wrapped in a blockquote at the start of the sidebar
+// All the !important in this file is to pverride the resets the comment face
+// code puts on certain types of links; they're all there for a reason
+$dropdown-shadow: 0 0 4px #AAA;
+$dropdown-shadow-nightmode: 0 0 4px #000;
+$infobar-height: 45px;
+$infobar-button-height: 30px;
+$infobar-padding-vertical: ($infobar-height - $infobar-button-height) / 2;
+$info-entry-period: 5.5s; // time for a single thing to be displayed
+$hover-delay: 150ms; // delay before dropdowns trigger
+
+.side .md > :first-child {
+	position: absolute;
+	top: $header-height;
+	left: 0;
+	right: $sidebar-width;
+	height: $infobar-height;
+	margin: 0;
+	border: 0;
+	padding: 0 0 0 5px;
+	display: flex;
+	align-items: center;
+	font-size: 14px;
+	// Dropdowns appear over the "Welcome to Reddit" banner and comment field
+	// placeholder when logged out
+	z-index: 3;
+
+	// Dropdowns
+	> p {
+		margin: 0;
+		padding: 0;
+		height: $infobar-button-height;
+		line-height: $infobar-button-height;
+		position: relative;
+		z-index: 1; // appear above the other things
+
+		// Sub-headings
+		strong {
+			display: block;
+			line-height: 25px;
+			padding: 0 10px;
+			border-bottom: 1px solid #EEE;
+		}
+
+		// All links in dropdowns
+		a {
+			display: block !important;
+			width: auto !important;
+			height: auto !important;
+			padding: 0 10px;
+			white-space: nowrap;
+			transition: 0s;
+		}
+
+		// Top-level links get styles on hover
+		&:hover > a {
+			background: #6a9de6 !important;
+			color: #FFF !important;
+			border-radius: 5px;
+			position: relative !important;
+			z-index: 2;
+			@include nightmode {
+				background: #445f7e !important;
+			}
+		}
+
+		// Top-level dropdowns get little indicators
+		> a:not(:only-child)::after {
+			display: inline-block;
+			content: "";
+			width: 5px;
+			height: 5px;
+			margin-left: 7px;
+			border-right: 2px solid currentcolor;
+			border-bottom: 2px solid currentcolor;
+			transform: rotate(45deg) translate(-2px, -2px);
+		}
+
+		// The dropdown content
+		em {
+			position: absolute;
+			top: $infobar-button-height - 5px; // TODO
+			background: #FFF;
+			white-space: nowrap;
+			display: block;
+			font-style: normal;
+			border-radius: 0 0 5px 5px;
+			transition: visibility 0s;
+			visibility: hidden;
+		}
+		&:hover em {
+			transition-delay: $hover-delay;
+			visibility: visible;
+			border-top: 5px solid #6a9de6;
+			box-shadow: $dropdown-shadow;
+			@include nightmode {
+				border-color: #445f7e;
+			}
+		}
+	}
+
+	// Scrolling announcements banner
+	blockquote {
+		order: 1;
+		flex: 0 1 100%;
+		align-self: stretch;
+		margin: 0 0 0 5px;
+		padding: 0 15px;
+		display: flex;
+		flex-direction: column;
+		border-left: 1px solid #EEE;
+		position: relative;
+		overflow: hidden;
+		height: $infobar-height;
+		transition: 0s;
+		&:hover {
+			transition-delay: $hover-delay;
+			height: $infobar-height * 4;
+			background: #FFF;
+			border-color: #DDD;
+			border-bottom: 1px solid #DDD;
+			border-bottom-left-radius: 5px;
+			box-shadow: $dropdown-shadow;
+		}
+		@include nightmode {
+			border-color: #0f0f0f;
+		}
+
+		// Entries may or may not be inside links, so we duplicate some styles
+		p {
+			flex: 0 0 $infobar-height;
+			margin: 0;
+			line-height: 1.3;
+			animation: reorder ($info-entry-period * 4) infinite;
+			// Allow custom labels to be positioned relative to the individual
+			// link rather than the page
+			position: relative;
+		}
+		p,
+		p > a {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			justify-content: center;
+			align-self: stretch;
+		}
+		&:hover p {
+			// Border between items
+			box-shadow: 0 1px #EEE;
+			// Animation freezing
+			animation-play-state: paused;
+			margin-top: 0 !important;
+			@include nightmode {
+				box-shadow: 0 1px #000;
+			}
+		}
+
+		// For small text on the second line of the announcement
+		em {
+			font-size: smaller;
+			opacity: 0.8;
+			color: #000;
+			@include nightmode {
+				color: #FFF;
+			}
+		}
+
+		// Each thing has its own delay
+		p:nth-child(2) {
+			animation-delay: $info-entry-period;
+		}
+		p:nth-child(3) {
+			animation-delay: $info-entry-period * 2;
+		}
+		p:nth-child(4) {
+			animation-delay: $info-entry-period * 3;
+		}
+
+		// LIVE label for AMA announcements
+		[href$="#live"] {
+			padding-left: 45px;
+
+			&::after {
+				content: "LIVE";
+				padding: 2px 0;
+				border: 1px solid currentcolor;
+				color: #ce223e;
+				border-radius: 5px;
+				position:absolute;
+				left: 0;
+				font-size: x-small;
+				width: 30px;
+				text-align: center;
+			}
+		}
+	}
+
+	// Misc nightmode styles
+	@include nightmode {
+		blockquote:hover,
+		> p:hover em {
+			background: #2f2f2f;
+			box-shadow: $dropdown-shadow-nightmode;
+		}
+	}
+}
+
+// Small screen styles
+@media (max-width: 1300px) {
+	body > .content {
+		// The infobar sections are stacked on top of each other with a 1px border between them,
+		// the content needs to make room
+		padding-top: 2 * $infobar-height + 1px;
+	}
+	.side .md > :first-child {
+		flex-wrap: wrap;
+		// Wrapped flex containers can't use flexbox to vertically align within a wrapped row, so
+		// we add padding to the top of the container and margin to the element in the second row
+		padding-top: $infobar-padding-vertical;
+		blockquote {
+			flex: 1 1 100%;
+			margin-top: $infobar-padding-vertical;
+			margin-left: -5px; // alignment with other text, TODO: can we put this in terms of variables?
+			border-left: 0;
+			border-top: 1px solid #EEE;
+			text-align: center;
+		}
+	}
+}
+
+// Each item sets a negative offset on itself to scroll to the next item, then
+// moves itself to the end of the list and slowly moves back up to the top.
+@keyframes reorder {
+	from, 22% {
+		margin-top: 0;
+		order: 0;
+	}
+	24.99% {
+		margin-top: -$infobar-height;
+		order: 0;
+	}
+	25%, 49.99%, 99.99% {
+		margin-top: 0;
+		order: 3;
+	}
+	50%, 74.99% {
+		order: 2;
+	}
+	75%, 99.99% {
+		order: 1;
+	}
+	to {
+		order: 0;
+		margin-top: 0;
+	}
+}

@@ -17,13 +17,13 @@ a {
 }
 
 ::-moz-selection {
-    background: #355C7D;
+    background: #2a363b;
     text-shadow: none;
     color: #010007
 }
 
 ::selection {
-    background: #355C7D;
+    background: #2a363b;
     text-shadow: none;
     color: #010007
 }
@@ -61,7 +61,7 @@ body .content input[type=password]:focus,
 body .content input[type=text]:focus,
 body .content input[type=url]:focus,
 body .content textarea:focus {
-    border-color: #355C7D;
+    border-color: #2a363b;
     color: #292f34
 }
 
@@ -680,7 +680,7 @@ body>.content .link .rank {
 }
 
 .thumbnail.spoiler {
-    background: url("images/spritesheet.png") -208px -148px #f44336
+    background: url("images/spritesheet.png") -208px -148px #d35274
 }
 
 .linefield input[type=password],
@@ -742,7 +742,7 @@ textarea:hover {
 input:active,
 textarea:active {
     outline: 0!important;
-    border-color: #355C7D;
+    border-color: #2a363b;
     color: #4d5763
 }
 
@@ -769,7 +769,7 @@ textarea:active {
 .thing .title.loggedin,
 .thing .title.loggedin.click,
 body .content .sitetable .link .title a:hover {
-    color: #355C7D
+    color: #2a363b
 }
 
 .content .thing .title:visited,
@@ -779,7 +779,7 @@ body .content .sitetable .link .title a:hover {
 
 .thing .title.click:visited,
 .thing .title.loggedin.click:visited {
-    color: #355C7D
+    color: #2a363b
 }
 
 .link .domain {
@@ -795,7 +795,7 @@ body .content .sitetable .link .title a:hover {
 }
 
 .link .domain a:hover {
-    color: #355C7D
+    color: #2a363b
 }
 
 .approval-checkmark,
@@ -820,8 +820,8 @@ body .content .sitetable .link .title a:hover {
 }
 
 .expando-button:hover {
-    background-color: #355C7D;
-    border-color: #355C7D
+    background-color: #2a363b;
+    border-color: #2a363b
 }
 
 .expando-button.crosspost.collapsed,
@@ -955,7 +955,7 @@ body .content .sitetable .link .title a:hover {
 .tagline .userattrs>* {
     cursor: help;
     display: inline-block;
-    color: #355C7D!important;
+    color: #2a363b!important;
     line-height: 13px;
     padding: 0 0px;
     border-radius: 0px;
@@ -1012,7 +1012,7 @@ body .content .sitetable .link .title a:hover {
 .spoiler-stamp {
     position: relative;
     padding: 2px 3px;
-    background: #ea4876;
+    background: #d35274;
     border-radius: 0;
     color: #fff;
     cursor: help
@@ -1992,7 +1992,7 @@ div.titlebox span.word {
 
 .sidebox.create .morelink a {
     font-size: 14px;
-    color: #355C7D
+    color: #2a363b
 }
 
 .sidebox .spacer {
@@ -2094,7 +2094,7 @@ div.titlebox span.word {
 .commentarea .menuarea .toggle a:hover,
 .help-hoverable:hover,
 .usertext .bottom-area a.reddiquette {
-    color: #355C7D
+    color: #2a363b
 }
 
 .help-hoverable {
@@ -2480,7 +2480,7 @@ div.titlebox span.word {
 
 .res-nightmode .submit-page #newlink.submit.content .btn,
 .res-nightmode .submit-page #url-field button {
-    background-color: #355C7D!important
+    background-color: #2a363b!important
 }
 
 .res-nightmode #newlink-with-image-upload .image-upload-drop-target,
@@ -2618,7 +2618,7 @@ body.mod-toolbox .tb-action-button {
 }
 
 .md a {
-    color: #355C7D
+    color: #2a363b
 }
 
 .md a:visited {
@@ -2665,17 +2665,17 @@ body.mod-toolbox .tb-action-button {
 }
 
 .comment .flat-list li a:hover {
-    color: #355C7D;
+    color: #2a363b;
     text-decoration: none
 }
 
 .comment .flat-list li a[onclick*=reply] {
-    color: #355C7D;
+    color: #2a363b;
     font-weight: 700
 }
 
 .deepthread a {
-    color: #355C7D
+    color: #2a363b
 }
 
 .morecomments a {
@@ -2694,7 +2694,7 @@ body.mod-toolbox .tb-action-button {
     padding: 16px;
     width: 300px;
     height: 98px;
-    background: #355C7D;
+    background: #2a363b;
     border-radius: 2px;
     box-shadow: 0 1px 5px rgba(0, 0, 0, .16);
     border: none
@@ -2767,7 +2767,7 @@ body.mod-toolbox .tb-action-button {
 }
 
 .read-next .read-next-button {
-    background-color: #355C7D;
+    background-color: #2a363b;
     color: #010007;
     font: 10px/16px monospace;
     height: 16px;
@@ -2809,7 +2809,7 @@ body.mod-toolbox .tb-action-button {
     position: relative;
     padding: 0;
     border: none;
-    background: #355C7D;
+    background: #2a363b;
     border-radius: 2px;
     box-shadow: 0 1px 4px 0 rgba(0, 0, 0, .14)
 }
@@ -3047,7 +3047,7 @@ body #newlink-with-image-upload .file-upload-button {
 }
 
 .combined-search-page .search-result .search-result-header .search-title {
-    color: #355C7D
+    color: #2a363b
 }
 
 .combined-search-page .search-result .search-result-meta {
@@ -3056,7 +3056,7 @@ body #newlink-with-image-upload .file-upload-button {
 
 .combined-search-page .search-result a,
 .combined-search-page .search-result a>mark {
-    color: #355C7D
+    color: #2a363b
 }
 
 .combined-search-page .search-result-subreddit .search-subscribe-button {
@@ -3065,7 +3065,7 @@ body #newlink-with-image-upload .file-upload-button {
 
 .combined-search-page .search-result-subreddit .search-subscribe-button .add,
 .combined-search-page .search-result-subreddit .search-subscribe-button .add:active {
-    background: #355C7D;
+    background: #2a363b;
     border: none;
     border-radius: 2px
 }
@@ -3078,7 +3078,7 @@ body #newlink-with-image-upload .file-upload-button {
 }
 
 .combined-search-page .search-result .search-comments {
-    color: #355C7D
+    color: #2a363b
 }
 
 .search-result.has-thumbnail>.thumbnail {
@@ -3170,8 +3170,8 @@ body #newlink-with-image-upload .file-upload-button {
 
 .wiki-page .pageactions .wikiaction-current {
     padding: 10px 16px 9px;
-    border-bottom: 2px solid #355C7D;
-    color: #355C7D
+    border-bottom: 2px solid #2a363b;
+    color: #2a363b
 }
 
 .wiki-page .pageactions .wikiaction-current:hover,
@@ -3221,7 +3221,7 @@ body #newlink-with-image-upload .file-upload-button {
 }
 
 .usertext .bottom-area a:hover {
-    color: #355C7D
+    color: #2a363b
 }
 
 .pretty-form {
@@ -3249,7 +3249,7 @@ body #newlink-with-image-upload .file-upload-button {
 }
 
 .tabmenu li.selected a {
-    color: #355C7D;
+    color: #2a363b;
     background: 0 0;
     border: none
 }
@@ -3321,7 +3321,7 @@ ul.image-preview-list li {
 .subreddit-rules-page .subreddit-rule-add-form-buttons button,
 .subreddit-rules-page .subreddit-rule-buttons button {
     padding: 0 16px;
-    background: #355C7D;
+    background: #2a363b;
     border: none;
     border-radius: 2px;
     color: #010007;
@@ -4019,7 +4019,7 @@ body:not(.search-page) .morelink {
 .submit_text.enabled.roundfield,
 body .btn,
 body button {
-    background-color: #355C7D
+    background-color: #2a363b
 }
 
 .submit_text.enabled.roundfield {
@@ -4074,7 +4074,7 @@ body button:active {
 .wiki-page .wiki-page-content .md.wiki h4,
 a,
 body .content .sitetable .link .title a:hover {
-    color: #355C7D
+    color: #2a363b
 }
 
 #header-img,
@@ -4317,7 +4317,7 @@ html:lang(dm) ul.image-preview-list .description pre {
 }
 
 html:lang(dm) #header .tabmenu li a:hover {
-    color: #355C7D
+    color: #2a363b
 }
 
 html:lang(dm) .flair,
@@ -4367,7 +4367,7 @@ html:lang(dm) .thing .title.loggedin.click {
 }
 
 .subreddits-page .fancy-toggle-button .add {
-    background-color: #355C7D
+    background-color: #2a363b
 }
 
 .subreddits-page .fancy-toggle-button .remove {
@@ -4433,7 +4433,7 @@ div.titlebox span.word {
 
 .res .RESDashboardToggle,
 .res .RESshortcutside {
-    background: #355C7D;
+    background: #2a363b;
     border: none;
     color: #fff;
     text-decoration: none;
@@ -4477,7 +4477,7 @@ div.titlebox span.word {
 .wiki-page .wiki-page-content .md.wiki h4,
 a,
 body .content .sitetable .link .title a:hover {
-    color: #355C7D
+    color: #2a363b
 }
 
 .flairselector {
@@ -4495,7 +4495,7 @@ body .content .sitetable .link .title a:hover {
 .flairselector h2 {
     margin-bottom: 4px;
     background: 0 0;
-    color: #355C7D;
+    color: #2a363b;
     text-align: left;
     text-transform: capitalize;
     font-weight: 400;
@@ -4531,7 +4531,7 @@ body .content .sitetable .link .title a:hover {
 .flairoptionpane ul li .linkflair a.title {
     font-size: 18px!important;
     opacity: 100!important;
-    color: #355C7D!important
+    color: #2a363b!important
 }
 
 .flairselector form {
@@ -4552,7 +4552,7 @@ body .content .sitetable .link .title a:hover {
 .flairselector form .flairselection .linkflair a.title {
     font-size: 18px!important;
     opacity: 100!important;
-    color: #355C7D!important;
+    color: #2a363b!important;
     cursor: default
 }
 
@@ -4566,7 +4566,7 @@ body .content .sitetable .link .title a:hover {
 .flairselector form .flairselection .flairremove a {
     visibility: visible;
     opacity: 100!important;
-    color: #355C7D!important;
+    color: #2a363b!important;
     margin-left: -4px;
     text-transform: capitalize
 }
@@ -4741,5 +4741,5 @@ body .content .sitetable .link .title a:hover {
 }
 
 .tagline .submitter, .search-result-meta .submitter {
-  color: #355C7D
+  color: #2a363b
 }
