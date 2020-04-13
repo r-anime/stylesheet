@@ -2258,7 +2258,6 @@ div.titlebox span.word {
 
 .comment .author {
     color: #292f34;
-    margin-right: 0;
     font-weight: 700
 }
 
@@ -2684,7 +2683,7 @@ body.mod-toolbox .tb-action-button {
 
 .comments-page .side,
 .other-discussions-page .side {
-    margin-top: 400px
+    margin-top: 320px
 }
 
 .comments-page .side .linkinfo,
@@ -4001,7 +4000,7 @@ body:not(.search-page) .morelink {
 }
 
 .comments-page .side .linkinfo {
-    top: 592px
+    top: 415px;
 }
 
 #search,
