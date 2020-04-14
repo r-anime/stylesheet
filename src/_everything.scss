@@ -71,7 +71,8 @@ body .btn,
 body button {
     margin: 4px 16px 4px 0;
     padding: 0 16px;
-    background: #2a363b;
+    background: #355c7d;
+    opacity: 0.8;
     border: none;
     border-radius: 2px;
     color: #fff;
@@ -2620,11 +2621,11 @@ body.mod-toolbox .tb-action-button {
 }
 
 .md a {
-    color: #2a363b
+    color: #d35274
 }
 
 .md a:visited {
-    color: #7d5d8a
+    color: #355c7d
 }
 
 .md pre {
@@ -4036,7 +4037,8 @@ body button {
 .morelink:hover,
 .side .titlebox .md h3 a:hover,
 body button:hover {
-    background-color: #355c7d!important
+    background-color: #355c7d!important;
+    opacity: 1.0
 }
 
 .morelink:hover a {
