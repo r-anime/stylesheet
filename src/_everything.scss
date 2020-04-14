@@ -182,14 +182,14 @@ a.random.choice {
     text-decoration: underline
 }
 
-#sr-header-area .dropdown.srdrop .selected:hover:after,
-.link .domain a:hover,
-.link .entry .buttons li a:hover,
-.link .entry .tagline a:hover,
-.link .entry li .comments:hover,
-.tagline .userattrs>:hover {
-    text-decoration: none
-}
+// #sr-header-area .dropdown.srdrop .selected:hover:after,
+// .link .domain a:hover,
+// .link .entry .buttons li a:hover,
+// .link .entry .tagline a:hover,
+// .link .entry li .comments:hover,
+// .tagline .userattrs>:hover {
+//     text-decoration: none
+// }
 
 #sr-header-area .dropdown.srdrop .selected:after {
     display: inline-block;
@@ -2266,7 +2266,7 @@ div.titlebox span.word {
 }
 
 .comment .author:hover {
-    text-decoration: none
+    color: #d35274
 }
 
 .green {
@@ -2668,8 +2668,7 @@ body.mod-toolbox .tb-action-button {
 }
 
 .comment .flat-list li a:hover {
-    color: #2a363b;
-    text-decoration: none
+    color: #2a363b
 }
 
 .comment .flat-list li a[onclick*=reply] {
