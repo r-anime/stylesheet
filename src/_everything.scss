@@ -1856,10 +1856,13 @@ div.titlebox span.word {
 }
 
 .morelink:hover {
+    background: #355c7d;
     opacity: 0.8
 }
 
 .morelink:active {
+    background: #355c7d;
+    opacity: 0.8;
     box-shadow: 0 4px 5px 0 rgba(0, 0, 0, .14), 0 1px 10px 0 rgba(0, 0, 0, .12), 0 2px 4px -1px rgba(0, 0, 0, .2)
 }
 
@@ -4489,8 +4492,7 @@ body .content .sitetable .link .title a:hover {
 
 .flairselector.drop-choices.active {
     border: none;
-    display: block;
-    padding: 4px!important
+    display: block
 }
 
 .flairselector h2 {
