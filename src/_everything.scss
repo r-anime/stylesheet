@@ -541,11 +541,11 @@ body>.content .link .rank {
 }
 
 .link .score.likes {
-    color: #F8B195
+    color: #f67280
 }
 
 .link .score.dislikes {
-    color: #5f5189
+    color: #82c0cd
 }
 
 .arrow {
@@ -1856,12 +1856,10 @@ div.titlebox span.word {
 }
 
 .morelink:hover {
-    background: #355c7d;
     opacity: 0.8
 }
 
 .morelink:active {
-    background: #355c7d;
     box-shadow: 0 4px 5px 0 rgba(0, 0, 0, .14), 0 1px 10px 0 rgba(0, 0, 0, .12), 0 2px 4px -1px rgba(0, 0, 0, .2)
 }
 
@@ -4089,9 +4087,9 @@ body .content .sitetable .link .title a:hover {
     background-position: 0 0
 }
 
-.arrow.down:after {
-    content: "For content that does not contribute to any discussion"
-}
+// .arrow.down:after {
+//     content: "For content that does not contribute to any discussion"
+// }
 
 #header {
     background: url("images/headerimg.png") 50% 50%/cover no-repeat
@@ -4484,14 +4482,15 @@ body .content .sitetable .link .title a:hover {
 
 .flairselector {
     padding: 16px!important;
-    width: 250px!important;
     border: none;
     border-radius: 2px;
     box-shadow: 0 0 16px rgba(0, 0, 0, .12)
 }
 
 .flairselector.drop-choices.active {
-    border: none
+    border: none;
+    display: block;
+    padding: 4px!important
 }
 
 .flairselector h2 {
