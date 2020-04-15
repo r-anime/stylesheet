@@ -791,12 +791,13 @@ body .content .sitetable .link .title a:hover {
     visibility: visible;
     position: relative;
     top: -1px;
-    color: #f67280;
+    color: #355c7d;
     transition: all .15s ease
 }
 
 .link .domain a:hover {
-    color: #d35274
+    color: #355c7d;
+    opacity: 0.8
 }
 
 .approval-checkmark,
@@ -1843,7 +1844,6 @@ div.titlebox span.word {
 
 .morelink {
     background: #355c7d;
-    opacity: 0.8;
     height: 36px;
     border-radius: 2px;
     font-size: 14px;
@@ -1857,7 +1857,7 @@ div.titlebox span.word {
 
 .morelink:hover {
     background: #355c7d;
-    opacity: 1.0
+    opacity: 0.8
 }
 
 .morelink:active {
