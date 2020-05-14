@@ -586,10 +586,17 @@ body>.content .spacer {margin: 0}
 .comment.collapsed .expand:after { content: "[+]" }
 .comment.collapsed .expand { bottom: 20px }
 .comment.collapsed { padding: 0 }
-/* Fix RES expando images overflowing under the sidebar in comments */
+
+// Fix RES expando images overflowing under the sidebar in comments
 .res-image img {
-    max-width: 100%!important;
+	max-width: 100%!important;
 }
+// Fix the above sometimes causing images to shrink to 1x1px when rotated through RES media tools
+.res-media-with-controls-wrapper {
+	width: auto !important;
+	height: auto !important;
+}
+
 /* Other spacing */
 .comment .child {
     border: 0;
