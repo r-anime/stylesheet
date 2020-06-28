@@ -197,8 +197,8 @@ $hover-delay: 150ms; // delay before dropdowns trigger
 
 	// Misc nightmode styles
 	@include nightmode {
-		blockquote:hover,
-		> p:hover em {
+		> p:hover em,
+		blockquote:hover {
 			background: #2f2f2f;
 			box-shadow: $dropdown-shadow-nightmode;
 		}
