@@ -1,0 +1,172 @@
+$header-snoo-reserved-width: $header-snoo-width + 2 * $header-snoo-padding-horizontal;
+
+#header {
+	height: $header-height;
+	background-color: #6a9de6;
+	// background-repeat: no-repeat;
+	// background-image: url("images/banner.png");
+	// background-position: $banner-left $banner-top;
+	// background-size: auto $banner-height;
+	border-bottom: 0;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.2)
+}
+
+// Subreddits bar at the very top of the page
+#sr-header-area {
+	background: rgba(0, 0, 0, 0.2);
+	border-bottom: 0;
+	color: #FFF;
+	// text-transform: none;
+	// font-size: 12px;
+	// line-height: 18px
+	.dropdown.srdrop .selected {
+		color: #FFF;
+		background-image: none;
+		// padding-right: 0;
+		// margin: 0;
+	}
+	.dropdown.srdrop .selected::after {
+	/* 	content: " | "; */
+		white-space: pre;
+		padding: 0 .7ex;
+		color: #FFF
+	}
+	.separator,
+	.sr-bar a {
+		color: #FFF !important;
+	}
+	*,
+	#sr-more-link,
+	#RESShortcutsEditContainer,
+	#RESShortcutsSort,
+	#RESShortcutsRight,
+	#RESShortcutsLeft,
+	#RESShortcutsAdd,
+	#RESShortcutsTrash {
+		color: #FFF;
+	}
+	.drop-choices {
+		border: 0;
+		background: #557EB8  !important;
+	}
+	a.RESShortcutsCurrentSub {
+		color: inherit!important;
+		text-decoration: underline
+	}
+}
+
+// Main header content (sub icon, name, page info on search/config pages, tab bar)
+#header-bottom-left {
+	/* background: url("images/banner.png") center bottom no-repeat; */
+	// push to bottom of header
+	position: absolute;
+	bottom: 0;
+	// use box-shadow to give tab menu a background
+	box-shadow: inset 0 (-$header-tabmenu-height) rgba(0, 0, 0, 0.2);
+	// stretch background to both edges of header
+	left: 0;
+	right: 0;
+	// move below userbar to prevent intercepting clicks
+	z-index: -1;
+	// leave space for snoo
+	padding-left: $header-snoo-reserved-width;
+}
+
+// Snoo
+#header-img-a {
+	// anchor image to absolute bottom left
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	// horizontal spacing from edge of viewport and tabmenu
+	padding: 0 $header-snoo-padding-horizontal;
+}
+#header-img,
+#header-img-a:after {
+	display: block;
+	margin: 0;
+	// these values should match the target dimensions of the snoo image file,
+	// e.g. the image's dimensions scaled by 50% to account for high dpi screens
+	width: $header-snoo-width;
+	height: $header-snoo-height;
+}
+// In nightmode, display a custom image in a pseudo-element
+#header-img {
+	@include nightmode {
+		@extend %display-none;
+	}
+}
+#header-img-a:after {
+	@include nightmode {
+		content: "";
+		display: block;
+		background: url("images/general.png") 0 -172px/128px;
+	}
+}
+
+// Sub name and page info
+.pagename {
+	display: block;
+	color: #FFF;
+	font: normal 34px "Helvetica", "Arial", sans-serif;
+	text-transform: capitalize;
+	// align subreddit name with tabmenu text
+	margin-left: $header-tabmenu-padding-horizontal;
+	// add a little extra space below so descenders don't touch the tabmenu
+	margin-bottom: 2px;
+
+	a {
+		color: inherit;
+	}
+}
+
+// Tabs
+#header .tabmenu {
+	height: $header-tabmenu-height;
+	margin: 0;
+
+	li {
+		display: inline-block;
+		margin: 0;
+	}
+	a {
+		display: inline-block;
+		padding: 0 $header-tabmenu-padding-horizontal;
+		background: transparent;
+		border: 0;
+		color: #FFF;
+		font-size: 14px;
+		line-height: $header-tabmenu-height;
+		font-weight: 400;
+		height: $header-tabmenu-height;
+		position: relative;
+	}
+	a:hover {
+		background: rgba(0,0,0,.1);
+	}
+	.selected a::after {
+		content: "";
+		position: absolute;
+		bottom: -4px;
+		left: 50%;
+		transform: translateX(-50%) rotate(45deg);
+		width: 8px;
+		height: 8px;
+		background: #FFF;
+		box-shadow: inset 2px 2px 2px -1px rgba(0,0,0,0.2),1px 1px 1px #FFF;
+	}
+}
+
+// Userbar stuff
+#header-bottom-right {
+	bottom: 35px;
+	right: 0;
+	padding: $base-spacing-small $base-spacing;
+	background-color: transparent!important;
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 5px;
+}
+#header-bottom-right span,
+#header-bottom-right a {
+	color: #FFF;
+}
