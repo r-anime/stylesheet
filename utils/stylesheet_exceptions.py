@@ -22,8 +22,8 @@ class SassCompileException(StylesheetException):
 
     def __init__(self, compile_error: CompileError, filename):
         """Construct an instance of SassCompileException."""
-        message = f"An error occurred when compiling the Sass file "
-        f"{filename}:\n {str(compile_error)}"
+        message = (f"An error occurred when compiling the Sass file "
+        f"{filename}:\n {str(compile_error)}")
         super().__init__(message)
         self.filename = filename
 
