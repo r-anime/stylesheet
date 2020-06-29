@@ -1,3 +1,49 @@
-// Intrinsic variables
+// Core spacing values
+$base-spacing: 10px;
+$base-spacing-small: 5px;
+$base-border-width: 1px;
+$base-border-radius: 5px;
+
+// Colors
+$primary-color: #6A9DE6;
+$secondary-color: #557EB8;
+$separator-color: #CFCFCF;
+$separator-color-light: #EFEFEF;
+$light-text-color: #FFF;
+$dark-text-color: #000;
+
+// Basic element dimensions
 $header-height: 115px;
-$sidebar-width: 321px;
+$header-tabmenu-height: 35px;
+$header-snoo-width: 74px;
+$header-snoo-height: 90px;
+$header-snoo-padding-horizontal: 5px;
+$sidebar-section-header-height: 35px;
+
+// Derived variables
+
+// Horizontal padding of each tabmenu link
+$header-tabmenu-padding-horizontal: $base-spacing;
+
+// The appearance of the outer sidebar border
+$sidebar-border-width: $base-border-width;
+$sidebar-border-radius: $base-border-radius;
+$sidebar-border-color: $separator-color;
+$sidebar-padding: $base-spacing;
+
+// The appearance of individual sections within the sidebar
+$sidebar-section-border-width: $base-border-width;
+$sidebar-section-border-radius: $base-border-radius;
+$sidebar-section-border-color: $separator-color;
+$sidebar-section-padding: $base-spacing;
+
+// Sidebar section headers
+$sidebar-section-header-background-color: $primary-color;
+$sidebar-section-header-text-color: $light-text-color;
+$sidebar-section-header-margin-vertical: $base-spacing;
+
+// The "a community for X years" bit at the bottom of the sidebar
+$sidebar-subreddit-age-padding-vertical: $base-spacing-small;
+
+// you really don't want to change this one, too much baked-in sidebar content relies on having 300px to work with
+$sidebar-width: 300px + 2 * $sidebar-padding + $sidebar-border-width;
