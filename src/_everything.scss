@@ -132,8 +132,9 @@ body > .content,
 .side .subscribe-button {
 	display: block;
 	position: relative;
+	text-align: right;
 	// 18px is the height of the subscribe button
-	// 21px is a magical hardcoded value idk man this element is weird
+	// i'm not entirely sure why the -1px is necessary but it is
 	margin-top: -1px - $sidebar-section-header-margin-vertical - ($sidebar-section-header-height / 2) - (18px / 2);
 	margin-bottom: $sidebar-section-header-margin-vertical;
 }

@@ -118,6 +118,11 @@ $header-snoo-reserved-width: $header-snoo-width + 2 * $header-snoo-padding-horiz
 	a {
 		color: inherit;
 	}
+
+	// If there's no tab bar (e.g. on submit page) add space at the bottom where the tab bar would normally be
+	&:last-child {
+		margin-bottom: 2px + $header-tabmenu-height;
+	}
 }
 
 // Tabs
