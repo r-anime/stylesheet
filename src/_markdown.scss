@@ -1,6 +1,6 @@
 // Spoiler tags
 a[href="/s"],
-a[href*="/s?"] {
+a[href*="reddit.com/s?"] {
 	color: #fff!important;
 	background: #000;
 	padding: 1px 0 1px 3px;
@@ -8,12 +8,12 @@ a[href*="/s?"] {
 	border-radius: 2px;
 }
 a[href="/s"]:hover,
-a[href*="/s?"]:hover {
+a[href*="reddit.com/s?"]:hover {
 	color: #f44!important;
 	text-decoration: none;
 }
 a[href="/s"]::after,
-a[href*="/s?"]::after {
+a[href*="reddit.com/s?"]::after {
 	content: attr(title);
 	background: inherit;
 	color: #000;
@@ -21,10 +21,10 @@ a[href*="/s?"]::after {
 }
 a[href="/s"]:hover::after,
 a[href="/s"]:active::after,
-a[href*="/s?"]:hover::after,
-a[href*="/s?"]:active::after {color: #FFF}
+a[href*="reddit.com/s?"]:hover::after,
+a[href*="reddit.com/s?"]:active::after {color: #FFF}
 /* QoL for mobile desktop users */
 a[href="/s"]:active,
-a[href*="/s?"]:active {
+a[href*="reddit.com/s?"]:active {
     pointer-events: none;
 }
