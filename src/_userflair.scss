@@ -38,6 +38,12 @@
 	margin-right: 4px;
 }
 
+// Display emoji flairs at the same resolution as new Reddit (avoids quality loss with favicons e.g. MAL)
+.flairemoji {
+	width: 16px;
+	height: 16px;
+}
+
 // List services
 .flair-MAL::before {background-position: 0 0}
 .flair-HB::before {background-position: 0 -16px}
