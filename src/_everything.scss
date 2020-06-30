@@ -64,7 +64,7 @@ body > .content,
 	padding: $sidebar-padding;
 	width: 300px;
 	background: $sidebar-background;
-	border: $sidebar-border-width solid #cfcfcf;
+	border: $sidebar-border-width solid $sidebar-border-color;
 	border-top: 0;
 	border-right: 0;
 	border-bottom-left-radius: $sidebar-border-radius;
@@ -75,8 +75,8 @@ body > .content,
 .side>.spacer+.spacer {
 	margin-top: $sidebar-padding;
 }
-.titlebox,.linkinfo {
-	background: #FFF;
+.titlebox, .linkinfo {
+	background: $sidebar-section-background;
 	padding: $sidebar-section-padding + $sidebar-section-border-width;
 	border: 0;
 	border-radius: $sidebar-section-border-radius;
@@ -93,7 +93,7 @@ body > .content,
 	font-size: 18px;
     line-height: $sidebar-section-header-height;
 	text-transform: capitalize;
-	color: #FFF;
+	color: $text-on-primary-color;
 	overflow: hidden;
 	font-weight: 700
 }
@@ -130,20 +130,19 @@ body > .content,
 
 .subscribers {display: block;}
 .side .subscribe-button {
-	position: relative;
-	width: 200px;
-	text-align: right;
 	display: block;
-	margin-top: -37.5px;
-	left: 81px;
-	margin-bottom: 20px
+	position: relative;
+	// 18px is the height of the subscribe button
+	// 21px is a magical hardcoded value idk man this element is weird
+	margin-top: -1px - $sidebar-section-header-margin-vertical - ($sidebar-section-header-height / 2) - (18px / 2);
+	margin-bottom: $sidebar-section-header-margin-vertical;
 }
 .side .subscribe-button .option {
 	width: 100%;
 	height: 100%;
 	border: 0;
 	background: #557eb8;
-	padding: 3px 5px
+	padding: 3px 5px;
 }
 .side .titlebox .res-fancy-toggle-button {
 	border: 0;
@@ -155,7 +154,8 @@ body > .content,
 .res-sr-style-toggle {
 	float: left;
 	width: 100%;
-	padding-top: 0!important
+	padding-top: 0 !important;
+	height: 17px;
 }
 span.multi-count {margin: 0!important}
 .users-online {
@@ -193,13 +193,13 @@ span.multi-count {margin: 0!important}
 	line-height: 35px
 }
 .sidecontentbox .title h1 {
-	color: #FFF;
+	color: $text-on-primary-color;
 	text-transform: lowercase;
 	font-size: 1.3rem
 }
 .sidecontentbox .content {
-	background: #FFF;
-	border: $sidebar-section-border-radius solid $sidebar-section-border-color;
+	background: $sidebar-section-background;
+	border: $sidebar-section-border-width solid $sidebar-section-border-color;
 	border-top: 0;
 	box-shadow: 0 (-$sidebar-section-border-radius) $sidebar-section-header-background-color;
 	border-bottom-left-radius: $sidebar-section-border-radius;
@@ -222,7 +222,7 @@ span.multi-count {margin: 0!important}
 .sidecontentbox .title .collapse-button {
 	$my-height: 13px;
 	$my-padding-vertical: 2px;
-	color: #FFF;
+	color: $text-on-primary-color;
 	background: $sidebar-section-header-button-background-color;
 	font-family: "Verdana",sans-serif;
 	font-size: 10px;
@@ -289,7 +289,7 @@ span.multi-count {margin: 0!important}
 	@extend %display-none;
 }
 .morelink a {
-	color: #FFF;
+	color: $text-on-primary-color;
 	display: block;
 	padding: 0 34px 0 $base-spacing;
 	width: auto;
@@ -316,6 +316,7 @@ span.multi-count {margin: 0!important}
 .morelink:hover {top: -2px}
 .morelink:hover:active {top: 1px}
 .morelink:hover a {
+	color: $text-on-secondary-color;
 	background: $sidebar-button-secondary-color;
 	box-shadow: 0 5px 10px rgba(0,0,0,0.2)
 }
@@ -677,10 +678,6 @@ body #progressIndicator {
 	margin-bottom: 1.6rem
 }
 .md.wiki .toc+* {margin-top: 0}
-.md.wiki hr {
-	background: #cfcfcf;
-	height: 1px
-}
 .wiki-page .wiki-page-content .wiki>.toc>ul {
 	border-color: #cfcfcf;
 	border-radius: 5px;
@@ -718,7 +715,7 @@ body #progressIndicator {
 .md hr {
 	margin: 1em 0;
 	height: $base-border-width;
-	background-color: #cfcfcf
+	background-color: $separator-color;
 }
 .res-nightmode .md hr {
 	background-color: #000 !important

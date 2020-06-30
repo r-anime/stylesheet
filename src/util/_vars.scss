@@ -8,12 +8,17 @@ $base-border-radius-small: 3px;
 // Colors
 $primary-color: #6A9DE6;
 $secondary-color: #557EB8;
+
+$base-background-color: #FFF;
 $separator-color: #CFCFCF;
 $separator-color-light: #EFEFEF;
+
 $light-text-color: #FFF;
 $dark-text-color: #000;
 $link-color: $secondary-color;
 $link-hover-color: #244573;
+$text-on-primary-color: $light-text-color;
+$text-on-secondary-color: $light-text-color;
 
 // Basic element dimensions
 $header-height: 115px;
@@ -40,6 +45,7 @@ $sidebar-border-color: $separator-color;
 $sidebar-padding: $base-spacing;
 
 // The appearance of individual sections within the sidebar
+$sidebar-section-background: $base-background-color;
 $sidebar-section-border-width: $base-border-width;
 $sidebar-section-border-radius: $base-border-radius;
 $sidebar-section-border-color: $separator-color;
