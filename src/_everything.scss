@@ -169,21 +169,15 @@ span.multi-count {margin: 0!important}
 	border-color: #cfcfcf;
 	margin: $sidebar-section-padding 0 (-$sidebar-section-padding);
 	padding: $sidebar-subreddit-age-padding-vertical 0;
-	font-size: 0;
+	text-align: center;
 	@if $base-border-width != 1px {
 		border-width: $base-border-width;
 	}
 }
 .res-nightmode .titlebox .bottom {border-color: #000}
-.titlebox .bottom .author::after {font-size: 0}
-.titlebox .bottom .flair {
-	@extend %display-none;
-}
 .titlebox .bottom .age {
-	font-size: x-small;
 	float: none;
 	display: block;
-	text-align: center
 }
 .sidecontentbox .title {
 	background: $sidebar-section-header-background-color;
@@ -206,9 +200,6 @@ span.multi-count {margin: 0!important}
 	border-bottom-left-radius: $sidebar-section-border-radius;
 	border-bottom-right-radius: $sidebar-section-border-radius;
 	padding: $sidebar-section-padding;
-}
-.sidebox.create {
-	@extend %display-none;
 }
 
 /* Common small buttons and stuff */

@@ -166,3 +166,20 @@ $sidebar-image-other-height: -10px; // set to -10px when not being used
 .side .titlebox [href*="twitter.com/RedditChan"]:hover {
 	background: #198bd1;
 }
+
+// Hide sub author from community info section
+.titlebox .bottom,
+.titlebox .bottom .author::after {
+	font-size: 0;
+}
+.titlebox .bottom .flair {
+	@extend %display-none;
+}
+.titlebox .bottom .age {
+	font-size: x-small;
+}
+
+// Hide "create a subreddit" button
+.sidebox.create {
+	@extend %display-none;
+}
