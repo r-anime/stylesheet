@@ -568,7 +568,7 @@ body #progressIndicator {
 	content: "*";
 	color: red
 }
-#text-desc {font-size: 0}
+#text-desc {@extend %font-size-zero}
 #text-desc:after {
 	content: 'You are submitting a text-based post. Speak your mind. A title and a text body are both required. Beginning your title with "vote up if" is violation of intergalactic law.';
 	font-size: small
