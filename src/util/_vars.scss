@@ -3,6 +3,7 @@ $base-spacing: 10px;
 $base-spacing-small: 5px;
 $base-border-width: 1px;
 $base-border-radius: 5px;
+$base-border-radius-small: 3px;
 
 // Colors
 $primary-color: #6A9DE6;
@@ -11,6 +12,8 @@ $separator-color: #CFCFCF;
 $separator-color-light: #EFEFEF;
 $light-text-color: #FFF;
 $dark-text-color: #000;
+$link-color: $secondary-color;
+$link-hover-color: #244573;
 
 // Basic element dimensions
 $header-height: 115px;
@@ -19,6 +22,11 @@ $header-snoo-width: 74px;
 $header-snoo-height: 90px;
 $header-snoo-padding-horizontal: 5px;
 $sidebar-section-header-height: 35px;
+$sidebar-control-height: 35px;
+
+// Image customization and stuff
+$header-background: $primary-color; 
+$sidebar-background: repeating-linear-gradient(45deg, #f7f7f7, #f7f7f7 2px, #e9e9e9 2px, #e9e9e9 2.8px) 0/4px 4px;
 
 // Derived variables
 
@@ -36,11 +44,23 @@ $sidebar-section-border-width: $base-border-width;
 $sidebar-section-border-radius: $base-border-radius;
 $sidebar-section-border-color: $separator-color;
 $sidebar-section-padding: $base-spacing;
+$sidebar-section-margin-vertical: $sidebar-padding;
+
+// The search bar
+$sidebar-search-height: $sidebar-control-height;
+$sidebar-search-border-width: $sidebar-section-border-width;
+$sidebar-search-border-radius: $sidebar-section-border-radius;
+$sidebar-search-border-color: $sidebar-section-border-color;
+
+// Submit buttons
+$sidebar-button-primary-color: $primary-color;
+$sidebar-button-secondary-color: $secondary-color;
 
 // Sidebar section headers
 $sidebar-section-header-background-color: $primary-color;
 $sidebar-section-header-text-color: $light-text-color;
 $sidebar-section-header-margin-vertical: $base-spacing;
+$sidebar-section-header-button-background-color: $secondary-color;
 
 // The "a community for X years" bit at the bottom of the sidebar
 $sidebar-subreddit-age-padding-vertical: $base-spacing-small;

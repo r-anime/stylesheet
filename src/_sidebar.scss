@@ -7,11 +7,13 @@ $sidebar-image-other-height: -10px; // set to -10px when not being used
 }
 
 // Border radius for the Reddit premium banner - we can't remove it, but we can make it look good
-.premium-banner::before {
-	border-radius: 3px;
-}
-.premium-banner-outer {
-	border-radius: 5px;
+@if $sidebar-section-border-radius > 0 {
+	.premium-banner-outer {
+		border-radius: $sidebar-section-border-radius;
+	}
+	.premium-banner::before {
+		border-radius: max($sidebar-section-border-radius - 2px, 1px);
+	}
 }
 
 // If an ad doesn't load, get rid of the big gap it leaves behind
@@ -21,8 +23,8 @@ $sidebar-image-other-height: -10px; // set to -10px when not being used
 
 // Markdown headings
 .side .md h1 {
-	background: #6a9de6;
-	margin: 10px -11px;
+	background: $sidebar-section-header-background-color;
+	margin: $sidebar-section-header-margin-vertical (-$sidebar-section-padding - $sidebar-section-border-width);
 	color: #FFF;
 	font-size: 1.5em;
 	font-weight: bold
@@ -67,7 +69,13 @@ $sidebar-image-other-height: -10px; // set to -10px when not being used
 // Leave appropriate room at the top of the sidebar for the
 // image + the absolutely-positioned search bar
 .side {
-	padding-top: 10px + 35px + 10px + $sidebar-image-height + 10px + $sidebar-image-other-height;
+	padding-top:
+		$sidebar-section-margin-vertical +
+		$sidebar-search-height +
+		$sidebar-section-margin-vertical +
+		$sidebar-image-height +
+		$sidebar-section-margin-vertical +
+		$sidebar-image-other-height;
 }
 // Search bar isn't there on search pages, it's moved to #content
 // Also on search pages the submit buttons are the first .spacers which means they don't have
@@ -80,7 +88,7 @@ $sidebar-image-other-height: -10px; // set to -10px when not being used
 // Position the image
 .side [href*='#sidebarimg'] {
 	position: absolute;
-	top: 115px + 10px + 35px + 10px;
+	top: $header-height + $sidebar-section-margin-vertical + $sidebar-search-height + $sidebar-section-margin-vertical;
 	right: 10px;
 	width: 300px;
 	height: $sidebar-image-height;
@@ -101,7 +109,7 @@ $sidebar-image-other-height: -10px; // set to -10px when not being used
 // Move the search bar above the image
 #search {
 	position: absolute;
-	top: 125px;
+	top: $header-height + $sidebar-section-margin-vertical;
 }
 
 // Discord and Twitter buttons

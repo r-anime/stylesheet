@@ -2,13 +2,13 @@ $header-snoo-reserved-width: $header-snoo-width + 2 * $header-snoo-padding-horiz
 
 #header {
 	height: $header-height;
-	background-color: #6a9de6;
+	background: $header-background;
 	// background-repeat: no-repeat;
 	// background-image: url("images/banner.png");
 	// background-position: $banner-left $banner-top;
 	// background-size: auto $banner-height;
 	border-bottom: 0;
-	box-shadow: 0 1px 2px rgba(0,0,0,0.2)
+	box-shadow: 0 1px 2px rgba(0,0,0,0.2);
 }
 
 // Subreddits bar at the very top of the page
