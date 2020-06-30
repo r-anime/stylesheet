@@ -9,7 +9,7 @@ html {
 // Reset some margins
 body > .content {
 	margin: 0;
-	padding: 45px 0 10px;
+	padding: 45px 0 $base-spacing;
 }
 
 // Get rid of unnecessary backgrounds that Reddit applies
@@ -35,7 +35,7 @@ body > .content,
 
 // Special infobars have different styles for some reason
 .reddit-infobar {
-	margin: 0 ($sidebar-width + 10px) 10px 10px;
+	margin: 0 ($sidebar-width + $base-spacing) $base-spacing $base-spacing;
 }
 
 // Make the "Welcome to Reddit" banners full-width
@@ -61,7 +61,7 @@ body > .content,
 // Sidebar stuff
 .side {
 	margin: 0;
-	padding: 10px;
+	padding: $sidebar-padding;
 	width: 300px;
 	background: repeating-linear-gradient(45deg, #f7f7f7, #f7f7f7 2px, #e9e9e9 2px, #e9e9e9 2.8px) 0/4px 4px;
 	border: 1px solid #cfcfcf;
@@ -69,8 +69,12 @@ body > .content,
 	border-right: 0;
 	border-bottom-left-radius: 5px;
 }
-.side>.spacer {margin: 0}
-.side>.spacer+.spacer {margin-top: 10px}
+.side>.spacer {
+	margin: 0;
+}
+.side>.spacer+.spacer {
+	margin-top: $sidebar-padding;
+}
 .titlebox,.linkinfo {
 	background: #FFF;
 	padding: 11px;
@@ -80,7 +84,8 @@ body > .content,
 	overflow: hidden
 }
 .side .redditname {
-	margin: -11px -11px 10px;
+	$inverse-padding-and-border: -$sidebar-section-border-width - $sidebar-section-padding;
+	margin: $inverse-padding-and-border $inverse-padding-and-border $sidebar-section-header-margin-vertical;
 	padding: 0 8px;
 	background: #6a9de6;
 	height: 35px;
@@ -161,8 +166,8 @@ span.multi-count {margin: 0!important}
 }
 .titlebox .bottom {
 	border-color: #cfcfcf;
-	margin: 10px 0 -10px;
-	padding: 5px 0;
+	margin: $sidebar-section-padding 0 (-$sidebar-section-padding);
+	padding: $sidebar-subreddit-age-padding-vertical 0;
 	font-size: 0
 }
 .res-nightmode .titlebox .bottom {border-color: #000}
@@ -180,7 +185,7 @@ span.multi-count {margin: 0!important}
 	background: #6a9de6;
 	margin-bottom: 0;
 	border-radius: 5px;
-	padding: 0 0 0 10px;
+	padding: 0 0 0 $sidebar-section-padding + $sidebar-section-border-width;
 	position: relative;
 	line-height: 35px
 }
@@ -194,9 +199,9 @@ span.multi-count {margin: 0!important}
 	border: 1px solid #cfcfcf;
 	border-top: 0;
 	box-shadow: 0 -5px #6a9de6;
-	border-bottom-left-radius: 5px;
-	border-bottom-right-radius: 5px;
-	padding: 10px
+	border-bottom-left-radius: $sidebar-section-border-radius;
+	border-bottom-right-radius: $sidebar-section-border-radius;
+	padding: $sidebar-section-padding;
 }
 .sidebox.create {
 	@extend %display-none;
@@ -237,7 +242,7 @@ span.multi-count {margin: 0!important}
 	border: 1px solid #cfcfcf;
 	border-radius: 5px;
 	box-shadow: none !important; /* mobile safari override, smh */
-	padding: 0 40px 0 10px;
+	padding: 0 30px + $base-spacing 0 $base-spacing;
 	line-height: 30px;
 }
 .res-nightmode #search input[type="text"] {
@@ -251,8 +256,8 @@ span.multi-count {margin: 0!important}
 	transition: 200ms;
 }
 #searchexpando {
-	margin-top: 10px;
-	padding: 10px;
+	margin-top: $base-spacing;
+	padding: $sidebar-section-padding;
 	position: absolute;
 	z-index: 1;
 	width: 280px;
@@ -277,7 +282,7 @@ span.multi-count {margin: 0!important}
 .morelink a {
 	color: #FFF;
 	display: block;
-	padding: 0 34px 0 10px;
+	padding: 0 34px 0 $base-spacing;
 	width: auto;
 	height: 35px;
 	line-height: 35px;
@@ -309,12 +314,12 @@ span.multi-count {margin: 0!important}
 .side::after {
 	content: "(✿◠‿◠) ~<3";
 	display: block;
-	margin: 10px 0 0;
+	margin: $base-spacing 0 0;
 	text-align: center;
 	color: gray
 }
 .infobar.newsletterbar {
-	margin: 0 10px 10px;
+	margin: 0 $base-spacing $base-spacing;
 	width: calc(100% - 341px);
 	border-radius: 5px
 }
@@ -326,7 +331,7 @@ span.multi-count {margin: 0!important}
 .listing-page .menuarea {
 	border-top: 1px solid #efefef;
 	margin: 0 0 -1px;
-	padding: 10px;
+	padding: $base-spacing;
 	background: #f7f7f7;
 	border-bottom: 1px solid #efefef
 }
@@ -351,7 +356,7 @@ span.multi-count {margin: 0!important}
 }
 .link ~ .link.last-clicked {margin-top: -1px}
 .link .thumbnail {
-	margin: 0 10px 0 0;
+	margin: 0 $base-spacing 0 0;
 	min-width: 70px
 }
 .link .entry {
@@ -359,7 +364,7 @@ span.multi-count {margin: 0!important}
 	padding: 0
 }
 .link .expando {
-    margin-right: 10px;
+    margin-right: $base-spacing;
 }
 .link a.title {color: #333}
 .link a.title:hover {color: #567}
@@ -393,8 +398,8 @@ body>.content .spacer {margin: 0}
 	box-sizing: content-box
 }
 .comment .entry {
-	margin: 0 0 10px;
-	padding: 0 10px
+	margin: 0 0 $base-spacing;
+	padding: 0 $base-spacing;
 }
 .comment .entry .tagline {display: block}
 .comment .entry .md {
@@ -422,7 +427,7 @@ body>.content .spacer {margin: 0}
     content: "";
     position: absolute;
     top: 17px;
-    bottom: 10px;
+    bottom: $base-spacing;
     left: 7px;
     border-left: 1px dotted #B7B7B7;
 }
@@ -498,7 +503,7 @@ body .NERPageMarker .gearIcon {
 	margin-right: 2px
 }
 body #progressIndicator {
-	padding: 10px;
+	padding: $base-spacing;
 	border-bottom: 1px solid #EFEFEF
 }
 #progressIndicator:hover {background: #EFEFEF}
@@ -606,10 +611,10 @@ body #progressIndicator {
 	width: 498px;
 	border: 1px solid #BBB;
 	background: #f7f7f7;
-	margin-bottom: 10px
+	margin-bottom: $base-spacing;
 }
-.submit-page .formtabs-content .infobar {margin-bottom: 10px}
-.submit-page .roundfield.info-notice {padding: 10px}
+.submit-page .formtabs-content .infobar {margin-bottom: $base-spacing}
+.submit-page .roundfield.info-notice {padding: $base-spacing}
 .submit-page .roundfield textarea,
 .submit-page .roundfield input:not([type=checkbox]):not([type=radio]),
 .submit-page .roundfield .usertext-edit {width: calc(100% - 8px)!important}
@@ -631,8 +636,8 @@ body #progressIndicator {
 .wiki-page>.content {margin-top: 0}
 .wiki-page>.content>span {
 	display: block;
-	margin: 0 331px 10px 10px;
-	padding: 0 10px;
+	margin: 0 $sidebar-width + $base-spacing $base-spacing $base-spacing;
+	padding: 0 $base-spacing;
 	background: #6a9de6;
 	color: #FFF;
 	border-radius: 5px;
@@ -654,7 +659,7 @@ body #progressIndicator {
 	margin: 0;
 	border-radius: 0;
 	line-height: 35px;
-	padding: 0 10px;
+	padding: 0 $base-spacing;
 	color: #FFF;
 	text-transform: capitalize;
 	background: transparent!important
@@ -737,13 +742,6 @@ body #progressIndicator {
 /*.RESMacroDropdownTitle: before{content:"Super Dimension Fortress "} */
 
 /** all the nightmode **/
-.res-nightmode #header-img-a:after {
-    content: '';
-    background: url("images/general.png") 0 -172px/128px;
-}
-.res-nightmode #header-img {
-    @extend %display-none;
-}
 .res-nightmode .side {
 	background: repeating-linear-gradient(45deg, #1f1f1f, #1f1f1f 2px, #282828 2px, #282828 2.8px) 0/4px 4px;
 	border-color: #0f0f0f !important;
