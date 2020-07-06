@@ -1,6 +1,6 @@
 /*!
  * /r/anime stylesheet
- * maintained by /u/bainos
+ * maintained by /u/bainos, /u/geo1088
  * https://github.com/r-anime/stylesheet
  * public domain
  */
@@ -20,6 +20,7 @@
 @import "src/linkflair"; // Link flair, including mod-only things
 @import "src/userflair"; // User flair, for list services
 @import "src/markdown"; // Generic markdown styles
+@import "src/header"; // Header/banner styles
 @import "src/sidebar"; // Sidebar-specific styles, including markdown hacks
 @import "src/infobar"; // Fancy announcements thing at the top of the sub
 @import "src/commentfaces"; // Comment faces, static and animated

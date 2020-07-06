@@ -9,7 +9,7 @@ html {
 // Reset some margins
 body > .content {
 	margin: 0;
-	padding: 45px 0 10px;
+	padding: 45px 0 $base-spacing;
 }
 
 // Get rid of unnecessary backgrounds that Reddit applies
@@ -25,7 +25,7 @@ body > .content,
 
 // Generic elements with rounded corners
 .infobar, .rounded, .reddit-infobar {
-	border-radius: 5px;
+	border-radius: $base-border-radius;
 }
 
 // Leave space for the sidebar next to infobars at the top of the page
@@ -35,7 +35,7 @@ body > .content,
 
 // Special infobars have different styles for some reason
 .reddit-infobar {
-	margin: 0 ($sidebar-width + 10px) 10px 10px;
+	margin: 0 ($sidebar-width + $base-spacing) $base-spacing $base-spacing;
 }
 
 // Make the "Welcome to Reddit" banners full-width
@@ -58,176 +58,42 @@ body > .content,
 .res-nightmode body,
 .res-nightmode body>.content {background: #2f2f2f!important}
 
-
-/** Page header **/
-// $banner-height: 62px;
-// $banner-top: 18px;
-// $banner-left: 200px;
-
-#header {
-	height: 115px;
-	background-color: #6a9de6;
-// 	background-repeat: no-repeat;
-// 	background-image: url("images/banner.png");
-// 	background-position: $banner-left $banner-top;
-// 	background-size: auto $banner-height;
-	border-bottom: 0;
-	box-shadow: 0 1px 2px rgba(0,0,0,0.2)
-}
-#sr-header-area {
-	background: rgba(0, 0, 0, 0.2);
-	border-bottom: 0;
-	color: #FFF;
-/* 	text-transform: none; */
-/* 	font-size: 12px; */
-/* 	line-height: 18px */
-}
-.dropdown.srdrop .selected {
-	color: #FFF;
-	background-image: none;
-/*	padding-right: 0; */
-/*	margin: 0 */
-}
-.dropdown.srdrop .selected::after {
-/* 	content: " | "; */
-	white-space: pre;
-	padding: 0 .7ex;
-	color: #FFF
-}
-#sr-header-area .separator,
-.sr-bar a {
-	color: #FFF !important;
-}
-#sr-header-area *,
-#sr-more-link,
-.res #RESShortcutsEditContainer,
-.res #RESShortcutsSort,
-.res #RESShortcutsRight,
-.res #RESShortcutsLeft,
-.res #RESShortcutsAdd,
-.res #RESShortcutsTrash {
-	color: #FFF;
-}
-#sr-header-area .drop-choices {
-	border: 0;
-	background: #557EB8  !important;
-}
-html #sr-header-area a.RESShortcutsCurrentSub {
-	color: inherit!important;
-	text-decoration: underline
-}
-#header-bottom-left {
-	/* background: url("images/banner.png") center bottom no-repeat; */
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	z-index: -1;
-	box-shadow: inset 0 -35px rgba(0, 0, 0, 0.2);
-}
-#header-img-a {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	padding: 0 2px
-}
-#header-img,
-#header-img-a:after {
-	position: relative;
-	margin: 0;
-	display: block;
-	z-index: 99;
-	width: 74px;
-	height: 90px;
-}
-.pagename {
-	position: absolute;
-	bottom: 37px;
-	left: 88px;
-	display: block;
-	color: #FFF;
-	font-weight: 400;
-	text-transform: capitalize;
-	font-variant: normal;
-	font-size: 34px;
-	font: normal 34px "Helvetica","Arial",sans-serif;
-}
-.pagename a {color: inherit}
-#header .tabmenu {
-	height: 35px;
-	position: absolute;
-	bottom: 0;
-	padding-left: 75px;
-}
-#header .tabmenu li {
-	display: inline-block;
-	margin: 0
-}
-#header .tabmenu a {
-	display: inline-block;
-	padding: 0 10px;
-	background: transparent;
-	border: 0;
-	color: #FFF;
-	font-size: 14px;
-	line-height: 35px;
-	font-weight: 400;
-	height: 35px;
-	position: relative
-}
-#header .tabmenu a:hover {background: rgba(0,0,0,.1)}
-#header .tabmenu .selected a::after {
-	content: "";
-	position: absolute;
-	bottom: -4px;
-	left: 50%;
-	transform: translateX(-50%) rotate(45deg);
-	width: 8px;
-	height: 8px;
-	background: #FFF;
-	box-shadow: inset 2px 2px 2px -1px rgba(0,0,0,0.2),1px 1px 1px #FFF
-}
-#header-bottom-right {
-	bottom: 35px;
-	right: 0;
-	padding: 5px 10px;
-	background-color: transparent!important;
-	border-top-left-radius: 0;
-	border-bottom-left-radius: 5px
-}
-#header-bottom-right span,
-#header-bottom-right a {color: #FFF}
+// Sidebar stuff
 .side {
 	margin: 0;
-	padding: 10px;
+	padding: $sidebar-padding;
 	width: 300px;
-	background: repeating-linear-gradient(45deg, #f7f7f7, #f7f7f7 2px, #e9e9e9 2px, #e9e9e9 2.8px) 0/4px 4px;
-	border: 1px solid #cfcfcf;
+	background: $sidebar-background;
+	border: $sidebar-border-width solid $sidebar-border-color;
 	border-top: 0;
 	border-right: 0;
-	border-bottom-left-radius: 5px;
+	border-bottom-left-radius: $sidebar-border-radius;
 }
-.side>.spacer {margin: 0}
-.side>.spacer+.spacer {margin-top: 10px}
-.titlebox,.linkinfo {
-	background: #FFF;
-	padding: 11px;
+.side>.spacer {
+	margin: 0;
+}
+.side>.spacer+.spacer {
+	margin-top: $sidebar-padding;
+}
+.titlebox, .linkinfo {
+	background: $sidebar-section-background;
+	padding: $sidebar-section-padding + $sidebar-section-border-width;
 	border: 0;
-	border-radius: 5px;
-	box-shadow: inset 0 0 0 1px #cfcfcf;
+	border-radius: $sidebar-section-border-radius;
+	box-shadow: inset 0 0 0 $sidebar-section-border-width $separator-color;
 	overflow: hidden
 }
 .side .redditname {
-	margin: -11px -11px 10px;
-	padding: 0 8px;
-	background: #6a9de6;
-	height: 35px;
+	$inverse-padding-and-border: -$sidebar-section-border-width - $sidebar-section-padding;
+	margin: $inverse-padding-and-border $inverse-padding-and-border $sidebar-section-header-margin-vertical;
+	padding: 0 $sidebar-section-border-width + $sidebar-section-padding;
+	background: $sidebar-section-header-background-color;
+	height: $sidebar-section-header-height;
 	font-weight: normal;
 	font-size: 18px;
-    line-height: 35px;
+    line-height: $sidebar-section-header-height;
 	text-transform: capitalize;
-	color: #FFF;
+	color: $text-on-primary-color;
 	overflow: hidden;
 	font-weight: 700
 }
@@ -264,20 +130,20 @@ html #sr-header-area a.RESShortcutsCurrentSub {
 
 .subscribers {display: block;}
 .side .subscribe-button {
-	position: relative;
-	width: 200px;
-	text-align: right;
 	display: block;
-	margin-top: -37.5px;
-	left: 81px;
-	margin-bottom: 20px
+	position: relative;
+	text-align: right;
+	// 18px is the height of the subscribe button
+	// i'm not entirely sure why the -1px is necessary but it is
+	margin-top: -1px - $sidebar-section-header-margin-vertical - ($sidebar-section-header-height / 2) - (18px / 2);
+	margin-bottom: $sidebar-section-header-margin-vertical;
 }
 .side .subscribe-button .option {
 	width: 100%;
 	height: 100%;
 	border: 0;
 	background: #557eb8;
-	padding: 3px 5px
+	padding: 3px 5px;
 }
 .side .titlebox .res-fancy-toggle-button {
 	border: 0;
@@ -289,7 +155,8 @@ html #sr-header-area a.RESShortcutsCurrentSub {
 .res-sr-style-toggle {
 	float: left;
 	width: 100%;
-	padding-top: 0!important
+	padding-top: 0 !important;
+	height: 17px;
 }
 span.multi-count {margin: 0!important}
 .users-online {
@@ -300,102 +167,102 @@ span.multi-count {margin: 0!important}
 }
 .titlebox .bottom {
 	border-color: #cfcfcf;
-	margin: 10px 0 -10px;
-	padding: 5px 0;
-	font-size: 0
+	margin: $sidebar-section-padding 0 (-$sidebar-section-padding);
+	padding: $sidebar-subreddit-age-padding-vertical 0;
+	text-align: center;
+	@if $base-border-width != 1px {
+		border-width: $base-border-width;
+	}
 }
 .res-nightmode .titlebox .bottom {border-color: #000}
-.titlebox .bottom .author::after {font-size: 0}
-.titlebox .bottom .flair {
-	@extend %display-none;
-}
 .titlebox .bottom .age {
-	font-size: x-small;
 	float: none;
 	display: block;
-	text-align: center
 }
 .sidecontentbox .title {
-	background: #6a9de6;
+	background: $sidebar-section-header-background-color;
 	margin-bottom: 0;
-	border-radius: 5px;
-	padding: 0 0 0 10px;
+	border-radius: $sidebar-section-border-radius;
+	padding: 0 0 0 $sidebar-section-padding + $sidebar-section-border-width;
 	position: relative;
 	line-height: 35px
 }
 .sidecontentbox .title h1 {
-	color: #FFF;
+	color: $text-on-primary-color;
 	text-transform: lowercase;
 	font-size: 1.3rem
 }
 .sidecontentbox .content {
-	background: #FFF;
-	border: 1px solid #cfcfcf;
+	background: $sidebar-section-background;
+	border: $sidebar-section-border-width solid $sidebar-section-border-color;
 	border-top: 0;
-	box-shadow: 0 -5px #6a9de6;
-	border-bottom-left-radius: 5px;
-	border-bottom-right-radius: 5px;
-	padding: 10px
-}
-.sidebox.create {
-	@extend %display-none;
+	box-shadow: 0 (-$sidebar-section-border-radius) $sidebar-section-header-background-color;
+	border-bottom-left-radius: $sidebar-section-border-radius;
+	border-bottom-right-radius: $sidebar-section-border-radius;
+	padding: $sidebar-section-padding;
 }
 
 /* Common small buttons and stuff */
 /* TODO: Also integrate subscribe button */
 .side .md h1,
 .sidecontentbox .title {
-	padding: 0 0 0 8px !important;
-	line-height: 35px;
+	padding: 0 ($sidebar-section-padding + $sidebar-section-border-width) !important;
+	line-height: $sidebar-section-header-height;;
 }
 .sidecontentbox a.helplink,
 .side .md h1 a,
 .sidecontentbox .title .collapse-button {
-	color: #FFF;
-	background: #557eb8;
+	$my-height: 13px;
+	$my-padding-vertical: 2px;
+	color: $text-on-primary-color;
+	background: $sidebar-section-header-button-background-color;
 	font-family: "Verdana",sans-serif;
 	font-size: 10px;
 	font-weight: bold;
-	line-height: 13px;
-	padding: 3px 5px;
+	line-height: $my-height;
+	padding: $my-padding-vertical 5px;
 	border: 0;
-	border-radius: 3px;
-	margin: 8px 8px 8px 0;
+	border-radius: $base-border-radius-small;
+	margin: (($sidebar-section-header-height - $my-height) / 2 - $my-padding-vertical) 0;
 	float: right;
 	width: auto;
 	height: auto;
    	position: relative;
 	z-index: 1;
 }
-
+.side .md h1 a + a,
+.sidecontentbox a.helplink {
+	margin-right: $base-spacing-small;
+}  
 
 #search input[type="text"] {
 	height: 35px;
 	background: #FFF;
 	color: #000;
-	border: 1px solid #cfcfcf;
-	border-radius: 5px;
+	border: $sidebar-search-border-width solid $sidebar-search-border-color;
+	border-radius: $sidebar-section-border-radius;
 	box-shadow: none !important; /* mobile safari override, smh */
-	padding: 0 40px 0 10px;
+	padding: 0 30px + $base-spacing 0 $base-spacing;
 	line-height: 30px;
-}
-.res-nightmode #search input[type="text"] {
-	background: #2f2f2f!important;
-	border-color: #0f0f0f
+
+	@include nightmode {
+		background: #2f2f2f!important;
+		border-color: #0f0f0f
+	}
 }
 #search input[type="text"]:focus {
-	border-color: #6a9de6;
+	border-color: $primary-color;
 	outline: 0;
-	box-shadow: 0 0 3px #6a9de6;
+	box-shadow: 0 0 3px $primary-color;
 	transition: 200ms;
 }
 #searchexpando {
-	margin-top: 10px;
-	padding: 10px;
+	margin-top: $base-spacing;
+	padding: $sidebar-section-padding;
 	position: absolute;
 	z-index: 1;
-	width: 280px;
-	border-radius: 5px
+	width: 300px - (2 * $sidebar-padding) - 2px;
+	border-radius: $sidebar-section-border-radius;
 }
 #searchexpando>p {margin: 0}
 .morelink {
@@ -414,14 +281,14 @@ span.multi-count {margin: 0!important}
 	@extend %display-none;
 }
 .morelink a {
-	color: #FFF;
+	color: $text-on-primary-color;
 	display: block;
-	padding: 0 34px 0 10px;
+	padding: 0 34px 0 $base-spacing;
 	width: auto;
 	height: 35px;
 	line-height: 35px;
-	background: #6a9de6;
-	border-radius: 5px;
+	background: $sidebar-button-primary-color;
+	border-radius: $sidebar-section-border-radius;
 	transition: background-color 200ms,box-shadow 200ms;
 	box-shadow: 0 0 rgba(0,0,0,.1)
 }
@@ -433,39 +300,40 @@ span.multi-count {margin: 0!important}
 	height: 35px;
 	top: 0;
 	right: 0;
-	background: url("images/general.png") -58px -93px/128px no-repeat,#557eb8;
-	border-top-right-radius: 5px;
-	border-bottom-right-radius: 5px
+	background: url("images/general.png") -58px -93px/128px no-repeat $sidebar-button-secondary-color;
+	border-top-right-radius: $sidebar-section-border-radius;
+	border-bottom-right-radius: $sidebar-section-border-radius;
 }
 .submit-text .morelink a::after {background-position: -93px -58px}
 .morelink:hover {top: -2px}
 .morelink:hover:active {top: 1px}
 .morelink:hover a {
-	background: #557eb8;
+	color: $text-on-secondary-color;
+	background: $sidebar-button-secondary-color;
 	box-shadow: 0 5px 10px rgba(0,0,0,0.2)
 }
 .ad300x250,.sponsor-300-250 {border-radius: 5px}
 .side::after {
 	content: "(✿◠‿◠) ~<3";
 	display: block;
-	margin: 10px 0 0;
+	margin: $base-spacing 0 0;
 	text-align: center;
 	color: gray
 }
 .infobar.newsletterbar {
-	margin: 0 10px 10px;
+	margin: 0 $base-spacing $base-spacing;
 	width: calc(100% - 341px);
 	border-radius: 5px
 }
 .login-form-side {
 	border-color: #cfcfcf;
 	background: #FFF;
-	border-radius: 5px
+	border-radius: $sidebar-section-border-radius;
 }
 .listing-page .menuarea {
 	border-top: 1px solid #efefef;
 	margin: 0 0 -1px;
-	padding: 10px;
+	padding: $base-spacing;
 	background: #f7f7f7;
 	border-bottom: 1px solid #efefef
 }
@@ -490,7 +358,7 @@ span.multi-count {margin: 0!important}
 }
 .link ~ .link.last-clicked {margin-top: -1px}
 .link .thumbnail {
-	margin: 0 10px 0 0;
+	margin: 0 $base-spacing 0 0;
 	min-width: 70px
 }
 .link .entry {
@@ -498,7 +366,7 @@ span.multi-count {margin: 0!important}
 	padding: 0
 }
 .link .expando {
-    margin-right: 10px;
+    margin-right: $base-spacing;
 }
 .link a.title {color: #333}
 .link a.title:hover {color: #567}
@@ -532,8 +400,8 @@ body>.content .spacer {margin: 0}
 	box-sizing: content-box
 }
 .comment .entry {
-	margin: 0 0 10px;
-	padding: 0 10px
+	margin: 0 0 $base-spacing;
+	padding: 0 $base-spacing;
 }
 .comment .entry .tagline {display: block}
 .comment .entry .md {
@@ -555,15 +423,19 @@ body>.content .spacer {margin: 0}
     bottom: 0;
     left: 0;
     width: 15px;
-    font-size: 0;
+	font-size: 0;
+	color: #B7B7B7;
+	&:hover {
+		color: $primary-color;
+	}
 }
 .comment .expand:before {
     content: "";
     position: absolute;
     top: 17px;
-    bottom: 10px;
+    bottom: $base-spacing;
     left: 7px;
-    border-left: 1px dotted #B7B7B7;
+    border-left: 1px dotted currentcolor;
 }
 .comment .expand::after {
     content: "[–]";
@@ -575,13 +447,6 @@ body>.content .spacer {margin: 0}
     left: -2px;
     text-align: center;
     line-height: 15px;
-    color: #B7B7B7;
-}
-.comment .expand:hover:before {
-    border-left: 1px solid #6A9DE6;
-}
-.comment .expand:hover:after {
-    color: #6A9DE6;
 }
 .comment.collapsed .expand:after { content: "[+]" }
 .comment.collapsed .expand { bottom: 20px }
@@ -644,7 +509,7 @@ body .NERPageMarker .gearIcon {
 	margin-right: 2px
 }
 body #progressIndicator {
-	padding: 10px;
+	padding: $base-spacing;
 	border-bottom: 1px solid #EFEFEF
 }
 #progressIndicator:hover {background: #EFEFEF}
@@ -710,7 +575,7 @@ body #progressIndicator {
 	content: "*";
 	color: red
 }
-#text-desc {font-size: 0}
+#text-desc {@extend %font-size-zero}
 #text-desc:after {
 	content: 'You are submitting a text-based post. Speak your mind. A title and a text body are both required. Beginning your title with "vote up if" is violation of intergalactic law.';
 	font-size: small
@@ -752,10 +617,10 @@ body #progressIndicator {
 	width: 498px;
 	border: 1px solid #BBB;
 	background: #f7f7f7;
-	margin-bottom: 10px
+	margin-bottom: $base-spacing;
 }
-.submit-page .formtabs-content .infobar {margin-bottom: 10px}
-.submit-page .roundfield.info-notice {padding: 10px}
+.submit-page .formtabs-content .infobar {margin-bottom: $base-spacing}
+.submit-page .roundfield.info-notice {padding: $base-spacing}
 .submit-page .roundfield textarea,
 .submit-page .roundfield input:not([type=checkbox]):not([type=radio]),
 .submit-page .roundfield .usertext-edit {width: calc(100% - 8px)!important}
@@ -777,8 +642,8 @@ body #progressIndicator {
 .wiki-page>.content {margin-top: 0}
 .wiki-page>.content>span {
 	display: block;
-	margin: 0 331px 10px 10px;
-	padding: 0 10px;
+	margin: 0 $sidebar-width + $base-spacing $base-spacing $base-spacing;
+	padding: 0 $base-spacing;
 	background: #6a9de6;
 	color: #FFF;
 	border-radius: 5px;
@@ -800,7 +665,7 @@ body #progressIndicator {
 	margin: 0;
 	border-radius: 0;
 	line-height: 35px;
-	padding: 0 10px;
+	padding: 0 $base-spacing;
 	color: #FFF;
 	text-transform: capitalize;
 	background: transparent!important
@@ -812,10 +677,6 @@ body #progressIndicator {
 	margin-bottom: 1.6rem
 }
 .md.wiki .toc+* {margin-top: 0}
-.md.wiki hr {
-	background: #cfcfcf;
-	height: 1px
-}
 .wiki-page .wiki-page-content .wiki>.toc>ul {
 	border-color: #cfcfcf;
 	border-radius: 5px;
@@ -852,8 +713,8 @@ body #progressIndicator {
 }
 .md hr {
 	margin: 1em 0;
-	height: 1px;
-	background-color: #cfcfcf
+	height: $base-border-width;
+	background-color: $separator-color;
 }
 .res-nightmode .md hr {
 	background-color: #000 !important
@@ -867,11 +728,11 @@ body #progressIndicator {
 /* Link styles */
 .md a,
 .tagline a {
-	color: #557eb8;
+	color: $link-color;
 }
 .md a:hover,
 .tagline a:hover {
-	color: #244573;
+	color: $link-hover-color;
 	text-decoration: underline;
 }
 .res-nightmode .md a:hover,
@@ -883,13 +744,6 @@ body #progressIndicator {
 /*.RESMacroDropdownTitle: before{content:"Super Dimension Fortress "} */
 
 /** all the nightmode **/
-.res-nightmode #header-img-a:after {
-    content: '';
-    background: url("images/general.png") 0 -172px/128px;
-}
-.res-nightmode #header-img {
-    @extend %display-none;
-}
 .res-nightmode .side {
 	background: repeating-linear-gradient(45deg, #1f1f1f, #1f1f1f 2px, #282828 2px, #282828 2.8px) 0/4px 4px;
 	border-color: #0f0f0f !important;
