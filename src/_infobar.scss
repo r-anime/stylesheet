@@ -6,8 +6,12 @@ $dropdown-shadow-nightmode: 0 0 4px #000;
 $infobar-height: 45px;
 $infobar-button-height: 30px;
 $infobar-padding-vertical: ($infobar-height - $infobar-button-height) / 2;
-$info-entry-period: 5.5s; // time for a single thing to be displayed
+$info-entry-count: 4; // number of entries you have
+$info-entry-period: 5s; // time for a single entry to be displayed
+$info-entry-transition-period: 0.5s; // time for the transition between entries
 $hover-delay: 150ms; // delay before dropdowns trigger
+
+$total-animation-period: ($info-entry-period + $info-entry-transition-period) * $info-entry-count;
 
 .side .md > :first-child {
 	position: absolute;
@@ -115,7 +119,7 @@ $hover-delay: 150ms; // delay before dropdowns trigger
 		transition: 0s;
 		&:hover {
 			transition-delay: $hover-delay;
-			height: $infobar-height * 4;
+			height: $infobar-height * $info-entry-count;
 			background: #FFF;
 			border-color: #DDD;
 			border-bottom: 1px solid #DDD;
@@ -131,7 +135,7 @@ $hover-delay: 150ms; // delay before dropdowns trigger
 			flex: 0 0 $infobar-height;
 			margin: 0;
 			line-height: 1.3;
-			animation: reorder ($info-entry-period * 4) infinite;
+			animation: reorder $total-animation-period infinite;
 			// Allow custom labels to be positioned relative to the individual
 			// link rather than the page
 			position: relative;
@@ -165,15 +169,11 @@ $hover-delay: 150ms; // delay before dropdowns trigger
 			}
 		}
 
-		// Each thing has its own delay
-		p:nth-child(2) {
-			animation-delay: $info-entry-period;
-		}
-		p:nth-child(3) {
-			animation-delay: $info-entry-period * 2;
-		}
-		p:nth-child(4) {
-			animation-delay: $info-entry-period * 3;
+		// Each thing has its own delay offset
+		@for $i from 2 through $info-entry-count {
+			p:nth-child($i) {
+				animation-delay: $info-entry-period * ($i - 1);
+			}
 		}
 
 		// LIVE label for AMA announcements
@@ -231,23 +231,29 @@ $hover-delay: 150ms; // delay before dropdowns trigger
 // Each item sets a negative offset on itself to scroll to the next item, then
 // moves itself to the end of the list and slowly moves back up to the top.
 @keyframes reorder {
-	from, 22% {
+	$fraction-per-entry: 100% / $info-entry-count;
+	$entry-visible-transition-ratio: $info-entry-period / ($info-entry-period + $info-entry-transition-period);
+
+	0%,
+	#{$entry-visible-transition-ratio * $fraction-per-entry} {
 		margin-top: 0;
 		order: 0;
 	}
-	24.99% {
-		margin-top: -$infobar-height;
-		order: 0;
-	}
-	25%, 49.99%, 99.99% {
-		margin-top: 0;
-		order: 3;
-	}
-	50%, 74.99% {
-		order: 2;
-	}
-	75%, 99.99% {
-		order: 1;
+	@for $i from 1 through $info-entry-count {
+		@if $i == 1 {
+			#{$fraction-per-entry - 0.001%} {
+				margin-top: -$infobar-height;
+				order: 0;
+			}
+		} @else {
+			#{$fraction-per-entry * ($i - 1)},
+			#{$fraction-per-entry * $i - 0.001%} {
+				order: $info-entry-count - $i + 1;
+				@if $i == 2 {
+					margin-top: 0;
+				}
+			}
+		}
 	}
 	to {
 		order: 0;
