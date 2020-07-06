@@ -171,7 +171,7 @@ $total-animation-period: ($info-entry-period + $info-entry-transition-period) * 
 
 		// Each thing has its own delay offset
 		@for $i from 2 through $info-entry-count {
-			p:nth-child($i) {
+			p:nth-child(#{$i}) {
 				animation-delay: $info-entry-period * ($i - 1);
 			}
 		}
