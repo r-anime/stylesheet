@@ -31,7 +31,7 @@
 .author[href$="/AutoModerator"]{@extend %font-size-zero}
 //.author[href$="/Bainos"]:not(.moderator):before{color:#9cc344;content:"SKK ";font-style:italic}
 //.author[href$="/Bainos"].moderator{@extend %font-size-zero}
-.author[href$="/Bainos"].moderator:after{content:", the SFW mod";font-style:italic}
+.author[href$="/Bainos"].moderator:after{content:" -- beep boop";font-family:monospace}
 .author[href$="/babydave371"]:before{color:#E74C3C;content:"Royal Space Force Officer "}
 .author[href$="/babydave371"]:after{color:#F4D03F;content:"babydave371"}
 .author[href$="/babydave371"]{@extend %font-size-zero}
