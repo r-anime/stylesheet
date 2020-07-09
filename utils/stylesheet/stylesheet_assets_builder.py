@@ -90,7 +90,6 @@ class StylesheetAssetsBuilder:
         try:
             logger.debug("Compiling the Sass file.")
             css_content = sass.compile(filename=sass_file.name)
-            raise SassCompileException(error, sass_file.name)
         except sass.CompileError as error:
             raise SassCompileException(error, sass_file.name)
         logger.debug(
