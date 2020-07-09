@@ -15,6 +15,7 @@ jobs:
     - name: Build and some other testing stuff
       run: |
         echo "${{ github.ref }}"
+        pip3 install -r utils/requirements.txt
         python3 utils/validate.py
     - name: Upload build artifact
       uses: actions/upload-artifact@v2
@@ -33,6 +34,7 @@ jobs:
       env:
         REDDIT_SUBREDDIT: anime
       run: |
+        pip3 install -r utils/requirements.txt
         python3 utils/build.py
         python3 utils/update.py
 
@@ -47,5 +49,6 @@ jobs:
       env:
         REDDIT_SUBREDDIT: animestaging
       run: |
+        pip3 install -r utils/requirements.txt
         python3 utils/build.py
         python3 utils/update.py
