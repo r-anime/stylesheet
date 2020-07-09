@@ -20,7 +20,7 @@ jobs:
       run: pip install -r utils/requirements.txt
     - name: Build and some other testing stuff
       run: |
-      echo ${{ toJSON(github) }}
+        echo ${{ toJSON(github) }}
         echo ${{ github.ref }}
         python utils/validate.py
     - name: Upload build artifact
