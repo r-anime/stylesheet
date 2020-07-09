@@ -22,6 +22,7 @@ jobs:
       run: |
         echo ${{ github.ref }}
         python utils/validate.py
+        ls -R
     - name: Upload build artifact
       uses: actions/upload-artifact@v2
       with:
