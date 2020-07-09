@@ -91,8 +91,7 @@ class StylesheetAssetsBuilder:
             logger.debug("Compiling the Sass file.")
             css_content = sass.compile(filename=sass_file.name)
             raise SassCompileException(error, sass_file.name)
-        logger.debug(
-            "Compiled the Sass file. CSS content size: {} bytes".format(
+        logger.debug("Compiled the Sass file. CSS content size: {} bytes".format(
                 len(css_content),
             ))
 
