@@ -20,7 +20,6 @@ jobs:
       run: pip install -r utils/requirements.txt
     - name: Build and some other testing stuff
       run: |
-        echo ${{ toJSON(github) }}
         echo ${{ github.ref }}
         python utils/validate.py
     - name: Upload build artifact
@@ -46,7 +45,7 @@ jobs:
       env:
         REDDIT_SUBREDDIT: anime
       run: |
-        python utils/build.py
+        python utils/build.py -r "${{ github.event.compare }}"
         python utils/update.py
 
   deploy-staging:
@@ -66,6 +65,5 @@ jobs:
       env:
         REDDIT_SUBREDDIT: animestaging
       run: |
-        pip install -r utils/requirements.txt
-        python utils/build.py
+        python utils/build.py -r "${{ github.event.compare }}"
         python utils/update.py
