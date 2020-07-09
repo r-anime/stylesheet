@@ -15,7 +15,7 @@ jobs:
     - name: Build and some other testing stuff
       run: |
         echo "${{ github.ref }}"
-        python utils/validate.py
+        python3 utils/validate.py
     - name: Upload build artifact
       uses: actions/upload-artifact@v2
       with:
@@ -33,8 +33,8 @@ jobs:
       env:
         REDDIT_SUBREDDIT: anime
       run: |
-        python utils/build.py
-        python utils/update.py
+        python3 utils/build.py
+        python3 utils/update.py
 
   deploy-staging:
     if: ${{ github.ref != 'refs/heads/master' }}
@@ -47,5 +47,5 @@ jobs:
       env:
         REDDIT_SUBREDDIT: animestaging
       run: |
-        python utils/build.py
-        python utils/update.py
+        python3 utils/build.py
+        python3 utils/update.py

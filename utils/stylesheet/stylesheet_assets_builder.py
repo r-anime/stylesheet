@@ -2,6 +2,7 @@
 import logging
 import os
 import re
+import subprocess
 
 import csscompressor
 import sass
@@ -79,7 +80,7 @@ class StylesheetAssetsBuilder:
         self.assets.adapted_css_content = css_content
 
     def build_css(self, sass_file):
-        """Compile the Sass code to CSS using the "libsass-python" package
+        """Compile and compress the Sass code to CSS using dart-sass.
         and compress the CSS using the "csscompressor" package.
 
         Apply the custom filter on CSS by calling the `_filter_css` method.
@@ -89,7 +90,7 @@ class StylesheetAssetsBuilder:
 
         try:
             logger.debug("Compiling the Sass file.")
-            css_content = sass.compile(filename=sass_file.name)
+            css_content = subprocess.check_output('')
         except sass.CompileError as error:
             raise SassCompileException(error, sass_file.name)
         logger.debug(
