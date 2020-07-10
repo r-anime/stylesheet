@@ -190,7 +190,7 @@
 .author[href$="/whatdoidowtfhelp"]:hover {@extend %font-size-zero}
 .author[href$="/whatdoidowtfhelp"]:hover:before {color: #4B3E2C; content:"Nadeko bad";}
 .author[href$="/whatdoidowtfhelp"]{@extend %font-size-zero}
-.author[href$="/whatdoidowtfhelp"].moderator:before{color: #ffffff; content:"Nadeko bad";}
+.author[href$="/whatdoidowtfhelp"].moderator:hover:before{color: #ffffff; content:"Nadeko bad";}
 .author[href$="/Xinil"]:after{color:#009;content:" Founder of MAL"}
 .author[href$="/xRichard"]:before{content:"se"}
 .author[href$="/zhongzhen93"]:after{color:#333333;content:" SOS Brigade Director"}
