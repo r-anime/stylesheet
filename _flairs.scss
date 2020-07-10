@@ -128,7 +128,7 @@
 .author[href$="/RandomRedditorWithNo"]:after{color:#ff0000;content:"Flair"}
 .author[href$="/reddadz"]:not(.moderator){@extend %font-size-zero}
 .author[href$="/reddadz"]:not(.moderator):before{color:#B1C82D;content:"Shitsurei kamimashita,"}
-.author[href$="/reddadz"]:not(.moderator):after{color:#F8CCC3;content:"rededadz-san"}
+.author[href$="/reddadz"]:not(.moderator):after{color:#F8CCC3;content:" rededadz-san"}
 .author[href$="/reddadz"].moderator{@extend %font-size-zero}
 .author[href$="/reddadz"].moderator:after{content:"reddadz has Mystic Eyes of Karma Perception"}
 .author[href$="/readitmeow"]:after{content:" (^・・^)ﾉ"}
