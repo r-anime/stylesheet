@@ -50,6 +50,8 @@
 .author[href$="/Chariotwheel"]:before{color:#ff8894;content:"Shiny "}
 .author[href$="/Cottonteeth"]:after{content:" ;_;"}
 .author[href$="/cptn_garlock"]:after{color:#45539e;content:" went down with his ship"}
+.author[href$="/crobat3"]:after{color:#6c557b;content:"A wild crobat3 appeared!"}
+.author[href$="/crobat3"]{@extend %font-size-zero}
 .author[href$="/Croutons5"]{@extend %font-size-zero}
 .author[href$="/Croutons5"]:before{font-size: 10.5px!important;color: #d11141;font-weight: bold;content:"Jimmy Crouton: "}
 .author[href$="/Croutons5"]:after{font-size: 10.5px!important;color:#00aedb;font-weight: bold;content:"Boy Genius"}
