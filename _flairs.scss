@@ -127,10 +127,8 @@
 .author[href$="/Quarkboy"]:after{content:" Anime Sols"}
 .author[href$="/Quartapple"]:after{color:#de93aa;content:" PM me lewd loli dragons"}
 .author[href$="/RandomRedditorWithNo"]:after{color:#ff0000;content:"Flair"}
-.author[href$="/reddadz"]:not(.moderator):before{color:#22c0ff;content:"「 "}
-.author[href$="/reddadz"]:not(.moderator):after{color:#22c0ff;content:" 」Mystic Eyes of Karma Perception "}
-.author[href$="/reddadz"].moderator{@extend %font-size-zero}
-.author[href$="/reddadz"].moderator:after{content:"reddadz activated Mystic Eyes"}
+.author[href$="/reddadz"]:before{color:#22c0ff;content:"「 "}
+.author[href$="/reddadz"]:after{color:#22c0ff;content:" 」Mystic Eyes of Karma Perception "}
 .author[href$="/readitmeow"]:after{content:" (^・・^)ﾉ"}
 .author[href$="/rpereyda"]:after{color:#f59719;content:" VP, VIZ | Sr. Advisor, Kitsu | Founder, Henshin"}
 .author[href$="/Sandvikovich"]:after{color:#e5c100;content:"$ Sandvikovich $ "}
