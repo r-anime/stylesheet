@@ -523,7 +523,6 @@ body #progressIndicator {
 .thumbnail[href*="cosplay"] {background: 0 -524px}
 .thumbnail[href*="satire"] {background: 0 -1014px}
 .thumbnail[href*="/wt"] {background: 0 -1224px}
-.linkflair-green .thumbnail {background: 0 -734px}
 .thumbnail[href*="fanart"] {background: 0 -664px}
 .thumbnail[href*="spoiler"],
 .thumbnail.spoiler {background: 0 -1154px}
@@ -532,6 +531,7 @@ body #progressIndicator {
 .thumbnail[href*="rewatch"] {background: 0 -944px} /* blaze it lmao */
 .thumbnail.nsfw {background: 0 -804px}
 [data-author="AutoModerator"] .thumbnail {background: 0 -1294px}
+.linkflair-green .thumbnail {background: 0 -734px}
 .thumbnail.self,
 .thumbnail.nsfw,
 .thumbnail.spoiler {
