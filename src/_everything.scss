@@ -519,18 +519,19 @@ body #progressIndicator {
 }
 /** Thumbnail shit **/
 .thumbnail.self {background: 0 -1084px}
-.thumbnail[href*="recom"] {background: 0 -874px}
-.thumbnail[href*="cosplay"] {background: 0 -524px}
-.thumbnail[href*="satire"] {background: 0 -1014px}
-.thumbnail[href*="/wt"] {background: 0 -1224px}
-.thumbnail[href*="fanart"] {background: 0 -664px}
-.thumbnail[href*="spoiler"],
+.linkflair-recommendation .thumbnail {background: 0 -874px}
+.linkflair-cosplay .thumbnail {background: 0 -524px}   /*who even posts cosplay anymore*/
+.linkflair-satire .thumbnail {background: 0 -1014px}  /*okay cool but we have satire self posts once in a blue moon*/
+.linkflair-wt .thumbnail {background: 0 -1224px}
+.linkflair-fanart,
+.linkflair-fanart-oc,
+.linkflair-fanart-misc .thumbnail {background: 0 -664px} /*why is this so long*/
 .thumbnail.spoiler {background: 0 -1154px}
 .thumbnail[href*="spoiler"][href*="episode"],
 [data-author="AutoLovepon"] .thumbnail {background: 0 -594px}
-.thumbnail[href*="rewatch"] {background: 0 -944px} /* blaze it lmao */
+.linkflair-rewatch .thumbnail {background: 0 -944px} 
 .thumbnail.nsfw {background: 0 -804px}
-[data-author="AutoModerator"] .thumbnail {background: 0 -1294px}
+[data-author="AnimeMod"] .thumbnail {background: 0 -1294px} /* -- honestly we can kill this, the computer image suits the tone of the subs better */
 .linkflair-green .thumbnail {background: 0 -734px}
 .thumbnail.self,
 .thumbnail.nsfw,
