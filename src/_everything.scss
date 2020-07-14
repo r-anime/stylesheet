@@ -524,11 +524,7 @@ body #progressIndicator {
 .linkflair-satire .thumbnail {background: 0 -1014px}  /*okay cool but we have satire self posts once in a blue moon*/
 .linkflair-wt .thumbnail {background: 0 -1224px}
 
-.linkflair-fanart .thumbnail img,
-.linkflair-fanart-oc .thumbnail img {
-    display: none;
-}                                   /*this kills the image for fanart embeds (can use if we decide to kill any more thumbs)*/
-
+                            
 .linkflair-fanart .thumbnail,
 .linkflair-fanart-oc .thumbnail {background: 0 -664px} 
 .thumbnail.spoiler {background: 0 -1154px}
