@@ -524,14 +524,13 @@ body #progressIndicator {
 .linkflair-satire .thumbnail {background: 0 -1014px}  /*okay cool but we have satire self posts once in a blue moon*/
 .linkflair-wt .thumbnail {background: 0 -1224px}
 .linkflair-fanart,
-.linkflair-fanart-oc,
-.linkflair-fanart-misc .thumbnail {background: 0 -664px} /*why is this so long*/
+.linkflair-fanart-oc .thumbnail {background: 0 -664px} 
 .thumbnail.spoiler {background: 0 -1154px}
 .thumbnail[href*="spoiler"][href*="episode"],
 [data-author="AutoLovepon"] .thumbnail {background: 0 -594px}
 .linkflair-rewatch .thumbnail {background: 0 -944px} 
 .thumbnail.nsfw {background: 0 -804px}
-[data-author="AnimeMod"] .thumbnail {background: 0 -1294px} /* -- honestly we can kill this, the computer image suits the tone of the subs better */
+[data-author="AnimeMod"] .thumbnail {background: 0 -1294px} /* love this btw */
 .linkflair-green .thumbnail {background: 0 -734px}
 .thumbnail.self,
 .thumbnail.nsfw,
