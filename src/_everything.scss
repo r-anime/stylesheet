@@ -523,7 +523,7 @@ body #progressIndicator {
 .linkflair-cosplay .thumbnail {background: 0 -524px}   /*who even posts cosplay anymore*/
 .linkflair-satire .thumbnail {background: 0 -1014px}  /*okay cool but we have satire self posts once in a blue moon*/
 .linkflair-wt .thumbnail {background: 0 -1224px}
-.linkflair-fanart .thumbnail {background: 0 -664px} 
+.linkflair-fanart .thumbnail {display: none, background: 0 -1224px}
 .linkflair-fanart-oc .thumbnail {background: 0 -664px} 
 .thumbnail.spoiler {background: 0 -1154px}
 .thumbnail[href*="spoiler"][href*="episode"],
