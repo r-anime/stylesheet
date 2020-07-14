@@ -524,6 +524,9 @@ body #progressIndicator {
 .linkflair-satire .thumbnail {background: 0 -1014px}  /*okay cool but we have satire self posts once in a blue moon*/
 .linkflair-wt .thumbnail {background: 0 -1224px}
 
+.linkflair-fanart .thumbnail img,.linkflair-fanart-oc .thumbnail img {
+    display: none;
+}  /*Kills the link flair thumbnail*/
                             
 .linkflair-fanart .thumbnail,
 .linkflair-fanart-oc .thumbnail {background: 0 -664px} 
@@ -534,6 +537,8 @@ body #progressIndicator {
 .thumbnail.nsfw {background: 0 -804px}
 [data-author="AnimeMod"] .thumbnail {background: 0 -1294px} /* love this btw */
 .linkflair-green .thumbnail {background: 0 -734px}
+.linkflair-fanart .thumbnail,
+.linkflair-fanart-oc .thumbnail,
 .thumbnail.self,
 .thumbnail.nsfw,
 .thumbnail.spoiler {
