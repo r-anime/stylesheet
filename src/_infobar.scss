@@ -4,8 +4,18 @@
 
 $dropdown-shadow: 0 0 4px #AAA;
 $dropdown-shadow-nightmode: 0 0 4px #000;
+
 $infobar-height: 45px;
+$infobar-padding-horizontal: $base-spacing;
+
 $infobar-button-height: 30px;
+$infobar-button-padding-horizontal: $base-spacing;
+$infobar-button-border-radius: $base-border-radius;
+
+$infobar-dropdown-border-width: $base-spacing-small;
+$infobar-dropdown-border-color: $primary-color;
+$infobar-dropdown-border-radius: $base-border-radius;
+
 $info-entry-count: 4; // number of entries you have
 $info-entry-period: 5s; // time for a single entry to be displayed
 $info-entry-transition-period: 0.5s; // time for the transition between entries
@@ -28,7 +38,7 @@ body > .content {
 	height: $infobar-height;
 	margin: 0;
 	border: 0;
-	padding: 0 0 0 5px;
+	padding: 0 0 0 $infobar-padding-horizontal;
 	display: flex;
 	align-items: center;
 	font-size: 14px;
@@ -58,7 +68,7 @@ body > .content {
 			display: block !important;
 			width: auto !important;
 			height: auto !important;
-			padding: 0 10px;
+			padding: 0 $infobar-button-padding-horizontal;
 			white-space: nowrap;
 			transition: 0s;
 		}
@@ -67,7 +77,7 @@ body > .content {
 		&:hover > a {
 			background: #6a9de6 !important;
 			color: #FFF !important;
-			border-radius: 5px;
+			border-radius: $infobar-button-border-radius;
 			position: relative !important;
 			z-index: 2;
 			@include nightmode {
@@ -90,19 +100,19 @@ body > .content {
 		// The dropdown content
 		em {
 			position: absolute;
-			top: $infobar-button-height - 5px; // TODO
+			top: $infobar-button-height - $infobar-dropdown-border-width; // TODO
 			background: #FFF;
 			white-space: nowrap;
 			display: block;
 			font-style: normal;
-			border-radius: 0 0 5px 5px;
+			border-radius: 0 0 $infobar-dropdown-border-radius $infobar-dropdown-border-radius;
 			transition: visibility 0s;
 			visibility: hidden;
 		}
 		&:hover em {
 			transition-delay: $hover-delay;
 			visibility: visible;
-			border-top: 5px solid #6a9de6;
+			border-top: $infobar-dropdown-border-width solid $infobar-dropdown-border-color;
 			box-shadow: $dropdown-shadow;
 			@include nightmode {
 				border-color: #445f7e;
@@ -115,8 +125,8 @@ body > .content {
 		order: 1;
 		flex: 0 1 100%;
 		align-self: stretch;
-		margin: 0 0 0 5px;
-		padding: 0 15px;
+		margin: 0 0 0 $infobar-padding-horizontal;
+		padding: 0 $infobar-padding-horizontal;
 		display: flex;
 		flex-direction: column;
 		border-left: 1px solid #EEE;
@@ -227,7 +237,8 @@ body > .content {
 		blockquote {
 			flex: 1 1 100%;
 			margin-top: $infobar-padding-vertical;
-			margin-left: -5px; // alignment with other text, TODO: can we put this in terms of variables?
+			margin-left: -$infobar-padding-horizontal; // alignment with other text
+			padding: 0 $infobar-padding-horizontal + $infobar-button-padding-horizontal;
 			border-left: 0;
 			border-top: 1px solid #EEE;
 			text-align: center;
