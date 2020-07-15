@@ -3,7 +3,7 @@
 // Reset some margins
 body > .content {
 	margin: 0;
-	padding: 45px 0 $base-spacing;
+	padding: $base-spacing 0;
 }
 
 // Get rid of unnecessary backgrounds that Reddit applies

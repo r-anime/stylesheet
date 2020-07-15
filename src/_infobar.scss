@@ -14,6 +14,12 @@ $hover-delay: 150ms; // delay before dropdowns trigger
 $infobar-padding-vertical: ($infobar-height - $infobar-button-height) / 2;
 $infobar-total-animation-period: ($info-entry-period + $info-entry-transition-period) * $info-entry-count;
 
+// Make room for the infobar at the top of the page
+body > .content {
+	padding-top: $infobar-height;
+}
+
+// The infobar itself resides in a blockquote at the very top of the sidebar
 .side .md > :first-child {
 	position: absolute;
 	top: $header-height;
@@ -104,7 +110,7 @@ $infobar-total-animation-period: ($info-entry-period + $info-entry-transition-pe
 		}
 	}
 
-	// Scrolling announcements banner
+	// Scrolling announcements banner, which is a nested blockquote
 	blockquote {
 		order: 1;
 		flex: 0 1 100%;
