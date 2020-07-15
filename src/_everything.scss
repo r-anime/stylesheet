@@ -517,33 +517,48 @@ body #progressIndicator {
     background: #252525 !important;
     border-color: #000 !important;
 }
-/** Thumbnail shit **/
-.thumbnail.self {background: 0 -1084px}
-.linkflair-recommendation .thumbnail {background: 0 -874px}
-.linkflair-cosplay .thumbnail {background: 0 -524px}   /*who even posts cosplay anymore*/
-.linkflair-satire .thumbnail {background: 0 -1014px}  /*okay cool but we have satire self posts once in a blue moon*/
-.linkflair-wt .thumbnail {background: 0 -1224px}
 
-.linkflair-fanart .thumbnail img,.linkflair-fanart-oc .thumbnail img {
-    display: none;
-}  /*Kills the link flair thumbnail*/
-                            
+// Custom thumbnail images
+
+// For default Reddit classes
+.thumbnail.self {background: 0 -1084px}
+.thumbnail.spoiler {background: 0 -1154px}
+.thumbnail.nsfw {background: 0 -804px}
+// For specific flairs (usually only applies to text posts, exceptions handled below)
+.linkflair-recommendation .thumbnail {background: 0 -874px}
+.linkflair-cosplay .thumbnail {background: 0 -524px}
+.linkflair-satire .thumbnail {background: 0 -1014px}
+.linkflair-wt .thumbnail {background: 0 -1224px}
 .linkflair-fanart .thumbnail,
 .linkflair-fanart-oc .thumbnail {background: 0 -664px} 
-.thumbnail.spoiler {background: 0 -1154px}
 .thumbnail[href*="spoiler"][href*="episode"],
-[data-author="AutoLovepon"] .thumbnail {background: 0 -594px}
 .linkflair-rewatch .thumbnail {background: 0 -944px} 
-.thumbnail.nsfw {background: 0 -804px}
-[data-author="AnimeMod"] .thumbnail {background: 0 -1294px} /* love this btw */
 .linkflair-green .thumbnail {background: 0 -734px}
-.linkflair-fanart .thumbnail,
-.linkflair-fanart-oc .thumbnail,
+// For specific users
+[data-author="AutoLovepon"] .thumbnail {background: 0 -594px}
+[data-author="AnimeMod"] .thumbnail {background: 0 -1294px}
+
+// Assign thespritesheet background image to all posts that will have custom thumbnails:
+// - Text posts (only applies to text posts that don't have an embedded image)
+// - NSFW posts
+// - Spoiler posts
+// - Fanart posts, even if they have thumbnails otherwise (fanart posts are always self posts, but
+//   may have an `img` and not get the `.self` class when posted from new reddit)
 .thumbnail.self,
 .thumbnail.nsfw,
-.thumbnail.spoiler {
-	background-image: url("images/general.png")!important;
+.thumbnail.spoiler,
+.linkflair-fanart .thumbnail,
+.linkflair-fanart-oc .thumbnail {
+	background-image: url("images/general.png") !important; // TODO: why is !important necessary?
 	height: 70px
+}
+
+// Fanart posts are special and should always display our thumbnails instead of whatever Reddit may pull
+.linkflair-fanart,
+.linkflair-fanart-oc {
+	.thumbnail img {
+		@extend %display-none;
+	}
 }
 
 /** Title colors **/
