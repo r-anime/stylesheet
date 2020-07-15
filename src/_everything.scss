@@ -518,21 +518,6 @@ body #progressIndicator {
     border-color: #000 !important;
 }
 
-/** Title colors **/
-.spoiler a.title:link, .linkflair-episode a.title:link {color: #cd0000}
-.res-nightmode .spoiler a.title:link, .res-nightmode .linkflair-episode a.title:link {color: red}
-.spoiler a.title:visited, .linkflair-episode a.title:visited {color: #e88c8c!important}
-.linkflair-fanart a.title:link {color: #005900!important}
-.linkflair-fanart a.title:visited {color: #003e00!important}
-.res-nightmode .linkflair-fanart a.title:link {color: #019b00!important}
-.res-nightmode .linkflair-fanart a.title:visited {color: #347b34!important}
-.linkflair-wt a.title:link {color: #b29600!important}
-.linkflair-wt a.title:visited {color: #473c00!important}
-.linkflair-rewatch a.title:link {color: #09f!important}
-.linkflair-rewatch a.title:visited {color: #003d66!important}
-.linkflair-writing-club a.title:link {color: #E55A76 !important}
-.linkflair-writing-club a.title:visited {color: #AF1C3A !important}
-
 /** Submit shit **/
 .submit-page>.content {
 	margin: 0 auto;
