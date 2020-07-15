@@ -12,20 +12,20 @@
 
 // Customizations
 @import "subcount"; // Contains the sidebar subscriber/online user phrases
-@import "flairs"; // User CSS flair texts, etc.
+@import "flairs"; // User CSS flair texts, etc. (needs to be before main theme
 
 // Main theme style
 @import "src/everything"; // Everything that isn't somewhere else yet
 @import "src/usernames"; // Compatibility styles for all usernames
 @import "src/linkflair"; // Link flair, including mod-only things
 @import "src/userflair"; // User flair, for list services
-@import "src/thumbnails"; // Custom post thumbnail images
-@import "src/titles"; // Custom colors for post titles
 @import "src/markdown"; // Generic markdown styles
 @import "src/header"; // Header/banner styles
-@import "src/sidebar"; // Sidebar-specific styles, including markdown hacks
-@import "src/infobar"; // Fancy announcements thing at the top of the sub
-@import "src/commentfaces"; // Comment faces, static and animated
+@import "src/sidebar"; // Sidebar styles
 
-// Even more customizations
+// More sub-specific customizations
+@import "src/infobar"; // Fancy announcements thing at the top of the sub
+@import "src/thumbnails"; // Custom post thumbnail images
+@import "src/titles"; // Custom colors for post titles
 @import "src/sidebarimages"; // Custom sidebar images that link places
+@import "src/commentfaces"; // Comment faces, static and animated
