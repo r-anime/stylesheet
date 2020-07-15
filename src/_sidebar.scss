@@ -30,22 +30,6 @@ $sidebar-image-other-height: 83px; // set to -10px when not being used
 	font-weight: bold
 }
 
-// Fullwidth tables
-// TODO this doesn't really work...
-.side .md table {
-	width: calc(100% + 20px);
-	margin: 10px -10px;
-	table-layout: fixed;
-}
-.side .md td,
-.side .md th {
-	border-color: #CFCFCF;
-	border-left: 0;
-}
-.side .md tr :last-child {
-	border-right: 0;
-}
-
 // Tables right after headings bump up against the heading
 .side .md h1 + table {
 	margin-top: -10px;
