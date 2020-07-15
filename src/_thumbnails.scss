@@ -1,0 +1,42 @@
+// Custom thumbnail image handling
+
+// Default Reddit classes
+.thumbnail.self {background: 0 -1084px}
+.thumbnail.spoiler {background: 0 -1154px}
+.thumbnail.nsfw {background: 0 -804px}
+// For specific flairs (usually only applies to text posts, exceptions handled below)
+.linkflair-recommendation .thumbnail {background: 0 -874px}
+.linkflair-cosplay .thumbnail {background: 0 -524px}
+.linkflair-satire .thumbnail {background: 0 -1014px}
+.linkflair-wt .thumbnail {background: 0 -1224px}
+.linkflair-fanart .thumbnail,
+.linkflair-fanart-oc .thumbnail {background: 0 -664px} 
+.thumbnail[href*="spoiler"][href*="episode"],
+.linkflair-rewatch .thumbnail {background: 0 -944px} 
+.linkflair-green .thumbnail {background: 0 -734px}
+// For specific users
+[data-author="AutoLovepon"] .thumbnail {background: 0 -594px}
+[data-author="AnimeMod"] .thumbnail {background: 0 -1294px}
+
+// Assign the spritesheet background image for all custom thumbnails:
+// - Text posts (only applies to text posts that don't have an embedded image)
+// - NSFW posts
+// - Spoiler posts
+// - Fanart posts, even if they have an embedded image (also see the next block)
+.thumbnail.self,
+.thumbnail.nsfw,
+.thumbnail.spoiler,
+.linkflair-fanart .thumbnail,
+.linkflair-fanart-oc .thumbnail {
+	background-image: url("images/general.png") !important; // TODO: why is !important necessary?
+	height: 70px
+}
+
+// Fanart posts are special and should always display our thumbnails instead of
+// whatever Reddit may pull
+.linkflair-fanart,
+.linkflair-fanart-oc {
+	.thumbnail img {
+		@extend %display-none;
+	}
+}
