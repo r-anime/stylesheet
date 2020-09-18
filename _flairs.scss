@@ -118,7 +118,8 @@
 .author[href$="/peaceshot"]:after{content:" - 01 OVA"}
 .author[href$="/peaceshot"]:before{content:"[Mori] "}
 .author[href$="/peaceshot"]{color:#a300df}
-.author[href$="/pittman66"]:after{color:#E74C3C;content:" Whose Seiyuu is it Anime?"}
+.author[href$="/pittman66"]{@extend %font-size-zero}
+.author[href$="/pittman66"]:after{content:"Pitt~"}
 .author[href$="/Pixelsaber"]:after{color: #1779A6; content:" activates the Lambda Drive"}
 .author[href$="/porpoiseoflife"]:after{color:#FFC90E;content:" has tried it at home."}
 .author[href$="/PwillyAlldilly"]:before{color: #7c9cf9; content:"Czar"}
