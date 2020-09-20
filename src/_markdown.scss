@@ -16,7 +16,7 @@ a[href="/s"]::after,
 a[href*="reddit.com/s?"]::after {
 	content: attr(title);
 	background: inherit;
-	color: #000;
+	color: transparent;
 	padding: 0 10px;
 }
 a[href="/s"]:hover::after,
