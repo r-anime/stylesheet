@@ -90,10 +90,10 @@
 .author[href$="/juliaisagirl"]:after{color:#333333;content:" SOS Brigade Director"}
 .author[href$="/kaverik"]:after{content:"КOMЯДDE ☭ КДVEЯIК"}
 .author[href$="/kaverik"]{@extend %font-size-zero;color:#F00}
-.author[href$="/KiwiBennydudez"]:after{color: #A285E1; content:"RED HAWK";color:#FA0808}
+.author[href$="/KiwiBennydudez"]:after{color: #A285E1; content:" RED HAWK";color:#FA0808}
 .author[href$="/KiwiBennydudez"]:hover {@extend %font-size-zero}
-.author[href$="/KiwiBennydudez"]:hover:before{color: #ffffff; content:"Caesura";}
-.author[href$="/KiwiBennydudez"].moderator:after{content:"Gumu Gumu no..."}
+.author[href$="/KiwiBennydudez"]:hover:before{color: #0A5EF0; content:"Caesura";}
+.author[href$="/KiwiBennydudez"].moderator:after{content:" Gumu Gumu no..."}
 .author[href$="/KiwiBennydudez"].moderator:hover:before{color: #0A5EF0; content:"Caesura";}
 .author[href$="/kpenk"]:after{color:#fff399;content:" Kevin Penkin Official"}
 .author[href$="/krasnovian"]:before{color: #A285E1; content:"Legend of the "}
