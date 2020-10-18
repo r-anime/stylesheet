@@ -97,6 +97,6 @@
 .flair-a-1milquiz::before {background-position: -32px -80px}
 
 // If the only flair class someone has is the skip7 one, just hide the flair
-[class="flair flair-skip7"] {
+.flair[class="flair flair-skip7"] {
 	@extend %display-none;
 }
