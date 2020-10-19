@@ -228,6 +228,21 @@ span.multi-count {margin: 0!important}
 .side .md h1 a + a {
 	margin-right: $base-spacing-small;
 }  
+// Position the "message the mods" button where it used to be because I hate change
+.sidecontentbox .message-button {
+	position: relative;
+	margin: 0;
+	padding: 0;
+}
+.sidecontentbox .message-button a {
+	position: absolute;
+	top: -$sidebar-padding - $sidebar-section-header-height;
+	right: 0;
+	text-transform: lowercase;
+}
+.sidecontentbox .message-button a::after {
+	content: " »";
+}
 
 #search input[type="text"] {
 	height: 35px;
