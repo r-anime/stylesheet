@@ -200,9 +200,10 @@ span.multi-count {margin: 0!important}
 .side .md h1,
 .sidecontentbox .title {
 	padding: 0 ($sidebar-section-padding + $sidebar-section-border-width) !important;
-	line-height: $sidebar-section-header-height;;
+	height: $sidebar-section-header-height;
+	line-height: $sidebar-section-header-height;
 }
-.sidecontentbox a.helplink,
+.sidecontentbox .message-button a,
 .side .md h1 a,
 .sidecontentbox .title .collapse-button {
 	$my-height: 13px;
@@ -223,8 +224,8 @@ span.multi-count {margin: 0!important}
    	position: relative;
 	z-index: 1;
 }
-.side .md h1 a + a,
-.sidecontentbox a.helplink {
+// some headings have multiple buttons
+.side .md h1 a + a {
 	margin-right: $base-spacing-small;
 }  
 
