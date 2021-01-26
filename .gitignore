@@ -3,6 +3,7 @@ Thumbs.db
 Desktop.ini
 .DS_Store
 # build artifacts
+*.log
 *.css
 subreddit_data.yml
 css_validation_result.html
