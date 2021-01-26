@@ -90,6 +90,10 @@ def main(
         builder.validate_css(skip_css_validation)
         logger.verbose("CSS has been validated")
 
+        logger.info("Saving stylesheet data:")
+        builder.save()
+        logger.verbose("Data saved.")
+
         logger.info("Validation completed successfully.")
 
     except StylesheetException as error:
