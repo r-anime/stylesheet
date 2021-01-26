@@ -23,11 +23,16 @@ jobs:
         echo ${{ github.ref }}
         python utils/validate.py
         ls -R
-    - name: Upload build artifact
+    - name: Upload generated CSS
       uses: actions/upload-artifact@v2
       with:
-        name: compiled-with-dart-sass
-        path: test.md
+        name: stylesheet.css
+        path: stylesheet.css
+    - name: Upload generated subreddit data
+      uses: action/upload-artifact@v2
+      with:
+        name: subreddit_data.yml
+        path: subreddit_data.yml
 
   deploy-production:
     if: ${{ github.ref == 'refs/heads/main' }}
