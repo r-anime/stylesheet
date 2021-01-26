@@ -739,23 +739,16 @@ body #progressIndicator {
 .res-nightmode .side a.helplink,
 .res-nightmode .side .md h1 a,
 .res-nightmode .sidecontentbox .title .collapse-button {
-	background: #2b4665!important;
+	background: $secondary-color-nightmode !important;
 	color: inherit
 }
-.res-nightmode .wiki-page .pageactions .wikiaction-current {background: #2b4665!important}
+.res-nightmode .wiki-page .pageactions .wikiaction-current {background: $secondary-color-nightmode!important}
 .res-nightmode .morelink a {
 	background: #445f7e;
 	color: #FFF!important
 }
-.res-nightmode #header .tabmenu .selected a::after {
-	background: #2f2f2f;
-	box-shadow: inset 2px 2px 2px -1px $primary-secondary-shadow, 1px 1px 1px #2f2f2f
-}
-.res-nightmode.res #header {background-color: #445f7e}
-.res-nightmode #header-bottom-left {box-shadow: inset 0 -35px #2b4665}
-.res-nightmode.res #sr-header-area {background-color: #2b4665}
 .res-nightmode .morelink a:hover,
-.res-nightmode .morelink a::after {background-color: #2b4665}
+.res-nightmode .morelink a::after {background-color: $secondary-color-nightmode}
 .res-nightmode .wiki-page>.content>span {background-color: #445f7e}
 .res-nightmode .content .link {border-color: #0f0f0f} /* bulky selector to override weird report res style */
 .res-nightmode .link.RES-keyNav-activeThing {background: #373737}

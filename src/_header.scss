@@ -7,16 +7,29 @@ $header-background: url("images/header.png") center left/auto 100% #213553 no-re
 	background: $header-background;
 	border-bottom: 0;
 	box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+
+	@include nightmode {
+		html & { // specificity hack
+			background: #445f7e;
+		}
+	}
 }
 
 // Subreddits bar at the very top of the page
 #sr-header-area {
-	background: $primary-secondary-shadow;
+	background-color: $primary-secondary-shadow;
 	border-bottom: 0;
 	color: #FFF;
 	// text-transform: none;
 	// font-size: 12px;
 	// line-height: 18px
+
+	@include nightmode {
+		html & { // specificity hack
+			background: $primary-secondary-shadow-nightmode;
+		}
+	}
+
 	.dropdown.srdrop .selected {
 		color: #FFF;
 		background-image: none;
@@ -68,6 +81,10 @@ $header-background: url("images/header.png") center left/auto 100% #213553 no-re
 	z-index: -1;
 	// leave space for snoo
 	padding-left: $header-snoo-reserved-width;
+
+	@include nightmode {
+		box-shadow: inset 0 (-$header-tabmenu-height) $primary-secondary-shadow-nightmode;
+	}
 }
 
 // Snoo
@@ -157,6 +174,11 @@ $header-background: url("images/header.png") center left/auto 100% #213553 no-re
 		height: 8px;
 		background: #FFF;
 		box-shadow: inset 2px 2px 2px -1px rgba(0,0,0,0.2),1px 1px 1px #FFF;
+
+		@include nightmode {
+			background: #2f2f2f;
+			box-shadow: inset 2px 2px 2px -1px rgba(0, 0, 0, 0.2), 1px 1px 1px #2f2f2f;
+		}
 	}
 }
 

@@ -9,11 +9,17 @@ $base-border-radius-small: 3px;
 
 // "Brand" colors
 $primary-color: #6A9DE6;
+$primary-color-nightmode: #445F7E;
+
 // We construct the secondary color from the primary color and a black overlay
 $darken-ratio: 0.2;
-$secondary-color: mix($color-primary, black, 100% * (1 - $darken-ratio));
+$secondary-color: mix($primary-color, black, 100% * (1 - $darken-ratio));
+$darken-ratio-nightmode: 0.3;
+$secondary-color-nightmode: mix($primary-color, black, 100% * (1 - $darken-ratio));
+
 // We can also achieve the secondary color by adding a shadow to the primary
 $primary-secondary-shadow: rgba(0, 0, 0, $darken-ratio);
+$primary-secondary-shadow-nightmode: rgba(0, 0, 0, $darken-ratio-nightmode);
 
 $base-background-color: #FFF;
 $separator-color: #CFCFCF;
