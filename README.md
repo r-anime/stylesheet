@@ -4,4 +4,4 @@
 
 This repo contains the [/r/anime](https://www.reddit.com/r/anime) subreddit stylesheet, written in Sass and automatically built to CSS and deployed to Reddit through Github Actions. See [CONTRIBUTING.md](/CONTRIBUTING.md) for more information.
 
-Special thanks to [/u/vaclav-2012](https://www.reddit.com/user/vaclav-2012) for contributing significant improvements to the build system.
+Special thanks to [/u/vaclav-2012](https://www.reddit.com/user/vaclav-2012) for significant improvements to the build system.
