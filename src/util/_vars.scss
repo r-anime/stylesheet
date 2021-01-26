@@ -6,8 +6,14 @@ $base-border-radius: 5px;
 $base-border-radius-small: 3px;
 
 // Colors
+
+// "Brand" colors
 $primary-color: #6A9DE6;
-$secondary-color: #557EB8;
+// We construct the secondary color from the primary color and a black overlay
+$darken-ratio: 0.2;
+$secondary-color: mix($color-primary, black, 100% * (1 - $darken-ratio));
+// We can also achieve the secondary color by adding a shadow to the primary
+$primary-secondary-shadow: rgba(0, 0, 0, $darken-ratio);
 
 $base-background-color: #FFF;
 $separator-color: #CFCFCF;

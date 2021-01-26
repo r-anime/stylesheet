@@ -319,7 +319,7 @@ span.multi-count {margin: 0!important}
 .morelink:hover a {
 	color: $text-on-secondary-color;
 	background: $sidebar-button-secondary-color;
-	box-shadow: 0 5px 10px rgba(0,0,0,0.2)
+	box-shadow: 0 5px 10px $primary-secondary-shadow;
 }
 .ad300x250,.sponsor-300-250 {border-radius: 5px}
 .side::after {
@@ -583,7 +583,7 @@ body #progressIndicator {
 }
 .submit-page ul.formtab .selected a {
 	top: -2px;
-	box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+	box-shadow: 0 5px 10px $primary-secondary-shadow;
 	font-size: 18px
 }
 .submit-page .roundfield {
@@ -749,7 +749,7 @@ body #progressIndicator {
 }
 .res-nightmode #header .tabmenu .selected a::after {
 	background: #2f2f2f;
-	box-shadow: inset 2px 2px 2px -1px rgba(0,0,0,0.2), 1px 1px 1px #2f2f2f
+	box-shadow: inset 2px 2px 2px -1px $primary-secondary-shadow, 1px 1px 1px #2f2f2f
 }
 .res-nightmode.res #header {background-color: #445f7e}
 .res-nightmode #header-bottom-left {box-shadow: inset 0 -35px #2b4665}

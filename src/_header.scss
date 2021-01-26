@@ -11,7 +11,7 @@ $header-background: url("images/header.png") center left/auto 100% #213553 no-re
 
 // Subreddits bar at the very top of the page
 #sr-header-area {
-	background: rgba(0, 0, 0, 0.2);
+	background: $primary-secondary-shadow;
 	border-bottom: 0;
 	color: #FFF;
 	// text-transform: none;
@@ -60,7 +60,7 @@ $header-background: url("images/header.png") center left/auto 100% #213553 no-re
 	position: absolute;
 	bottom: 0;
 	// use box-shadow to give tab menu a background
-	box-shadow: inset 0 (-$header-tabmenu-height) rgba(0, 0, 0, 0.2);
+	box-shadow: inset 0 (-$header-tabmenu-height) $primary-secondary-shadow;
 	// stretch background to both edges of header
 	left: 0;
 	right: 0;
