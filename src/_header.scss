@@ -10,7 +10,7 @@ $header-background: url("images/header.png") center left/auto 100% #213553 no-re
 
 	@include nightmode {
 		html & { // specificity hack
-			background: #445f7e;
+			background: $primary-color-nightmode;
 		}
 	}
 }

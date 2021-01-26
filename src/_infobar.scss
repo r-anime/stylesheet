@@ -81,7 +81,7 @@ body > .content {
 			position: relative !important;
 			z-index: 2;
 			@include nightmode {
-				background: #445f7e !important;
+				background: $primary-color-nightmode !important;
 			}
 		}
 
@@ -115,7 +115,7 @@ body > .content {
 			border-top: $infobar-dropdown-border-width solid $infobar-dropdown-border-color;
 			box-shadow: $dropdown-shadow;
 			@include nightmode {
-				border-color: #445f7e;
+				border-color: $primary-color-nightmode;
 			}
 		}
 	}

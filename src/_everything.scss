@@ -729,10 +729,10 @@ body #progressIndicator {
 .res-nightmode .side .redditname,
 .res-nightmode .sidecontentbox .title,
 .res-nightmode .side .md-container .md h1,
-.res-nightmode .sidecontentbox .content {background-color: #445f7e !important}
+.res-nightmode .sidecontentbox .content {background-color: $primary-color-nightmode !important}
 .res-nightmode .sidecontentbox .content {
 	background: #2f2f2f !important;
-	box-shadow: 0 -5px #445f7e;
+	box-shadow: 0 -5px $primary-color-nightmode;
 	border-color: #0f0f0f !important;
 }
 .res-nightmode .subscribe-button .option,
@@ -744,19 +744,19 @@ body #progressIndicator {
 }
 .res-nightmode .wiki-page .pageactions .wikiaction-current {background: $secondary-color-nightmode!important}
 .res-nightmode .morelink a {
-	background: #445f7e;
+	background: $primary-color-nightmode;
 	color: #FFF!important
 }
 .res-nightmode .morelink a:hover,
 .res-nightmode .morelink a::after {background-color: $secondary-color-nightmode}
-.res-nightmode .wiki-page>.content>span {background-color: #445f7e}
+.res-nightmode .wiki-page>.content>span {background-color: $primary-color-nightmode}
 .res-nightmode .content .link {border-color: #0f0f0f} /* bulky selector to override weird report res style */
 .res-nightmode .link.RES-keyNav-activeThing {background: #373737}
 .res-nightmode .submit-page {background: #1f1f1f!important}
 .res-nightmode .submit-page>.content,
 .res-nightmode .submit-page .content .content {background-color: transparent!important}
 .res-nightmode .tabmenu.formtab a {background-color: #2f2f2f}
-.res-nightmode .tabmenu.formtab .selected a {background-color: #445f7e!important}
+.res-nightmode .tabmenu.formtab .selected a {background-color: $primary-color-nightmode!important}
 .res-nightmode .submit-page .roundfield {
 	background-color: #2f2f2f!important;
 	border-color: #0f0f0f
