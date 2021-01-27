@@ -12,7 +12,8 @@
 
 // Customizations
 @import "subcount"; // Contains the sidebar subscriber/online user phrases
-@import "flairs"; // User CSS flair texts, etc. (needs to be before main theme
+@import "flairs"; // User CSS flair texts, etc. (needs to be before main theme)
+@import "banner"; // Custom banner images for special events
 
 // Main theme style
 @import "src/everything"; // Everything that isn't somewhere else yet
