@@ -1,16 +1,23 @@
 $header-snoo-reserved-width: $header-snoo-width + 2 * $header-snoo-padding-horizontal;
 // Temporary header background override for special events
 $header-background: url("images/header.png") center left/auto 100% #213553 no-repeat;
+$header-background-nightmode: $header-background;
 
 #header {
 	height: $header-height;
-	background: $header-background;
 	border-bottom: 0;
 	box-shadow: 0 1px 2px rgba(0,0,0,0.2);
 
-	@include nightmode {
-		html & { // specificity hack
-			background: $primary-color-nightmode;
+	// Slight optimization - if we use the same header for light and dark modes,
+	// we can just use !important instead of explicitly styling for nightmode
+	@if $header-background == $header-background-nightmode {
+		background: $header-background !important;
+	} @else {
+		background: $header-background;
+		@include nightmode {
+			html & { // specificity hack
+				background: $header-background-nightmode;
+			}
 		}
 	}
 }
