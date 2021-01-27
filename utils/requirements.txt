@@ -1,5 +1,4 @@
 praw
-libsass
 csscompressor
 click
 Pillow

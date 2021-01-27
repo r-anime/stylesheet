@@ -18,6 +18,8 @@ jobs:
         python-version: '3.6'
     - name: Install pip requirements
       run: pip install -r utils/requirements.txt
+    - name: Install Sass CLI
+      run: npm install --global sass
     - name: Build and some other testing stuff
       run: |
         echo ${{ github.ref }}
