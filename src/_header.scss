@@ -1,7 +1,4 @@
 $header-snoo-reserved-width: $header-snoo-width + 2 * $header-snoo-padding-horizontal;
-// Temporary header background override for special events
-$header-background: url("images/header.png") center left/auto 100% #213553 no-repeat;
-$header-background-nightmode: $header-background;
 
 #header {
 	height: $header-height;
