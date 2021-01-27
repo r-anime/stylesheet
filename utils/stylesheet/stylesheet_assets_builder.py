@@ -89,7 +89,7 @@ class StylesheetAssetsBuilder:
 
         logger.debug("Compiling the Sass file.")
         process = subprocess.run(
-            ["sass", "--no-charset", "main.scss"],
+            ["npx", "-q", "sass", "--no-charset", "main.scss"],
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE,
             universal_newlines=True,
