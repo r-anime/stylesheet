@@ -92,7 +92,7 @@ class StylesheetAssetsBuilder:
             ["sass", "--no-charset", "main.scss"],
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE,
-            text=True,
+            universal_newlines=True,
         )
         if process.stderr:
             raise SassCompileException(process.stderr, sass_file.name)
