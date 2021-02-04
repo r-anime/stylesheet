@@ -191,11 +191,6 @@
 .author[href$="/VincentBlack96"]:after{color: #000; content: "Black96"}
 .author[href$="/WingsOfLight"]:after{content:"Wings of Light is 3x faster"}
 .author[href$="/WingsOfLight"]{@extend %font-size-zero;color:#F00}
-.author[href$="/whatdoidowtfhelp"]:before{color: #7c9cf9; content:"Afraaz"}
-.author[href$="/whatdoidowtfhelp"]:hover {@extend %font-size-zero}
-.author[href$="/whatdoidowtfhelp"]:hover:before {color: #4B3E2C; content:"Nadeko good";}
-.author[href$="/whatdoidowtfhelp"]{@extend %font-size-zero}
-.author[href$="/whatdoidowtfhelp"].moderator:hover:before{color: #ffffff; content:"Nadeko good";}
 .author[href$="/Xinil"]:after{color:#009;content:" Founder of MAL"}
 .author[href$="/xRichard"]:before{content:"se"}
 .author[href$="/Zylda"]:before{color:#feda39;content:"The Legend of "}
