@@ -1,6 +1,4 @@
 """Stylesheet exception classes."""
-from sass import CompileError
-
 
 class StylesheetException(Exception):
     """The base Stylesheet Exception that all other exception classes extend.
@@ -20,10 +18,10 @@ class SassCompileException(StylesheetException):
     The specific information about errors in included in the error message.
     """
 
-    def __init__(self, compile_error: CompileError, filename):
+    def __init__(self, error_message, filename):
         """Construct an instance of SassCompileException."""
         message = (f"An error occurred when compiling the Sass file "
-        f"{filename}:\n {str(compile_error)}")
+        f"{filename}:\n{str(error_message)}")
         super().__init__(message)
         self.filename = filename
 
