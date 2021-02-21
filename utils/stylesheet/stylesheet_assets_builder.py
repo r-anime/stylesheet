@@ -4,7 +4,7 @@ import os
 import re
 
 import csscompressor
-import sass
+import subprocess
 from ruamel.yaml import YAML
 
 from stylesheet import (LocalStylesheetImage, RemoteStylesheetImage,
@@ -87,11 +87,21 @@ class StylesheetAssetsBuilder:
         logger.debug("Reading the Sass file.")
         sass_content = sass_file.read()
 
-        try:
-            logger.debug("Compiling the Sass file.")
-            css_content = sass.compile(filename=sass_file.name)
-        except sass.CompileError as error:
-            raise SassCompileException(error, sass_file.name)
+        logger.debug("Compiling the Sass file.")
+        process = subprocess.run(
+            ["npx", "-q", "sass", "--no-charset", "main.scss"],
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            universal_newlines=True,
+        )
+        if process.stderr:
+            raise SassCompileException(process.stderr, sass_file.name)
+        if process.returncode != 0:
+            raise SassCompileException(
+                f"Sass gave non-zero exit code {process.returncode}",
+                sass_file.name,
+            )
+        css_content = process.stdout
         logger.debug(
             "Compiled the Sass file. CSS content size: {} bytes".format(
                 len(css_content),
