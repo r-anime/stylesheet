@@ -51,6 +51,10 @@
 		$sidebar-section-margin-vertical;
 	height: $sidebar-image-other-height;
 	background-image: url("images/sidebar2.png");
+	background-size: cover;
+	//rotating sidebar - wouldn't go under 40 seconds since it gets annoying to look at
+        -webkit-animation: sidb 50s linear infinite;
+        animation: sidb 50s steps(3, end) infinite;
 	
 	// you get the idea
 	.search-page & {
@@ -65,4 +69,14 @@
 .side #search {
 	position: absolute;
 	top: $header-height + $sidebar-section-margin-vertical;
+}
+
+//rotating sidebar
+@-webkit-keyframes sidb {
+    from { background-position: 0 0px; }
+    to { background-position: -900px 0px;}
+}
+@keyframes sidb {
+    from { background-position: 0 0px; }
+    to { background-position: -900px 0px;}
 }
