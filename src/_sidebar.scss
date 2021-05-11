@@ -30,21 +30,25 @@ $sidebar-image-other-height: 300px; // set to -10px when not being used
 	font-weight: bold
 }
 
-// Tables right after headings bump up against the heading
-.side .md h1 + table {
-	margin-top: -10px;
+// Tables take up the full width of the sidebar
+.side .md table {
+	margin: 0 -$sidebar-padding - $sidebar-border-width;
+	width: calc(100% + #{2 * ($sidebar-padding + $sidebar-border-width)});
 }
-.side .md h1 + table th {
-	border-top: 0;
+.side th,
+.side td {
+	border-color: $sidebar-border-color;
 }
 
-// Table column widths
-.side table:first-of-type th:nth-child(2),
-.side table:nth-of-type(2) th:last-child {
-  width: 40px;
+// Tables and headings have no margin, and table borders next to headings are hidden
+.side .md h1 + table {
+	margin-top: -$sidebar-section-header-margin-vertical;
+	th {
+		  border-top: 0;
+	}
 }
-.side table:first-of-type th:last-child {
-  width: 70px;
+.side .md table + h1 {
+	margin-top: -$sidebar-border-width;
 }
 
 // Discord and Twitter buttons
