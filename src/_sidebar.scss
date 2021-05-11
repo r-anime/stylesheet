@@ -32,8 +32,8 @@ $sidebar-image-other-height: 300px; // set to -10px when not being used
 
 // Tables take up the full width of the sidebar
 .side .md table {
-	margin: 0 -$sidebar-padding - $sidebar-border-width;
-	width: calc(100% + #{2 * ($sidebar-padding + $sidebar-border-width)});
+	margin: 0 (-$sidebar-padding - $sidebar-border-width);
+	width: calc(100% - #{-2 * ($sidebar-padding + $sidebar-border-width)});
 }
 .side th,
 .side td {
