@@ -60,7 +60,7 @@ jobs:
         if [ "$GITHUB_REF" == "/refs/heads/main" ]; then
           echo Targeting /r/anime
           echo '::set-output name=environment::production'
-          echo ::set-output name=subreddit::anime'
+          echo '::set-output name=subreddit::anime'
         else
           echo Targeting /r/animestaging
           echo '::set-output name=environment::staging'
