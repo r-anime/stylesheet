@@ -1,3 +1,5 @@
+@use "sass:math";
+
 // The whole infobar is wrapped in a blockquote at the start of the sidebar
 // All the !important in this file is to pverride the resets the comment face
 // code puts on certain types of links; they're all there for a reason
@@ -21,7 +23,7 @@ $info-entry-period: 5s; // time for a single entry to be displayed
 $info-entry-transition-period: 0.5s; // time for the transition between entries
 $hover-delay: 150ms; // delay before dropdowns trigger
 
-$infobar-padding-vertical: ($infobar-height - $infobar-button-height) / 2;
+$infobar-padding-vertical: math.div($infobar-height - $infobar-button-height, 2);
 $infobar-total-animation-period: ($info-entry-period + $info-entry-transition-period) * $info-entry-count;
 
 // Make room for the infobar at the top of the page
@@ -249,8 +251,8 @@ body > .content {
 // Each item sets a negative offset on itself to scroll to the next item, then
 // moves itself to the end of the list and slowly moves back up to the top.
 @keyframes reorder {
-	$fraction-per-entry: 100% / $info-entry-count;
-	$entry-visible-transition-ratio: $info-entry-period / ($info-entry-period + $info-entry-transition-period);
+	$fraction-per-entry: math.div(100%, $info-entry-count);
+	$entry-visible-transition-ratio: math.div($info-entry-period, $info-entry-period + $info-entry-transition-period);
 
 	0%,
 	#{$entry-visible-transition-ratio * $fraction-per-entry} {
