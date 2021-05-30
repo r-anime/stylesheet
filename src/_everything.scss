@@ -1,3 +1,5 @@
+@use "sass:math";
+
 /** Base styles **/
 
 // Reset some margins
@@ -129,7 +131,7 @@ body > .content,
 	text-align: right;
 	// 18px is the height of the subscribe button
 	// i'm not entirely sure why the -1px is necessary but it is
-	margin-top: -1px - $sidebar-section-header-margin-vertical - ($sidebar-section-header-height / 2) - (18px / 2);
+	margin-top: -1px - $sidebar-section-header-margin-vertical - math.div($sidebar-section-header-height, 2) - math.div(18px, 2);
 	margin-bottom: $sidebar-section-header-margin-vertical;
 }
 .side .subscribe-button .option {
@@ -217,7 +219,7 @@ span.multi-count {margin: 0!important}
 	padding: $my-padding-vertical 5px;
 	border: 0;
 	border-radius: $base-border-radius-small;
-	margin: (($sidebar-section-header-height - $my-height) / 2 - $my-padding-vertical) 0;
+	margin: (math.div($sidebar-section-header-height - $my-height, 2) - $my-padding-vertical) 0;
 	float: right;
 	width: auto;
 	height: auto;

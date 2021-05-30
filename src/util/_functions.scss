@@ -1,3 +1,5 @@
+@use "sass:math";
+
 // Adds "px" units to any non-zero number.
 @function format-px($number) {
 	@if $number == 0 {
@@ -38,7 +40,7 @@
 	@while $number > 0 {
 		$result: char($number % 26) + $result;
 
-		$number: floor($number / 26);
+		$number: floor(math.div($number, 26));
 	}
 
 	@return $result;
