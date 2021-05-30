@@ -57,7 +57,7 @@ jobs:
     - name: Detect target environment
       id: target
       run: |
-        if [ "$GITHUB_REF" == "/refs/heads/main" ]; then
+        if [ "$GITHUB_REF" == "refs/heads/main" ]; then
           echo Targeting /r/anime
           echo '::set-output name=environment::production'
           echo '::set-output name=subreddit::anime'
