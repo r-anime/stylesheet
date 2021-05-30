@@ -59,12 +59,12 @@ jobs:
       run: |
         if [ "$GITHUB_REF" == "/refs/heads/main" ]; then
           echo Targeting /r/anime
-          ::set-output name=environment::'production'
-          ::set-output name=subreddit::'anime'
+          echo '::set-output name=environment::production'
+          echo ::set-output name=subreddit::anime'
         else
           echo Targeting /r/animestaging
-          ::set-output name=environment::'staging'
-          ::set-output name=subreddit::'animestaging'
+          echo '::set-output name=environment::staging'
+          echo '::set-output name=subreddit::animestaging'
         fi
 
     - name: Create GitHub deployment
