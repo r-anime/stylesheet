@@ -19,12 +19,17 @@
 // List service icons
 .flair:before {
 	content: "";
-	width: 16px;
-	height: 16px;
+	width: 0px;
+	height: 0px;
 	background: url("images/general.png") 0 0/128px;
 	border-radius: inherit;
 	margin-left: -16px;
 	transition: inherit;
+}
+
+.flair-MAL, .flair-HB, .flair-ANI, .flair-AP, .flair-ann, .flair-anidb, .flair-custom {
+	width: 16px;
+	height: 16px;
 }
 
 // Expand the flair on hover
