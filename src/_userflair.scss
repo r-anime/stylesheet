@@ -17,7 +17,7 @@
 }
 
 // List service icons
-.flair:before {
+.flair::before {
 	content: "";
 	width: 0px;
 	height: 0px;
@@ -27,7 +27,13 @@
 	transition: inherit;
 }
 
-.flair-MAL, .flair-HB, .flair-ANI, .flair-AP, .flair-ann, .flair-anidb, .flair-custom {
+.flair-MAL::before, 
+.flair-HB::before,
+.flair-ANI::before,
+.flair-AP::before,
+.flair-ann::before,
+.flair-anidb::before,
+.flair-custom::before {
 	width: 16px;
 	height: 16px;
 }
