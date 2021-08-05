@@ -17,15 +17,37 @@
 }
 
 // List service icons
-.flair:before {
+.flair::before {
 	content: "";
-	width: 16px;
-	height: 16px;
+	width: 0px;
+	height: 0px;
 	background: url("images/general.png") 0 0/128px;
 	border-radius: inherit;
 	margin-left: -16px;
 	transition: inherit;
 }
+
+.flair-MAL::before, 
+.flair-HB::before,
+.flair-ANI::before,
+.flair-AP::before,
+.flair-ann::before,
+.flair-anidb::before,
+.flair-custom::before {
+	width: 16px;
+	height: 16px;
+}
+
+.flair-MAL:hover:before,
+.flair-HB:hover:before,
+.flair-ANI:hover:before,
+.flair-AP:hover:before,
+.flair-ann:hover:before,
+.flair-anidb:hover:before,
+.flair-custom:hover:before {
+	margin-right: 4px;
+}
+
 
 // Expand the flair on hover
 .flair:hover {
@@ -33,9 +55,6 @@
 	padding-right: 4px;
 	font-size: x-small !important;
 	transition-delay: 0s
-}
-.flair:hover:before {
-	margin-right: 4px;
 }
 
 // Display emoji flairs at the same resolution as new Reddit (avoids quality loss with favicons e.g. MAL)

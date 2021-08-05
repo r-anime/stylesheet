@@ -195,36 +195,8 @@
 .author[href$="/xRichard"]:before{content:"se"}
 .author[href$="/Zylda"]:before{color:#feda39;content:"The Legend of "}
 
+// 2021-8-2: The Fanart Contest Flair emoji has been moved to reddit emoji as part of the flairsite
 // Fanart contest flairs
-.author[href$="/SteamyTomato"]:after,
-.author[href$="/cheesewoo"]:after,
-.author[href$="/Earth2Mars"]:before {
-	// Hack: In order to clip the spritesheet to only the part we need, we use
-	// background-clip: content-box; and rely on the text overflowing on hover.
-	// To ensure there's enough room for the text on hover, we set an arbitrary
-	// padding-right that's wide enough to contain all the text.
-	content: " Fanart Contest Winner!";
-	color: #37ada3;
-	background: content-box url("images/general.png") 0 -115px/128px no-repeat red;
-	display: inline-block;
-	height: 13px;
-	width: 13px;
-	margin-left: .3em;
-	margin-bottom: .2em;
-	text-indent: -9999em;
-	vertical-align: middle;
-	white-space: nowrap;
-}
-.author[href$="/SteamyTomato"]:hover:after,
-.author[href$="/cheesewoo"]:hover:after,
-.author[href$="/Earth2Mars"]:hover:before {
-	padding-right: 122px;
-	text-indent: 17px;
-}
-// Comment authors' names are bold, so we need more space
-.comment .author[href$="/SteamyTomato"]:hover:after,
-.comment .author[href$="/cheesewoo"]:hover:after,
-.comment .author[href$="/Earth2Mars"]:hover:before {padding-right: 136px}
-// Custom colors for the other two
-.author[href$="/Earth2Mars"]:before {color: #00E6B8}
-.author[href$="/cheesewoo"]:after {color: #ffb973}
+.author[href$="/SteamyTomato"]:hover:after{color: #ffb973; content:" Fanart Contest Winner!";}
+.author[href$="/cheesewoo"]:hover:after{color: #ffb973; content:" Fanart Contest Winner!";}
+.author[href$="/Earth2Mars"]:hover:before{color: #00E6B8; content:" Fanart Contest Winner!";}
