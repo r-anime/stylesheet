@@ -38,15 +38,23 @@
 	height: 16px;
 }
 
+.flair-MAL:hover:before,
+.flair-HB:hover:before,
+.flair-ANI:hover:before,
+.flair-AP:hover:before,
+.flair-ann:hover:before,
+.flair-anidb:hover:before,
+.flair-custom:hover:before {
+	margin-right: 4px;
+}
+
+
 // Expand the flair on hover
 .flair:hover {
 	width: auto;
 	padding-right: 4px;
 	font-size: x-small !important;
 	transition-delay: 0s
-}
-.flair:hover:before {
-	margin-right: 4px;
 }
 
 // Display emoji flairs at the same resolution as new Reddit (avoids quality loss with favicons e.g. MAL)
