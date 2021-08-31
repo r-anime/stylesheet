@@ -90,6 +90,8 @@ $header-snoo-reserved-width: $header-snoo-width + 2 * $header-snoo-padding-horiz
 		box-shadow: inset 0 (-$header-tabmenu-height) $primary-secondary-shadow-nightmode;
 	}
 }
+// Put res filter line under the dropdowns
+.res-filterline {z-index: 1 !important}
 
 // Snoo
 #header-img-a {
