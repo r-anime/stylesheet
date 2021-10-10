@@ -673,7 +673,7 @@ body #progressIndicator {
 	padding: 0 5px;
 	line-height: 18px;
 }
-.diff tbody tr:nth-child(2n) { background: rgba(0.5,0.5,0.5,0.03) }
+.diff tbody tr:nth-child(even) { background: rgba(0.5,0.5,0.5,0.03) }
 
 /** Gemeral markdown **/
 .md h1 {
