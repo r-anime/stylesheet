@@ -5,24 +5,40 @@
 // Leave appropriate room at the top of the sidebar for the
 // image + the absolutely-positioned search bar
 .side {
-	padding-top:
-		$sidebar-section-margin-vertical +
-		$sidebar-search-height +
-		$sidebar-section-margin-vertical +
-		$sidebar-image-height +
-		$sidebar-section-margin-vertical +
-		$sidebar-image-other-height;
+	@if $sidebar-image-other-height == 0 {
+		padding-top:
+			$sidebar-section-margin-vertical +
+			$sidebar-search-height +
+			$sidebar-section-margin-vertical +
+			$sidebar-image-height;
+	} @else {
+		padding-top:
+			$sidebar-section-margin-vertical +
+			$sidebar-search-height +
+			$sidebar-section-margin-vertical +
+			$sidebar-image-height +
+			$sidebar-section-margin-vertical +
+			$sidebar-image-other-height;
+	}
 }
+
 // Search bar isn't there on search pages, it's moved to #content. Also, on
 // search pages, the submit buttons are the first `.spacer`s which means they
 // don't have the normal top margin, which means we need to add that back.
 .search-page .side {
-	padding-top:
-		$sidebar-section-margin-vertical +
-		$sidebar-image-height +
-		$sidebar-section-margin-vertical +
-		$sidebar-image-other-height +
-		$sidebar-section-margin-vertical;
+	@if $sidebar-image-other-height == 0 {
+		padding-top:
+			$sidebar-section-margin-vertical +
+			$sidebar-image-height +
+			$sidebar-section-margin-vertical;
+	} @else {
+		padding-top:
+			$sidebar-section-margin-vertical +
+			$sidebar-image-height +
+			$sidebar-section-margin-vertical +
+			$sidebar-image-other-height +
+			$sidebar-section-margin-vertical;
+	}
 }
 
 // Position the first image and also set some stuff for both images
