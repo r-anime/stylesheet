@@ -18,7 +18,11 @@
 // Expand the flair on hover
 .flair:hover {
 	width: auto;
-	padding-right: 4px;
 	font-size: x-small !important;
 	transition-delay: 0s
+}
+
+// Give some margin to the text component of the flair for readability
+.flair:hover > :not([class]) {
+	margin: 0 5px;
 }
