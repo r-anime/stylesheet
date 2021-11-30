@@ -102,33 +102,33 @@ div#thing_t3_f81tvr  {
 
 // Post filter stuff
 // xn - No NSFW
-:lang(xn) .link.over18,
+[lang=xn] .link.over18,
 // xs - No Spoilers
-:lang(xs) .link.spoiler,
+[lang=xs] .link.spoiler,
 // xb - No News
-:lang(xb) .link.linkflair-news,
+[lang=xb] .link.linkflair-news,
 // xf - No Fanart
-:lang(xf) .link.linkflair-fanart,
-:lang(xf) .link.linkflair-fanart-oc,
-:lang(xf) .link.linkflair-fanart-misc,
+[lang=xf] .link.linkflair-fanart,
+[lang=xf] .link.linkflair-fanart-oc,
+[lang=xf] .link.linkflair-fanart-misc,
 // xc - No Cosplay
-:lang(xc) .link.linkflair-cosplay,
+[lang=xc] .link.linkflair-cosplay,
 // xd - No Clips
-:lang(xd) .link.linkflair-clip,
+[lang=xd] .link.linkflair-clip,
 // xm - No Official Media
-:lang(xm) .link.linkflair-official-media,
+[lang=xm] .link.linkflair-official-media,
 // xq - No Questions
-:lang(xq) .link.linkflair-question,
+[lang=xq] .link.linkflair-question,
 // xr - No Recommendations
-:lang(xr) .link.linkflair-recommendation,
+[lang=xr] .link.linkflair-recommendation,
 // xa - No "Light Media" (Fanart, Cosplay, Clips, Official Media, Questions, Recommendations)
-:lang(xa) .link.linkflair-fanart,
-:lang(xa) .link.linkflair-fanart-oc,
-:lang(xa) .link.linkflair-fanart-misc,
-:lang(xa) .link.linkflair-cosplay,
-:lang(xa) .link.linkflair-clip,
-:lang(xa) .link.linkflair-official-media,
-:lang(xa) .link.linkflair-recommendation,
-:lang(xa) .link.linkflair-question {
+[lang=xa] .link.linkflair-fanart,
+[lang=xa] .link.linkflair-fanart-oc,
+[lang=xa] .link.linkflair-fanart-misc,
+[lang=xa] .link.linkflair-cosplay,
+[lang=xa] .link.linkflair-clip,
+[lang=xa] .link.linkflair-official-media,
+[lang=xa] .link.linkflair-recommendation,
+[lang=xa] .link.linkflair-question {
 	@extend %display-none;
 }

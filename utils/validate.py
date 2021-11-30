@@ -86,13 +86,13 @@ def main(
         builder.adapt()
         logger.verbose(f"Adapted CSS size: {assets.adapted_css_size} bytes")
 
-        logger.info("Validating CSS:")
-        builder.validate_css(skip_css_validation)
-        logger.verbose("CSS has been validated")
-
         logger.info("Saving stylesheet data:")
         builder.save()
         logger.verbose("Data saved.")
+
+        logger.info("Validating CSS:")
+        builder.validate_css(skip_css_validation)
+        logger.verbose("CSS has been validated")
 
         logger.info("Validation completed successfully.")
 

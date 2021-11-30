@@ -27,16 +27,25 @@ jobs:
         python utils/validate.py
 
     - name: Upload generated CSS
+      if: always()
       uses: actions/upload-artifact@v2
       with:
         name: stylesheet.css
         path: stylesheet.css
 
     - name: Upload generated subreddit data
+      if: always()
       uses: actions/upload-artifact@v2
       with:
         name: subreddit_data.yml
         path: subreddit_data.yml
+
+    - name: Upload CSS validation report
+      if: always()
+      uses: actions/upload-artifact@v2
+      with:
+        name: css_validation_result.html
+        path: css_validation_result.html
 
   deploy:
     runs-on: ubuntu-latest

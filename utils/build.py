@@ -201,14 +201,14 @@ def main(
         builder.adapt()
         logger.verbose(f"Adapted CSS size: {assets.adapted_css_size} bytes")
 
-        logger.info("Validating CSS:")
-        builder.validate_css(skip_css_validation)
-        logger.verbose("CSS has been validated")
-
         logger.info("Saving output files:")
         builder.save()
         logger.verbose("Saved Subreddit Data file")
         logger.verbose("Saved CSS file")
+
+        logger.info("Validating CSS:")
+        builder.validate_css(skip_css_validation)
+        logger.verbose("CSS has been validated")
     except StylesheetException as error:
         show_traceback = logger.getEffectiveLevel() == logging.DEBUG
         logger.error(f"Build procedure failed: {error}",

@@ -1,5 +1,6 @@
-$sidebar-image-height: 300px;
-$sidebar-image-other-height: 300px; // set to -10px when not being used
+// Set both to 300px with 2 images, set $sidebar-image-other-height to 0 with only 1
+$sidebar-image-height: 300px; 
+$sidebar-image-other-height: 300px; 
 
 // Align the search icon better with our search style
 .side #search input[type="submit"] {
