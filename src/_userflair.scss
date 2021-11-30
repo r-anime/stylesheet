@@ -13,6 +13,11 @@
 	color: #3e5267 !important;
 	cursor: default;
 	transition: 200ms 350ms;
+
+	// All elements of the flair inherit the same transition properties
+	* {
+		transition: inherit;
+	}
 }
 
 // Expand the flair on hover
