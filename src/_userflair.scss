@@ -12,17 +12,29 @@
 	font-size: 0 !important;
 	color: #3e5267 !important;
 	cursor: default;
+
+	// 200ms smooth transition from normal to hover and back. When going from
+	// hovered back to normal, delay for 350ms in case the user was trying to
+	// select the flair text and their mouse briefly left the flair area
+	// accidentally.
 	transition: 200ms 350ms;
-}
 
-// Expand the flair on hover
-.flair:hover {
-	width: auto;
-	font-size: x-small !important;
-	transition-delay: 0s
-}
+	// All elements of the flair inherit the same transition properties
+	* {
+		transition: inherit;
+	}
 
-// Give some margin to the text component of the flair for readability
-.flair:hover > :not([class]) {
-	margin: 0 5px;
+	// Expand the flair on hover
+	:hover {
+		width: auto;
+		font-size: x-small !important;
+
+		// No delay when going from normal to hover, open the flair immediately
+		transition-delay: 0ms;
+
+		// Give some margin to the text component of the flair for readability
+		> :not([class]) {
+			margin: 0 5px;
+		}
+	}
 }
