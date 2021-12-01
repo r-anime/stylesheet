@@ -1,6 +1,5 @@
 // User list flairs
 .flair {
-	height: 16px;
 	display: inline-flex;
 	align-items: center;
 	vertical-align: middle;
@@ -37,4 +36,10 @@
 			margin: 0 5px;
 		}
 	}
+}
+
+// Manually set icons to 16x16 for nice scaling
+.flairemoji {
+	width: 16px;
+	height: 16px;
 }
