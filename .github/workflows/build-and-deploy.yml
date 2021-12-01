@@ -21,6 +21,9 @@ jobs:
 
     - name: Install pip requirements
       run: pip install -r utils/requirements.txt
+      
+    - name: Install Sass
+      run: npm install --no-save sass
 
     - name: Build and some other testing stuff
       run: |
