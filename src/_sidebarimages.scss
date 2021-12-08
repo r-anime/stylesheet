@@ -1,6 +1,6 @@
 // Sidebar images
-// TODO: lots of hardcoding, don't we have variables for some of this stuff?
-//       also can 100% rewrite this to accept an arbitrary number of images
+// TODO: some stuff is still hardcoded, also can 100% rewrite this to accept
+//       an arbitrary number of images
 
 // Leave appropriate room at the top of the sidebar for the
 // image + the absolutely-positioned search bar
@@ -50,7 +50,7 @@
 	height: $sidebar-image-height;
 	border-radius: $sidebar-section-border-radius;
 	background: url("images/sidebar.png") center/contain;
-	
+
 	// Again, search bar isn't there on search pages
 	.search-page & {
 		top: $header-height + $sidebar-section-margin-vertical;
@@ -59,7 +59,8 @@
 
 // Position the second image
 .side [href*="#sidebarimg2"] {
-	top: $header-height +
+	top:
+		$header-height +
 		$sidebar-padding +
 		$sidebar-search-height +
 		$sidebar-section-margin-vertical +
@@ -68,13 +69,14 @@
 	height: $sidebar-image-other-height;
 	background-image: url("images/sidebar2.png");
 	background-size: cover;
-	//rotating sidebar - wouldn't go under 40 seconds since it gets annoying to look at
-        -webkit-animation: sidb 50s linear infinite;
-        animation: sidb 50s steps(3, end) infinite;
-	
+
+	// rotating sidebar - wouldn't go under 40 seconds since it gets annoying to look at
+	animation: sidb 50s steps(3, end) infinite;
+
 	// you get the idea
 	.search-page & {
-		top: $header-height +
+		top:
+			$header-height +
 			$sidebar-section-margin-vertical +
 			$sidebar-image-height +
 			$sidebar-section-margin-vertical;
@@ -87,12 +89,7 @@
 	top: $header-height + $sidebar-section-margin-vertical;
 }
 
-//rotating sidebar
-@-webkit-keyframes sidb {
-    from { background-position: 0 0px; }
-    to { background-position: -900px 0px;}
-}
 @keyframes sidb {
-    from { background-position: 0 0px; }
-    to { background-position: -900px 0px;}
+	from { background-position: 0 0px; }
+	to { background-position: -900px 0px;}
 }
