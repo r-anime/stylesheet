@@ -1,7 +1,13 @@
 // Applies nightmode styles to an element
 @mixin nightmode {
-	.res-nightmode & {
-		@content;
+	@if #{&} == "" {
+		.res-nightmode {
+			@content;
+		}
+	} @else {
+		.res-nightmode & {
+			@content;
+		}
 	}
 }
 
@@ -9,9 +15,11 @@
 %display-none {
 	display: none;
 }
+
 %font-size-zero {
 	font-size: 0;
 }
+
 %margin-zero {
 	margin: 0;
 }
