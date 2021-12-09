@@ -40,16 +40,19 @@ $header-snoo-reserved-width: $header-snoo-width + 2 * $header-snoo-padding-horiz
 		// padding-right: 0;
 		// margin: 0;
 	}
+
 	.dropdown.srdrop .selected::after {
 	/* 	content: " | "; */
 		white-space: pre;
 		padding: 0 .7ex;
 		color: #FFF
 	}
+
 	.separator,
 	.sr-bar a {
 		color: #FFF !important;
 	}
+
 	*,
 	#sr-more-link,
 	#RESShortcutsEditContainer,
@@ -60,10 +63,12 @@ $header-snoo-reserved-width: $header-snoo-width + 2 * $header-snoo-padding-horiz
 	#RESShortcutsTrash {
 		color: #FFF;
 	}
+
 	.drop-choices {
 		border: 0;
 		background: #557EB8  !important;
 	}
+
 	a.RESShortcutsCurrentSub {
 		color: inherit!important;
 		text-decoration: underline
@@ -72,17 +77,22 @@ $header-snoo-reserved-width: $header-snoo-width + 2 * $header-snoo-padding-horiz
 
 // Main header content (sub icon, name, page info on search/config pages, tab bar)
 #header-bottom-left {
-	/* background: url("images/banner.png") center bottom no-repeat; */
+	// background: url("images/banner.png") center bottom no-repeat;
+
 	// push to bottom of header
 	position: absolute;
 	bottom: 0;
+
 	// use box-shadow to give tab menu a background
 	box-shadow: inset 0 (-$header-tabmenu-height) $primary-secondary-shadow;
+
 	// stretch background to both edges of header
 	left: 0;
 	right: 0;
+
 	// move below userbar to prevent intercepting clicks
 	z-index: -1;
+
 	// leave space for snoo
 	padding-left: $header-snoo-reserved-width;
 
@@ -90,8 +100,11 @@ $header-snoo-reserved-width: $header-snoo-width + 2 * $header-snoo-padding-horiz
 		box-shadow: inset 0 (-$header-tabmenu-height) $primary-secondary-shadow-nightmode;
 	}
 }
-// Put res filter line under the dropdowns
-.res-filterline {z-index: 1 !important}
+
+// Put RES filter line under the dropdowns
+.res-filterline {
+	z-index: 1 !important;
+}
 
 // Snoo
 #header-img-a {
@@ -99,25 +112,30 @@ $header-snoo-reserved-width: $header-snoo-width + 2 * $header-snoo-padding-horiz
 	position: absolute;
 	bottom: 0;
 	left: 0;
+
 	// horizontal spacing from edge of viewport and tabmenu
 	padding: 0 $header-snoo-padding-horizontal;
 }
+
 #header-img,
 #header-img-a:after {
 	display: block;
 	margin: 0;
+
 	// these values should match the target dimensions of the snoo image file,
 	// e.g. the image's dimensions scaled by 50% to account for high dpi screens
 	width: $header-snoo-width;
 	height: $header-snoo-height;
 }
+
 // In nightmode, display a custom image in a pseudo-element
 #header-img {
 	@include nightmode {
 		@extend %display-none;
 	}
 }
-#header-img-a:after {
+
+#header-img-a::after {
 	@include nightmode {
 		content: "";
 		display: block;
@@ -131,8 +149,10 @@ $header-snoo-reserved-width: $header-snoo-width + 2 * $header-snoo-padding-horiz
 	color: #FFF;
 	font: normal 34px "Helvetica", "Arial", sans-serif;
 	text-transform: capitalize;
+
 	// align subreddit name with tabmenu text
 	margin-left: $header-tabmenu-padding-horizontal;
+
 	// add a little extra space below so descenders don't touch the tabmenu
 	margin-bottom: 2px;
 
@@ -155,6 +175,7 @@ $header-snoo-reserved-width: $header-snoo-width + 2 * $header-snoo-padding-horiz
 		display: inline-block;
 		margin: 0;
 	}
+
 	a {
 		display: inline-block;
 		padding: 0 $header-tabmenu-padding-horizontal;
@@ -166,10 +187,12 @@ $header-snoo-reserved-width: $header-snoo-width + 2 * $header-snoo-padding-horiz
 		font-weight: 400;
 		height: $header-tabmenu-height;
 		position: relative;
+		
+		&:hover {
+			background: rgba(0,0,0,.1);
+		}
 	}
-	a:hover {
-		background: rgba(0,0,0,.1);
-	}
+
 	.selected a::after {
 		content: "";
 		position: absolute;
@@ -197,6 +220,7 @@ $header-snoo-reserved-width: $header-snoo-width + 2 * $header-snoo-padding-horiz
 	border-top-left-radius: 0;
 	border-bottom-left-radius: 5px;
 }
+
 #header-bottom-right span,
 #header-bottom-right a {
 	color: #FFF;
