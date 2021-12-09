@@ -1,10 +1,10 @@
 // Set both to 300px with 2 images, set $sidebar-image-other-height to 0 with only 1
-$sidebar-image-height: 300px; 
-$sidebar-image-other-height: 300px; 
+$sidebar-image-height: 300px;
+$sidebar-image-other-height: 300px;
 
 // Align the search icon better with our search style
 .side #search input[type="submit"] {
-	margin-left: -25px
+	margin-left: -25px;
 }
 
 // Border radius for the Reddit premium banner - we can't remove it, but we can make it look good
@@ -28,7 +28,7 @@ $sidebar-image-other-height: 300px;
 	margin: $sidebar-section-header-margin-vertical (-$sidebar-section-padding - $sidebar-section-border-width);
 	color: $text-on-primary-color;
 	font-size: 1.5em;
-	font-weight: bold
+	font-weight: bold;
 }
 
 // Tables take up the full width of the sidebar
@@ -44,6 +44,7 @@ $sidebar-image-other-height: 300px;
 // Tables and headings have no margin, and table borders next to headings are hidden
 .side .md h1 + table {
 	margin-top: -$sidebar-section-header-margin-vertical;
+
 	th {
 		  border-top: 0;
 	}
@@ -94,20 +95,20 @@ $sidebar-image-other-height: 300px;
 
 // Twitter-specific styling, overrides some of the above
 .side .titlebox [href*="twitter.com/RedditChan"] {
-    padding: 0px 0px 0px 10px;
-    background: #1DA1F2;
+	padding: 0 0 0 10px;
+	background: #1DA1F2;
 }
 
 .side .titlebox [href*="twitter.com/RedditChan"]:before {
 	width: 41px;
-	background:  url("images/general.png")  -50px -128px/128px no-repeat;
+	background: url("images/general.png") -50px -128px/128px no-repeat;
 }
 
 .side .titlebox [href*="twitter.com/RedditChan"]:hover {
 	background: #198bd1;
 }
 
-// Hide sub author from community info section
+// Hide sub creator from community info section
 .titlebox .bottom,
 .titlebox .bottom .author::after {
 	@extend %font-size-zero;

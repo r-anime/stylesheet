@@ -44,6 +44,7 @@ body > .content {
 	display: flex;
 	align-items: center;
 	font-size: 14px;
+
 	// Dropdowns appear over the "Welcome to Reddit" banner and comment field
 	// placeholder when logged out
 	z-index: 3;
@@ -111,6 +112,7 @@ body > .content {
 			transition: visibility 0s;
 			visibility: hidden;
 		}
+
 		&:hover em {
 			transition-delay: $hover-delay;
 			visibility: visible;
@@ -136,6 +138,11 @@ body > .content {
 		overflow: hidden;
 		height: $infobar-height;
 		transition: 0s;
+
+		@include nightmode {
+			border-color: #0f0f0f;
+		}
+
 		&:hover {
 			transition-delay: $hover-delay;
 			height: $infobar-height * $info-entry-count;
@@ -145,9 +152,6 @@ body > .content {
 			border-bottom-left-radius: 5px;
 			box-shadow: $dropdown-shadow;
 		}
-		@include nightmode {
-			border-color: #0f0f0f;
-		}
 
 		// Entries may or may not be inside links, so we duplicate some styles
 		p {
@@ -155,10 +159,12 @@ body > .content {
 			margin: 0;
 			line-height: 1.3;
 			animation: reorder $infobar-total-animation-period infinite;
+
 			// Allow custom labels to be positioned relative to the individual
 			// link rather than the page
 			position: relative;
 		}
+
 		p,
 		p > a {
 			display: flex;
@@ -167,12 +173,15 @@ body > .content {
 			justify-content: center;
 			align-self: stretch;
 		}
+
 		&:hover p {
 			// Border between items
 			box-shadow: 0 1px #EEE;
+
 			// Animation freezing
 			animation-play-state: paused;
 			margin-top: 0 !important;
+
 			@include nightmode {
 				box-shadow: 0 1px #000;
 			}
@@ -183,6 +192,7 @@ body > .content {
 			font-size: smaller;
 			opacity: 0.8;
 			color: #000;
+
 			@include nightmode {
 				color: #FFF;
 			}
@@ -231,11 +241,14 @@ body > .content {
 		// the content needs to make room
 		padding-top: 2 * $infobar-height + 1px;
 	}
+
 	.side .md > :first-child {
 		flex-wrap: wrap;
+		
 		// Wrapped flex containers can't use flexbox to vertically align within a wrapped row, so
 		// we add padding to the top of the container and margin to the element in the second row
 		padding-top: $infobar-padding-vertical;
+		
 		blockquote {
 			flex: 1 1 100%;
 			margin-top: $infobar-padding-vertical;
@@ -259,6 +272,7 @@ body > .content {
 		margin-top: 0;
 		order: 0;
 	}
+
 	@for $i from 1 through $info-entry-count {
 		@if $i == 1 {
 			#{$fraction-per-entry - 0.001%} {
@@ -275,6 +289,7 @@ body > .content {
 			}
 		}
 	}
+
 	to {
 		order: 0;
 		margin-top: 0;
