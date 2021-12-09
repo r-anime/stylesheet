@@ -1,6 +1,14 @@
 // Subscriber and current user flavor texts
 
-//.titlebox .number:before {content: ""}
-.titlebox .number:after {content: " cheering at the Hakone Ekiden"}
-//.titlebox .users-online span.number:before {content: ""}
-.titlebox .users-online span.number:after {content: " love running"}
+// Hide the normal text so we can show our own
+.titlebox .word {
+	@extend %display-none;
+}
+
+// Subscriber count text
+//.titlebox .number::before {content: ""}
+.titlebox .number::after {content: " cheering at the Hakone Ekiden"}
+
+// Online users text
+//.titlebox .users-online span.number::before {content: ""}
+.titlebox .users-online span.number::after {content: " love running"}

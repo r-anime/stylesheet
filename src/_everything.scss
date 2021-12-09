@@ -190,11 +190,6 @@ span.multi-count {
 	margin: 0 !important;
 }
 
-// We override the "readers" and "users here now" text with our own custom stuff
-.titlebox .word {
-	@extend %display-none;
-}
-
 // Style the "a community for X years" note
 .titlebox .bottom {
 	border-color: #cfcfcf;
