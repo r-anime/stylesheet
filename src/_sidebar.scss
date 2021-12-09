@@ -1,10 +1,320 @@
+// Main container
+.side {
+	margin: 0;
+	padding: $sidebar-padding;
+	width: 300px;
+	background: $sidebar-background;
+	border: $sidebar-border-width solid $sidebar-border-color;
+	border-top: 0;
+	border-right: 0;
+	border-bottom-left-radius: $sidebar-border-radius;
+
+	// Spacing between sections
+	> .spacer {
+		margin: 0;
+
+		+ .spacer {
+			margin-top: $sidebar-padding;
+		}
+	}
+}
+
+// Content boxes
+.titlebox, .linkinfo {
+	background: $sidebar-section-background;
+	padding: $sidebar-section-padding + $sidebar-section-border-width;
+	border: 0;
+	border-radius: $sidebar-section-border-radius;
+	box-shadow: inset 0 0 0 $sidebar-section-border-width $separator-color;
+	overflow: hidden;
+}
+
+// Subreddit name at the top of the community info box
+.side .redditname {
+	$inverse-padding-and-border: -$sidebar-section-border-width - $sidebar-section-padding;
+
+	margin: $inverse-padding-and-border $inverse-padding-and-border $sidebar-section-header-margin-vertical;
+	padding: 0 $sidebar-section-border-width + $sidebar-section-padding;
+	background: $sidebar-section-header-background-color;
+	height: $sidebar-section-header-height;
+	font-weight: normal;
+	font-size: 18px;
+	line-height: $sidebar-section-header-height;
+	text-transform: capitalize;
+	color: $text-on-primary-color;
+	overflow: hidden;
+	font-weight: 700;
+
+	a {
+		color: inherit;
+	}
+}
+
+// Subscribers/online users section
+.side .subscribe-button {
+	display: block;
+	position: relative;
+	text-align: right;
+
+	// 18px is the height of the subscribe button
+	// I'm not entirely sure why the -1px is necessary but it is
+	margin-top: -1px - $sidebar-section-header-margin-vertical - math.div($sidebar-section-header-height, 2) - math.div(18px, 2);
+	margin-bottom: $sidebar-section-header-margin-vertical;
+
+	.option {
+		width: 100%;
+		height: 100%;
+		border: 0;
+		background: #557eb8;
+		padding: 3px 5px;
+	}
+}
+
+// RES dashboard and shortcut buttons - style like subscribe button
+.side .titlebox .res-fancy-toggle-button {
+	border: 0;
+	background: #557eb8;
+	color: #FFF;
+	padding: 3px 5px;
+	line-height: 1;
+}
+
+// RES subreddit style toggle - make sure it doesn't get in the way of the
+// weird float layout we have going on in this area
+.res-sr-style-toggle {
+	float: left;
+	width: 100%;
+	padding-top: 0 !important;
+	height: 17px;
+}
+
+// RES multireddit counter badge
+span.multi-count {
+	margin: 0 !important;
+}
+
+// Style the "a community for X years" note
+.titlebox .bottom {
+	border-color: #cfcfcf;
+	margin: $sidebar-section-padding 0 (-$sidebar-section-padding);
+	padding: $sidebar-subreddit-age-padding-vertical 0;
+	text-align: center;
+
+	// NOTE: 1px is the reddit default, micro-optimize by not emitting a rule
+	@if $base-border-width != 1px {
+		border-width: $base-border-width;
+	}
+
+	@include nightmode {
+		border-color: #000;
+	}
+
+	// Don't float the text; we want to center it
+	.age {
+		float: none;
+		display: block;
+	}
+}
+
+// Style sidebar boxes other than community info (e.g. moderators)
+.sidecontentbox .title {
+	background: $sidebar-section-header-background-color;
+	margin-bottom: 0;
+	border-radius: $sidebar-section-border-radius;
+	padding: 0 0 0 $sidebar-section-padding + $sidebar-section-border-width;
+	position: relative;
+	line-height: 35px;
+
+	h1 {
+		color: $text-on-primary-color;
+		text-transform: lowercase;
+	}
+}
+
+.sidecontentbox .content {
+	background: $sidebar-section-background;
+	border: $sidebar-section-border-width solid $sidebar-section-border-color;
+	border-top: 0;
+	box-shadow: 0 (-$sidebar-section-border-radius) $sidebar-section-header-background-color;
+	border-bottom-left-radius: $sidebar-section-border-radius;
+	border-bottom-right-radius: $sidebar-section-border-radius;
+	padding: $sidebar-section-padding;
+}
+
+// Common small buttons that show up in the sidebar
+// TODO: Also integrate subscribe button, RES sidebar dashboard/shortcut buttons
+.side .md h1,
+.sidecontentbox .title {
+	padding: 0 ($sidebar-section-padding + $sidebar-section-border-width) !important;
+	height: $sidebar-section-header-height;
+	line-height: $sidebar-section-header-height;
+}
+
+.sidecontentbox .message-button a,
+.side .md h1 a,
+.sidecontentbox .title .collapse-button {
+	$my-height: 13px;
+	$my-padding-vertical: 2px;
+
+	color: $text-on-primary-color;
+	background: $sidebar-section-header-button-background-color;
+	font-family: "Verdana", sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+	line-height: $my-height;
+	padding: $my-padding-vertical 5px;
+	border: 0;
+	border-radius: $base-border-radius-small;
+	margin: (math.div($sidebar-section-header-height - $my-height, 2) - $my-padding-vertical) 0;
+	float: right;
+	width: auto;
+	height: auto;
+   	position: relative;
+	z-index: 1;
+}
+
+// Allow headings to have multiple buttons
+.side .md h1 a + a {
+	margin-right: $base-spacing-small;
+}
+
+// Position the "message the mods" button where it used to be because I hate change
+.sidecontentbox .message-button {
+	position: relative;
+	margin: 0;
+	padding: 0;
+
+	a {
+		position: absolute;
+		top: -$sidebar-padding - $sidebar-section-header-height;
+		right: 0;
+		text-transform: lowercase;
+
+		::after {
+			content: " »";
+		}
+	}
+}
+
+// Search bar
+#search input[type="text"] {
+	height: 35px;
+	background: #FFF;
+	color: #000;
+	border: $sidebar-search-border-width solid $sidebar-search-border-color;
+	border-radius: $sidebar-section-border-radius;
+	box-shadow: none !important; // mobile safari override, smh
+	padding: 0 30px + $base-spacing 0 $base-spacing;
+	line-height: 30px;
+
+	&:focus {
+		border-color: $primary-color;
+		outline: 0;
+		box-shadow: 0 0 3px $primary-color;
+		transition: 200ms;
+	}
+
+	@include nightmode {
+		background: #2f2f2f !important;
+		border-color: #0f0f0f;
+	}
+}
+
 // Align the search icon better with our search style
 .side #search input[type="submit"] {
 	margin-left: -25px;
 }
 
-// Border radius for the Reddit premium banner - we can't remove it, but we can make it look good
+// Search help box
+#searchexpando {
+	margin-top: $base-spacing;
+	padding: $sidebar-section-padding;
+	position: absolute;
+	z-index: 1;
+	width: 300px - (2 * $sidebar-padding) - 2px;
+	border-radius: $sidebar-section-border-radius;
+
+	> p {
+		margin: 0;
+	}
+}
+
+// Style sidebar buttons
+.morelink {
+	border: 0;
+	background-image: none !important;
+	background-color: transparent !important;
+	font-size: 16px;
+	font-weight: 400;
+	letter-spacing: 0;
+	height: auto;
+	position: relative;
+	top: 0;
+	transition: top 200ms;
+
+	.nub {
+		@extend %display-none;
+	}
+
+	a {
+		color: $text-on-primary-color;
+		display: block;
+		padding: 0 34px 0 $base-spacing;
+		width: auto;
+		height: 35px;
+		line-height: 35px;
+		background: $sidebar-button-primary-color;
+		border-radius: $sidebar-section-border-radius;
+		transition: background-color 200ms,box-shadow 200ms;
+		box-shadow: 0 0 rgba(0,0,0,.1);
+	}
+
+
+	// Give it a nice "push" animation when clicked
+	&:hover {
+		top: -2px;
+
+		a {
+			color: $text-on-secondary-color;
+			background: $sidebar-button-secondary-color;
+			box-shadow: 0 5px 10px $primary-secondary-shadow;
+		}
+
+		&:active {
+			top: 1px;
+		}
+	}
+}
+
+// Style sidebar button icons
+.morelink a::after {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 35px;
+	height: 35px;
+	top: 0;
+	right: 0;
+	background: url("images/general.png") -58px -93px/128px no-repeat $sidebar-button-secondary-color;
+	border-top-right-radius: $sidebar-section-border-radius;
+	border-bottom-right-radius: $sidebar-section-border-radius;
+
+	.submit-text & {
+		background-position: -93px -58px;
+	}
+}
+
+// Login form box
+.login-form-side {
+	border-color: #cfcfcf;
+	background: #FFF;
+	border-radius: $sidebar-section-border-radius;
+}
+
+// Border radius for ads and the Reddit premium banner
 @if $sidebar-section-border-radius > 0 {
+	.ad300x250,
+	.sponsor-300-250,
 	.premium-banner-outer {
 		border-radius: $sidebar-section-border-radius;
 	}
@@ -17,6 +327,17 @@
 .ad-container:empty {
 	@extend %display-none;
 }
+
+// uwu
+.side::after {
+	content: "(✿◠‿◠) ~<3";
+	display: block;
+	margin: $base-spacing 0 0;
+	text-align: center;
+	color: gray;
+}
+
+// Sidebar markdown styling
 
 // Markdown headings
 .side .md h1 {
@@ -42,7 +363,7 @@
 	margin-top: -$sidebar-section-header-margin-vertical;
 
 	th {
-		  border-top: 0;
+		border-top: 0;
 	}
 }
 .side .md table + h1 {
