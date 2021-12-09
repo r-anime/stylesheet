@@ -210,7 +210,7 @@ body > .content,
 	border: 0;
 }
 .pinned .thumbnail {
-	margin: 0;
+	@extend %margin-zero;
 }
 
 .organic-listing {
@@ -224,7 +224,7 @@ body > .content,
 }
 
 body > .content .spacer {
-	margin: 0;
+	@extend %margin-zero;
 }
 
 .organic-listing .sponsored-tagline {
@@ -350,7 +350,7 @@ body > .content .spacer {
 }
 
 .res.res-commentBoxes .comment.collapsed .entry {
-	margin: 0;
+	@extend %margin-zero;
 }
 
 .res.res-commentBoxes .comment .expand {
@@ -430,7 +430,7 @@ body #progressIndicator {
 }
 
 #newlink {
-	margin: 0;
+	@extend %margin-zero;
 }
 
 .submit-page .formtabs-content {
