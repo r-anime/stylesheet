@@ -1,3 +1,5 @@
+@use "sass:math";
+
 // Main container
 .side {
 	margin: 0;
@@ -8,6 +10,11 @@
 	border-top: 0;
 	border-right: 0;
 	border-bottom-left-radius: $sidebar-border-radius;
+
+	@include nightmode {
+		background: repeating-linear-gradient(45deg, #1f1f1f, #1f1f1f 2px, #282828 2px, #282828 2.8px) 0/4px 4px;
+		border-color: #0f0f0f !important;
+	}
 
 	// Spacing between sections
 	> .spacer {
@@ -27,6 +34,11 @@
 	border-radius: $sidebar-section-border-radius;
 	box-shadow: inset 0 0 0 $sidebar-section-border-width $separator-color;
 	overflow: hidden;
+
+	@include nightmode {
+		box-shadow: inset 0 0 0 1px #0f0f0f;
+		background: #2f2f2f !important;
+	}
 }
 
 // Subreddit name at the top of the community info box
@@ -67,6 +79,11 @@
 		border: 0;
 		background: #557eb8;
 		padding: 3px 5px;
+
+		@include nightmode {
+			background: $secondary-color-nightmode !important;
+			color: inherit;
+		}
 	}
 }
 
@@ -139,6 +156,12 @@ span.multi-count {
 	border-bottom-left-radius: $sidebar-section-border-radius;
 	border-bottom-right-radius: $sidebar-section-border-radius;
 	padding: $sidebar-section-padding;
+
+	@include nightmode {
+		background: #2f2f2f !important;
+		box-shadow: 0 -5px $primary-color-nightmode;
+		border-color: #0f0f0f !important;
+	}
 }
 
 // Common small buttons that show up in the sidebar
@@ -171,6 +194,11 @@ span.multi-count {
 	height: auto;
    	position: relative;
 	z-index: 1;
+
+	@include nightmode {
+		background: $secondary-color-nightmode !important;
+		color: inherit;
+	}
 }
 
 // Allow headings to have multiple buttons
@@ -278,6 +306,10 @@ span.multi-count {
 			color: $text-on-secondary-color;
 			background: $sidebar-button-secondary-color;
 			box-shadow: 0 5px 10px $primary-secondary-shadow;
+
+			@include nightmode {
+				background: $secondary-color-nightmode;
+			}
 		}
 
 		&:active {
@@ -298,6 +330,10 @@ span.multi-count {
 	background: url("images/general.png") -58px -93px/128px no-repeat $sidebar-button-secondary-color;
 	border-top-right-radius: $sidebar-section-border-radius;
 	border-bottom-right-radius: $sidebar-section-border-radius;
+
+	@include nightmode {
+		background-color: $secondary-color-nightmode;
+	}
 
 	.submit-text & {
 		background-position: -93px -58px;

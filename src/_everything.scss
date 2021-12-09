@@ -699,16 +699,6 @@ body #progressIndicator {
 
 // Misc. nightmode styles
 // TODO: move all these to the elements they style and use `@include nightmode`
-.res-nightmode .side {
-	background: repeating-linear-gradient(45deg, #1f1f1f, #1f1f1f 2px, #282828 2px, #282828 2.8px) 0/4px 4px;
-	border-color: #0f0f0f !important;
-}
-
-.res-nightmode .titlebox,
-.res-nightmode .linkinfo {
-	box-shadow: inset 0 0 0 1px #0f0f0f;
-	background: #2f2f2f !important;
-}
 
 .res-nightmode .side .redditname,
 .res-nightmode .sidecontentbox .title,
@@ -717,29 +707,10 @@ body #progressIndicator {
 	background-color: $primary-color-nightmode !important;
 }
 
-.res-nightmode .sidecontentbox .content {
-	background: #2f2f2f !important;
-	box-shadow: 0 -5px $primary-color-nightmode;
-	border-color: #0f0f0f !important;
-}
-
-.res-nightmode .subscribe-button .option,
-.res-nightmode .side a.helplink,
-.res-nightmode .side .md h1 a,
-.res-nightmode .sidecontentbox .title .collapse-button {
-	background: $secondary-color-nightmode !important;
-	color: inherit;
-}
-
 .res-nightmode .wiki-page .pageactions .wikiaction-current {background: $secondary-color-nightmode!important}
 .res-nightmode .morelink a {
 	background: $primary-color-nightmode;
 	color: #FFF !important;
-}
-
-.res-nightmode .morelink a:hover,
-.res-nightmode .morelink a::after {
-	background-color: $secondary-color-nightmode;
 }
 
 .res-nightmode .wiki-page > .content > span {
