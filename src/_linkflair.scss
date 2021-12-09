@@ -39,7 +39,7 @@
 
 /* "Misleading" flair - meant to be edited to make corrections to titles */
 .linkflair-misleading .linkflairlabel {
-	color: #e02424!important;
+	color: #e02424 !important;
 	font-weight: 900;
 	background: white!important;
 	max-width: none;
@@ -67,27 +67,33 @@
 	border: 1px solid;
 	color: white !important; // !important to override spoiler text color
 }
+
 // Color styles
 .linkflair-green a.title {
 	background: #46b141;
 	border-color: #090;
 	&:hover {background: #090}
 }
+
 .linkflair-blue a.title {
 	background: #6a9de6;
 	border-color: #557eb8;
 	&:hover {background: #557eb8}
 }
+
 .linkflair-red a.title {
 	background: #de3954;
 	border-color: #ce223e;
 	&:hover {background: #ce223e}
 }
+
 .linkflair-palered a.title {
 	background: #e97b8d;
 	border-color: #e35970;
 	&:hover {background: #e35970}
 }
+
+// TODO: remove these one-off rules, don't need them anymore
 div#thing_t3_f81tvr  {
 	background: #ffeb80;
 }
@@ -95,10 +101,14 @@ div#thing_t3_f81tvr  {
 	background:black;
 }
 
+// Add text to the title for AMA flairs
+.linkflair-palered a.title:before {
+	content: "[Finished] ";
+}
 
-// Add text to the title for certain things
-.linkflair-palered a.title:before {content: "[Finished] "}
-.linkflair-ongoing a.title:before {content: "[Ongoing] "}
+.linkflair-ongoing a.title:before {
+	content: "[Ongoing] ";
+}
 
 // Post filter stuff
 // xn - No NSFW
