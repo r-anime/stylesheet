@@ -2,6 +2,11 @@
 // TODO: some stuff is still hardcoded, also can 100% rewrite this to accept
 //       an arbitrary number of images
 
+// For 2 images, set both to 300px
+// For just 1 image, set $sidebar-image-other-height to 0
+$sidebar-image-height: 300px;
+$sidebar-image-other-height: 300px;
+
 // Leave appropriate room at the top of the sidebar for the
 // image + the absolutely-positioned search bar
 .side {
