@@ -79,7 +79,7 @@ body > .content,
 	> .spacer {
 		margin: 0;
 		
-		+ spacer {
+		+ .spacer {
 			margin-top: $sidebar-padding;
 		}
 	}
