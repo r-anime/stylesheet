@@ -94,11 +94,13 @@
 	&:hover {background: #e35970}
 }
 
-// TODO: remove these one-off rules, don't need them anymore
-div#thing_t3_swknu8  {
+// Gold Award backgrounds for old.reddit
+div#thing_t3_swknu8,
+div#thing_t3_swql95 {
 	background: #ffeb80;
 }
-.res-nightmode div#thing_t3_swknu8 {
+.res-nightmode div#thing_t3_swknu8,
+.res-nightmode div#thing_t3_swql95 {
 	background:black;
 }
 
