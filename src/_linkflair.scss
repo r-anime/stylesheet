@@ -20,6 +20,7 @@
 .linkflair-official-media .linkflairlabel {background: #0AA18F !important}
 .linkflair-news           .linkflairlabel {background: #FF4500 !important}
 .linkflair-video          .linkflairlabel {background: #CC3600 !important}
+.linkflair-video-edit     .linkflairlabel {background: #800080 !important}
 .linkflair-fanart         .linkflairlabel {background: #73AD34 !important}
 .linkflair-fanart-oc      .linkflairlabel {background: #94e044 !important}
 .linkflair-fanart-misc    .linkflairlabel {background: #349e48 !important}
@@ -35,7 +36,7 @@
 .linkflair-episode        .linkflairlabel {background: #005BA1 !important}
 .linkflair-weekly         .linkflairlabel {background: #FF56CC !important}
 .linkflair-recommendation .linkflairlabel {background: #373C3F !important}
-.linkflair-meme           .linkflairlabel {background: #800080 !important}
+.linkflair-meme           .linkflairlabel {background: #EDEFF1 !important; color: #000 !important;}
 
 /* "Misleading" flair - meant to be edited to make corrections to titles */
 .linkflair-misleading .linkflairlabel {
@@ -93,11 +94,13 @@
 	&:hover {background: #e35970}
 }
 
-// TODO: remove these one-off rules, don't need them anymore
-div#thing_t3_f81tvr  {
+// Gold Award backgrounds for old.reddit
+div#thing_t3_swknu8,
+div#thing_t3_swql95 {
 	background: #ffeb80;
 }
-.res-nightmode div#thing_t3_f81tvr {
+.res-nightmode div#thing_t3_swknu8,
+.res-nightmode div#thing_t3_swql95 {
 	background:black;
 }
 
@@ -131,12 +134,13 @@ div#thing_t3_f81tvr  {
 [lang=xq] .link.linkflair-question,
 // xr - No Recommendations
 [lang=xr] .link.linkflair-recommendation,
-// xa - No "Light Media" (Fanart, Cosplay, Clips, Official Media, Questions, Recommendations)
+// xa - No "Light Media" (Fanart, Cosplay, Clips, Video Edits, Official Media, Questions, Recommendations)
 [lang=xa] .link.linkflair-fanart,
 [lang=xa] .link.linkflair-fanart-oc,
 [lang=xa] .link.linkflair-fanart-misc,
 [lang=xa] .link.linkflair-cosplay,
 [lang=xa] .link.linkflair-clip,
+[lang=xa] .link.linkflair-video-edit,
 [lang=xa] .link.linkflair-official-media,
 [lang=xa] .link.linkflair-recommendation,
 [lang=xa] .link.linkflair-question {
