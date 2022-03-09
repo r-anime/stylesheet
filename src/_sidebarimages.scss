@@ -71,7 +71,7 @@
 	background-size: cover;
 
 	// rotating sidebar - wouldn't go under 40 seconds since it gets annoying to look at
-	animation: sidb 50s steps(3, end) infinite;
+	animation: sidb 33s steps(2, end) infinite;
 
 	// you get the idea
 	.search-page & {
@@ -91,5 +91,5 @@
 
 @keyframes sidb {
 	from { background-position: 0 0px; }
-	to { background-position: -900px 0px;}
+	to { background-position: -600px 0px;}
 }
