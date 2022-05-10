@@ -323,7 +323,7 @@ $static-comment-faces: (
 				"harukathink": ("height": 160, "width": 112, "position": 8139),
 				"kannathumbs": ("height": 162, "width": 150, "position": 8289),
 				"konosubawot4": ("height": 166, "width": 129, "position": 8418))),
-		33: ("sprite-sheet": "cf-static-046", "total-width": 7293, "items": ("araragi-1": ("height": 50, "width": 100, "position": 100),
+		33: ("sprite-sheet": "cf-static-046", "total-width": 7047, "items": ("araragi-1": ("height": 50, "width": 100, "position": 100),
 				"yui-crying": ("height": 80, "width": 78, "position": 178),
 				"facepalm": ("height": 80, "width": 80, "position": 258),
 				"gununu": ("height": 80, "width": 107, "position": 365),
@@ -357,19 +357,21 @@ $static-comment-faces: (
 				"nicoisdone": ("height": 151, "width": 129, "position": 4253),
 				"sideeyes": ("height": 161, "width": 129, "position": 4382),
 				"konosubawot": ("height": 167, "width": 129, "position": 4511))),
-		34: ("sprite-sheet": "cf-static-046", "total-width": 7293, "items": (
-				"SeasonalApproval": ("height": 120, "width": 188, "position": 4699),
-				"SeasonalConfused": ("height": 120, "width": 213, "position": 4912),
-				"SeasonalCool": ("height": 120, "width": 213, "position": 5125),
-				"SeasonalDisapproval": ("height": 120, "width": 213, "position": 5338),
-				"SeasonalDisdain": ("height": 120, "width": 213, "position": 5551),
-				"SeasonalHype": ("height": 120, "width": 213, "position": 5764),
-				"SeasonalLaugh": ("height": 120, "width": 213, "position": 5977),
-				"SeasonalListen": ("height": 120, "width": 213, "position": 6190),
-				"SeasonalLove": ("height": 120, "width": 213, "position": 6403),
-				"SeasonalShock": ("height": 120, "width": 213, "position": 6616),
-				"SeasonalTired": ("height": 120, "width": 213, "position": 6829),
-				"SeasonalDepression": ("height": 151, "width": 130, "position": 6959),
-				"SeasonalPout": ("height": 151, "width": 173, "position": 7132),
-				"SeasonalThink": ("height": 151, "width": 161, "position": 7293)))
+
+				# The height needs to be an odd number to stick to the top of image
+		34: ("sprite-sheet": "cf-static-046", "total-width": 7047, "items": (
+				"SeasonalApproval": ("height": 115, "width": 167, "position": 4678),
+				"SeasonalConfused": ("height": 115, "width": 204, "position": 4882),
+				"SeasonalCool": ("height": 115, "width": 204, "position": 5086),
+				"SeasonalDisapproval": ("height": 115, "width": 170, "position": 5256),
+				"SeasonalDisdain": ("height": 115, "width": 204, "position": 5460),
+				"SeasonalHype": ("height": 115, "width": 164, "position": 5624),
+				"SeasonalLaugh": ("height": 115, "width": 193, "position": 5817),
+				"SeasonalListen": ("height": 115, "width": 204, "position": 6021),
+				"SeasonalShock": ("height": 115, "width": 204, "position": 6225),
+				"SeasonalTired": ("height": 115, "width": 182, "position": 6407),
+				"SeasonalLove": ("height": 121, "width": 176, "position": 6583),
+				"SeasonalDepression": ("height": 151, "width": 130, "position": 6713),
+				"SeasonalPout": ("height": 151, "width": 173, "position": 6886),
+				"SeasonalThink": ("height": 151, "width": 161, "position": 7047)))
 );
