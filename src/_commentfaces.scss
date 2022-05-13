@@ -34,7 +34,7 @@
 
 // Returns the selector of the Comment Face.
 @function cf-selector($comment-face) {
-	@return ".md [href=\"\##{$comment-face}\"]";
+	@return ".md [href=\"\##{$comment-face}\" i]";
 }
 
 // A list of comment faces that are not meant for direct use.
