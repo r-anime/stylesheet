@@ -4,6 +4,7 @@ $header-snoo-reserved-width: $header-snoo-width + 2 * $header-snoo-padding-horiz
 	height: $header-height;
 	border-bottom: 0;
 	box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+	text-shadow: 0 0 0.1em black, 0 0 0.2em black, 0 0 0.3em black;
 
 	// Slight optimization - if we use the same header for light and dark modes,
 	// we can just use !important instead of explicitly styling for nightmode
@@ -149,7 +150,6 @@ $header-snoo-reserved-width: $header-snoo-width + 2 * $header-snoo-padding-horiz
 	color: #FFF;
 	font: normal 34px "Helvetica", "Arial", sans-serif;
 	text-transform: capitalize;
-	text-shadow: 0 0 0.1em black, 0 0 0.2em black;
 
 	// align subreddit name with tabmenu text
 	margin-left: $header-tabmenu-padding-horizontal;
@@ -220,7 +220,6 @@ $header-snoo-reserved-width: $header-snoo-width + 2 * $header-snoo-padding-horiz
 	background-color: transparent!important;
 	border-top-left-radius: 0;
 	border-bottom-left-radius: 5px;
-	text-shadow: 0 0 0.1em black, 0 0 0.2em black,  0 0 0.3em black;
 }
 
 #header-bottom-right span,
