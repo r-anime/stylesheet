@@ -220,6 +220,7 @@ $header-snoo-reserved-width: $header-snoo-width + 2 * $header-snoo-padding-horiz
 	background-color: transparent!important;
 	border-top-left-radius: 0;
 	border-bottom-left-radius: 5px;
+	text-shadow: 0 0 0.1em black, 0 0 0.2em black,  0 0 0.3em black;
 }
 
 #header-bottom-right span,
