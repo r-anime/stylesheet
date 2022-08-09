@@ -2,6 +2,7 @@ import logging
 import os
 
 import click
+import mintotp
 import verboselogs
 from ruamel.yaml import YAML
 
@@ -52,6 +53,13 @@ from subreddit import Subreddit
     help="The redirect URI associated with your registered Reddit "
     "application. Can be set by REDDIT_REDIRECT_URI environment variable.",
 )
+@click.option(
+    "--totp_secret",
+    required=False,
+    envvar="REDDIT_TOTP_SECRET",
+    help="The TOTP hex secret of the Reddit account if 2FA is enabled. Can be set by "
+         "REDDIT_TOTP_SECRET environment variable.",
+)
 def main(
     config_file,
     client_id,
@@ -59,6 +67,7 @@ def main(
     username,
     password,
     redirect_uri,
+    totp_secret=None,
 ):
     config = Config(config_file)
     config.setup_logging()
@@ -77,6 +86,10 @@ def main(
         logger.verbose(f"CSS size: {len(updater.css_content)} bytes")
 
         logger.info("Authenticating to Reddit:")
+
+        if totp_secret:
+            password = f"{password}:{mintotp.totp(totp_secret)}"
+
         subreddit = Subreddit(
             subreddit_name=data.subreddit_name,
             client_id=client_id,

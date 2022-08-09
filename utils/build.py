@@ -2,6 +2,7 @@ import logging
 import os
 
 import click
+import mintotp
 import verboselogs
 
 from config import Config
@@ -116,6 +117,13 @@ def travis_revision_comment():
     is_flag=True,
     help="Skip the validation performed by W3C CSS Validator Web Service.",
 )
+@click.option(
+    "--totp_secret",
+    required=False,
+    envvar="REDDIT_TOTP_SECRET",
+    help="The TOTP hex secret of the Reddit account if 2FA is enabled. Can be set by "
+         "REDDIT_TOTP_SECRET environment variable.",
+)
 def main(
     subreddit_name,
     revision_comment,
@@ -130,6 +138,7 @@ def main(
     password,
     redirect_uri,
     skip_css_validation,
+    totp_secret=None,
 ):
     config = Config(config_file)
     config.setup_logging()
@@ -162,6 +171,10 @@ def main(
             "All image references in the CSS are matching with image files.")
 
         logger.info("Connecting to Reddit:")
+
+        if totp_secret:
+            password = f"{password}:{mintotp.totp(totp_secret)}"
+
         subreddit = Subreddit(
             subreddit_name=subreddit_name,
             client_id=client_id,
