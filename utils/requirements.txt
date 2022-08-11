@@ -6,3 +6,4 @@ ruamel.yaml
 anyconfig
 coloredlogs
 verboselogs
+mintotp
