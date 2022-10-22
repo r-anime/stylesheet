@@ -114,39 +114,3 @@ div#thing_t3_swql95 {
 .linkflair-ongoing a.title:before {
 	content: "[Ongoing] ";
 }
-
-// Post filter stuff
-// xn - No NSFW
-[lang=xn] .link.over18,
-// xs - No Spoilers
-[lang=xs] .link.spoiler,
-// xb - No News
-[lang=xb] .link.linkflair-news,
-// xf - No Fanart
-[lang=xf] .link.linkflair-fanart,
-[lang=xf] .link.linkflair-fanart-oc,
-[lang=xf] .link.linkflair-fanart-misc,
-// xc - No Cosplay
-[lang=xc] .link.linkflair-cosplay,
-// xd - No Clips
-[lang=xd] .link.linkflair-clip,
-// xe - No Contest
-[lang=xe] .link.linkflair-contest,
-// xm - No Official Media
-[lang=xm] .link.linkflair-official-media,
-// xq - No Questions
-[lang=xq] .link.linkflair-question,
-// xr - No Recommendations
-[lang=xr] .link.linkflair-recommendation,
-// xa - No "Light Media" (Fanart, Cosplay, Clips, Video Edits, Official Media, Questions, Recommendations)
-[lang=xa] .link.linkflair-fanart,
-[lang=xa] .link.linkflair-fanart-oc,
-[lang=xa] .link.linkflair-fanart-misc,
-[lang=xa] .link.linkflair-cosplay,
-[lang=xa] .link.linkflair-clip,
-[lang=xa] .link.linkflair-video-edit,
-[lang=xa] .link.linkflair-official-media,
-[lang=xa] .link.linkflair-recommendation,
-[lang=xa] .link.linkflair-question {
-	@extend %display-none;
-}
