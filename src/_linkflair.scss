@@ -1,6 +1,7 @@
 /** Post flairs **/
 .linkflairlabel {
 	vertical-align: middle;
+	border: none;
 	font-size: 12px;
 	text-align: center;
 	padding: 2px 6px;
@@ -13,6 +14,32 @@
 	color: #FFF !important; // !important for nightmode
 	min-width: 95px;
 }
+
+// Colors pulled from redesign, !important for nightmode
+.linkflair-discussion     .linkflairlabel {background: #7193FF !important}
+.linkflair-rewatch        .linkflairlabel {background: #0079D3 !important}
+.linkflair-official-media .linkflairlabel {background: #0AA18F !important}
+.linkflair-news           .linkflairlabel {background: #FF4500 !important}
+.linkflair-video          .linkflairlabel {background: #CC3600 !important}
+.linkflair-video-edit     .linkflairlabel {background: #800080 !important}
+.linkflair-fanart         .linkflairlabel {background: #73AD34 !important}
+.linkflair-fanart-oc      .linkflairlabel {background: #94e044 !important}
+.linkflair-fanart-misc    .linkflairlabel {background: #349e48 !important}
+.linkflair-infographic    .linkflairlabel {background: #349e48 !important}
+.linkflair-cosplay        .linkflairlabel {background: #CC5289 !important}
+.linkflair-wt             .linkflairlabel {background: #CCAC2B !important}
+.linkflair-writing        .linkflairlabel {background: #DDBD37 !important}
+.linkflair-clip           .linkflairlabel {background: #9d76b8 !important}
+.linkflair-satire         .linkflairlabel {background: #6B6031 !important}
+.linkflair-question       .linkflairlabel {background: #9E8D49 !important}
+.linkflair-contest        .linkflairlabel {background: #007373 !important}
+.linkflair-misc           .linkflairlabel {background: #646D73 !important}
+.linkflair-writing-club   .linkflairlabel {background: #E55A76 !important}
+.linkflair-episode        .linkflairlabel {background: #005BA1 !important}
+.linkflair-weekly         .linkflairlabel {background: #FF56CC !important}
+.linkflair-recommendation .linkflairlabel {background: #373C3F !important}
+.linkflair-meme           .linkflairlabel {background: #EDEFF1 !important; color: #000 !important;}
+.linkflair-merch          .linkflairlabel {background: #BBBDBF !important; color: #000 !important;}
 
 /* "Misleading" flair - meant to be edited to make corrections to titles */
 .linkflair-misleading .linkflairlabel {
