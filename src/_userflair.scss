@@ -45,6 +45,15 @@
 }
 
 // span containing user flair also needs to have height increased otherwise emoji get cut off above 16px default
-//.tagline .flairrichtext {
+//.flairrichtext {
 //	height: 20px;
 //}
+
+// Make flairs bigger when hovering over them
+.flairrichtext:hover {
+	height:24px
+}
+.flairrichtext:hover .flairemoji {
+	width:24px;
+	height:24px
+}
