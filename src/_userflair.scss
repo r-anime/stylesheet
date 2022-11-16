@@ -38,13 +38,13 @@
 	}
 }
 
-// Manually set icons to 24x24 for nice scaling
+// Manually set icons to 16x16 for nice scaling
 .flairemoji {
-	width: 24px;
-	height: 24px;
+	width: 16px;
+	height: 16px;
 }
 
 // span containing user flair also needs to have height increased otherwise emoji get cut off above 16px default
-.tagline .flairrichtext {
-	height: 24px;
-}
+//.tagline .flairrichtext {
+//	height: 20px;
+//}
