@@ -13,12 +13,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
 
-    - name: Use Python 3
-      uses: actions/setup-python@v2
+    - name: Use Python 3.11
+      uses: actions/setup-python@v4
       with:
-        python-version: '3.6'
+        python-version: '3.11'
 
     - name: Install pip requirements
       run: pip install -r utils/requirements.txt
@@ -47,12 +47,12 @@ jobs:
     needs: build
     steps:
     - name: Checkout
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
 
-    - name: Use Python 3
-      uses: actions/setup-python@v2
+    - name: Use Python 3.11
+      uses: actions/setup-python@v4
       with:
-        python-version: '3.6'
+        python-version: '3.11'
 
     - name: Install pip requirements
       run: |
