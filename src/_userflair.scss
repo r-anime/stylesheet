@@ -44,16 +44,14 @@
 	height: 16px;
 }
 
-// span containing user flair also needs to have height increased otherwise emoji get cut off above 16px default
-//.flairrichtext {
-//	height: 20px;
-//}
-
 // Make flairs bigger when hovering over them
 .flairrichtext:hover {
-	height:24px
+	height:32px;
+	// Keep rest of page from moving due to flair size increase.
+	// reddit has a default -1px margin-top for flairs so include that as well.
+	margin-top: -17px !important;
 }
 .flairrichtext:hover .flairemoji {
-	width:24px;
-	height:24px
+	width:32px;
+	height:32px;
 }
