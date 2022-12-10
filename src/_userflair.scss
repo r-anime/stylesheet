@@ -1,13 +1,13 @@
 // User list flairs
 .flair {
 	display: inline-flex;
-	align-items: center;
-	vertical-align: middle;
+	align-items: flex-start;
+	//vertical-align: middle;
 	padding: 0;
 	background-color: #f7f7f7 !important;
 	border: 0;
 	border-radius: 2px;
-	box-shadow: inset 0 0 0 1px currentcolor;
+	//box-shadow: inset 0 0 0 1px currentcolor;
 	font-size: 0 !important;
 	color: #3e5267 !important;
 	cursor: default;
@@ -48,8 +48,7 @@
 .flairrichtext:hover {
 	height:32px;
 	// Keep rest of page from moving due to flair size increase.
-	// reddit has a default -1px margin-top for flairs so include that as well.
-	margin-top: -17px !important;
+	margin-bottom: -16px !important;
 }
 .flairrichtext:hover .flairemoji {
 	width:32px;
