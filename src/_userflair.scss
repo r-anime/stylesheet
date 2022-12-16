@@ -1,13 +1,13 @@
 // User list flairs
 .flair {
 	display: inline-flex;
-	align-items: center;
-	vertical-align: middle;
+	align-items: flex-start;
+	//vertical-align: middle;
 	padding: 0;
 	background-color: #f7f7f7 !important;
 	border: 0;
 	border-radius: 2px;
-	box-shadow: inset 0 0 0 1px currentcolor;
+	//box-shadow: inset 0 0 0 1px currentcolor;
 	font-size: 0 !important;
 	color: #3e5267 !important;
 	cursor: default;
@@ -44,7 +44,13 @@
 	height: 16px;
 }
 
-// span containing user flair also needs to have height increased otherwise emoji get cut off above 16px default
-//.tagline .flairrichtext {
-//	height: 20px;
-//}
+// Make flairs bigger when hovering over them
+.flairrichtext:hover {
+	height:32px;
+	// Keep rest of page from moving due to flair size increase.
+	margin-bottom: -16px !important;
+}
+.flairrichtext:hover .flairemoji {
+	width:32px;
+	height:32px;
+}
