@@ -37,7 +37,7 @@
 
 	// Matching RES, this is necessary because RES nightmode doesn't use !important unless there's a template being
 	// used which sets background-color on the element (rule is .res-nightmode .flairrichtext[style*="color"]).
-	&.res-nightmode {
+	.res-nightmode & {
 		background-color: #404040 !important;
 		color: #c8c8c8 !important;
 	}
