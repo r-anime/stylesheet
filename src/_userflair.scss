@@ -2,14 +2,12 @@
 .flair {
 	display: inline-flex;
 	align-items: flex-start;
-	//vertical-align: middle;
 	padding: 0;
 	background-color: #f7f7f7 !important;
+	color: #3e5267 !important;
 	border: 0;
 	border-radius: 2px;
-	//box-shadow: inset 0 0 0 1px currentcolor;
 	font-size: 0 !important;
-	color: #3e5267 !important;
 	cursor: default;
 
 	// 200ms smooth transition from normal to hover and back. When going from
@@ -35,6 +33,13 @@
 		> :not([class]) {
 			margin: 0 5px;
 		}
+	}
+
+	// Matching RES, this is necessary because RES nightmode doesn't use !important unless there's a template being
+	// used which sets background-color on the element (rule is .res-nightmode .flairrichtext[style*="color"]).
+	&.res-nightmode {
+		background-color: #404040 !important;
+		color: #c8c8c8 !important;
 	}
 }
 
