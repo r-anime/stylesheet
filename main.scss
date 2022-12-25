@@ -1,6 +1,6 @@
 /*!
  * /r/anime stylesheet
- * maintained by /u/bainos, /u/eritbh
+ * maintained by /u/durinthal, /u/eritbh
  * https://github.com/r-anime/stylesheet
  * public domain (http://creativecommons.org/publicdomain/zero/1.0)
  */
@@ -12,7 +12,6 @@
 
 // Customizations
 @import "subcount"; // Contains the sidebar subscriber/online user phrases
-@import "flairs"; // User CSS flair texts, etc. (needs to be before main theme)
 @import "banner"; // Custom banner images for special events
 
 // Main theme style
