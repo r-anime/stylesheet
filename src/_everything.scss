@@ -771,7 +771,7 @@ body #progressIndicator {
 
 // Replace text post submission description
 #text-desc {
-	@extend %font-size-zero;
+	font-size: 0;
 }
 
 #text-desc::after {
