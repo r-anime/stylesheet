@@ -111,7 +111,7 @@ $sidebar-image-other-height: 300px;
 // Hide sub creator from community info section
 .titlebox .bottom,
 .titlebox .bottom .author::after {
-	@extend %font-size-zero;
+	font-size: 0;
 }
 .titlebox .bottom .flair {
 	@extend %display-none;
