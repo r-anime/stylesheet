@@ -22,18 +22,3 @@ a.author.moderator {
 .author.submitter::after {
 	color: inherit;
 }
-
-// We may set font-size: 0 from a user title, but we *always* want the ::before
-// and ::after to show up, since they're often used to replace the username. The
-// sizes used here is pulled from Reddit code.
-.author::before,
-.author::after {
-	font-size: small;
-	
-	// Ceratin places have usernames displayed smaller, so we adapt
-	.tagline &,
-	.bottom &,
-	.parent & {
-		font-size: x-small;
-	}
-}
