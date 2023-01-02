@@ -28,6 +28,9 @@ $flair-icon-size-hover: 32px;
 	// Text in the flair starts out hidden
 	font-size: 0 !important;
 
+	// Avoid other text on the page being rendered on top of expanded flairs
+	position: relative;
+
 	// 200ms smooth transition from normal to hover and back. When going from
 	// hovered back to normal, delay for 350ms in case the user was trying to
 	// select the flair text and their mouse briefly left the flair area
