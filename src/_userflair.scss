@@ -1,14 +1,35 @@
-// User list flairs
+$flair-icon-size: 16px;
+$flair-icon-size-hover: 32px;
+
+// Styles for all user flairs
 .flair {
-	display: inline-flex;
-	align-items: flex-start;
-	padding: 0;
 	background-color: #f7f7f7 !important;
 	color: #3e5267 !important;
 	border: 0;
 	border-radius: 2px;
-	font-size: 0 !important;
 	cursor: default;
+
+	// Matching RES, this is necessary because RES nightmode doesn't use !important unless there's a template being
+	// used which sets background-color on the element (rule is .res-nightmode .flairrichtext[style*="color"]).
+	.res-nightmode & {
+		background-color: #404040 !important;
+		color: #c8c8c8 !important;
+	}
+}
+
+// Flairs with emojis in them expand on hover
+.flairrichtext {
+	// Extra layout stuff
+	display: inline-flex;
+	align-items: flex-start;
+	padding: 0;
+	height: auto;
+
+	// Text in the flair starts out hidden
+	font-size: 0 !important;
+
+	// Avoid other text on the page being rendered on top of expanded flairs
+	position: relative;
 
 	// 200ms smooth transition from normal to hover and back. When going from
 	// hovered back to normal, delay for 350ms in case the user was trying to
@@ -21,41 +42,33 @@
 		transition: inherit;
 	}
 
+	// Manually set icon sizes for nice scaling
+	.flairemoji {
+		width: $flair-icon-size;
+		height: $flair-icon-size;
+	}
+
 	// Expand the flair on hover
 	&:hover {
-		width: auto;
 		font-size: x-small !important;
+		line-height: $flair-icon-size-hover;
+		// Keep rest of page from moving due to flair size increase.
+		margin-bottom: $flair-icon-size - $flair-icon-size-hover !important;
 
 		// No delay when going from normal to hover, open the flair immediately
 		transition-delay: 0ms;
 
+		// Icons get bigger
+		.flairemoji {
+			width: $flair-icon-size-hover;
+			height: $flair-icon-size-hover;
+		}
+
 		// Give some margin to the text component of the flair for readability
+		// (this is here because we don't include spaces between emojis and text
+		// to save characters)
 		> :not([class]) {
 			margin: 0 5px;
 		}
 	}
-
-	// Matching RES, this is necessary because RES nightmode doesn't use !important unless there's a template being
-	// used which sets background-color on the element (rule is .res-nightmode .flairrichtext[style*="color"]).
-	.res-nightmode & {
-		background-color: #404040 !important;
-		color: #c8c8c8 !important;
-	}
-}
-
-// Manually set icons to 16x16 for nice scaling
-.flairemoji {
-	width: 16px;
-	height: 16px;
-}
-
-// Make flairs bigger when hovering over them
-.flairrichtext:hover {
-	height:32px;
-	// Keep rest of page from moving due to flair size increase.
-	margin-bottom: -16px !important;
-}
-.flairrichtext:hover .flairemoji {
-	width:32px;
-	height:32px;
 }
