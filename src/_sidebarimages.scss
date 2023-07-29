@@ -83,13 +83,12 @@
 	}
 }
 
+// Position the third image
 .side [href*="#sidebarimg3"] {
 	top:
 		$header-height +
 		$sidebar-padding +
 		$sidebar-search-height +
-		$sidebar-section-margin-vertical +
-		$sidebar-image-height +
 		$sidebar-section-margin-vertical +
 		$sidebar-image-height +
 		$sidebar-section-margin-vertical;
