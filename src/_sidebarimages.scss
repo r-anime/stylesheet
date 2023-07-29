@@ -83,6 +83,31 @@
 	}
 }
 
+.side [href*="#sidebarimg3"] {
+	top:
+		$header-height +
+		$sidebar-padding +
+		$sidebar-search-height +
+		$sidebar-section-margin-vertical +
+		$sidebar-image-height +
+		$sidebar-section-margin-vertical +
+		$sidebar-image-height +
+		$sidebar-section-margin-vertical;
+	height: $sidebar-image-other-height;
+	background-image: url("images/sidebar3.png");
+	background-size: cover;
+
+	.search-page & {
+		top:
+			$header-height +
+			$sidebar-section-margin-vertical +
+			$sidebar-image-height +
+			$sidebar-section-margin-vertical +
+			$sidebar-image-height +
+			$sidebar-section-margin-vertical;
+	}
+}
+
 // Move the search bar above the images
 .side #search {
 	position: absolute;
