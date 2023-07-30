@@ -18,7 +18,9 @@
 			$sidebar-section-margin-vertical +
 			$sidebar-image-height +
 			$sidebar-section-margin-vertical +
-			$sidebar-image-other-height;
+			$sidebar-image-other-height +
+			$sidebar-section-margin-vertical +
+			$sidebar-image-other-mini-height;
 	}
 }
 
@@ -36,8 +38,9 @@
 			$sidebar-section-margin-vertical +
 			$sidebar-image-height +
 			$sidebar-section-margin-vertical +
-			$sidebar-image-other-height +
-			$sidebar-section-margin-vertical;
+			$sidebar-image-other-height
+			$sidebar-section-margin-vertical +
+			$sidebar-image-other-mini-height;
 	}
 }
 
@@ -77,6 +80,32 @@
 	.search-page & {
 		top:
 			$header-height +
+			$sidebar-section-margin-vertical +
+			$sidebar-image-height +
+			$sidebar-section-margin-vertical;
+	}
+}
+
+// Position the third image
+.side [href*="#sidebarimg3"] {
+	top:
+		$header-height +
+		$sidebar-padding +
+		$sidebar-search-height +
+		$sidebar-section-margin-vertical +
+		$sidebar-image-height +
+		$sidebar-section-margin-vertical +
+		$sidebar-image-other-height + 
+		$sidebar-section-margin-vertical;
+	height: $sidebar-image-other-mini-height;
+	background-image: url("images/sidebar3.png");
+	background-size: cover;
+
+	.search-page & {
+		top:
+			$header-height +
+			$sidebar-section-margin-vertical +
+			$sidebar-image-height +
 			$sidebar-section-margin-vertical +
 			$sidebar-image-height +
 			$sidebar-section-margin-vertical;
