@@ -1,124 +1,107 @@
 // Sidebar images
-// TODO: some stuff is still hardcoded, also can 100% rewrite this to accept
-//       an arbitrary number of images
 
-// Leave appropriate room at the top of the sidebar for the
-// image + the absolutely-positioned search bar
-.side {
-	@if $sidebar-image-other-height == 0 {
-		padding-top:
-			$sidebar-section-margin-vertical +
-			$sidebar-search-height +
-			$sidebar-section-margin-vertical +
-			$sidebar-image-height;
-	} @else {
-		padding-top:
-			$sidebar-section-margin-vertical +
-			$sidebar-search-height +
-			$sidebar-section-margin-vertical +
-			$sidebar-image-height +
-			$sidebar-section-margin-vertical +
-			$sidebar-image-other-height +
-			$sidebar-section-margin-vertical +
-			$sidebar-image-other-mini-height;
-	}
-}
+/*
+$sidebar-images: (
+	// Map keys are identifiers used at the end of links in the sidebar markdown
+	// e.g. this image would use the markdown [](https://example.com#some_img)
+	"some_img": (
+		// The height of the image, in CSS pixels - all images are 300 CSS
+		// pixels wide. Actual image file dimensions should be doubled for HiDPI
+		// support, i.e. 600px wide and (2x this value) tall
+		"height": 300px,
+		// Reference to the image - make sure you put it in the images folder!
+		"image": url("images/sidebar.png"),
+	),
 
-// Search bar isn't there on search pages, it's moved to #content. Also, on
-// search pages, the submit buttons are the first `.spacer`s which means they
-// don't have the normal top margin, which means we need to add that back.
-.search-page .side {
-	@if $sidebar-image-other-height == 0 {
-		padding-top:
-			$sidebar-section-margin-vertical +
-			$sidebar-image-height +
-			$sidebar-section-margin-vertical;
-	} @else {
-		padding-top:
-			$sidebar-section-margin-vertical +
-			$sidebar-image-height +
-			$sidebar-section-margin-vertical +
-			$sidebar-image-other-height
-			$sidebar-section-margin-vertical +
-			$sidebar-image-other-mini-height;
-	}
-}
+	// ... etc for more images
+);
+*/
 
-// Position the first image and also set some stuff for both images
-.side [href*='#sidebarimg'] {
-	position: absolute;
-	top: $header-height + $sidebar-section-margin-vertical + $sidebar-search-height + $sidebar-section-margin-vertical;
-	right: $sidebar-padding;
-	width: 300px;
-	height: $sidebar-image-height;
-	border-radius: $sidebar-section-border-radius;
-	background: url("images/sidebar.png") center/contain;
+$sidebar-images: (
+	"sidebarimg": (
+		"height": 300px,
+		"image": url("images/sidebar.png"),
+	),
+	"sidebarimg2": (
+		"height": 300px,
+		"image": url("images/sidebar2.png"),
+	),
+	"sidebarimg3": (
+		"height": 200px,
+		"image": url("images/sidebar3.png"),
+	),
+);
 
-	// Again, search bar isn't there on search pages
-	.search-page & {
-		top: $header-height + $sidebar-section-margin-vertical;
-	}
-}
+// The distance from the top of the page sidebar images need to be positioned -
+// this accounts for the height of the header as well as the height of the
+// search box and additional margins
+$sidebar-content-top:
+	$header-height
+	+ $sidebar-section-margin-vertical;
 
-// Position the second image
-.side [href*="#sidebarimg2"] {
-	top:
-		$header-height +
-		$sidebar-padding +
-		$sidebar-search-height +
-		$sidebar-section-margin-vertical +
-		$sidebar-image-height +
-		$sidebar-section-margin-vertical;
-	height: $sidebar-image-other-height;
-	background-image: url("images/sidebar2.png");
-	background-size: cover;
+// On most pages, the search bar is displayed above the images, so we need to
+// move them down further to accomodate
+$sidebar-content-top-with-search:
+	$sidebar-search-height
+	+ $sidebar-section-margin-vertical
+	+ $sidebar-content-top;
 
-	// rotating sidebar - wouldn't go under 40 seconds since it gets annoying to look at
-	animation: sidb 33s steps(2, end) infinite;
-
-	// you get the idea
-	.search-page & {
-		top:
-			$header-height +
-			$sidebar-section-margin-vertical +
-			$sidebar-image-height +
-			$sidebar-section-margin-vertical;
-	}
-}
-
-// Position the third image
-.side [href*="#sidebarimg3"] {
-	top:
-		$header-height +
-		$sidebar-padding +
-		$sidebar-search-height +
-		$sidebar-section-margin-vertical +
-		$sidebar-image-height +
-		$sidebar-section-margin-vertical +
-		$sidebar-image-other-height + 
-		$sidebar-section-margin-vertical;
-	height: $sidebar-image-other-mini-height;
-	background-image: url("images/sidebar3.png");
-	background-size: cover;
-
-	.search-page & {
-		top:
-			$header-height +
-			$sidebar-section-margin-vertical +
-			$sidebar-image-height +
-			$sidebar-section-margin-vertical +
-			$sidebar-image-height +
-			$sidebar-section-margin-vertical;
-	}
-}
-
-// Move the search bar above the images
+// Move the search bar to the very top of the sidebar, if it's here
 .side #search {
 	position: absolute;
-	top: $header-height + $sidebar-section-margin-vertical;
+	top: $sidebar-content-top;
 }
 
-@keyframes sidb {
-	from { background-position: 0 0px; }
-	to { background-position: -600px 0px;}
+// Total padding left at the top of the sidebar to make room for the absolutely
+// positioned sidebar images - the extra height of each image is added each
+// iteration
+$images-height-cumulative: 0px;
+
+// Iterate over all images and position them progressively
+@each $anchor, $details in $sidebar-images {
+	// The height of this image
+	$height: map-get($details, "height");
+	// The source of this image
+	$image: map-get($details, "image");
+
+	// Render this image in the correct location
+	.side [href*="##{$anchor}"] {
+		position: absolute;
+		top: $sidebar-content-top-with-search + $images-height-cumulative;
+		right: $sidebar-padding;
+		width: 300px;
+		height: $height;
+		border-radius: $sidebar-section-border-radius;
+		background: $image center/contain;
+
+		// Again, search bar isn't there on search pages
+		.search-page & {
+			top: $sidebar-content-top + $images-height-cumulative;
+		}
+	}
+
+	// Add this image to the cumulative height
+	$images-height-cumulative:
+		$images-height-cumulative + $height + $sidebar-section-margin-vertical;
 }
+
+// Leave appropriate room at the top of the sidebar for all the
+// absolutely-positioned images + the search bar
+.side {
+	padding-top:
+		$sidebar-section-margin-vertical
+		+ $sidebar-search-height
+		+ $images-height-cumulative;
+
+	// no sidebar search bar on search pages - move up
+	.search-page & {
+		padding-top:
+			$images-height-cumulative;
+	}
+}
+
+// old and unused - previously used for a carousel effect with two images
+// @keyframes sidb {
+// 	from { background-position: 0 0px; }
+// 	to { background-position: -600px 0px;}
+// }
