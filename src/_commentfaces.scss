@@ -27,9 +27,12 @@
  * Also, it's probably at least 2013. Did you ever take that trip
  * to Iceland?
  */
-@import "util/functions";
-@import "commentfaces-animated";
-@import "commentfaces-static";
+@use "sass:list";
+@use "sass:map";
+@use "sass:string";
+@use "util/functions";
+@use "commentfaces-animated";
+@use "commentfaces-static";
 //@import "util/SassySort";
 
 // Returns the selector of the Comment Face.
@@ -44,25 +47,25 @@ $special-comment-faces: (
 );
 
 // Removes Special Comment faces from `$static-comment-faces` and stores their properties to `$special-comment-faces`.
-@each $index, $group in $static-comment-faces {
-	$items: map-get($group, "items");
+@each $index, $group in commentfaces-static.$static-comment-faces {
+	$items: map.get($group, "items");
 	@each $comment-face, $attributes in $items {
-		@if map-has-key($special-comment-faces, $comment-face) {
-			$special-comment-faces: map-merge($special-comment-faces, ($comment-face: (
-					map-get($group, "sprite-sheet"),
-					compact-position(map-get($attributes, "position"), map-get($group, "total-width")))
+		@if map.has-key($special-comment-faces, $comment-face) {
+			$special-comment-faces: map.merge($special-comment-faces, ($comment-face: (
+					map.get($group, "sprite-sheet"),
+					functions.compact-position(map.get($attributes, "position"), map.get($group, "total-width")))
 			));
-			$static-comment-faces: map-deep-set($static-comment-faces, $index "items", map-remove($items, $comment-face));
+			$static-comment-faces: functions.map-deep-set(commentfaces-static.$static-comment-faces, $index "items", map.remove($items, $comment-face));
 		}
 	}
 }
 
-$brokencommentface: map-get($special-comment-faces, "brokencommentface");
+$brokencommentface: map.get($special-comment-faces, "brokencommentface");
 
 .md [href^="#"] {
 	display: inline-block;
 	position: relative;
-	background: image-url(nth($brokencommentface, 1)) format-px(nth($brokencommentface, 2));
+	background: functions.image-url(list.nth($brokencommentface, 1)) functions.format-px(list.nth($brokencommentface, 2));
 	width: 120px;
 	height: 154px;
 	overflow: hidden;
@@ -137,9 +140,9 @@ $brokencommentface: map-get($special-comment-faces, "brokencommentface");
 }
 
 // Manually defined
-$hisocuck_2: map-get($special-comment-faces, "hisocuck_2");
+$hisocuck_2: map.get($special-comment-faces, "hisocuck_2");
 #{cf-selector("hisocuck")}:hover {
-	background: image-url(nth($hisocuck_2, 1)) format-px(nth($hisocuck_2, 2));
+	background: functions.image-url(list.nth($hisocuck_2, 1)) functions.format-px(list.nth($hisocuck_2, 2));
 }
 
 // The following code could be used to shorten the length of Comment Face selectors. It has its shortcomings so it's
@@ -192,7 +195,7 @@ $hisocuck_2: map-get($special-comment-faces, "hisocuck_2");
 @mixin animation-keyframes($identifier, $to-position) {
 	@keyframes #{$identifier} {
 		to {
-			background-position: 0 format-px($to-position);
+			background-position: 0 functions.format-px($to-position);
 		}
 	}
 }
@@ -202,24 +205,24 @@ $animation-identifiers: ();
 // Assigns base-26 alphabet number as an identifier for the definition of Comment Face animation that ends at the given
 // position.
 @function assign-animation-identifier($to-position) {
-	$animation-identifier: alpha-base(length($animation-identifiers));
+	$animation-identifier: functions.alpha-base(list.length($animation-identifiers));
 
-	$animation-identifiers: map-merge($animation-identifiers, ($to-position: $animation-identifier)) !global;
+	$animation-identifiers: map.merge($animation-identifiers, ($to-position: $animation-identifier)) !global;
 
 	@return $animation-identifier;
 }
 
 // Generates rules of Animated Comment Faces from the Comment Face map.
-@each $sprite-sheet, $sprite-sheet-rules in $animated-comment-faces {
-	@each $comment-face, $attributes in map-get($sprite-sheet-rules, "items") {
-		$duration: map-get($attributes, "duration");
-		$is-loop: map-get($attributes, "loop");
-		$width: map-get($attributes, "width");
-		$from-position: map-get($attributes, "from-position");
-		$to-position: map-get($attributes, "to-position");
-		$steps: map-get($attributes, "frames") - if($is-loop, 0, 1);
+@each $sprite-sheet, $sprite-sheet-rules in commentfaces-animated.$animated-comment-faces {
+	@each $comment-face, $attributes in map.get($sprite-sheet-rules, "items") {
+		$duration: map.get($attributes, "duration");
+		$is-loop: map.get($attributes, "loop");
+		$width: map.get($attributes, "width");
+		$from-position: map.get($attributes, "from-position");
+		$to-position: map.get($attributes, "to-position");
+		$steps: map.get($attributes, "frames") - if($is-loop, 0, 1);
 
-		$animation-identifier: map-get($animation-identifiers, $to-position);
+		$animation-identifier: map.get($animation-identifiers, $to-position);
 
 		@if not $animation-identifier {
 			$animation-identifier: assign-animation-identifier($to-position);
@@ -228,20 +231,20 @@ $animation-identifiers: ();
 
 		// Drops the leading zero for values below 1.
 		@if $duration < 1 {
-			$duration: str-slice(#{$duration}, 2);
+			$duration: string.slice(#{$duration}, 2);
 		}
 
 		#{cf-selector($comment-face)} {
-			height: #{map-get($attributes, "height")}px;
-			width: #{map-get($attributes, "width")}px;
+			height: #{map.get($attributes, "height")}px;
+			width: #{map.get($attributes, "width")}px;
 			@if $from-position != 0 {
-				background: image-url($sprite-sheet) 0 format-px($from-position);
+				background: functions.image-url($sprite-sheet) 0 functions.format-px($from-position);
 			} @else {
-				background: image-url($sprite-sheet);
+				background: functions.image-url($sprite-sheet);
 			}
 
 			&:hover {
-				animation: unquote($animation-identifier) #{$duration}s steps($steps) if($is-loop, infinite, forwards);
+				animation: string.unquote($animation-identifier) #{$duration}s steps($steps) if($is-loop, infinite, forwards);
 			}
 		}
 	}
@@ -253,9 +256,9 @@ $aligned-positions-odd: ();
 // Returns the map of aligned Comment Faces for the given position and the parity of the given height.
 @function get-aligned-comment-faces($position, $height) {
 	@if ($height % 2 == 0) {
-		@return map-get($aligned-positions-even, $position);
+		@return map.get($aligned-positions-even, $position);
 	} @else {
-		@return map-get($aligned-positions-odd, $position);
+		@return map.get($aligned-positions-odd, $position);
 	}
 }
 
@@ -264,37 +267,37 @@ $aligned-positions-odd: ();
 // in case of odd image height).
 @function static-cf-position($position, $height) {
 	@if ($height % 2 == 0) {
-		@return format-px($position);
+		@return functions.format-px($position);
 	} @else {
-		@return unquote(format-px($position) + " 0");
+		@return string.unquote(functions.format-px($position) + " 0");
 	}
 }
 
 // Creates a map of Comment Faces aligned to the same position. Only Comment Faces grouped with default dimensions are
 // included.
-@each $index, $group in $static-comment-faces {
-	@if map-has-key($group, "default") {
-		$total-width: map-get($group, "total-width");
-		$default-width: nth(map-get($group, "default"), 1);
-		$default-height: nth(map-get($group, "default"), 2);
+@each $index, $group in commentfaces-static.$static-comment-faces {
+	@if map.has-key($group, "default") {
+		$total-width: map.get($group, "total-width");
+		$default-width: list.nth(map.get($group, "default"), 1);
+		$default-height: list.nth(map.get($group, "default"), 2);
 
-		@each $comment-face, $attributes in map-get($group, "items") {
-			$width: map-get($attributes, "width");
-			$height: map-get($attributes, "height");
+		@each $comment-face, $attributes in map.get($group, "items") {
+			$width: map.get($attributes, "width");
+			$height: map.get($attributes, "height");
 			@if $width == $default-width and $height == $default-height {
-				$position: compact-position(map-get($attributes, "position"), $total-width);
+				$position: functions.compact-position(map.get($attributes, "position"), $total-width);
 				$aligned-comment-faces: get-aligned-comment-faces($position, $height);
 
 				@if not $aligned-comment-faces {
 					$aligned-comment-faces: $comment-face;
 				} @else {
-					$aligned-comment-faces: append($aligned-comment-faces, $comment-face);
+					$aligned-comment-faces: list.append($aligned-comment-faces, $comment-face);
 				}
 
 				@if ($height % 2 == 0) {
-					$aligned-positions-even: map-merge($aligned-positions-even, ($position: $aligned-comment-faces));
+					$aligned-positions-even: map.merge($aligned-positions-even, ($position: $aligned-comment-faces));
 				} @else {
-					$aligned-positions-odd: map-merge($aligned-positions-odd, ($position: $aligned-comment-faces));
+					$aligned-positions-odd: map.merge($aligned-positions-odd, ($position: $aligned-comment-faces));
 				}
 			}
 		}
@@ -302,27 +305,27 @@ $aligned-positions-odd: ();
 }
 
 // Generates rules of Static Comment Faces from the Comment Face map.
-@each $index, $group in $static-comment-faces {
-	$sprite-sheet: map-get($group, "sprite-sheet");
+@each $index, $group in commentfaces-static.$static-comment-faces {
+	$sprite-sheet: map.get($group, "sprite-sheet");
 	$default-width: 0;
 	$default-height: 0;
-	$total-width: map-get($group, "total-width");
+	$total-width: map.get($group, "total-width");
 
-	@if map-has-key($group, "default") {
-		$default-width: nth(map-get($group, "default"), 1);
-		$default-height: nth(map-get($group, "default"), 2);
+	@if map.has-key($group, "default") {
+		$default-width: list.nth(map.get($group, "default"), 1);
+		$default-height: list.nth(map.get($group, "default"), 2);
 
 		%default-#{$index} {
 			width: #{$default-width}px;
 			height: #{$default-height}px;
-			background: image-url($sprite-sheet);
+			background: functions.image-url($sprite-sheet);
 		}
 	}
 
-	@each $comment-face, $attributes in map-get($group, "items") {
-		$background-position: compact-position(map-get($attributes, "position"), $total-width);
-		$width: map-get($attributes, "width");
-		$height: map-get($attributes, "height");
+	@each $comment-face, $attributes in map.get($group, "items") {
+		$background-position: functions.compact-position(map.get($attributes, "position"), $total-width);
+		$width: map.get($attributes, "width");
+		$height: map.get($attributes, "height");
 
 		#{cf-selector($comment-face)} {
 			@if $width == $default-width and $height == $default-height {
@@ -334,7 +337,7 @@ $aligned-positions-odd: ();
 			} @else {
 				width: #{$width}px;
 				height: #{$height}px;
-				background: image-url($sprite-sheet) static-cf-position($background-position, $height)
+				background: functions.image-url($sprite-sheet) static-cf-position($background-position, $height)
 			}
 		}
 	}
@@ -344,7 +347,7 @@ $aligned-positions-odd: ();
 @each $position, $aligned-comment-faces in $aligned-positions-even {
 	@if ($position != 0) {
 		%aligned-position-even#{$position} {
-			background-position: format-px($position)
+			background-position: functions.format-px($position)
 		}
 
 		@each $comment-face in $aligned-comment-faces {
@@ -359,7 +362,7 @@ $aligned-positions-odd: ();
 @each $position, $aligned-comment-faces in $aligned-positions-odd {
 	@if ($position != 0) {
 		%aligned-position-odd#{$position} {
-			background-position: unquote(format-px($position) + " 0")
+			background-position: string.unquote(functions.format-px($position) + " 0")
 		}
 
 		@each $comment-face in $aligned-comment-faces {

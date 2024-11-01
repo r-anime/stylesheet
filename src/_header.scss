@@ -1,19 +1,22 @@
-$header-snoo-reserved-width: $header-snoo-width + 2 * $header-snoo-padding-horizontal;
+@use "util/mixins";
+@use "util/vars";
+
+$header-snoo-reserved-width: vars.$header-snoo-width + 2 * vars.$header-snoo-padding-horizontal;
 
 #header {
-	height: $header-height;
+	height: vars.$header-height;
 	border-bottom: 0;
 	box-shadow: 0 1px 2px rgba(0,0,0,0.2);
 
 	// Slight optimization - if we use the same header for light and dark modes,
 	// we can just use !important instead of explicitly styling for nightmode
-	@if $header-background == $header-background-nightmode {
-		background: $header-background !important;
+	@if vars.$header-background == vars.$header-background-nightmode {
+		background: vars.$header-background !important;
 	} @else {
-		background: $header-background;
-		@include nightmode {
+		background: vars.$header-background;
+		@include mixins.nightmode {
 			html & { // specificity hack
-				background: $header-background-nightmode;
+				background: vars.$header-background-nightmode;
 			}
 		}
 	}
@@ -21,16 +24,16 @@ $header-snoo-reserved-width: $header-snoo-width + 2 * $header-snoo-padding-horiz
 
 // Subreddits bar at the very top of the page
 #sr-header-area {
-	background-color: $primary-secondary-shadow;
+	background-color: vars.$primary-secondary-shadow;
 	border-bottom: 0;
 	color: #FFF;
 	// text-transform: none;
 	// font-size: 12px;
 	// line-height: 18px
 
-	@include nightmode {
+	@include mixins.nightmode {
 		html & { // specificity hack
-			background: $primary-secondary-shadow-nightmode;
+			background: vars.$primary-secondary-shadow-nightmode;
 		}
 	}
 
@@ -84,7 +87,7 @@ $header-snoo-reserved-width: $header-snoo-width + 2 * $header-snoo-padding-horiz
 	bottom: 0;
 
 	// use box-shadow to give tab menu a background
-	box-shadow: inset 0 (-$header-tabmenu-height) $primary-secondary-shadow;
+	box-shadow: inset 0 (-(vars.$header-tabmenu-height)) vars.$primary-secondary-shadow;
 
 	// stretch background to both edges of header
 	left: 0;
@@ -96,8 +99,8 @@ $header-snoo-reserved-width: $header-snoo-width + 2 * $header-snoo-padding-horiz
 	// leave space for snoo
 	padding-left: $header-snoo-reserved-width;
 
-	@include nightmode {
-		box-shadow: inset 0 (-$header-tabmenu-height) $primary-secondary-shadow-nightmode;
+	@include mixins.nightmode {
+		box-shadow: inset 0 (-(vars.$header-tabmenu-height)) vars.$primary-secondary-shadow-nightmode;
 	}
 }
 
@@ -114,7 +117,7 @@ $header-snoo-reserved-width: $header-snoo-width + 2 * $header-snoo-padding-horiz
 	left: 0;
 
 	// horizontal spacing from edge of viewport and tabmenu
-	padding: 0 $header-snoo-padding-horizontal;
+	padding: 0 vars.$header-snoo-padding-horizontal;
 }
 
 #header-img,
@@ -124,19 +127,19 @@ $header-snoo-reserved-width: $header-snoo-width + 2 * $header-snoo-padding-horiz
 
 	// these values should match the target dimensions of the snoo image file,
 	// e.g. the image's dimensions scaled by 50% to account for high dpi screens
-	width: $header-snoo-width;
-	height: $header-snoo-height;
+	width: vars.$header-snoo-width;
+	height: vars.$header-snoo-height;
 }
 
 // In nightmode, display a custom image in a pseudo-element
 #header-img {
-	@include nightmode {
+	@include mixins.nightmode {
 		@extend %display-none;
 	}
 }
 
 #header-img-a::after {
-	@include nightmode {
+	@include mixins.nightmode {
 		content: "";
 		display: block;
 		background: url("images/general.png") 0 -172px/128px;
@@ -151,7 +154,7 @@ $header-snoo-reserved-width: $header-snoo-width + 2 * $header-snoo-padding-horiz
 	text-transform: capitalize;
 
 	// align subreddit name with tabmenu text
-	margin-left: $header-tabmenu-padding-horizontal;
+	margin-left: vars.$header-tabmenu-padding-horizontal;
 
 	// add a little extra space below so descenders don't touch the tabmenu
 	margin-bottom: 2px;
@@ -162,13 +165,13 @@ $header-snoo-reserved-width: $header-snoo-width + 2 * $header-snoo-padding-horiz
 
 	// If there's no tab bar (e.g. on submit page) add space at the bottom where the tab bar would normally be
 	&:last-child {
-		margin-bottom: 2px + $header-tabmenu-height;
+		margin-bottom: 2px + vars.$header-tabmenu-height;
 	}
 }
 
 // Tabs
 #header .tabmenu {
-	height: $header-tabmenu-height;
+	height: vars.$header-tabmenu-height;
 	margin: 0;
 
 	li {
@@ -178,14 +181,14 @@ $header-snoo-reserved-width: $header-snoo-width + 2 * $header-snoo-padding-horiz
 
 	a {
 		display: inline-block;
-		padding: 0 $header-tabmenu-padding-horizontal;
+		padding: 0 vars.$header-tabmenu-padding-horizontal;
 		background: transparent;
 		border: 0;
 		color: #FFF;
 		font-size: 14px;
-		line-height: $header-tabmenu-height;
+		line-height: vars.$header-tabmenu-height;
 		font-weight: 400;
-		height: $header-tabmenu-height;
+		height: vars.$header-tabmenu-height;
 		position: relative;
 		
 		&:hover {
@@ -204,7 +207,7 @@ $header-snoo-reserved-width: $header-snoo-width + 2 * $header-snoo-padding-horiz
 		background: #FFF;
 		box-shadow: inset 2px 2px 2px -1px rgba(0,0,0,0.2),1px 1px 1px #FFF;
 
-		@include nightmode {
+		@include mixins.nightmode {
 			background: #2f2f2f;
 			box-shadow: inset 2px 2px 2px -1px rgba(0, 0, 0, 0.2), 1px 1px 1px #2f2f2f;
 		}
@@ -215,7 +218,7 @@ $header-snoo-reserved-width: $header-snoo-width + 2 * $header-snoo-padding-horiz
 #header-bottom-right {
 	bottom: 35px;
 	right: 0;
-	padding: $base-spacing-small $base-spacing;
+	padding: vars.$base-spacing-small vars.$base-spacing;
 	background-color: transparent!important;
 	border-top-left-radius: 0;
 	border-bottom-left-radius: 5px;

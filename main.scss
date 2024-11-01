@@ -6,26 +6,26 @@
  */
 
 // Global variable definitions
-@import "src/util/vars";
+@use "src/util/vars";
 // Mixins and placeholders
-@import "src/util/mixins";
+@use "src/util/mixins";
 
 // Customizations
-@import "subcount"; // Contains the sidebar subscriber/online user phrases
-@import "banner"; // Custom banner images for special events
+@use "subcount"; // Contains the sidebar subscriber/online user phrases
+@use "banner"; // Custom banner images for special events
 
 // Main theme style
-@import "src/everything"; // Everything that isn't somewhere else yet
-@import "src/usernames"; // Compatibility styles for all usernames
-@import "src/linkflair"; // Link flair, including mod-only things
-@import "src/userflair"; // User flair, for list services
-@import "src/markdown"; // Generic markdown styles
-@import "src/header"; // Header/banner styles
-@import "src/sidebar"; // Sidebar styles
+@use "src/everything"; // Everything that isn't somewhere else yet
+@use "src/usernames"; // Compatibility styles for all usernames
+@use "src/linkflair"; // Link flair, including mod-only things
+@use "src/userflair"; // User flair, for list services
+@use "src/markdown"; // Generic markdown styles
+@use "src/header"; // Header/banner styles
+@use "src/sidebar"; // Sidebar styles
 
 // More sub-specific customizations
-@import "src/infobar"; // Fancy announcements thing at the top of the sub
-@import "src/thumbnails"; // Custom post thumbnail images
-@import "src/titles"; // Custom colors for post titles
-@import "src/sidebarimages"; // Custom sidebar images that link places
-@import "src/commentfaces"; // Comment faces, static and animated
+@use "src/infobar"; // Fancy announcements thing at the top of the sub
+@use "src/thumbnails"; // Custom post thumbnail images
+@use "src/titles"; // Custom colors for post titles
+@use "src/sidebarimages"; // Custom sidebar images that link places
+@use "src/commentfaces"; // Comment faces, static and animated

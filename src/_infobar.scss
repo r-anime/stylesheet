@@ -1,3 +1,6 @@
+@use "util/mixins";
+@use "util/vars";
+
 @use "sass:math";
 
 // The whole infobar is wrapped in a blockquote at the start of the sidebar
@@ -8,15 +11,15 @@ $dropdown-shadow: 0 0 4px #AAA;
 $dropdown-shadow-nightmode: 0 0 4px #000;
 
 $infobar-height: 45px;
-$infobar-padding-horizontal: $base-spacing;
+$infobar-padding-horizontal: vars.$base-spacing;
 
 $infobar-button-height: 30px;
-$infobar-button-padding-horizontal: $base-spacing;
-$infobar-button-border-radius: $base-border-radius;
+$infobar-button-padding-horizontal: vars.$base-spacing;
+$infobar-button-border-radius: vars.$base-border-radius;
 
-$infobar-dropdown-border-width: $base-spacing-small;
-$infobar-dropdown-border-color: $primary-color;
-$infobar-dropdown-border-radius: $base-border-radius;
+$infobar-dropdown-border-width: vars.$base-spacing-small;
+$infobar-dropdown-border-color: vars.$primary-color;
+$infobar-dropdown-border-radius: vars.$base-border-radius;
 
 $info-entry-count: 5; // number of entries you have
 $info-entry-period: 5s; // time for a single entry to be displayed
@@ -34,9 +37,9 @@ body > .content {
 // The infobar itself resides in a blockquote at the very top of the sidebar
 .side .md > :first-child {
 	position: absolute;
-	top: $header-height;
+	top: vars.$header-height;
 	left: 0;
-	right: $sidebar-width;
+	right: vars.$sidebar-width;
 	height: $infobar-height;
 	margin: 0;
 	border: 0;
@@ -83,8 +86,8 @@ body > .content {
 			border-radius: $infobar-button-border-radius;
 			position: relative !important;
 			z-index: 2;
-			@include nightmode {
-				background: $primary-color-nightmode !important;
+			@include mixins.nightmode {
+				background: vars.$primary-color-nightmode !important;
 			}
 		}
 
@@ -118,8 +121,8 @@ body > .content {
 			visibility: visible;
 			border-top: $infobar-dropdown-border-width solid $infobar-dropdown-border-color;
 			box-shadow: $dropdown-shadow;
-			@include nightmode {
-				border-color: $primary-color-nightmode;
+			@include mixins.nightmode {
+				border-color: vars.$primary-color-nightmode;
 			}
 		}
 	}
@@ -139,7 +142,7 @@ body > .content {
 		height: $infobar-height;
 		transition: 0s;
 
-		@include nightmode {
+		@include mixins.nightmode {
 			border-color: #0f0f0f;
 		}
 
@@ -182,7 +185,7 @@ body > .content {
 			animation-play-state: paused;
 			margin-top: 0 !important;
 
-			@include nightmode {
+			@include mixins.nightmode {
 				box-shadow: 0 1px #000;
 			}
 		}
@@ -193,7 +196,7 @@ body > .content {
 			opacity: 0.8;
 			color: #000;
 
-			@include nightmode {
+			@include mixins.nightmode {
 				color: #FFF;
 			}
 		}
@@ -225,7 +228,7 @@ body > .content {
 	}
 
 	// Misc nightmode styles
-	@include nightmode {
+	@include mixins.nightmode {
 		> p:hover em,
 		blockquote:hover {
 			background: #2f2f2f;

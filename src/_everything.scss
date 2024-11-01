@@ -1,3 +1,6 @@
+@use "util/mixins";
+@use "util/vars";
+
 @use "sass:math";
 
 /** Base styles **/
@@ -5,7 +8,7 @@
 // Reset some margins
 body > .content {
 	margin: 0;
-	padding: $base-spacing 0;
+	padding: vars.$base-spacing 0;
 }
 
 // Get rid of unnecessary backgrounds that Reddit applies
@@ -23,17 +26,17 @@ body > .content,
 .infobar,
 .rounded,
 .reddit-infobar {
-	border-radius: $base-border-radius;
+	border-radius: vars.$base-border-radius;
 }
 
 // Leave space for the sidebar next to infobars at the top of the page
 .infobar {
-	margin-right: $sidebar-width;
+	margin-right: vars.$sidebar-width;
 }
 
 // Special infobars have different styles for some reason
 .reddit-infobar {
-	margin: 0 ($sidebar-width + $base-spacing) $base-spacing $base-spacing;
+	margin: 0 (vars.$sidebar-width + vars.$base-spacing) vars.$base-spacing vars.$base-spacing;
 }
 
 // Make the "Welcome to Reddit" banners full-width
@@ -68,46 +71,46 @@ body > .content,
 // Sidebar stuff
 .side {
 	margin: 0;
-	padding: $sidebar-padding;
+	padding: vars.$sidebar-padding;
 	width: 300px;
-	background: $sidebar-background;
-	border: $sidebar-border-width solid $sidebar-border-color;
+	background: vars.$sidebar-background;
+	border: vars.$sidebar-border-width solid vars.$sidebar-border-color;
 	border-top: 0;
 	border-right: 0;
-	border-bottom-left-radius: $sidebar-border-radius;
+	border-bottom-left-radius: vars.$sidebar-border-radius;
 
 	> .spacer {
 		margin: 0;
 		
 		+ .spacer {
-			margin-top: $sidebar-padding;
+			margin-top: vars.$sidebar-padding;
 		}
 	}
 }
 
 // Sidebar content boxes
 .titlebox, .linkinfo {
-	background: $sidebar-section-background;
-	padding: $sidebar-section-padding + $sidebar-section-border-width;
+	background: vars.$sidebar-section-background;
+	padding: vars.$sidebar-section-padding + vars.$sidebar-section-border-width;
 	border: 0;
-	border-radius: $sidebar-section-border-radius;
-	box-shadow: inset 0 0 0 $sidebar-section-border-width $separator-color;
+	border-radius: vars.$sidebar-section-border-radius;
+	box-shadow: inset 0 0 0 vars.$sidebar-section-border-width vars.$separator-color;
 	overflow: hidden;
 }
 
 // Subreddit name at the top of the community info box
 .side .redditname {
-	$inverse-padding-and-border: -$sidebar-section-border-width - $sidebar-section-padding;
+	$inverse-padding-and-border: -(vars.$sidebar-section-border-width) - vars.$sidebar-section-padding;
 
-	margin: $inverse-padding-and-border $inverse-padding-and-border $sidebar-section-header-margin-vertical;
-	padding: 0 $sidebar-section-border-width + $sidebar-section-padding;
-	background: $sidebar-section-header-background-color;
-	height: $sidebar-section-header-height;
+	margin: $inverse-padding-and-border $inverse-padding-and-border vars.$sidebar-section-header-margin-vertical;
+	padding: 0 vars.$sidebar-section-border-width + vars.$sidebar-section-padding;
+	background: vars.$sidebar-section-header-background-color;
+	height: vars.$sidebar-section-header-height;
 	font-weight: normal;
 	font-size: 18px;
-	line-height: $sidebar-section-header-height;
+	line-height: vars.$sidebar-section-header-height;
 	text-transform: capitalize;
-	color: $text-on-primary-color;
+	color: vars.$text-on-primary-color;
 	overflow: hidden;
 	font-weight: 700;
 
@@ -155,8 +158,8 @@ body > .content,
 	text-align: right;
 	// 18px is the height of the subscribe button
 	// I'm not entirely sure why the -1px is necessary but it is
-	margin-top: -1px - $sidebar-section-header-margin-vertical - math.div($sidebar-section-header-height, 2) - math.div(18px, 2);
-	margin-bottom: $sidebar-section-header-margin-vertical;
+	margin-top: -1px - vars.$sidebar-section-header-margin-vertical - math.div(vars.$sidebar-section-header-height, 2) - math.div(18px, 2);
+	margin-bottom: vars.$sidebar-section-header-margin-vertical;
 	
 	.option {
 		width: 100%;
@@ -198,16 +201,16 @@ span.multi-count {
 // Style the "a community for X years" note
 .titlebox .bottom {
 	border-color: #cfcfcf;
-	margin: $sidebar-section-padding 0 (-$sidebar-section-padding);
-	padding: $sidebar-subreddit-age-padding-vertical 0;
+	margin: vars.$sidebar-section-padding 0 (-(vars.$sidebar-section-padding));
+	padding: vars.$sidebar-subreddit-age-padding-vertical 0;
 	text-align: center;
 
 	// NOTE: 1px is the reddit default, micro-optimize by not emitting a rule
-	@if $base-border-width != 1px {
-		border-width: $base-border-width;
+	@if vars.$base-border-width != 1px {
+		border-width: vars.$base-border-width;
 	}
 
-	@include nightmode {
+	@include mixins.nightmode {
 		border-color: #000;
 	}
 
@@ -220,36 +223,36 @@ span.multi-count {
 
 // Style sidebar boxes other than community info (e.g. moderators)
 .sidecontentbox .title {
-	background: $sidebar-section-header-background-color;
+	background: vars.$sidebar-section-header-background-color;
 	margin-bottom: 0;
-	border-radius: $sidebar-section-border-radius;
-	padding: 0 0 0 $sidebar-section-padding + $sidebar-section-border-width;
+	border-radius: vars.$sidebar-section-border-radius;
+	padding: 0 0 0 vars.$sidebar-section-padding + vars.$sidebar-section-border-width;
 	position: relative;
 	line-height: 35px;
 	
 	h1 {
-		color: $text-on-primary-color;
+		color: vars.$text-on-primary-color;
 		text-transform: lowercase;
 	}
 }
 
 .sidecontentbox .content {
-	background: $sidebar-section-background;
-	border: $sidebar-section-border-width solid $sidebar-section-border-color;
+	background: vars.$sidebar-section-background;
+	border: vars.$sidebar-section-border-width solid vars.$sidebar-section-border-color;
 	border-top: 0;
-	box-shadow: 0 (-$sidebar-section-border-radius) $sidebar-section-header-background-color;
-	border-bottom-left-radius: $sidebar-section-border-radius;
-	border-bottom-right-radius: $sidebar-section-border-radius;
-	padding: $sidebar-section-padding;
+	box-shadow: 0 (-(vars.$sidebar-section-border-radius)) vars.$sidebar-section-header-background-color;
+	border-bottom-left-radius: vars.$sidebar-section-border-radius;
+	border-bottom-right-radius: vars.$sidebar-section-border-radius;
+	padding: vars.$sidebar-section-padding;
 }
 
 // Common small buttons that show up in the sidebar
 // TODO: Also integrate subscribe button, RES sidebar dashboard/shortcut buttons
 .side .md h1,
 .sidecontentbox .title {
-	padding: 0 ($sidebar-section-padding + $sidebar-section-border-width) !important;
-	height: $sidebar-section-header-height;
-	line-height: $sidebar-section-header-height;
+	padding: 0 (vars.$sidebar-section-padding + vars.$sidebar-section-border-width) !important;
+	height: vars.$sidebar-section-header-height;
+	line-height: vars.$sidebar-section-header-height;
 }
 
 .sidecontentbox .message-button a,
@@ -258,16 +261,16 @@ span.multi-count {
 	$my-height: 13px;
 	$my-padding-vertical: 2px;
 
-	color: $text-on-primary-color;
-	background: $sidebar-section-header-button-background-color;
+	color: vars.$text-on-primary-color;
+	background: vars.$sidebar-section-header-button-background-color;
 	font-family: "Verdana", sans-serif;
 	font-size: 10px;
 	font-weight: bold;
 	line-height: $my-height;
 	padding: $my-padding-vertical 5px;
 	border: 0;
-	border-radius: $base-border-radius-small;
-	margin: (math.div($sidebar-section-header-height - $my-height, 2) - $my-padding-vertical) 0;
+	border-radius: vars.$base-border-radius-small;
+	margin: (math.div(vars.$sidebar-section-header-height - $my-height, 2) - $my-padding-vertical) 0;
 	float: right;
 	width: auto;
 	height: auto;
@@ -277,7 +280,7 @@ span.multi-count {
 
 // Allow headings to have multiple buttons
 .side .md h1 a + a {
-	margin-right: $base-spacing-small;
+	margin-right: vars.$base-spacing-small;
 }  
 
 // Position the "message the mods" button where it used to be because I hate change
@@ -288,7 +291,7 @@ span.multi-count {
 	
 	a {
 		position: absolute;
-		top: -$sidebar-padding - $sidebar-section-header-height;
+		top: -(vars.$sidebar-padding) - vars.$sidebar-section-header-height;
 		right: 0;
 		text-transform: lowercase;
 		
@@ -303,32 +306,32 @@ span.multi-count {
 	height: 35px;
 	background: #FFF;
 	color: #000;
-	border: $sidebar-search-border-width solid $sidebar-search-border-color;
-	border-radius: $sidebar-section-border-radius;
+	border: vars.$sidebar-search-border-width solid vars.$sidebar-search-border-color;
+	border-radius: vars.$sidebar-section-border-radius;
 	box-shadow: none !important; // mobile safari override, smh
-	padding: 0 30px + $base-spacing 0 $base-spacing;
+	padding: 0 30px + vars.$base-spacing 0 vars.$base-spacing;
 	line-height: 30px;
 
-	@include nightmode {
+	@include mixins.nightmode {
 		background: #2f2f2f !important;
 		border-color: #0f0f0f;
 	}
 }
 #search input[type="text"]:focus {
-	border-color: $primary-color;
+	border-color: vars.$primary-color;
 	outline: 0;
-	box-shadow: 0 0 3px $primary-color;
+	box-shadow: 0 0 3px vars.$primary-color;
 	transition: 200ms;
 }
 
 // Style the search help box
 #searchexpando {
-	margin-top: $base-spacing;
-	padding: $sidebar-section-padding;
+	margin-top: vars.$base-spacing;
+	padding: vars.$sidebar-section-padding;
 	position: absolute;
 	z-index: 1;
-	width: 300px - (2 * $sidebar-padding) - 2px;
-	border-radius: $sidebar-section-border-radius;
+	width: 300px - (2 * vars.$sidebar-padding) - 2px;
+	border-radius: vars.$sidebar-section-border-radius;
 }
 
 #searchexpando > p {
@@ -353,14 +356,14 @@ span.multi-count {
 	}
 
 	a {
-		color: $text-on-primary-color;
+		color: vars.$text-on-primary-color;
 		display: block;
-		padding: 0 34px 0 $base-spacing;
+		padding: 0 34px 0 vars.$base-spacing;
 		width: auto;
 		height: 35px;
 		line-height: 35px;
-		background: $sidebar-button-primary-color;
-		border-radius: $sidebar-section-border-radius;
+		background: vars.$sidebar-button-primary-color;
+		border-radius: vars.$sidebar-section-border-radius;
 		transition: background-color 200ms,box-shadow 200ms;
 		box-shadow: 0 0 rgba(0,0,0,.1);
 	}
@@ -371,9 +374,9 @@ span.multi-count {
 		top: -2px;
 		
 		a {
-			color: $text-on-secondary-color;
-			background: $sidebar-button-secondary-color;
-			box-shadow: 0 5px 10px $primary-secondary-shadow;
+			color: vars.$text-on-secondary-color;
+			background: vars.$sidebar-button-secondary-color;
+			box-shadow: 0 5px 10px vars.$primary-secondary-shadow;
 		}
 		
 		&:active {
@@ -391,9 +394,9 @@ span.multi-count {
 	height: 35px;
 	top: 0;
 	right: 0;
-	background: url("images/general.png") -58px -93px/128px no-repeat $sidebar-button-secondary-color;
-	border-top-right-radius: $sidebar-section-border-radius;
-	border-bottom-right-radius: $sidebar-section-border-radius;
+	background: url("images/general.png") -58px -93px/128px no-repeat vars.$sidebar-button-secondary-color;
+	border-top-right-radius: vars.$sidebar-section-border-radius;
+	border-bottom-right-radius: vars.$sidebar-section-border-radius;
 }
 .submit-text .morelink a::after {
 	background-position: -93px -58px;
@@ -401,21 +404,21 @@ span.multi-count {
 
 // Give ads a border radius
 .ad300x250,.sponsor-300-250 {
-	border-radius: $sidebar-section-border-radius;
+	border-radius: vars.$sidebar-section-border-radius;
 }
 
 // uwu
 .side::after {
 	content: "(✿◠‿◠) ~<3";
 	display: block;
-	margin: $base-spacing 0 0;
+	margin: vars.$base-spacing 0 0;
 	text-align: center;
 	color: gray;
 }
 
 // Style the newsletter banner thingy that shows up sometimes
 .infobar.newsletterbar {
-	margin: 0 $base-spacing $base-spacing;
+	margin: 0 vars.$base-spacing vars.$base-spacing;
 	width: calc(100% - 341px);
 	border-radius: 5px;
 }
@@ -424,14 +427,14 @@ span.multi-count {
 .login-form-side {
 	border-color: #cfcfcf;
 	background: #FFF;
-	border-radius: $sidebar-section-border-radius;
+	border-radius: vars.$sidebar-section-border-radius;
 }
 
 // Style the sort controls and stuff at the top of listing pages (e.g. /top)
 .listing-page .menuarea {
 	border-top: 1px solid #efefef;
 	margin: 0 0 -1px;
-	padding: $base-spacing;
+	padding: vars.$base-spacing;
 	background: #f7f7f7;
 	border-bottom: 1px solid #efefef
 }
@@ -487,7 +490,7 @@ span.multi-count {
 
 // Give the thumbnail some space
 .link .thumbnail {
-	margin: 0 $base-spacing 0 0;
+	margin: 0 vars.$base-spacing 0 0;
 	min-width: 70px
 }
 
@@ -497,7 +500,7 @@ span.multi-count {
 }
 
 .link .expando {
-    margin-right: $base-spacing;
+    margin-right: vars.$base-spacing;
 }
 
 // Title colors
@@ -592,8 +595,8 @@ body > .content .spacer {
 	}
 
 	.entry {
-		margin: 0 0 $base-spacing;
-		padding: 0 $base-spacing;
+		margin: 0 0 vars.$base-spacing;
+		padding: 0 vars.$base-spacing;
 
 		.tagline {
 			display: block;
@@ -615,7 +618,7 @@ body > .content .spacer {
 		color: #B7B7B7;
 
 		&:hover {
-			color: $primary-color;
+			color: vars.$primary-color;
 		}
 
 		// Make the line running down the side
@@ -623,7 +626,7 @@ body > .content .spacer {
 		    content: "";
 		    position: absolute;
 		    top: 17px;
-		    bottom: $base-spacing;
+		    bottom: vars.$base-spacing;
 		    left: 7px;
 		    border-left: 1px dotted currentcolor;
 		}
@@ -726,7 +729,7 @@ body .NERPageMarker .gearIcon {
 }
 
 body #progressIndicator {
-	padding: $base-spacing;
+	padding: vars.$base-spacing;
 	border-bottom: 1px solid #EFEFEF;
 }
 
@@ -813,7 +816,7 @@ body #progressIndicator {
 
 .submit-page ul.formtab .selected a {
 	top: -2px;
-	box-shadow: 0 5px 10px $primary-secondary-shadow;
+	box-shadow: 0 5px 10px vars.$primary-secondary-shadow;
 	font-size: 18px;
 }
 
@@ -821,15 +824,15 @@ body #progressIndicator {
 	width: 498px;
 	border: 1px solid #BBB;
 	background: #f7f7f7;
-	margin-bottom: $base-spacing;
+	margin-bottom: vars.$base-spacing;
 }
 
 .submit-page .formtabs-content .infobar {
-	margin-bottom: $base-spacing;
+	margin-bottom: vars.$base-spacing;
 }
 
 .submit-page .roundfield.info-notice {
-	padding: $base-spacing;
+	padding: vars.$base-spacing;
 }
 
 .submit-page .roundfield textarea,
@@ -891,8 +894,8 @@ body #progressIndicator {
 
 .wiki-page > .content > span {
 	display: block;
-	margin: 0 $sidebar-width + $base-spacing $base-spacing $base-spacing;
-	padding: 0 $base-spacing;
+	margin: 0 vars.$sidebar-width + vars.$base-spacing vars.$base-spacing vars.$base-spacing;
+	padding: 0 vars.$base-spacing;
 	background: #6a9de6;
 	color: #FFF;
 	border-radius: 5px;
@@ -918,7 +921,7 @@ body #progressIndicator {
 	margin: 0;
 	border-radius: 0;
 	line-height: 35px;
-	padding: 0 $base-spacing;
+	padding: 0 vars.$base-spacing;
 	color: #FFF;
 	text-transform: capitalize;
 	background: transparent !important;
@@ -990,10 +993,10 @@ body #progressIndicator {
 
 .md hr {
 	margin: 1em 0;
-	height: $base-border-width;
-	background-color: $separator-color;
+	height: vars.$base-border-width;
+	background-color: vars.$separator-color;
 	
-	@include nightmode {
+	@include mixins.nightmode {
 		background-color: #000 !important;
 	}
 }
@@ -1009,13 +1012,13 @@ body #progressIndicator {
 // Link styles
 .md a,
 .tagline a {
-	color: $link-color;
+	color: vars.$link-color;
 	
 	&:hover {
-		color: $link-hover-color;
+		color: vars.$link-hover-color;
 		text-decoration: underline;
 
-		@include nightmode {
+		@include mixins.nightmode {
 			color: #B8D0E8;
 		}
 	}
@@ -1038,12 +1041,12 @@ body #progressIndicator {
 .res-nightmode .sidecontentbox .title,
 .res-nightmode .side .md-container .md h1,
 .res-nightmode .sidecontentbox .content {
-	background-color: $primary-color-nightmode !important;
+	background-color: vars.$primary-color-nightmode !important;
 }
 
 .res-nightmode .sidecontentbox .content {
 	background: #2f2f2f !important;
-	box-shadow: 0 -5px $primary-color-nightmode;
+	box-shadow: 0 -5px vars.$primary-color-nightmode;
 	border-color: #0f0f0f !important;
 }
 
@@ -1051,23 +1054,23 @@ body #progressIndicator {
 .res-nightmode .side a.helplink,
 .res-nightmode .side .md h1 a,
 .res-nightmode .sidecontentbox .title .collapse-button {
-	background: $secondary-color-nightmode !important;
+	background: vars.$secondary-color-nightmode !important;
 	color: inherit;
 }
 
-.res-nightmode .wiki-page .pageactions .wikiaction-current {background: $secondary-color-nightmode!important}
+.res-nightmode .wiki-page .pageactions .wikiaction-current {background: vars.$secondary-color-nightmode!important}
 .res-nightmode .morelink a {
-	background: $primary-color-nightmode;
+	background: vars.$primary-color-nightmode;
 	color: #FFF !important;
 }
 
 .res-nightmode .morelink a:hover,
 .res-nightmode .morelink a::after {
-	background-color: $secondary-color-nightmode;
+	background-color: vars.$secondary-color-nightmode;
 }
 
 .res-nightmode .wiki-page > .content > span {
-	background-color: $primary-color-nightmode;
+	background-color: vars.$primary-color-nightmode;
 }
 
 .res-nightmode .content .link { // bulky selector to override weird report res style
@@ -1092,7 +1095,7 @@ body #progressIndicator {
 }
 
 .res-nightmode .tabmenu.formtab .selected a {
-	background-color: $primary-color-nightmode !important;
+	background-color: vars.$primary-color-nightmode !important;
 }
 
 .res-nightmode .submit-page .roundfield {
