@@ -134,7 +134,7 @@ $header-snoo-reserved-width: vars.$header-snoo-width + 2 * vars.$header-snoo-pad
 // In nightmode, display a custom image in a pseudo-element
 #header-img {
 	@include mixins.nightmode {
-		@extend %display-none;
+		@extend %display-none !optional;
 	}
 }
 

@@ -17,7 +17,7 @@
 
 // If an ad doesn't load, get rid of the big gap it leaves behind
 .ad-container:empty {
-	@extend %display-none;
+	@extend %display-none !optional;
 }
 
 // Markdown headings
