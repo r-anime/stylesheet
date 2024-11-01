@@ -1,3 +1,6 @@
+@use "sass:map";
+@use "util/vars";
+
 // Sidebar images
 
 /*
@@ -36,14 +39,14 @@ $sidebar-images: (
 // this accounts for the height of the header as well as the height of the
 // search box and additional margins
 $sidebar-content-top:
-	$header-height
-	+ $sidebar-section-margin-vertical;
+	vars.$header-height
+	+ vars.$sidebar-section-margin-vertical;
 
 // On most pages, the search bar is displayed above the images, so we need to
 // move them down further to accomodate
 $sidebar-content-top-with-search:
-	$sidebar-search-height
-	+ $sidebar-section-margin-vertical
+	vars.$sidebar-search-height
+	+ vars.$sidebar-section-margin-vertical
 	+ $sidebar-content-top;
 
 // Move the search bar to the very top of the sidebar, if it's here
@@ -60,18 +63,18 @@ $images-height-cumulative: 0px;
 // Iterate over all images and position them progressively
 @each $anchor, $details in $sidebar-images {
 	// The height of this image
-	$height: map-get($details, "height");
+	$height: map.get($details, "height");
 	// The source of this image
-	$image: map-get($details, "image");
+	$image: map.get($details, "image");
 
 	// Render this image in the correct location
 	.side [href*="##{$anchor}"] {
 		position: absolute;
 		top: $sidebar-content-top-with-search + $images-height-cumulative;
-		right: $sidebar-padding;
+		right: vars.$sidebar-padding;
 		width: 300px;
 		height: $height;
-		border-radius: $sidebar-section-border-radius;
+		border-radius: vars.$sidebar-section-border-radius;
 		background: $image center/contain;
 
 		// Again, search bar isn't there on search pages
@@ -82,15 +85,15 @@ $images-height-cumulative: 0px;
 
 	// Add this image to the cumulative height
 	$images-height-cumulative:
-		$images-height-cumulative + $height + $sidebar-section-margin-vertical;
+		$images-height-cumulative + $height + vars.$sidebar-section-margin-vertical;
 }
 
 // Leave appropriate room at the top of the sidebar for all the
 // absolutely-positioned images + the search bar
 .side {
 	padding-top:
-		$sidebar-section-margin-vertical
-		+ $sidebar-search-height
+		vars.$sidebar-section-margin-vertical
+		+ vars.$sidebar-search-height
 		+ $images-height-cumulative;
 
 	// no sidebar search bar on search pages - move up

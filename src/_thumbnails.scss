@@ -37,6 +37,6 @@
 .linkflair-fanart,
 .linkflair-fanart-oc {
 	.thumbnail img {
-		@extend %display-none;
+		@extend %display-none !optional;
 	}
 }

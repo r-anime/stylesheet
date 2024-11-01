@@ -1,52 +1,54 @@
+@use "util/vars";
+
 // Align the search icon better with our search style
 .side #search input[type="submit"] {
 	margin-left: -25px;
 }
 
 // Border radius for the Reddit premium banner - we can't remove it, but we can make it look good
-@if $sidebar-section-border-radius > 0 {
+@if vars.$sidebar-section-border-radius > 0 {
 	.premium-banner-outer {
-		border-radius: $sidebar-section-border-radius;
+		border-radius: vars.$sidebar-section-border-radius;
 	}
 	.premium-banner::before {
-		border-radius: max($sidebar-section-border-radius - 2px, 1px);
+		border-radius: max(vars.$sidebar-section-border-radius - 2px, 1px);
 	}
 }
 
 // If an ad doesn't load, get rid of the big gap it leaves behind
 .ad-container:empty {
-	@extend %display-none;
+	@extend %display-none !optional;
 }
 
 // Markdown headings
 .side .md h1 {
-	background: $sidebar-section-header-background-color;
-	margin: $sidebar-section-header-margin-vertical (-$sidebar-section-padding - $sidebar-section-border-width);
-	color: $text-on-primary-color;
+	background: vars.$sidebar-section-header-background-color;
+	margin: vars.$sidebar-section-header-margin-vertical (-(vars.$sidebar-section-padding) - vars.$sidebar-section-border-width);
+	color: vars.$text-on-primary-color;
 	font-size: 1.5em;
 	font-weight: bold;
 }
 
 // Tables take up the full width of the sidebar
 .side .md table {
-	margin: 0 (-$sidebar-padding - $sidebar-border-width);
-	width: calc(100% - #{-2 * ($sidebar-padding + $sidebar-border-width)});
+	margin: 0 (-(vars.$sidebar-padding) - vars.$sidebar-border-width);
+	width: calc(100% - #{-2 * (vars.$sidebar-padding + vars.$sidebar-border-width)});
 }
 .side th,
 .side td {
-	border-color: $sidebar-border-color;
+	border-color: vars.$sidebar-border-color;
 }
 
 // Tables and headings have no margin, and table borders next to headings are hidden
 .side .md h1 + table {
-	margin-top: -$sidebar-section-header-margin-vertical;
+	margin-top: -(vars.$sidebar-section-header-margin-vertical);
 
 	th {
 		  border-top: 0;
 	}
 }
 .side .md table + h1 {
-	margin-top: -$sidebar-border-width;
+	margin-top: -(vars.$sidebar-border-width);
 }
 
 // Discord and Twitter buttons
@@ -110,7 +112,7 @@
 	font-size: 0;
 }
 .titlebox .bottom .flair {
-	@extend %display-none;
+	@extend %display-none !optional;
 }
 .titlebox .bottom .age {
 	font-size: x-small;
@@ -118,5 +120,5 @@
 
 // Hide "create a subreddit" button
 .sidebox.create {
-	@extend %display-none;
+	@extend %display-none !optional;
 }
