@@ -112,7 +112,7 @@
 	font-size: 0;
 }
 .titlebox .bottom .flair {
-	@extend %display-none;
+	@extend %display-none !optional;
 }
 .titlebox .bottom .age {
 	font-size: x-small;
@@ -120,5 +120,5 @@
 
 // Hide "create a subreddit" button
 .sidebox.create {
-	@extend %display-none;
+	@extend %display-none !optional;
 }
