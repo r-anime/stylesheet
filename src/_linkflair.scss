@@ -1,3 +1,5 @@
+@use "util/_mixins";
+
 /** Post flairs **/
 .linkflairlabel {
 	vertical-align: middle;
@@ -58,7 +60,7 @@
 .linkflair-blue .linkflairlabel,
 .linkflair-red .linkflairlabel,
 .linkflair-palered .linkflairlabel {
-	@extend %display-none !optional;
+	@extend %display-none;
 }
 
 // Adjust title styling to support giving the whole thing a
@@ -150,5 +152,5 @@ div#thing_t3_swql95 {
 [lang=xa] .link.linkflair-official-media,
 [lang=xa] .link.linkflair-recommendation,
 [lang=xa] .link.linkflair-question {
-	@extend %display-none !optional;
+	@extend %display-none;
 }
