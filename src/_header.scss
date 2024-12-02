@@ -132,19 +132,22 @@ $header-snoo-reserved-width: vars.$header-snoo-width + 2 * vars.$header-snoo-pad
 }
 
 // In nightmode, display a custom image in a pseudo-element
-#header-img {
-	@include mixins.nightmode {
-		@extend %display-none !optional;
-	}
-}
-
-#header-img-a::after {
-	@include mixins.nightmode {
-		content: "";
-		display: block;
-		background: url("images/general.png") 0 -172px/128px;
-	}
-}
+/* Temporary removal of nightmode snoo for the Christmas season.
+*
+*#header-img {
+*	@include mixins.nightmode {
+*		@extend %display-none !optional;
+*	}
+*}
+*
+*#header-img-a::after {
+*	@include mixins.nightmode {
+*		content: "";
+*		display: block;
+*		background: url("images/general.png") 0 -172px/128px;
+*	}
+*}
+*/
 
 // Sub name and page info
 .pagename {
