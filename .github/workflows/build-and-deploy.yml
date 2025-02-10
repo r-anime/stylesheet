@@ -75,11 +75,11 @@ jobs:
         fi
 
     - name: Create GitHub deployment
-      uses: chrnorm/deployment-action@v1.0.0
+      uses: chrnorm/deployment-action@v2
       id: deployment
       with:
         token: ${{ github.token }}
-        target_url: https://old.reddit.com/r/${{ steps.target.outputs.subreddit }}
+        environment-url: https://old.reddit.com/r/${{ steps.target.outputs.subreddit }}
         environment: ${{ steps.target.outputs.environment }}
 
     - name: Deploy
@@ -91,7 +91,7 @@ jobs:
 
     - name: Update deployment status (success)
       if: success()
-      uses: chrnorm/deployment-status@v1.0.0
+      uses: chrnorm/deployment-status@v2
       with:
         token: ${{ github.token }}
         state: success
@@ -99,7 +99,7 @@ jobs:
 
     - name: Update deployment status (failure)
       if: failure()
-      uses: chrnorm/deployment-status@v1.0.0
+      uses: chrnorm/deployment-status@v2
       with:
         token: ${{ github.token }}
         state: failure
