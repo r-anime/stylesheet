@@ -95,7 +95,7 @@ jobs:
       with:
         token: ${{ github.token }}
         state: success
-        deployment_id: ${{ steps.deployment.outputs.deployment_id }}
+        deployment-id: ${{ steps.deployment.outputs.deployment_id }}
 
     - name: Update deployment status (failure)
       if: failure()
@@ -103,4 +103,4 @@ jobs:
       with:
         token: ${{ github.token }}
         state: failure
-        deployment_id: ${{ steps.deployment.outputs.deployment_id }}
+        deployment-id: ${{ steps.deployment.outputs.deployment_id }}
