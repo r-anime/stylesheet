@@ -1,12 +1,17 @@
 import {writeFile} from 'node:fs/promises';
-import * as path from 'node:path'
+import * as path from 'node:path';
 
 import * as sass from 'sass';
 import jsonImporter from 'sass-importer-json';
 
 import {Image} from './Image.mts';
-import {assignNameForImageKey, getSubredditImageData, SubredditImageData, writeSubredditImageData } from './subredditData.mts';
 import {deleteCachedData, setCachedData} from './ImageCache.mts';
+import {
+	assignNameForImageKey,
+	getSubredditImageData,
+	SubredditImageData,
+	writeSubredditImageData,
+} from './subredditData.mts';
 
 const repoRootPath = path.join(path.dirname(new URL(import.meta.url).pathname), '..');
 const sassEntryFilePath = path.join(repoRootPath, 'main.scss');
@@ -24,8 +29,10 @@ const output = await sass.compileAsync(sassEntryFilePath, {
 		// Custom Sass function which defines a reference to an image.
 		async 'i($path, $width: null, $height: null)' ([pathArg, widthArg, heightArg]) {
 			const path = pathArg.assertString('path').text;
-			const width = widthArg.realNull?.assertNumber('width').assertNoUnits('width').assertInt('width') ?? undefined;
-			const height = heightArg.realNull?.assertNumber('height').assertNoUnits('height').assertInt('height') ?? undefined;
+			const width = widthArg.realNull?.assertNumber('width').assertNoUnits('width').assertInt('width')
+				?? undefined;
+			const height = heightArg.realNull?.assertNumber('height').assertNoUnits('height').assertInt('height')
+				?? undefined;
 
 			// Get our `Image` instance, where all our information comes from
 			const image = Image.from(path, {width, height});
@@ -38,7 +45,7 @@ const output = await sass.compileAsync(sassEntryFilePath, {
 			// Replace this call with an appropriate `url()` call (yeah
 			// apparently `url()` invocations in Sass are just unquoted strings)
 			return new sass.SassString(`url(%%${finalName}%%)`, {quotes: false});
-		}
+		},
 	},
 	// style: 'compressed',
 });
@@ -59,7 +66,7 @@ const allImages = await Promise.all(
 			// tack on the cache key too because it's useful
 			const key = await image.getImageKey();
 			return {image, key};
-		})
+		}),
 );
 
 // Prune old images from the subreddit
@@ -67,14 +74,14 @@ await Promise.all(
 	// Images we knew about before
 	Object.entries(existingSubredditImageData)
 		// Filter to only those not appearing in the current set
-		.filter(([key]) => !allImages.some((newImage) => key === newImage.key))
+		.filter(([key]) => !allImages.some(newImage => key === newImage.key))
 		// Remove all of these
 		.map(async ([key, imageName]) => {
 			console.log('-', key, imageName);
 			delete newSubredditImageData[key];
 			await deleteCachedData(imageName);
 			// TODO: actually remove from the subreddit
-		})
+		}),
 );
 
 // Upload new images to the subreddit
@@ -100,11 +107,11 @@ await Promise.all(
 			setCachedData(imageName, imageData);
 
 			console.log('+', key, imageName, '<-', image.name);
-		})
+		}),
 );
 console.groupEnd();
 
-console.log('Writing back image metadata...')
+console.log('Writing back image metadata...');
 await writeSubredditImageData('the_subreddit', newSubredditImageData);
 
-console.log('\nDone!')
+console.log('\nDone!');

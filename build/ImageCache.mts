@@ -13,25 +13,25 @@ try {
 	await mkdir(cacheFolderPath);
 }
 
-const cacheFilePath = key => path.join(cacheFolderPath, `${key}.jpg`)
+const cacheFilePath = key => path.join(cacheFolderPath, `${key}.jpg`);
 
-export async function getCachedData(key: string) {
+export async function getCachedData (key: string) {
 	const path = cacheFilePath(key);
 	try {
 		let statResult = await stat(path);
-		if (!statResult.isFile) throw new Error('here but not a file??');
+		if (!statResult.isFile) { throw new Error('here but not a file??'); }
 	} catch (error) {
 		return null;
 	}
 	return readFile(path);
 }
 
-export async function setCachedData(key: string, data: Buffer) {
+export async function setCachedData (key: string, data: Buffer) {
 	const path = cacheFilePath(key);
 	await writeFile(path, data);
 }
 
-export async function deleteCachedData(key: string) {
+export async function deleteCachedData (key: string) {
 	try {
 		await rm(cacheFilePath(key), {recursive: true});
 	} catch {}

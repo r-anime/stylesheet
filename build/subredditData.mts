@@ -1,6 +1,6 @@
-import {readFile, writeFile} from 'node:fs/promises'
-import { cacheFolderPath } from './ImageCache.mts';
+import {readFile, writeFile} from 'node:fs/promises';
 import path from 'node:path';
+import {cacheFolderPath} from './ImageCache.mts';
 
 // Map of cache keys to subreddit image names.
 export type SubredditImageData = Record<string, string>;
@@ -15,7 +15,7 @@ export async function getSubredditImageData (subreddit: string): Promise<Subredd
 	return JSON.parse(contents);
 }
 
-export async function writeSubredditImageData(subreddit: string, data: SubredditImageData) {
+export async function writeSubredditImageData (subreddit: string, data: SubredditImageData) {
 	await writeFile(path.join(cacheFolderPath, `${subreddit}-data.json`), JSON.stringify(data, null, '\t'), 'utf8');
 }
 
@@ -24,7 +24,7 @@ export async function writeSubredditImageData(subreddit: string, data: Subreddit
 // fewer images change during each commit, we'll never even have to dip into
 // double-letter image names! >:3
 const base62chars = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
-function base62(n, base = 62) {
+function base62 (n, base = 62) {
 	let leastSignificant = n % base;
 	let rest = Math.floor(n / base);
 	return `${rest == 0 ? '' : base62(rest, base)}${base62chars[leastSignificant]}`;

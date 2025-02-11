@@ -1,11 +1,11 @@
-import {createHash, type BinaryLike} from 'node:crypto';
+import {type BinaryLike, createHash} from 'node:crypto';
 import {readFile} from 'node:fs/promises';
 import path from 'node:path';
 
 import sharp from 'sharp';
 
 /** Computes the hex sha1sum of the given data. */
-function sha1sum(buf: BinaryLike) {
+function sha1sum (buf: BinaryLike) {
 	const hash = createHash('sha1');
 	hash.update(buf);
 	return hash.digest('hex');
@@ -15,7 +15,7 @@ function sha1sum(buf: BinaryLike) {
  * Finds the highest JPEG quality setting for a given image that keeps it under
  * the given byte size, and returns the resulting image data.
  */
-async function autoCompress(imageData: Buffer, thresholdBytes: number) {
+async function autoCompress (imageData: Buffer, thresholdBytes: number) {
 	// Skip all this if we don't need to change anything
 	if (imageData.byteLength <= thresholdBytes) {
 		return imageData;
@@ -53,7 +53,9 @@ async function autoCompress(imageData: Buffer, thresholdBytes: number) {
 
 	if (newImageSize > thresholdBytes) {
 		// there's no value that gives a size under the threshold
-		throw new Error(`Can't compress enough; ${newImageSize} bytes at quality ${mid} (target <= ${thresholdBytes} bytes). This really shouldn't happen, yell at Erin, consider manually resizing the image to fix the issue in the meantime`);
+		throw new Error(
+			`Can't compress enough; ${newImageSize} bytes at quality ${mid} (target <= ${thresholdBytes} bytes). This really shouldn't happen, yell at Erin, consider manually resizing the image to fix the issue in the meantime`,
+		);
 	}
 
 	return newImageData;
@@ -80,13 +82,18 @@ export class Image {
 	 * references; as long as that's the case, all the references to the same
 	 * image name will end up pointing at the same file.
 	 */
-	static from(name: string, targetDimensions: {width?: number; height?: number} = {}): Image {
+	static from (name: string, targetDimensions: {width?: number; height?: number} = {}): Image {
 		let existing = Image.images[name];
 		if (existing) {
-			if ((targetDimensions.width !== existing.targetDimensions.width || targetDimensions.height !== existing.targetDimensions.height)) {
+			if (
+				(targetDimensions.width !== existing.targetDimensions.width
+					|| targetDimensions.height !== existing.targetDimensions.height)
+			) {
 				// two requests for the same image with differing dimensions - we
 				// don't handle that
-				throw new Error(`Multiple references to image "${name}" with differing target dimensions: ${targetDimensions}, ${existing.targetDimensions}`);
+				throw new Error(
+					`Multiple references to image "${name}" with differing target dimensions: ${targetDimensions}, ${existing.targetDimensions}`,
+				);
 			}
 			return existing;
 		}
@@ -101,12 +108,14 @@ export class Image {
 	 * stylesheet is rendered so additional processing can occur for each
 	 * selected image file.
 	 */
-	static collect() {
+	static collect () {
 		return Object.values(Image.images);
-	};
+	}
 
 	/** The image's name. */
-	get name () {return this.#name}
+	get name () {
+		return this.#name;
+	}
 	#name: string;
 
 	/**
@@ -115,8 +124,10 @@ export class Image {
 	 * in order to meet the Reddit filesize limit, then the image will be
 	 * scaled within these dimensions, to attempt to reduce its filesize
 	 * without introducing JPEG compression artifacts.
-	*/
-	get targetDimensions () {return this.#targetDimensions}
+	 */
+	get targetDimensions () {
+		return this.#targetDimensions;
+	}
 	#targetDimensions: {width?: number; height?: number};
 
 	private constructor (name: string, targetDimensions: {width?: number; height?: number} = {}) {
@@ -139,15 +150,15 @@ export class Image {
 	}
 	#sourceDataPromise: Promise<Buffer> | null;
 	#getSourceData () {
-		return readFile(this.fullSourcePath)
+		return readFile(this.fullSourcePath);
 	}
 
 	/** SHA1 hash of this image's source file. */
-	getSourceHash() {
+	getSourceHash () {
 		if (!this.#sourceHashPromise) {
 			this.#sourceHashPromise = this.#getSourceHash();
 		}
-		return this.#sourceHashPromise
+		return this.#sourceHashPromise;
 	}
 	#sourceHashPromise: Promise<string> | null;
 	async #getSourceHash () {
@@ -161,17 +172,12 @@ export class Image {
 	 * change and the image will be reuploaded to the subreddit.
 	 */
 	async getImageKey () {
-		return `${
-			await this.getSourceHash()
-		}${
-			this.targetDimensions?.width ? `_w${this.targetDimensions.width}` : ''
-		}${
+		return `${await this.getSourceHash()}${this.targetDimensions?.width ? `_w${this.targetDimensions.width}` : ''}${
 			this.targetDimensions?.height ? `_h${this.targetDimensions.height}` : ''
 		}`;
 	}
 
 	/**
-	 *
 	 * @returns
 	 */
 	getFinalData () {
