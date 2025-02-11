@@ -61,12 +61,11 @@ console.group('Resolving image changes...');
 
 // Collect all the images referenced from the current stylesheet
 const allImages = await Promise.all(
-	Image.collect()
-		.map(async image => {
-			// tack on the cache key too because it's useful
-			const key = await image.getImageKey();
-			return {image, key};
-		}),
+	Image.collect().map(async image => {
+		// tack on the cache key too because it's useful
+		const key = await image.getImageKey();
+		return {image, key};
+	}),
 );
 
 // Prune old images from the subreddit

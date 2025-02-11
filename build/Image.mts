@@ -54,7 +54,8 @@ async function autoCompress (imageData: Buffer, thresholdBytes: number) {
 	if (newImageSize > thresholdBytes) {
 		// there's no value that gives a size under the threshold
 		throw new Error(
-			`Can't compress enough; ${newImageSize} bytes at quality ${mid} (target <= ${thresholdBytes} bytes). This really shouldn't happen, yell at Erin, consider manually resizing the image to fix the issue in the meantime`,
+			`Can't compress enough; ${newImageSize} bytes at quality ${mid} (target <= ${thresholdBytes} bytes). This`
+				+ `shouldn't happen, yell at Erin, consider manually resizing the image to fix this in the meantime`,
 		);
 	}
 
@@ -86,8 +87,8 @@ export class Image {
 		let existing = Image.images[name];
 		if (existing) {
 			if (
-				(targetDimensions.width !== existing.targetDimensions.width
-					|| targetDimensions.height !== existing.targetDimensions.height)
+				targetDimensions.width !== existing.targetDimensions.width
+				|| targetDimensions.height !== existing.targetDimensions.height
 			) {
 				// two requests for the same image with differing dimensions - we
 				// don't handle that
@@ -104,9 +105,8 @@ export class Image {
 	}
 
 	/**
-	 * Perform some action on all referenced images. To be called after the
-	 * stylesheet is rendered so additional processing can occur for each
-	 * selected image file.
+	 * Collect all referenced images. To be called after the stylesheet is
+	 * rendered so additional processing can occur for each referenced image.
 	 */
 	static collect () {
 		return Object.values(Image.images);
@@ -178,6 +178,7 @@ export class Image {
 	}
 
 	/**
+	 * XXX
 	 * @returns
 	 */
 	getFinalData () {
