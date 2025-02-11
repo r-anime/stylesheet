@@ -1,5 +1,3 @@
-import * as stream from 'node:stream';
-
 import {default as Snoowrap, SnoowrapOptions} from 'snoowrap';
 
 import {writeFile} from 'node:fs/promises';
@@ -8,14 +6,6 @@ import {StylesheetUploadBackend} from './StorageBackend';
 
 // Map of cache keys to subreddit image names.
 export type SubredditImageData = Record<string, string>;
-
-async function obtainAccessToken ({auth}: SnoowrapOptions) {
-	fetch('', {
-		headers: {
-			Authorization: `Basic ${btoa(auth.clientId + ':' + auth.clientSecret)}`,
-		},
-	});
-}
 
 export async function RedditBackend ({
 	auth: authOptions,
@@ -78,7 +68,7 @@ export async function RedditBackend ({
 			// we're just stealing this from snoowrap until i implement my own
 			const accessToken = reddit.accessToken;
 
-			console.group('Resolving image changes...');
+			console.group('Resolving modified images...');
 			const allImages = await Promise.all(images.map(async image => {
 				// tack on the cache key too because it's useful
 				const key = await image.getImageKey();
@@ -93,12 +83,11 @@ export async function RedditBackend ({
 					.filter(([key]) => !allImages.some(newImage => key === newImage.key))
 					// Remove all of these
 					.map(async ([key, imageName]) => {
-						console.log('-', key, imageName);
 						delete newImageData[key];
 						await (subreddit.deleteImage({
 							imageName,
 						}) as unknown as Promise<void>); // AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAa
-						// TODO: actually remove from the subreddit
+						console.log('-', key, imageName);
 					}),
 			);
 
@@ -169,7 +158,7 @@ export async function RedditBackend ({
 			);
 			console.groupEnd();
 
-			console.group('CSS Output:');
+			console.group('Writing CSS...');
 			try {
 				// also doesnt work
 				// await (subreddit.updateStylesheet({
