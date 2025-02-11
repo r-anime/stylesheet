@@ -1,3 +1,7 @@
+// XXX: don't merge this like this. This file is actually useless except as a
+// testing backend. None of this stuff should be used in production runs; there
+// should be an alternate storage backend that actually talks to Reddit
+
 import * as path from 'node:path';
 
 import {mkdir, readFile, rm, stat, writeFile} from 'node:fs/promises';
