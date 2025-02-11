@@ -14,7 +14,7 @@
 
 // Formats an image reference. Useful for easily moving the images during the development.
 @function image-url($name, $extension: "jpg") {
-	@return url("images/#{$name}.#{$extension}");
+	@return i("images/#{$name}.#{$extension}");
 }
 
 // Chooses a shorter specification of a given position on the repeated background image.

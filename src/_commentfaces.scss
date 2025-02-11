@@ -31,9 +31,10 @@
 @use "sass:map";
 @use "sass:string";
 @use "util/functions";
-@use "commentfaces-animated";
-@use "commentfaces-static";
 //@import "util/SassySort";
+
+@use "commentfaces-animated.json";
+@use "commentfaces-static.json";
 
 // Returns the selector of the Comment Face.
 @function cf-selector($comment-face) {

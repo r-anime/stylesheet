@@ -1,0 +1,15 @@
+{
+	"name": "stylesheet",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"fmt": "dprint fmt"
+	},
+	"devDependencies": {
+		"dprint": "^0.49.0",
+		"sass": "^1.84.0",
+		"sass-importer-json": "github:eritbh/sass-importer-json",
+		"sharp": "^0.33.5",
+		"typescript": "^5.7.3"
+	}
+}

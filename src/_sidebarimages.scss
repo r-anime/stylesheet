@@ -12,8 +12,8 @@ $sidebar-images: (
 		// pixels wide. Actual image file dimensions should be doubled for HiDPI
 		// support, i.e. 600px wide and (2x this value) tall
 		"height": 300px,
-		// Reference to the image - make sure you put it in the images folder!
-		"image": url("images/sidebar.png"),
+	    // Path to the image - this path is relative to the repo root.
+		"image": "images/sidebar.png",
 	),
 
 	// ... etc for more images
@@ -23,15 +23,15 @@ $sidebar-images: (
 $sidebar-images: (
 	"sidebarimg": (
 		"height": 300px,
-		"image": url("images/sidebar.png"),
+		"image": "images/sidebar.png",
 	),
 	"sidebarimg2": (
 		"height": 300px,
-		"image": url("images/sidebar2.png"),
+		"image": "images/sidebar2.png",
 	),
 	"sidebarimg3": (
 		"height": 200px,
-		"image": url("images/sidebar3.png"),
+		"image": "images/sidebar3.png",
 	),
 );
 
@@ -75,7 +75,7 @@ $images-height-cumulative: 0px;
 		width: 300px;
 		height: $height;
 		border-radius: vars.$sidebar-section-border-radius;
-		background: $image center/contain;
+		background: i($image, $width: 600) center/contain;
 
 		// Again, search bar isn't there on search pages
 		.search-page & {

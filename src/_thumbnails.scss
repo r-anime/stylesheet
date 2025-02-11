@@ -10,9 +10,9 @@
 .linkflair-satire .thumbnail {background: 0 -1014px}
 .linkflair-wt .thumbnail {background: 0 -1224px}
 .linkflair-fanart .thumbnail,
-.linkflair-fanart-oc .thumbnail {background: 0 -664px} 
+.linkflair-fanart-oc .thumbnail {background: 0 -664px}
 .thumbnail[href*="spoiler"][href*="episode"],
-.linkflair-rewatch .thumbnail {background: 0 -944px} 
+.linkflair-rewatch .thumbnail {background: 0 -944px}
 .linkflair-green .thumbnail {background: 0 -734px}
 // For specific users
 [data-author="AutoLovepon"] .thumbnail {background: 0 -594px}
@@ -28,7 +28,7 @@
 .thumbnail.spoiler,
 .linkflair-fanart .thumbnail,
 .linkflair-fanart-oc .thumbnail {
-	background-image: url("images/general.png") !important; // TODO: why is !important necessary?
+	background-image: i("images/general.png") !important; // TODO: why is !important necessary?
 	height: 70px
 }
 
