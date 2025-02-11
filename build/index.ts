@@ -9,7 +9,7 @@ import {StylesheetUploadBackend} from './backend/StorageBackend';
 import {Image} from './Image';
 
 const thisFolderPath = dirname(new URL(import.meta.url).pathname);
-const repoRootPath = join(thisFolderPath, '..');
+export const repoRootPath = join(thisFolderPath, '..');
 
 const backend: StylesheetUploadBackend = process.env['REDDIT_SUBREDDIT']
 	? await RedditBackend({

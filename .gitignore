@@ -8,7 +8,7 @@ node_modules
 
 # build artifacts
 *.css
-out/*
+out
 
 # stuff that shows up in local testing
 .sass-cache

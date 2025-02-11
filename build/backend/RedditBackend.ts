@@ -205,7 +205,7 @@ export async function RedditBackend ({
 			console.log(`+ /r/${subredditName}/wiki/stylesheet/data`);
 			console.groupEnd();
 
-			console.log('All done!');
+			console.log('All done.');
 		},
 	} satisfies StylesheetUploadBackend;
 }
