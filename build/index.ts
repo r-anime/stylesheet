@@ -5,13 +5,15 @@ import jsonImporter from 'sass-importer-json';
 
 import {LocalBackend} from './backend/LocalBackend';
 import {RedditBackend} from './backend/RedditBackend';
-import {StylesheetUploadBackend} from './backend/StorageBackend';
+import {type StylesheetUploadBackend} from './backend/StylesheetUploadBackend';
 import {Image} from './Image';
 
 const thisFolderPath = dirname(new URL(import.meta.url).pathname);
 export const repoRootPath = join(thisFolderPath, '..');
 
-const backend: StylesheetUploadBackend = process.env['REDDIT_SUBREDDIT']
+// If wehave all the details, we'll actually send the stylesheet to Reddit; if
+// not we'll just compile the stylesheet and then write our state to disk
+const backend = process.env['REDDIT_SUBREDDIT']
 	? await RedditBackend({
 		auth: {
 			userAgent: process.env['REDDIT_USER_AGENT']!,

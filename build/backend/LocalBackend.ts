@@ -3,7 +3,7 @@ import {dirname, join, relative} from 'node:path';
 
 import {repoRootPath} from '..';
 import {Image} from '../Image';
-import {StylesheetUploadBackend} from './StorageBackend';
+import {StylesheetUploadBackend} from './StylesheetUploadBackend';
 
 /** This backend's mapped filenames might have slashes, so... */
 async function writeFileInQuestionableTree (path: string, data: Buffer) {

@@ -2,7 +2,7 @@ import {default as Snoowrap, SnoowrapOptions} from 'snoowrap';
 
 import {writeFile} from 'node:fs/promises';
 import {base62} from '../util/base62';
-import {StylesheetUploadBackend} from './StorageBackend';
+import {StylesheetUploadBackend} from './StylesheetUploadBackend';
 
 // Map of cache keys to subreddit image names.
 export type SubredditImageData = Record<string, string>;
