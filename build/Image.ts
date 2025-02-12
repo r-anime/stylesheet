@@ -87,10 +87,7 @@ export class Image {
 
 	/** The contents of this image's source file on disk. */
 	getSourceData () {
-		if (!this.#sourceDataPromise) {
-			this.#sourceDataPromise = this.#getSourceData();
-		}
-		return this.#sourceDataPromise;
+		return (this.#sourceDataPromise ??= this.#getSourceData());
 	}
 	#sourceDataPromise: Promise<Buffer> | null;
 	#getSourceData () {
@@ -99,10 +96,7 @@ export class Image {
 
 	/** SHA1 hash of this image's source file. */
 	getSourceHash () {
-		if (!this.#sourceHashPromise) {
-			this.#sourceHashPromise = this.#getSourceHash();
-		}
-		return this.#sourceHashPromise;
+		return (this.#sourceHashPromise ??= this.#getSourceHash());
 	}
 	#sourceHashPromise: Promise<string> | null;
 	async #getSourceHash () {
@@ -128,10 +122,7 @@ export class Image {
 	 * @returns
 	 */
 	getFinalData () {
-		if (!this.#finalDataPromise) {
-			this.#finalDataPromise = this.#getFinalData();
-		}
-		return this.#finalDataPromise;
+		return (this.#finalDataPromise ??= this.#getFinalData());
 	}
 	#finalDataPromise: Promise<Buffer> | null;
 	async #getFinalData () {
