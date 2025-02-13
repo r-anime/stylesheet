@@ -2,7 +2,7 @@ import sharp from 'sharp';
 
 /**
  * Finds the highest JPEG quality setting for a given image that keeps it under
- * the given byte size, and returns the resulting image data.
+ * the given byte size. Returns the resulting image data.
  */
 export async function autoCompress (imageData: Buffer, thresholdBytes: number) {
 	// Skip all this if we don't need to change anything
