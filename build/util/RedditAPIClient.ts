@@ -1,3 +1,5 @@
+import {TOTP} from 'totp-generator';
+
 import {memoize} from './memoize';
 
 /** Authentication details for talking with Reddit */
@@ -6,6 +8,7 @@ export interface RedditAuthOptions {
 	clientSecret: string;
 	username: string;
 	password: string;
+	totpSecret?: string;
 }
 
 /** The value of the `Authorization` header for HTTP basic auth. */
@@ -58,6 +61,14 @@ export class RedditAPIClient {
 	// won't happen and memoizing the function for simplicity
 	@memoize
 	private async getAccessToken (): Promise<string> {
+		// If we have a TOTP secret, generate OTP and append to password
+		let password = this.auth.password;
+		if (this.auth.totpSecret) {
+			const {otp} = TOTP.generate(this.auth.totpSecret);
+			password += ':' + otp;
+		}
+
+		// Request access token
 		const response = await this.fetch('https://oauth.reddit.com/api/v1/access_token', {
 			method: 'POST',
 			headers: {
@@ -67,9 +78,10 @@ export class RedditAPIClient {
 			body: new URLSearchParams({
 				grant_type: 'password',
 				username: this.auth.username,
-				password: this.auth.password,
+				password,
 			}),
 		});
+
 		if (response.status !== 200) {
 			throw new Error(await response.text());
 		}
@@ -77,6 +89,7 @@ export class RedditAPIClient {
 		if (responseData.error_description || responseData.error) {
 			throw new Error(responseData.error_description || responseData.error);
 		}
+
 		return responseData.access_token;
 	}
 

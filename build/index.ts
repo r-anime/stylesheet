@@ -20,6 +20,7 @@ const backend = process.env['REDDIT_SUBREDDIT']
 			clientSecret: process.env['REDDIT_CLIENT_SECRET']!,
 			username: process.env['REDDIT_USERNAME']!,
 			password: process.env['REDDIT_PASSWORD']!,
+			totpSecret: process.env['REDDIT_TOTP_SECRET'],
 		},
 		process.env['REDDIT_USER_AGENT']!,
 		process.env['REDDIT_SUBREDDIT'],

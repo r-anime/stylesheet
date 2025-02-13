@@ -12,6 +12,7 @@
 		"sass-importer-json": "github:eritbh/sass-importer-json",
 		"sharp": "^0.33.5",
 		"snoowrap": "^1.23.0",
+		"totp-generator": "^1.0.0",
 		"tsx": "^4.19.2",
 		"typescript": "^5.7.3"
 	}
