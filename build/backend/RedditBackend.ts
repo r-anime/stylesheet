@@ -1,8 +1,8 @@
 import {writeFile} from 'node:fs/promises';
 
 import {Image} from '../Image';
-import {doInParallel} from '../util/asyncHelpers';
 import {base62} from '../util/base62';
+import {doInParallel} from '../util/doInParallel';
 import {memoize} from '../util/memoize';
 import {RedditAPIClient, type RedditAuthOptions} from '../util/RedditAPIClient';
 import {StylesheetUploadBackend} from './StylesheetUploadBackend';
