@@ -14,16 +14,16 @@ export const repoRootPath = join(thisFolderPath, '..');
 // If wehave all the details, we'll actually send the stylesheet to Reddit; if
 // not we'll just compile the stylesheet and then write our state to disk
 const backend = process.env['REDDIT_SUBREDDIT']
-	? await RedditBackend({
-		auth: {
+	? new RedditBackend(
+		{
 			clientID: process.env['REDDIT_CLIENT_ID']!,
 			clientSecret: process.env['REDDIT_CLIENT_SECRET']!,
 			username: process.env['REDDIT_USERNAME']!,
 			password: process.env['REDDIT_PASSWORD']!,
 		},
-		userAgent: process.env['REDDIT_USER_AGENT']!,
-		subreddit: process.env['REDDIT_SUBREDDIT'],
-	})
+		process.env['REDDIT_USER_AGENT']!,
+		process.env['REDDIT_SUBREDDIT'],
+	)
 	: LocalBackend(join(repoRootPath, 'out'));
 
 // compile CSS
