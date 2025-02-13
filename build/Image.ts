@@ -5,6 +5,7 @@ import * as path from 'node:path';
 import sharp from 'sharp';
 
 import {autoCompress} from './util/autoCompress';
+import {memoize} from './util/memoize';
 
 /**
  * An image referenced in the stylesheet by a call to the custom
@@ -56,28 +57,18 @@ export class Image {
 		return Object.values(Image.images);
 	}
 
-	/** The image's name. */
-	get name () {
-		return this.#name;
-	}
-	#name: string;
-
-	/**
-	 * The dimensions requested for this image by the stylesheet. If the source
-	 * image on disk is larger than these dimensions and needs to be compressed
-	 * in order to meet the Reddit filesize limit, then the image will be
-	 * scaled within these dimensions, to attempt to reduce its filesize
-	 * without introducing JPEG compression artifacts.
-	 */
-	get targetDimensions () {
-		return this.#targetDimensions;
-	}
-	#targetDimensions: {width?: number; height?: number};
-
-	private constructor (name: string, targetDimensions: {width?: number; height?: number} = {}) {
-		this.#name = name;
-		this.#targetDimensions = targetDimensions;
-	}
+	private constructor (
+		/** The image's name. */
+		public readonly name: string,
+		/**
+		 * The dimensions requested for this image by the stylesheet. If the source
+		 * image on disk is larger than these dimensions and needs to be compressed
+		 * in order to meet the Reddit filesize limit, then the image will be
+		 * scaled within these dimensions, to attempt to reduce its filesize
+		 * without introducing JPEG compression artifacts.
+		 */
+		public readonly targetDimensions: {width?: number; height?: number} = {},
+	) {}
 
 	/** The fully-qualified path to this image's source file on disk. */
 	get fullSourcePath () {
@@ -86,20 +77,14 @@ export class Image {
 	}
 
 	/** The contents of this image's source file on disk. */
+	@memoize
 	getSourceData () {
-		return (this.#sourceDataPromise ??= this.#getSourceData());
-	}
-	#sourceDataPromise: Promise<Buffer> | null;
-	#getSourceData () {
 		return readFile(this.fullSourcePath);
 	}
 
 	/** SHA1 hash of this image's source file. */
-	getSourceHash () {
-		return (this.#sourceHashPromise ??= this.#getSourceHash());
-	}
-	#sourceHashPromise: Promise<string> | null;
-	async #getSourceHash () {
+	@memoize
+	async getSourceHash () {
 		const hash = createHash('sha1');
 		hash.update(await this.getSourceData());
 		return hash.digest('hex');
@@ -111,6 +96,7 @@ export class Image {
 	 * is used in a location where its expected size is different, the key will
 	 * change and the image will be reuploaded to the subreddit.
 	 */
+	@memoize
 	async getImageKey () {
 		return `${await this.getSourceHash()}${this.targetDimensions?.width ? `_w${this.targetDimensions.width}` : ''}${
 			this.targetDimensions?.height ? `_h${this.targetDimensions.height}` : ''
@@ -121,11 +107,8 @@ export class Image {
 	 * XXX
 	 * @returns
 	 */
-	getFinalData () {
-		return (this.#finalDataPromise ??= this.#getFinalData());
-	}
-	#finalDataPromise: Promise<Buffer> | null;
-	async #getFinalData () {
+	@memoize
+	async getFinalData () {
 		// Start with the source image
 		let imageData = await this.getSourceData();
 
