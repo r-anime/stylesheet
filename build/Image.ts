@@ -104,8 +104,9 @@ export class Image {
 	}
 
 	/**
-	 * XXX
-	 * @returns
+	 * Transforms the image as necessary, scaling it to within its target
+	 * dimensions and compressing it until it fits under the filesize cap.
+	 * Returns the finalized image's data in a `Buffer`.
 	 */
 	@memoize
 	async getFinalData () {
