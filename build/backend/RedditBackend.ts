@@ -1,7 +1,7 @@
 import {writeFile} from 'node:fs/promises';
 
+import {doInParallel} from '../util/asyncHelpers';
 import {base62} from '../util/base62';
-import {doInParallel} from '../util/parallelTask';
 import {RedditAPIClient, type RedditAuthOptions} from '../util/RedditAPIClient';
 import {StylesheetUploadBackend} from './StylesheetUploadBackend';
 
