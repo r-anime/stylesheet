@@ -135,8 +135,8 @@ export class RedditBackend implements StylesheetUploadBackend {
 		// Delete these since we no longer need them
 		await doInParallel(unusedImages.map(async ([key, imageName]) => {
 			try {
-				delete this.newImageData[key];
 				await this.apiClient.deleteImage(this.subreddit, imageName);
+				delete this.newImageData[key];
 				console.log('-', key, imageName);
 			} catch (error) {
 				console.error('!', key, imageName, '\n  Failed to delete old image:', error);
@@ -173,8 +173,7 @@ export class RedditBackend implements StylesheetUploadBackend {
 			console.log(`+ /r/${this.subreddit}/config/stylesheet`);
 		} catch (error) {
 			console.error('! Failed to write stylesheet\n ', error);
-			// TODO: do something more permanent here
-			await writeFile('failed.css', css);
+			throw new Error('Failed to write stylesheet', {cause: error});
 		}
 		console.groupEnd();
 
