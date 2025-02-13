@@ -2,7 +2,9 @@
 // nice that it allows us to map more than 50 images cleanly - as long as 12 or
 // fewer images change during each commit, we'll never even have to dip into
 // double-letter image names! >:3
+
 const base62chars = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+
 /** Returns the base-62 representation of the given number. */
 export function base62 (n: number) {
 	const lastDigitValue = n % base62chars.length;

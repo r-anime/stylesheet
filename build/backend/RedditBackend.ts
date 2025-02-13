@@ -159,7 +159,7 @@ export class RedditBackend implements StylesheetUploadBackend {
 		// Now that all the referenced images are present, we can update the CSS
 		console.group('Writing CSS...');
 		try {
-			await this.apiClient.updateStylesheet(this.subreddit, css, 'beep boop');
+			await this.apiClient.updateCSS(this.subreddit, css, 'beep boop');
 			console.log(`+ /r/${this.subreddit}/config/stylesheet`);
 		} catch (error) {
 			console.error('! Failed to write stylesheet\n ', error);

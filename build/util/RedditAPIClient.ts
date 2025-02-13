@@ -1,3 +1,5 @@
+import {memoize} from './memoize';
+
 /** Authentication details for talking with Reddit */
 export interface RedditAuthOptions {
 	clientID: string;
@@ -17,8 +19,10 @@ function multipartFormDataBody (values: Record<string, string | Blob>) {
 }
 
 /**
- * Throws errors as appropriate for endpoints that report errors in a response
- * like `{"json": {"errors": [["CODE", "message", "field"], ...]}}`
+ * Handles errors for API endpoints whose error responses look like
+ * `{"json": {"errors": [["CODE", "message", "field"], ...]}}`. Throws errors as
+ * appropriate if the given response contains errors; otherwise returns the same
+ * response object for further processing.
  */
 async function handleArrayOfArrayErrors (response: Response): Promise<Response> {
 	if (response.status !== 200) {
@@ -39,28 +43,31 @@ async function handleArrayOfArrayErrors (response: Response): Promise<Response> 
 	return response;
 }
 
-/** Helper for making requests against the Reddit API. */
+/** Helper class for making requests against the Reddit API. */
 export class RedditAPIClient {
-	userAgent: string;
-	#accessTokenPromise: Promise<string>;
-
-	constructor (auth: RedditAuthOptions, userAgent: string) {
-		this.userAgent = userAgent;
-		this.#accessTokenPromise = this.#getAccessToken(auth);
-	}
+	constructor (
+		/** Authentication details for acting as a script-type OAuth app. */
+		private auth: RedditAuthOptions,
+		/** The value of the `User-Agent` header for all outgoing requests. */
+		public userAgent: string,
+	) {}
 
 	/** Retrieves an access token via the `password` grant flow. */
-	async #getAccessToken (auth: RedditAuthOptions): Promise<string> {
-		const response = await this.#fetch('https://oauth.reddit.com/api/v1/access_token', {
+	// In theory our access token could expire and we'd need to get another one,
+	// but this isn't a very long-lived process, so we're just assuming that
+	// won't happen and memoizing the function for simplicity
+	@memoize
+	private async getAccessToken (): Promise<string> {
+		const response = await this.fetch('https://oauth.reddit.com/api/v1/access_token', {
 			method: 'POST',
 			headers: {
-				'Authorization': basicAuth(auth.clientID, auth.clientSecret),
+				'Authorization': basicAuth(this.auth.clientID, this.auth.clientSecret),
 				'Content-Type': 'application/x-www-form-urlencoded',
 			},
 			body: new URLSearchParams({
 				grant_type: 'password',
-				username: auth.username,
-				password: auth.password,
+				username: this.auth.username,
+				password: this.auth.password,
 			}),
 		});
 		if (response.status !== 200) {
@@ -73,29 +80,26 @@ export class RedditAPIClient {
 		return responseData.access_token;
 	}
 
-	/** Performs a fetch request with our user agent. */
-	async #fetch (url: string, init: RequestInit = {}) {
+	/** Performs a fetch request with our `User-Agent` header. */
+	private async fetch (url: string, init: RequestInit = {}) {
 		const headers = new Headers(init.headers);
 		headers.set('User-Agent', this.userAgent);
 		return fetch(url, {...init, headers});
 	}
 
 	/**
-	 * Performs a fetch request against the Reddit OAuth API with our user
-	 * agent and access token.
+	 * Performs a fetch request against the Reddit OAuth API with our
+	 * `User-Agent` header and authorized with our access token.
 	 */
-	async #apiFetch (endpoint: `/${string}`, init: RequestInit = {}) {
+	private async apiFetch (endpoint: `/${string}`, init: RequestInit = {}) {
 		const headers = new Headers(init.headers);
-		headers.set('Authorization', `Bearer ${await this.#accessTokenPromise}`);
-		return this.#fetch(`https://oauth.reddit.com${endpoint}`, {...init, headers});
+		headers.set('Authorization', `Bearer ${await this.getAccessToken()}`);
+		return this.fetch(`https://oauth.reddit.com${endpoint}`, {...init, headers});
 	}
 
-	/**
-	 * Gets the contents of a wiki page. Returns `undefined` if the page doesn't
-	 * exist yet.
-	 */
+	/** Gets the contents of a wiki page. Throws if the page doesn't exist. */
 	async getWikiPageContent (subreddit: string, page: string) {
-		const response = await this.#apiFetch(`/r/${subreddit}/wiki/${page}?raw_json=1`);
+		const response = await this.apiFetch(`/r/${subreddit}/wiki/${page}?raw_json=1`);
 		const responseData = await response.json();
 
 		if (responseData.message) {
@@ -110,9 +114,9 @@ export class RedditAPIClient {
 		return responseData.data.content_md;
 	}
 
-	/** Updates the contents of a wiki page. */
+	/** Updates the contents of a wiki page, creating it if it doesn't exist. */
 	async updateWikiPage (subreddit: string, page: string, content: string, reason?: string) {
-		const response = await this.#apiFetch(`/r/${subreddit}/api/wiki/edit`, {
+		const response = await this.apiFetch(`/r/${subreddit}/api/wiki/edit`, {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/x-www-form-urlencoded',
@@ -127,15 +131,15 @@ export class RedditAPIClient {
 		// this endpoint's error responses are fucked. it seems like they use
 		// the same array-of-arrays format as the stylesheet stuff, except for
 		// some reason it doesn't respond to `api_type` and always returns the
-		// error wrapped in an HTML page embedded in a <script> tag. it's fucked
+		// error wrapped in an HTML page embedded in a <script> tag. so whatever
 		if (response.status !== 200) {
 			throw new Error(`${response.status}: ${await response.text()}`);
 		}
 	}
 
-	/** Uploads a stylesheet image to a subreddit. */
+	/** Uploads an image to a subreddit's stylesheet. */
 	async uploadImage (subreddit: string, name: string, data: Buffer) {
-		const response = await this.#apiFetch(`/r/${subreddit}/api/upload_sr_img`, {
+		const response = await this.apiFetch(`/r/${subreddit}/api/upload_sr_img`, {
 			method: 'POST',
 			body: multipartFormDataBody({
 				upload_type: 'img',
@@ -156,9 +160,12 @@ export class RedditAPIClient {
 		}
 	}
 
-	/** Deletes a stylesheet image from a subreddit. */
+	/**
+	 * Deletes an image from a subreddit's stylesheet. Does nothing if the
+	 * image already doesn't exist.
+	 */
 	async deleteImage (subreddit: string, name: string) {
-		await this.#apiFetch(`/r/${subreddit}/api/delete_sr_img`, {
+		await this.apiFetch(`/r/${subreddit}/api/delete_sr_img`, {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/x-www-form-urlencoded',
@@ -170,9 +177,9 @@ export class RedditAPIClient {
 		}).then(handleArrayOfArrayErrors);
 	}
 
-	/** Updates the stylesheet of a subreddit. */
-	async updateStylesheet (subreddit: string, css: string, reason?: string) {
-		await this.#apiFetch(`/r/${subreddit}/api/subreddit_stylesheet`, {
+	/** Updates the CSS of a subreddit. */
+	async updateCSS (subreddit: string, css: string, reason?: string) {
+		await this.apiFetch(`/r/${subreddit}/api/subreddit_stylesheet`, {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/x-www-form-urlencoded',
