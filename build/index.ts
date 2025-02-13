@@ -1,19 +1,23 @@
 import {dirname, join} from 'node:path';
 
+import minimist from 'minimist';
 import * as sass from 'sass';
 import jsonImporter from 'sass-importer-json';
 
 import {LocalBackend} from './backend/LocalBackend';
 import {RedditBackend} from './backend/RedditBackend';
-import {type StylesheetUploadBackend} from './backend/StylesheetUploadBackend';
 import {Image} from './Image';
+
+const argv = minimist(process.argv.slice(2), {
+	string: ['deploy-to-subreddit', 'reason'],
+});
 
 const thisFolderPath = dirname(new URL(import.meta.url).pathname);
 export const repoRootPath = join(thisFolderPath, '..');
 
 // If wehave all the details, we'll actually send the stylesheet to Reddit; if
 // not we'll just compile the stylesheet and then write our state to disk
-const backend = process.env['REDDIT_SUBREDDIT']
+const backend = argv['deploy-to-subreddit']
 	? new RedditBackend(
 		{
 			clientID: process.env['REDDIT_CLIENT_ID']!,
@@ -23,7 +27,8 @@ const backend = process.env['REDDIT_SUBREDDIT']
 			totpSecret: process.env['REDDIT_TOTP_SECRET'],
 		},
 		process.env['REDDIT_USER_AGENT']!,
-		process.env['REDDIT_SUBREDDIT'],
+		argv['deploy-to-subreddit'],
+		argv['reason'],
 	)
 	: LocalBackend(join(repoRootPath, 'out'));
 
