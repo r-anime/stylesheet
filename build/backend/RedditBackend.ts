@@ -27,6 +27,8 @@ export class RedditBackend implements StylesheetUploadBackend {
 		auth: RedditAuthOptions,
 		userAgent: string,
 		public subreddit: string,
+		/** Used as the revision comment for updates to the stylesheet/wiki. */
+		public reason = 'beep boop',
 	) {
 		this.apiClient = new RedditAPIClient(auth, userAgent);
 	}
@@ -85,6 +87,14 @@ export class RedditBackend implements StylesheetUploadBackend {
 	}
 
 	async uploadBuild (css: string, images: Image[]) {
+		// im sorry for my crimes @nex3 but reddit doesnt allow us to use either
+		// @charset or a BOM in the styles we upload so we're just rawdogging
+		// the encoding crimes here. see sass/sass#1395 and sass/dart-sass#568
+		// to learn why this is a bad idea
+		if (css.charCodeAt(0) === 0xFEFF) {
+			css = css.slice(1);
+		}
+
 		console.group('Resolving modified images...');
 
 		// Make sure we're below the limit for total images
@@ -159,7 +169,7 @@ export class RedditBackend implements StylesheetUploadBackend {
 		// Now that all the referenced images are present, we can update the CSS
 		console.group('Writing CSS...');
 		try {
-			await this.apiClient.updateCSS(this.subreddit, css, 'beep boop');
+			await this.apiClient.updateCSS(this.subreddit, css, this.reason);
 			console.log(`+ /r/${this.subreddit}/config/stylesheet`);
 		} catch (error) {
 			console.error('! Failed to write stylesheet\n ', error);
@@ -175,7 +185,7 @@ export class RedditBackend implements StylesheetUploadBackend {
 				this.subreddit,
 				IMAGE_DATA_WIKI_PAGE,
 				JSON.stringify(this.newImageData, null, '\t'),
-				'update image data',
+				this.reason,
 			);
 			console.log(`+ /r/${this.subreddit}/wiki/stylesheet/data`);
 		} catch (error) {
