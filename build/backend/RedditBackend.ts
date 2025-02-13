@@ -7,11 +7,16 @@ import {memoize} from '../util/memoize';
 import {RedditAPIClient, type RedditAuthOptions} from '../util/RedditAPIClient';
 import {StylesheetUploadBackend} from './StylesheetUploadBackend';
 
-// Map of cache keys to subreddit image names.
+/** Map of image keys to subreddit image names. */
 export type SubredditImageData = Record<string, string>;
 
+/** The name of the wiki page where image data is persisted across runs. */
 const IMAGE_DATA_WIKI_PAGE = 'stylesheet/data';
 
+/**
+ * Backend that uploads compiled CSS and associated images to a subreddit's
+ * stylesheet.
+ */
 export class RedditBackend implements StylesheetUploadBackend {
 	private apiClient: RedditAPIClient;
 
@@ -26,6 +31,10 @@ export class RedditBackend implements StylesheetUploadBackend {
 		this.apiClient = new RedditAPIClient(auth, userAgent);
 	}
 
+	/**
+	 * Gets stored image data from the target subreddit, so we can know which
+	 * images are already present and what their names are.
+	 */
 	@memoize
 	private async getImageData () {
 		console.group('Retrieving image data...');
@@ -48,6 +57,10 @@ export class RedditBackend implements StylesheetUploadBackend {
 		console.groupEnd();
 	}
 
+	/**
+	 * Maps an image named in the stylesheet to the name it will use when
+	 * uploaded to the subreddit.
+	 */
 	async mapImageName (image: Image) {
 		// ensure we have image data
 		await this.getImageData();
@@ -85,16 +98,12 @@ export class RedditBackend implements StylesheetUploadBackend {
 		// Get a list of all the images we referenced from the stylesheet,
 		// and also fetch their keys while we're here so we can reference
 		// the subreddit image data synchronously
-		const allImages = await Promise.all(images.map(async image => {
-			// tack on the cache key too because it's useful
-			const key = await image.getImageKey();
-			return {image, key};
-		}));
+		const allImages = await Promise.all(images.map(async image => ({image, key: await image.getImageKey()})));
 
 		// Get only the images that we haven't already uploaded
 		const newImages = allImages.filter(({key}) => !this.oldImageData[key]);
 
-		// Finalize new images - resize, compress, map names
+		// Finalize those new images - resize, compress, map names
 		const finalizedImages = await doInParallel(newImages.map(async ({key, image}) => {
 			try {
 				return {
@@ -109,11 +118,12 @@ export class RedditBackend implements StylesheetUploadBackend {
 			}
 		}));
 
-		// Prune old images from the subreddit
-		const oldImages = Object.entries(this.oldImageData)
-			// Filter to only those not appearing in the current set
+		// Get images from the map which are unused by the new stylesheet
+		const unusedImages = Object.entries(this.oldImageData)
 			.filter(([key]) => !allImages.some(newImage => key === newImage.key));
-		await doInParallel(oldImages.map(async ([key, imageName]) => {
+
+		// Delete these since we no longer need them
+		await doInParallel(unusedImages.map(async ([key, imageName]) => {
 			try {
 				delete this.newImageData[key];
 				await this.apiClient.deleteImage(this.subreddit, imageName);
@@ -146,6 +156,7 @@ export class RedditBackend implements StylesheetUploadBackend {
 
 		await console.groupEnd();
 
+		// Now that all the referenced images are present, we can update the CSS
 		console.group('Writing CSS...');
 		try {
 			await this.apiClient.updateStylesheet(this.subreddit, css, 'beep boop');
@@ -157,6 +168,7 @@ export class RedditBackend implements StylesheetUploadBackend {
 		}
 		console.groupEnd();
 
+		// Persist the image data so we can work with it next time
 		console.group('Writing back image data...');
 		try {
 			await this.apiClient.updateWikiPage(
