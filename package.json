@@ -10,7 +10,7 @@
 		"dprint": "^0.49.0",
 		"minimist": "^1.2.8",
 		"sass": "^1.84.0",
-		"sass-importer-json": "github:eritbh/sass-importer-json",
+		"sass-importer-json": "^0.1.0",
 		"sharp": "^0.33.5",
 		"snoowrap": "^1.23.0",
 		"totp-generator": "^1.0.0",
