@@ -1942,7 +1942,7 @@
 		},
 		"33": {
 			"sprite-sheet": "cf-static-038",
-			"total-width": 5245,
+			"total-width": 5417,
 			"items": {
 				"cinema": {
 					"height": 121,
@@ -2093,6 +2093,11 @@
 					"height": 135,
 					"width": 115,
 					"position": 5245
+				},
+				"psyduck": {
+					"height": 121,
+					"width": 172,
+					"position": 5417
 				}
 			}
 		},
@@ -2335,7 +2340,7 @@
 		},
 		"36": {
 			"sprite-sheet": "cf-static-039",
-			"total-width": 3827,
+			"total-width": 4300,
 			"items": {
 				"seasonalapproval": {
 					"height": 121,
@@ -2402,30 +2407,40 @@
 					"width": 215,
 					"position": 2795
 				},
-				"seasonalpout": {
+				"seasonalpls": {
 					"height": 121,
 					"width": 215,
 					"position": 3010
 				},
-				"seasonalsecret": {
+				"seasonalpout": {
 					"height": 121,
 					"width": 215,
 					"position": 3225
 				},
-				"seasonalshock": {
+				"seasonalsecret": {
 					"height": 121,
 					"width": 215,
 					"position": 3440
 				},
+				"seasonalshock": {
+					"height": 121,
+					"width": 215,
+					"position": 3655
+				},
+				"seasonalsmug": {
+					"height": 121,
+					"width": 215,
+					"position": 3870
+				},
 				"seasonalthink": {
 					"height": 121,
-					"width": 172,
-					"position": 3612
+					"width": 215,
+					"position": 4085
 				},
 				"seasonaltired": {
 					"height": 121,
 					"width": 215,
-					"position": 3827
+					"position": 4300
 				}
 			}
 		}
