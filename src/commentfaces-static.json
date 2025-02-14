@@ -2,2446 +2,674 @@
 	"static-comment-faces": {
 		"1": {
 			"sprite-sheet": "cf-static-040",
-			"default": [
-				129,
-				121
-			],
+			"default": [129, 121],
 			"total-width": 8575,
 			"items": {
-				"akyuusqueel": {
-					"height": 121,
-					"width": 129,
-					"position": 140
-				},
-				"badtaste": {
-					"height": 121,
-					"width": 129,
-					"position": 280
-				},
-				"calmdown": {
-					"height": 121,
-					"width": 129,
-					"position": 420
-				},
-				"chinosmirk": {
-					"height": 121,
-					"width": 129,
-					"position": 560
-				},
-				"concealedexcitement": {
-					"height": 121,
-					"width": 129,
-					"position": 700
-				},
-				"cup3": {
-					"height": 121,
-					"width": 129,
-					"position": 840
-				}
+				"akyuusqueel": { "height": 121, "width": 129, "position": 140 },
+				"badtaste": { "height": 121, "width": 129, "position": 280 },
+				"calmdown": { "height": 121, "width": 129, "position": 420 },
+				"chinosmirk": { "height": 121, "width": 129, "position": 560 },
+				"concealedexcitement": { "height": 121, "width": 129, "position": 700 },
+				"cup3": { "height": 121, "width": 129, "position": 840 }
 			}
 		},
 		"2": {
 			"sprite-sheet": "cf-static-040",
-			"default": [
-				178,
-				100
-			],
+			"default": [178, 100],
 			"total-width": 8575,
 			"items": {
-				"absolutely": {
-					"height": 100,
-					"width": 178,
-					"position": 1018
-				},
-				"airfist": {
-					"height": 100,
-					"width": 178,
-					"position": 1196
-				},
-				"ama": {
-					"height": 100,
-					"width": 178,
-					"position": 1374
-				},
-				"angryfeline": {
-					"height": 100,
-					"width": 178,
-					"position": 1552
-				},
-				"angryheadgrab": {
-					"height": 100,
-					"width": 178,
-					"position": 1730
-				},
-				"araara": {
-					"height": 100,
-					"width": 178,
-					"position": 1908
-				},
-				"atthewindow": {
-					"height": 100,
-					"width": 178,
-					"position": 2086
-				},
-				"badnews": {
-					"height": 100,
-					"width": 178,
-					"position": 2264
-				},
-				"bakabakashii": {
-					"height": 100,
-					"width": 178,
-					"position": 2442
-				},
-				"cackle": {
-					"height": 100,
-					"width": 178,
-					"position": 2620
-				},
-				"comehere": {
-					"height": 100,
-					"width": 178,
-					"position": 2798
-				},
-				"comfy": {
-					"height": 100,
-					"width": 178,
-					"position": 2976
-				},
-				"cooresto": {
-					"height": 100,
-					"width": 178,
-					"position": 3154
-				},
-				"cultured": {
-					"height": 100,
-					"width": 178,
-					"position": 3332
-				},
-				"dame": {
-					"height": 100,
-					"width": 178,
-					"position": 3510
-				},
-				"dead": {
-					"height": 100,
-					"width": 178,
-					"position": 3688
-				},
-				"delicious": {
-					"height": 100,
-					"width": 178,
-					"position": 3866
-				},
-				"drink2": {
-					"height": 100,
-					"width": 178,
-					"position": 4044
-				},
-				"drunkhisone": {
-					"height": 100,
-					"width": 178,
-					"position": 4222
-				},
-				"eh": {
-					"height": 100,
-					"width": 178,
-					"position": 4400
-				},
-				"elderlylove": {
-					"height": 100,
-					"width": 178,
-					"position": 4578
-				},
-				"elves": {
-					"height": 100,
-					"width": 178,
-					"position": 4756
-				},
-				"ero": {
-					"height": 100,
-					"width": 178,
-					"position": 4934
-				},
-				"everythingisfine": {
-					"height": 100,
-					"width": 178,
-					"position": 5112
-				},
-				"facepalm2": {
-					"height": 100,
-					"width": 178,
-					"position": 5290
-				},
-				"fightme": {
-					"height": 100,
-					"width": 178,
-					"position": 5468
-				},
-				"fujostare": {
-					"height": 100,
-					"width": 178,
-					"position": 5646
-				},
-				"gabdisgust": {
-					"height": 100,
-					"width": 178,
-					"position": 5824
-				},
-				"gasp": {
-					"height": 100,
-					"width": 178,
-					"position": 6002
-				},
-				"godisdead": {
-					"height": 100,
-					"width": 178,
-					"position": 6180
-				},
-				"grandhype": {
-					"height": 100,
-					"width": 178,
-					"position": 6358
-				},
-				"grandmawhy": {
-					"height": 100,
-					"width": 178,
-					"position": 6536
-				},
-				"haaaaaaah": {
-					"height": 100,
-					"width": 178,
-					"position": 6714
-				},
-				"happyhug": {
-					"height": 100,
-					"width": 178,
-					"position": 6892
-				},
-				"hearteyes": {
-					"height": 100,
-					"width": 178,
-					"position": 7070
-				},
-				"hideintoilet": {
-					"height": 100,
-					"width": 178,
-					"position": 7248
-				},
-				"holdback": {
-					"height": 100,
-					"width": 178,
-					"position": 7426
-				},
-				"holdup": {
-					"height": 100,
-					"width": 178,
-					"position": 7604
-				},
-				"hypeeyes": {
-					"height": 100,
-					"width": 178,
-					"position": 7782
-				},
-				"not-raining": {
-					"height": 100,
-					"width": 146,
-					"position": 7928
-				},
-				"theydidwhat": {
-					"height": 100,
-					"width": 152,
-					"position": 8080
-				},
-				"thatsmyfetish": {
-					"height": 100,
-					"width": 157,
-					"position": 8237
-				},
-				"f5": {
-					"height": 100,
-					"width": 168,
-					"position": 8405
-				},
-				"shock": {
-					"height": 100,
-					"width": 170,
-					"position": 8575
-				}
+				"absolutely": { "height": 100, "width": 178, "position": 1018 },
+				"airfist": { "height": 100, "width": 178, "position": 1196 },
+				"ama": { "height": 100, "width": 178, "position": 1374 },
+				"angryfeline": { "height": 100, "width": 178, "position": 1552 },
+				"angryheadgrab": { "height": 100, "width": 178, "position": 1730 },
+				"araara": { "height": 100, "width": 178, "position": 1908 },
+				"atthewindow": { "height": 100, "width": 178, "position": 2086 },
+				"badnews": { "height": 100, "width": 178, "position": 2264 },
+				"bakabakashii": { "height": 100, "width": 178, "position": 2442 },
+				"cackle": { "height": 100, "width": 178, "position": 2620 },
+				"comehere": { "height": 100, "width": 178, "position": 2798 },
+				"comfy": { "height": 100, "width": 178, "position": 2976 },
+				"cooresto": { "height": 100, "width": 178, "position": 3154 },
+				"cultured": { "height": 100, "width": 178, "position": 3332 },
+				"dame": { "height": 100, "width": 178, "position": 3510 },
+				"dead": { "height": 100, "width": 178, "position": 3688 },
+				"delicious": { "height": 100, "width": 178, "position": 3866 },
+				"drink2": { "height": 100, "width": 178, "position": 4044 },
+				"drunkhisone": { "height": 100, "width": 178, "position": 4222 },
+				"eh": { "height": 100, "width": 178, "position": 4400 },
+				"elderlylove": { "height": 100, "width": 178, "position": 4578 },
+				"elves": { "height": 100, "width": 178, "position": 4756 },
+				"ero": { "height": 100, "width": 178, "position": 4934 },
+				"everythingisfine": { "height": 100, "width": 178, "position": 5112 },
+				"facepalm2": { "height": 100, "width": 178, "position": 5290 },
+				"fightme": { "height": 100, "width": 178, "position": 5468 },
+				"fujostare": { "height": 100, "width": 178, "position": 5646 },
+				"gabdisgust": { "height": 100, "width": 178, "position": 5824 },
+				"gasp": { "height": 100, "width": 178, "position": 6002 },
+				"godisdead": { "height": 100, "width": 178, "position": 6180 },
+				"grandhype": { "height": 100, "width": 178, "position": 6358 },
+				"grandmawhy": { "height": 100, "width": 178, "position": 6536 },
+				"haaaaaaah": { "height": 100, "width": 178, "position": 6714 },
+				"happyhug": { "height": 100, "width": 178, "position": 6892 },
+				"hearteyes": { "height": 100, "width": 178, "position": 7070 },
+				"hideintoilet": { "height": 100, "width": 178, "position": 7248 },
+				"holdback": { "height": 100, "width": 178, "position": 7426 },
+				"holdup": { "height": 100, "width": 178, "position": 7604 },
+				"hypeeyes": { "height": 100, "width": 178, "position": 7782 },
+				"not-raining": { "height": 100, "width": 146, "position": 7928 },
+				"theydidwhat": { "height": 100, "width": 152, "position": 8080 },
+				"thatsmyfetish": { "height": 100, "width": 157, "position": 8237 },
+				"f5": { "height": 100, "width": 168, "position": 8405 },
+				"shock": { "height": 100, "width": 170, "position": 8575 }
 			}
 		},
 		"3": {
 			"sprite-sheet": "cf-static-041",
-			"default": [
-				129,
-				121
-			],
+			"default": [129, 121],
 			"total-width": 9744,
 			"items": {
-				"cup6": {
-					"height": 121,
-					"width": 129,
-					"position": 140
-				},
-				"faito": {
-					"height": 121,
-					"width": 129,
-					"position": 280
-				},
-				"forbiddenlove": {
-					"height": 121,
-					"width": 129,
-					"position": 420
-				},
-				"ginapproves": {
-					"height": 121,
-					"width": 129,
-					"position": 560
-				},
-				"goblet1": {
-					"height": 121,
-					"width": 129,
-					"position": 700
-				},
-				"howcouldyou": {
-					"height": 121,
-					"width": 129,
-					"position": 840
-				}
+				"cup6": { "height": 121, "width": 129, "position": 140 },
+				"faito": { "height": 121, "width": 129, "position": 280 },
+				"forbiddenlove": { "height": 121, "width": 129, "position": 420 },
+				"ginapproves": { "height": 121, "width": 129, "position": 560 },
+				"goblet1": { "height": 121, "width": 129, "position": 700 },
+				"howcouldyou": { "height": 121, "width": 129, "position": 840 }
 			}
 		},
 		"4": {
 			"sprite-sheet": "cf-static-041",
-			"default": [
-				178,
-				100
-			],
+			"default": [178, 100],
 			"total-width": 9744,
 			"items": {
-				"indexsmugshrug": {
-					"height": 100,
-					"width": 178,
-					"position": 1018
-				},
-				"jawdrop": {
-					"height": 100,
-					"width": 178,
-					"position": 1196
-				},
-				"justright": {
-					"height": 100,
-					"width": 178,
-					"position": 1374
-				},
-				"kawaii": {
-					"height": 100,
-					"width": 178,
-					"position": 1552
-				},
-				"KUSOTTARE": {
-					"height": 100,
-					"width": 178,
-					"position": 1730
-				},
-				"lolifightsback": {
-					"height": 100,
-					"width": 178,
-					"position": 1908
-				},
-				"longday": {
-					"height": 100,
-					"width": 178,
-					"position": 2086
-				},
-				"luckytehe": {
-					"height": 100,
-					"width": 178,
-					"position": 2264
-				},
-				"lyingawake": {
-					"height": 100,
-					"width": 178,
-					"position": 2442
-				},
-				"mangaka": {
-					"height": 100,
-					"width": 178,
-					"position": 2620
-				},
-				"mayushii": {
-					"height": 100,
-					"width": 178,
-					"position": 2798
-				},
-				"mindmelt": {
-					"height": 100,
-					"width": 178,
-					"position": 2976
-				},
-				"mischievous": {
-					"height": 100,
-					"width": 178,
-					"position": 3154
-				},
-				"mmmmyrgh": {
-					"height": 100,
-					"width": 178,
-					"position": 3332
-				},
-				"morecomfy": {
-					"height": 100,
-					"width": 178,
-					"position": 3510
-				},
-				"nooo": {
-					"height": 100,
-					"width": 178,
-					"position": 3688
-				},
-				"ohfuck": {
-					"height": 100,
-					"width": 178,
-					"position": 3866
-				},
-				"ok_hand": {
-					"height": 100,
-					"width": 178,
-					"position": 4044
-				},
-				"peacepeace": {
-					"height": 100,
-					"width": 178,
-					"position": 4222
-				},
-				"piracy": {
-					"height": 100,
-					"width": 178,
-					"position": 4400
-				},
-				"protest": {
-					"height": 100,
-					"width": 178,
-					"position": 4578
-				},
-				"ptsd": {
-					"height": 100,
-					"width": 178,
-					"position": 4756
-				},
-				"regretdecisions": {
-					"height": 100,
-					"width": 178,
-					"position": 4934
-				},
-				"ringomusume": {
-					"height": 100,
-					"width": 178,
-					"position": 5112
-				},
-				"sadholo": {
-					"height": 100,
-					"width": 178,
-					"position": 5290
-				},
-				"saikikek": {
-					"height": 100,
-					"width": 178,
-					"position": 5468
-				},
-				"saltymug": {
-					"height": 100,
-					"width": 178,
-					"position": 5646
-				},
-				"satisfyingbev": {
-					"height": 100,
-					"width": 178,
-					"position": 5824
-				},
-				"scaredillya": {
-					"height": 100,
-					"width": 178,
-					"position": 6002
-				},
-				"shh": {
-					"height": 100,
-					"width": 178,
-					"position": 6180
-				},
-				"shhbabe": {
-					"height": 100,
-					"width": 178,
-					"position": 6358
-				},
-				"sickness": {
-					"height": 100,
-					"width": 178,
-					"position": 6536
-				},
-				"sleepingcutie": {
-					"height": 100,
-					"width": 178,
-					"position": 6714
-				},
-				"smugboard": {
-					"height": 100,
-					"width": 178,
-					"position": 6892
-				},
-				"smugtouru": {
-					"height": 100,
-					"width": 178,
-					"position": 7070
-				},
-				"sobright": {
-					"height": 100,
-					"width": 178,
-					"position": 7248
-				},
-				"suddenshock": {
-					"height": 100,
-					"width": 178,
-					"position": 7426
-				},
-				"sulking": {
-					"height": 100,
-					"width": 178,
-					"position": 7604
-				},
-				"tablesleep": {
-					"height": 100,
-					"width": 178,
-					"position": 7782
-				},
-				"modsalute": {
-					"height": 126,
-					"width": 150,
-					"position": 7932
-				},
-				"assman": {
-					"height": 128,
-					"width": 150,
-					"position": 8082
-				},
-				"loli_ok": {
-					"height": 134,
-					"width": 150,
-					"position": 8232
-				},
-				"biiru": {
-					"height": 138,
-					"width": 150,
-					"position": 8382
-				},
-				"mindblank": {
-					"height": 125,
-					"width": 150,
-					"position": 8532
-				},
-				"feelingloved": {
-					"height": 127,
-					"width": 150,
-					"position": 8682
-				},
-				"nico-heart": {
-					"height": 129,
-					"width": 150,
-					"position": 8832
-				},
-				"mug3": {
-					"height": 131,
-					"width": 178,
-					"position": 9010
-				},
-				"mug1": {
-					"height": 131,
-					"width": 178,
-					"position": 9188
-				},
-				"eyythisguy": {
-					"height": 133,
-					"width": 150,
-					"position": 9338
-				},
-				"tomato": {
-					"height": 135,
-					"width": 150,
-					"position": 9488
-				},
-				"saberawe": {
-					"height": 137,
-					"width": 106,
-					"position": 9594
-				},
-				"nichijouthumbs": {
-					"height": 137,
-					"width": 150,
-					"position": 9744
-				}
+				"indexsmugshrug": { "height": 100, "width": 178, "position": 1018 },
+				"jawdrop": { "height": 100, "width": 178, "position": 1196 },
+				"justright": { "height": 100, "width": 178, "position": 1374 },
+				"kawaii": { "height": 100, "width": 178, "position": 1552 },
+				"KUSOTTARE": { "height": 100, "width": 178, "position": 1730 },
+				"lolifightsback": { "height": 100, "width": 178, "position": 1908 },
+				"longday": { "height": 100, "width": 178, "position": 2086 },
+				"luckytehe": { "height": 100, "width": 178, "position": 2264 },
+				"lyingawake": { "height": 100, "width": 178, "position": 2442 },
+				"mangaka": { "height": 100, "width": 178, "position": 2620 },
+				"mayushii": { "height": 100, "width": 178, "position": 2798 },
+				"mindmelt": { "height": 100, "width": 178, "position": 2976 },
+				"mischievous": { "height": 100, "width": 178, "position": 3154 },
+				"mmmmyrgh": { "height": 100, "width": 178, "position": 3332 },
+				"morecomfy": { "height": 100, "width": 178, "position": 3510 },
+				"nooo": { "height": 100, "width": 178, "position": 3688 },
+				"ohfuck": { "height": 100, "width": 178, "position": 3866 },
+				"ok_hand": { "height": 100, "width": 178, "position": 4044 },
+				"peacepeace": { "height": 100, "width": 178, "position": 4222 },
+				"piracy": { "height": 100, "width": 178, "position": 4400 },
+				"protest": { "height": 100, "width": 178, "position": 4578 },
+				"ptsd": { "height": 100, "width": 178, "position": 4756 },
+				"regretdecisions": { "height": 100, "width": 178, "position": 4934 },
+				"ringomusume": { "height": 100, "width": 178, "position": 5112 },
+				"sadholo": { "height": 100, "width": 178, "position": 5290 },
+				"saikikek": { "height": 100, "width": 178, "position": 5468 },
+				"saltymug": { "height": 100, "width": 178, "position": 5646 },
+				"satisfyingbev": { "height": 100, "width": 178, "position": 5824 },
+				"scaredillya": { "height": 100, "width": 178, "position": 6002 },
+				"shh": { "height": 100, "width": 178, "position": 6180 },
+				"shhbabe": { "height": 100, "width": 178, "position": 6358 },
+				"sickness": { "height": 100, "width": 178, "position": 6536 },
+				"sleepingcutie": { "height": 100, "width": 178, "position": 6714 },
+				"smugboard": { "height": 100, "width": 178, "position": 6892 },
+				"smugtouru": { "height": 100, "width": 178, "position": 7070 },
+				"sobright": { "height": 100, "width": 178, "position": 7248 },
+				"suddenshock": { "height": 100, "width": 178, "position": 7426 },
+				"sulking": { "height": 100, "width": 178, "position": 7604 },
+				"tablesleep": { "height": 100, "width": 178, "position": 7782 },
+				"modsalute": { "height": 126, "width": 150, "position": 7932 },
+				"assman": { "height": 128, "width": 150, "position": 8082 },
+				"loli_ok": { "height": 134, "width": 150, "position": 8232 },
+				"biiru": { "height": 138, "width": 150, "position": 8382 },
+				"mindblank": { "height": 125, "width": 150, "position": 8532 },
+				"feelingloved": { "height": 127, "width": 150, "position": 8682 },
+				"nico-heart": { "height": 129, "width": 150, "position": 8832 },
+				"mug3": { "height": 131, "width": 178, "position": 9010 },
+				"mug1": { "height": 131, "width": 178, "position": 9188 },
+				"eyythisguy": { "height": 133, "width": 150, "position": 9338 },
+				"tomato": { "height": 135, "width": 150, "position": 9488 },
+				"saberawe": { "height": 137, "width": 106, "position": 9594 },
+				"nichijouthumbs": { "height": 137, "width": 150, "position": 9744 }
 			}
 		},
 		"5": {
 			"sprite-sheet": "cf-static-042",
-			"default": [
-				129,
-				121
-			],
+			"default": [129, 121],
 			"total-width": 10387,
 			"items": {
-				"igiveup": {
-					"height": 121,
-					"width": 129,
-					"position": 140
-				},
-				"ilovethiskindofshit": {
-					"height": 121,
-					"width": 129,
-					"position": 280
-				},
-				"juice1": {
-					"height": 121,
-					"width": 129,
-					"position": 420
-				},
-				"kukuku2": {
-					"height": 121,
-					"width": 129,
-					"position": 560
-				},
-				"kumikolook": {
-					"height": 121,
-					"width": 129,
-					"position": 700
-				},
-				"miyamoriunimpressed": {
-					"height": 121,
-					"width": 129,
-					"position": 840
-				}
+				"igiveup": { "height": 121, "width": 129, "position": 140 },
+				"ilovethiskindofshit": { "height": 121, "width": 129, "position": 280 },
+				"juice1": { "height": 121, "width": 129, "position": 420 },
+				"kukuku2": { "height": 121, "width": 129, "position": 560 },
+				"kumikolook": { "height": 121, "width": 129, "position": 700 },
+				"miyamoriunimpressed": { "height": 121, "width": 129, "position": 840 }
 			}
 		},
 		"6": {
 			"sprite-sheet": "cf-static-042",
-			"default": [
-				178,
-				100
-			],
+			"default": [178, 100],
 			"total-width": 10387,
 			"items": {
-				"tanakalove": {
-					"height": 100,
-					"width": 178,
-					"position": 1018
-				},
-				"tch": {
-					"height": 100,
-					"width": 178,
-					"position": 1196
-				},
-				"thebutton": {
-					"height": 100,
-					"width": 178,
-					"position": 1374
-				},
-				"threatening": {
-					"height": 100,
-					"width": 178,
-					"position": 1552
-				},
-				"tooexcitedforsleep": {
-					"height": 100,
-					"width": 178,
-					"position": 1730
-				},
-				"unko": {
-					"height": 100,
-					"width": 178,
-					"position": 1908
-				},
-				"whatdidijustread": {
-					"height": 100,
-					"width": 178,
-					"position": 2086
-				},
-				"wipetears": {
-					"height": 100,
-					"width": 178,
-					"position": 2264
-				},
-				"wtfdidijustwatch": {
-					"height": 100,
-					"width": 178,
-					"position": 2442
-				},
-				"tiredaoi": {
-					"height": 100,
-					"width": 178,
-					"position": 2620
-				},
-				"yohane": {
-					"height": 100,
-					"width": 178,
-					"position": 2798
-				},
-				"yuristare": {
-					"height": 100,
-					"width": 178,
-					"position": 2976
-				}
+				"tanakalove": { "height": 100, "width": 178, "position": 1018 },
+				"tch": { "height": 100, "width": 178, "position": 1196 },
+				"thebutton": { "height": 100, "width": 178, "position": 1374 },
+				"threatening": { "height": 100, "width": 178, "position": 1552 },
+				"tooexcitedforsleep": { "height": 100, "width": 178, "position": 1730 },
+				"unko": { "height": 100, "width": 178, "position": 1908 },
+				"whatdidijustread": { "height": 100, "width": 178, "position": 2086 },
+				"wipetears": { "height": 100, "width": 178, "position": 2264 },
+				"wtfdidijustwatch": { "height": 100, "width": 178, "position": 2442 },
+				"tiredaoi": { "height": 100, "width": 178, "position": 2620 },
+				"yohane": { "height": 100, "width": 178, "position": 2798 },
+				"yuristare": { "height": 100, "width": 178, "position": 2976 }
 			}
 		},
 		"7": {
 			"sprite-sheet": "cf-static-042",
-			"default": [
-				178,
-				98
-			],
+			"default": [178, 98],
 			"total-width": 10387,
 			"items": {
-				"banhammer": {
-					"height": 98,
-					"width": 178,
-					"position": 3154
-				},
-				"barakamonnotcool": {
-					"height": 98,
-					"width": 178,
-					"position": 3332
-				},
-				"bearhug": {
-					"height": 98,
-					"width": 178,
-					"position": 3510
-				},
-				"bitchplease": {
-					"height": 98,
-					"width": 178,
-					"position": 3688
-				},
-				"cheekygahara": {
-					"height": 98,
-					"width": 178,
-					"position": 3866
-				},
-				"chitogheh": {
-					"height": 98,
-					"width": 178,
-					"position": 4044
-				},
-				"crumblingdespair": {
-					"height": 98,
-					"width": 178,
-					"position": 4222
-				},
-				"csikon": {
-					"height": 98,
-					"width": 178,
-					"position": 4400
-				},
-				"cup4": {
-					"height": 98,
-					"width": 178,
-					"position": 4578
-				},
-				"elsieqq": {
-					"height": 98,
-					"width": 178,
-					"position": 4756
-				},
-				"firstthinginthemorning": {
-					"height": 98,
-					"width": 178,
-					"position": 4934
-				},
-				"fuckyou": {
-					"height": 98,
-					"width": 178,
-					"position": 5112
-				},
-				"glasses-push": {
-					"height": 98,
-					"width": 178,
-					"position": 5290
-				},
-				"hackadollthumbsup": {
-					"height": 98,
-					"width": 178,
-					"position": 5468
-				},
-				"hanasakueurgh": {
-					"height": 98,
-					"width": 178,
-					"position": 5646
-				},
-				"happydera": {
-					"height": 98,
-					"width": 178,
-					"position": 5824
-				},
-				"haruhiisnotamused": {
-					"height": 98,
-					"width": 178,
-					"position": 6002
-				},
-				"healthypasstimes": {
-					"height": 98,
-					"width": 178,
-					"position": 6180
-				},
-				"holdme": {
-					"height": 98,
-					"width": 178,
-					"position": 6358
-				},
-				"jibrilaww": {
-					"height": 98,
-					"width": 178,
-					"position": 6536
-				},
-				"jibrilfetish": {
-					"height": 98,
-					"width": 178,
-					"position": 6714
-				},
-				"kaorusmile": {
-					"height": 98,
-					"width": 178,
-					"position": 6892
-				},
-				"katoupls": {
-					"height": 98,
-					"width": 178,
-					"position": 7070
-				},
-				"katoupout": {
-					"height": 98,
-					"width": 178,
-					"position": 7248
-				},
-				"konodioda": {
-					"height": 98,
-					"width": 178,
-					"position": 7426
-				},
-				"kotourashock": {
-					"height": 98,
-					"width": 178,
-					"position": 7604
-				},
-				"kyonfacepalm": {
-					"height": 98,
-					"width": 178,
-					"position": 7782
-				},
-				"deadlystare": {
-					"height": 100,
-					"width": 177,
-					"position": 7959
-				},
-				"eheheh": {
-					"height": 102,
-					"width": 150,
-					"position": 8109
-				},
-				"kms": {
-					"height": 104,
-					"width": 150,
-					"position": 8259
-				},
-				"whisperwhisper": {
-					"height": 108,
-					"width": 178,
-					"position": 8437
-				},
-				"annoyedkiki": {
-					"height": 110,
-					"width": 150,
-					"position": 8587
-				},
-				"drool": {
-					"height": 110,
-					"width": 158,
-					"position": 8745
-				},
-				"isthisameme": {
-					"height": 112,
-					"width": 149,
-					"position": 8894
-				},
-				"wow-really": {
-					"height": 85,
-					"width": 80,
-					"position": 8974
-				},
-				"kotori": {
-					"height": 89,
-					"width": 85,
-					"position": 9059
-				},
-				"annoyedkirito": {
-					"height": 113,
-					"width": 178,
-					"position": 9237
-				},
-				"nottodisushittoagen": {
-					"height": 101,
-					"width": 178,
-					"position": 9415
-				},
-				"lesbians": {
-					"height": 101,
-					"width": 180,
-					"position": 9595
-				},
-				"vashheadscratch": {
-					"height": 103,
-					"width": 143,
-					"position": 9738
-				},
-				"mug2": {
-					"height": 105,
-					"width": 143,
-					"position": 9881
-				},
-				"sweating": {
-					"height": 105,
-					"width": 178,
-					"position": 10059
-				},
-				"teekyuuhype": {
-					"height": 107,
-					"width": 178,
-					"position": 10237
-				},
-				"morethanonewaifu": {
-					"height": 109,
-					"width": 150,
-					"position": 10387
-				}
+				"banhammer": { "height": 98, "width": 178, "position": 3154 },
+				"barakamonnotcool": { "height": 98, "width": 178, "position": 3332 },
+				"bearhug": { "height": 98, "width": 178, "position": 3510 },
+				"bitchplease": { "height": 98, "width": 178, "position": 3688 },
+				"cheekygahara": { "height": 98, "width": 178, "position": 3866 },
+				"chitogheh": { "height": 98, "width": 178, "position": 4044 },
+				"crumblingdespair": { "height": 98, "width": 178, "position": 4222 },
+				"csikon": { "height": 98, "width": 178, "position": 4400 },
+				"cup4": { "height": 98, "width": 178, "position": 4578 },
+				"elsieqq": { "height": 98, "width": 178, "position": 4756 },
+				"firstthinginthemorning": { "height": 98, "width": 178, "position": 4934 },
+				"fuckyou": { "height": 98, "width": 178, "position": 5112 },
+				"glasses-push": { "height": 98, "width": 178, "position": 5290 },
+				"hackadollthumbsup": { "height": 98, "width": 178, "position": 5468 },
+				"hanasakueurgh": { "height": 98, "width": 178, "position": 5646 },
+				"happydera": { "height": 98, "width": 178, "position": 5824 },
+				"haruhiisnotamused": { "height": 98, "width": 178, "position": 6002 },
+				"healthypasstimes": { "height": 98, "width": 178, "position": 6180 },
+				"holdme": { "height": 98, "width": 178, "position": 6358 },
+				"jibrilaww": { "height": 98, "width": 178, "position": 6536 },
+				"jibrilfetish": { "height": 98, "width": 178, "position": 6714 },
+				"kaorusmile": { "height": 98, "width": 178, "position": 6892 },
+				"katoupls": { "height": 98, "width": 178, "position": 7070 },
+				"katoupout": { "height": 98, "width": 178, "position": 7248 },
+				"konodioda": { "height": 98, "width": 178, "position": 7426 },
+				"kotourashock": { "height": 98, "width": 178, "position": 7604 },
+				"kyonfacepalm": { "height": 98, "width": 178, "position": 7782 },
+				"deadlystare": { "height": 100, "width": 177, "position": 7959 },
+				"eheheh": { "height": 102, "width": 150, "position": 8109 },
+				"kms": { "height": 104, "width": 150, "position": 8259 },
+				"whisperwhisper": { "height": 108, "width": 178, "position": 8437 },
+				"annoyedkiki": { "height": 110, "width": 150, "position": 8587 },
+				"drool": { "height": 110, "width": 158, "position": 8745 },
+				"isthisameme": { "height": 112, "width": 149, "position": 8894 },
+				"wow-really": { "height": 85, "width": 80, "position": 8974 },
+				"kotori": { "height": 89, "width": 85, "position": 9059 },
+				"annoyedkirito": { "height": 113, "width": 178, "position": 9237 },
+				"nottodisushittoagen": { "height": 101, "width": 178, "position": 9415 },
+				"lesbians": { "height": 101, "width": 180, "position": 9595 },
+				"vashheadscratch": { "height": 103, "width": 143, "position": 9738 },
+				"mug2": { "height": 105, "width": 143, "position": 9881 },
+				"sweating": { "height": 105, "width": 178, "position": 10059 },
+				"teekyuuhype": { "height": 107, "width": 178, "position": 10237 },
+				"morethanonewaifu": { "height": 109, "width": 150, "position": 10387 }
 			}
 		},
 		"8": {
 			"sprite-sheet": "cf-static-043",
-			"default": [
-				129,
-				121
-			],
+			"default": [129, 121],
 			"total-width": 8772,
 			"items": {
-				"mug7": {
-					"height": 121,
-					"width": 129,
-					"position": 140
-				},
-				"papithumbsup": {
-					"height": 121,
-					"width": 129,
-					"position": 280
-				},
-				"psh-mongrels": {
-					"height": 121,
-					"width": 129,
-					"position": 420
-				},
-				"riddhethink": {
-					"height": 121,
-					"width": 129,
-					"position": 560
-				},
-				"rinkek": {
-					"height": 121,
-					"width": 129,
-					"position": 700
-				},
-				"salute": {
-					"height": 121,
-					"width": 129,
-					"position": 840
-				}
+				"mug7": { "height": 121, "width": 129, "position": 140 },
+				"papithumbsup": { "height": 121, "width": 129, "position": 280 },
+				"psh-mongrels": { "height": 121, "width": 129, "position": 420 },
+				"riddhethink": { "height": 121, "width": 129, "position": 560 },
+				"rinkek": { "height": 121, "width": 129, "position": 700 },
+				"salute": { "height": 121, "width": 129, "position": 840 }
 			}
 		},
 		"9": {
 			"sprite-sheet": "cf-static-043",
-			"default": [
-				178,
-				98
-			],
+			"default": [178, 98],
 			"total-width": 8772,
 			"items": {
-				"lovenectar": {
-					"height": 98,
-					"width": 178,
-					"position": 1018
-				},
-				"mechablush": {
-					"height": 98,
-					"width": 178,
-					"position": 1196
-				},
-				"meguminthumbsup": {
-					"height": 98,
-					"width": 178,
-					"position": 1374
-				},
-				"misakiteehee": {
-					"height": 98,
-					"width": 178,
-					"position": 1552
-				},
-				"nocomment": {
-					"height": 98,
-					"width": 178,
-					"position": 1730
-				},
-				"overwhelmed": {
-					"height": 98,
-					"width": 178,
-					"position": 1908
-				},
-				"peace": {
-					"height": 98,
-					"width": 178,
-					"position": 2086
-				},
-				"plebgetawayfromme": {
-					"height": 98,
-					"width": 178,
-					"position": 2264
-				},
-				"poltears": {
-					"height": 98,
-					"width": 178,
-					"position": 2442
-				},
-				"rengehype": {
-					"height": 98,
-					"width": 178,
-					"position": 2620
-				},
-				"saehug": {
-					"height": 98,
-					"width": 178,
-					"position": 2798
-				},
-				"saesmile": {
-					"height": 98,
-					"width": 178,
-					"position": 2976
-				},
-				"schwing": {
-					"height": 98,
-					"width": 178,
-					"position": 3154
-				},
-				"shatteredsaten": {
-					"height": 98,
-					"width": 178,
-					"position": 3332
-				},
-				"shirayukidrunk": {
-					"height": 98,
-					"width": 178,
-					"position": 3510
-				},
-				"shirayukieavesdrop": {
-					"height": 98,
-					"width": 178,
-					"position": 3688
-				},
-				"shirayukifuckinreally": {
-					"height": 98,
-					"width": 178,
-					"position": 3866
-				},
-				"smughaikyuu": {
-					"height": 98,
-					"width": 178,
-					"position": 4044
-				},
-				"smugobi": {
-					"height": 98,
-					"width": 178,
-					"position": 4222
-				},
-				"smugpoint": {
-					"height": 98,
-					"width": 178,
-					"position": 4400
-				},
-				"smugshinobu": {
-					"height": 98,
-					"width": 178,
-					"position": 4578
-				},
-				"SPORTS": {
-					"height": 98,
-					"width": 178,
-					"position": 4756
-				},
-				"takaradasalute": {
-					"height": 98,
-					"width": 178,
-					"position": 4934
-				},
-				"takasakiapproves": {
-					"height": 98,
-					"width": 178,
-					"position": 5112
-				},
-				"thinkingtoohard": {
-					"height": 98,
-					"width": 178,
-					"position": 5290
-				},
-				"tiredfate": {
-					"height": 98,
-					"width": 178,
-					"position": 5468
-				},
-				"TOMODA": {
-					"height": 98,
-					"width": 178,
-					"position": 5646
-				},
-				"toradorable": {
-					"height": 98,
-					"width": 178,
-					"position": 5824
-				},
-				"toradorasalute": {
-					"height": 98,
-					"width": 178,
-					"position": 6002
-				},
-				"triggeredkillua": {
-					"height": 98,
-					"width": 178,
-					"position": 6180
-				},
-				"trollnui": {
-					"height": 98,
-					"width": 178,
-					"position": 6358
-				},
-				"utahapraises": {
-					"height": 98,
-					"width": 178,
-					"position": 6536
-				},
-				"waah": {
-					"height": 98,
-					"width": 178,
-					"position": 6714
-				},
-				"watashihasdeclined": {
-					"height": 98,
-					"width": 178,
-					"position": 6892
-				},
-				"watashiworried": {
-					"height": 98,
-					"width": 178,
-					"position": 7070
-				},
-				"whatamireading": {
-					"height": 98,
-					"width": 178,
-					"position": 7248
-				},
-				"whowouldathunkit": {
-					"height": 98,
-					"width": 178,
-					"position": 7426
-				},
-				"WRYYY": {
-					"height": 98,
-					"width": 178,
-					"position": 7604
-				},
-				"yuruyuriapprove": {
-					"height": 98,
-					"width": 178,
-					"position": 7782
-				},
-				"niatilt": {
-					"height": 114,
-					"width": 178,
-					"position": 7960
-				},
-				"getout": {
-					"height": 116,
-					"width": 178,
-					"position": 8138
-				},
-				"k-on-hug": {
-					"height": 120,
-					"width": 179,
-					"position": 8317
-				},
-				"hisocuck": {
-					"height": 122,
-					"width": 150,
-					"position": 8467
-				},
-				"hisocuck_2": {
-					"height": 122,
-					"width": 150,
-					"position": 8617
-				},
-				"teehee": {
-					"height": 122,
-					"width": 155,
-					"position": 8772
-				}
+				"lovenectar": { "height": 98, "width": 178, "position": 1018 },
+				"mechablush": { "height": 98, "width": 178, "position": 1196 },
+				"meguminthumbsup": { "height": 98, "width": 178, "position": 1374 },
+				"misakiteehee": { "height": 98, "width": 178, "position": 1552 },
+				"nocomment": { "height": 98, "width": 178, "position": 1730 },
+				"overwhelmed": { "height": 98, "width": 178, "position": 1908 },
+				"peace": { "height": 98, "width": 178, "position": 2086 },
+				"plebgetawayfromme": { "height": 98, "width": 178, "position": 2264 },
+				"poltears": { "height": 98, "width": 178, "position": 2442 },
+				"rengehype": { "height": 98, "width": 178, "position": 2620 },
+				"saehug": { "height": 98, "width": 178, "position": 2798 },
+				"saesmile": { "height": 98, "width": 178, "position": 2976 },
+				"schwing": { "height": 98, "width": 178, "position": 3154 },
+				"shatteredsaten": { "height": 98, "width": 178, "position": 3332 },
+				"shirayukidrunk": { "height": 98, "width": 178, "position": 3510 },
+				"shirayukieavesdrop": { "height": 98, "width": 178, "position": 3688 },
+				"shirayukifuckinreally": { "height": 98, "width": 178, "position": 3866 },
+				"smughaikyuu": { "height": 98, "width": 178, "position": 4044 },
+				"smugobi": { "height": 98, "width": 178, "position": 4222 },
+				"smugpoint": { "height": 98, "width": 178, "position": 4400 },
+				"smugshinobu": { "height": 98, "width": 178, "position": 4578 },
+				"SPORTS": { "height": 98, "width": 178, "position": 4756 },
+				"takaradasalute": { "height": 98, "width": 178, "position": 4934 },
+				"takasakiapproves": { "height": 98, "width": 178, "position": 5112 },
+				"thinkingtoohard": { "height": 98, "width": 178, "position": 5290 },
+				"tiredfate": { "height": 98, "width": 178, "position": 5468 },
+				"TOMODA": { "height": 98, "width": 178, "position": 5646 },
+				"toradorable": { "height": 98, "width": 178, "position": 5824 },
+				"toradorasalute": { "height": 98, "width": 178, "position": 6002 },
+				"triggeredkillua": { "height": 98, "width": 178, "position": 6180 },
+				"trollnui": { "height": 98, "width": 178, "position": 6358 },
+				"utahapraises": { "height": 98, "width": 178, "position": 6536 },
+				"waah": { "height": 98, "width": 178, "position": 6714 },
+				"watashihasdeclined": { "height": 98, "width": 178, "position": 6892 },
+				"watashiworried": { "height": 98, "width": 178, "position": 7070 },
+				"whatamireading": { "height": 98, "width": 178, "position": 7248 },
+				"whowouldathunkit": { "height": 98, "width": 178, "position": 7426 },
+				"WRYYY": { "height": 98, "width": 178, "position": 7604 },
+				"yuruyuriapprove": { "height": 98, "width": 178, "position": 7782 },
+				"niatilt": { "height": 114, "width": 178, "position": 7960 },
+				"getout": { "height": 116, "width": 178, "position": 8138 },
+				"k-on-hug": { "height": 120, "width": 179, "position": 8317 },
+				"hisocuck": { "height": 122, "width": 150, "position": 8467 },
+				"hisocuck_2": { "height": 122, "width": 150, "position": 8617 },
+				"teehee": { "height": 122, "width": 155, "position": 8772 }
 			}
 		},
 		"10": {
 			"sprite-sheet": "cf-static-044",
-			"default": [
-				129,
-				121
-			],
+			"default": [129, 121],
 			"total-width": 8839,
 			"items": {
-				"schemingsaten": {
-					"height": 121,
-					"width": 129,
-					"position": 140
-				},
-				"shinjimug": {
-					"height": 121,
-					"width": 129,
-					"position": 280
-				},
-				"smugasuna": {
-					"height": 121,
-					"width": 129,
-					"position": 420
-				},
-				"smugkaguya": {
-					"height": 121,
-					"width": 129,
-					"position": 560
-				},
-				"yuishrug": {
-					"height": 121,
-					"width": 129,
-					"position": 700
-				},
-				"popcorn2": {
-					"height": 121,
-					"width": 133,
-					"position": 833
-				}
+				"schemingsaten": { "height": 121, "width": 129, "position": 140 },
+				"shinjimug": { "height": 121, "width": 129, "position": 280 },
+				"smugasuna": { "height": 121, "width": 129, "position": 420 },
+				"smugkaguya": { "height": 121, "width": 129, "position": 560 },
+				"yuishrug": { "height": 121, "width": 129, "position": 700 },
+				"popcorn2": { "height": 121, "width": 133, "position": 833 }
 			}
 		},
 		"11": {
 			"sprite-sheet": "cf-static-044",
-			"default": [
-				140,
-				140
-			],
+			"default": [140, 140],
 			"total-width": 8839,
 			"items": {
-				"hardthink": {
-					"height": 140,
-					"width": 140,
-					"position": 1011
-				},
-				"jashinsip": {
-					"height": 140,
-					"width": 140,
-					"position": 1189
-				},
-				"lalahmm": {
-					"height": 140,
-					"width": 140,
-					"position": 1367
-				},
-				"loveisatrap": {
-					"height": 140,
-					"width": 140,
-					"position": 1545
-				},
-				"mugipout": {
-					"height": 140,
-					"width": 140,
-					"position": 1723
-				},
-				"notlewd": {
-					"height": 140,
-					"width": 140,
-					"position": 1901
-				},
-				"rengethink": {
-					"height": 140,
-					"width": 140,
-					"position": 2079
-				},
-				"romance": {
-					"height": 140,
-					"width": 140,
-					"position": 2257
-				},
-				"surefam": {
-					"height": 140,
-					"width": 140,
-					"position": 2435
-				},
-				"toohighforthis": {
-					"height": 140,
-					"width": 140,
-					"position": 2613
-				},
-				"vacationcup": {
-					"height": 140,
-					"width": 140,
-					"position": 2791
-				},
-				"yoihug": {
-					"height": 140,
-					"width": 140,
-					"position": 2969
-				}
+				"hardthink": { "height": 140, "width": 140, "position": 1011 },
+				"jashinsip": { "height": 140, "width": 140, "position": 1189 },
+				"lalahmm": { "height": 140, "width": 140, "position": 1367 },
+				"loveisatrap": { "height": 140, "width": 140, "position": 1545 },
+				"mugipout": { "height": 140, "width": 140, "position": 1723 },
+				"notlewd": { "height": 140, "width": 140, "position": 1901 },
+				"rengethink": { "height": 140, "width": 140, "position": 2079 },
+				"romance": { "height": 140, "width": 140, "position": 2257 },
+				"surefam": { "height": 140, "width": 140, "position": 2435 },
+				"toohighforthis": { "height": 140, "width": 140, "position": 2613 },
+				"vacationcup": { "height": 140, "width": 140, "position": 2791 },
+				"yoihug": { "height": 140, "width": 140, "position": 2969 }
 			}
 		},
 		"12": {
 			"sprite-sheet": "cf-static-044",
-			"default": [
-				150,
-				100
-			],
+			"default": [150, 100],
 			"total-width": 8839,
 			"items": {
-				"chiochanvictory": {
-					"height": 100,
-					"width": 150,
-					"position": 3147
-				},
-				"cosy": {
-					"height": 100,
-					"width": 150,
-					"position": 3325
-				},
-				"girlslastdab": {
-					"height": 100,
-					"width": 150,
-					"position": 3503
-				},
-				"hellopolice": {
-					"height": 100,
-					"width": 150,
-					"position": 3681
-				},
-				"manly-tears": {
-					"height": 100,
-					"width": 150,
-					"position": 3859
-				},
-				"ookii": {
-					"height": 100,
-					"width": 150,
-					"position": 4037
-				},
-				"panickedgakuto": {
-					"height": 100,
-					"width": 150,
-					"position": 4215
-				},
-				"soon": {
-					"height": 100,
-					"width": 150,
-					"position": 4393
-				},
-				"stare": {
-					"height": 100,
-					"width": 149,
-					"position": 4571
-				},
-				"terminate": {
-					"height": 100,
-					"width": 150,
-					"position": 4749
-				},
-				"whippersnappers": {
-					"height": 100,
-					"width": 150,
-					"position": 4927
-				}
+				"chiochanvictory": { "height": 100, "width": 150, "position": 3147 },
+				"cosy": { "height": 100, "width": 150, "position": 3325 },
+				"girlslastdab": { "height": 100, "width": 150, "position": 3503 },
+				"hellopolice": { "height": 100, "width": 150, "position": 3681 },
+				"manly-tears": { "height": 100, "width": 150, "position": 3859 },
+				"ookii": { "height": 100, "width": 150, "position": 4037 },
+				"panickedgakuto": { "height": 100, "width": 150, "position": 4215 },
+				"soon": { "height": 100, "width": 150, "position": 4393 },
+				"stare": { "height": 100, "width": 149, "position": 4571 },
+				"terminate": { "height": 100, "width": 150, "position": 4749 },
+				"whippersnappers": { "height": 100, "width": 150, "position": 4927 }
 			}
 		},
 		"13": {
 			"sprite-sheet": "cf-static-044",
-			"default": [
-				150,
-				112
-			],
+			"default": [150, 112],
 			"total-width": 8839,
 			"items": {
-				"bookburning": {
-					"height": 112,
-					"width": 150,
-					"position": 5105
-				},
-				"exasperated": {
-					"height": 112,
-					"width": 150,
-					"position": 5283
-				},
-				"lewdgyaru": {
-					"height": 112,
-					"width": 150,
-					"position": 5461
-				},
-				"lost": {
-					"height": 112,
-					"width": 150,
-					"position": 5639
-				},
-				"mmph": {
-					"height": 112,
-					"width": 150,
-					"position": 5817
-				},
-				"outofplace": {
-					"height": 112,
-					"width": 150,
-					"position": 5995
-				},
-				"whathaveidone": {
-					"height": 112,
-					"width": 150,
-					"position": 6173
-				},
-				"whyhime": {
-					"height": 112,
-					"width": 150,
-					"position": 6351
-				}
+				"bookburning": { "height": 112, "width": 150, "position": 5105 },
+				"exasperated": { "height": 112, "width": 150, "position": 5283 },
+				"lewdgyaru": { "height": 112, "width": 150, "position": 5461 },
+				"lost": { "height": 112, "width": 150, "position": 5639 },
+				"mmph": { "height": 112, "width": 150, "position": 5817 },
+				"outofplace": { "height": 112, "width": 150, "position": 5995 },
+				"whathaveidone": { "height": 112, "width": 150, "position": 6173 },
+				"whyhime": { "height": 112, "width": 150, "position": 6351 }
 			}
 		},
 		"14": {
 			"sprite-sheet": "cf-static-044",
-			"default": [
-				152,
-				110
-			],
+			"default": [152, 110],
 			"total-width": 8839,
 			"items": {
-				"excitedmao": {
-					"height": 110,
-					"width": 152,
-					"position": 6529
-				},
-				"shades": {
-					"height": 110,
-					"width": 152,
-					"position": 6707
-				},
-				"shockedsotoka": {
-					"height": 110,
-					"width": 152,
-					"position": 6885
-				},
-				"why": {
-					"height": 110,
-					"width": 152,
-					"position": 7063
-				}
+				"excitedmao": { "height": 110, "width": 152, "position": 6529 },
+				"shades": { "height": 110, "width": 152, "position": 6707 },
+				"shockedsotoka": { "height": 110, "width": 152, "position": 6885 },
+				"why": { "height": 110, "width": 152, "position": 7063 }
 			}
 		},
 		"15": {
 			"sprite-sheet": "cf-static-044",
-			"default": [
-				144,
-				116
-			],
+			"default": [144, 116],
 			"total-width": 8839,
 			"items": {
-				"cheekychika": {
-					"height": 116,
-					"width": 144,
-					"position": 7241
-				},
-				"done": {
-					"height": 116,
-					"width": 144,
-					"position": 7419
-				},
-				"hikariactually": {
-					"height": 116,
-					"width": 144,
-					"position": 7597
-				},
-				"worshipme": {
-					"height": 116,
-					"width": 144,
-					"position": 7775
-				},
-				"heartbot": {
-					"height": 148,
-					"width": 113,
-					"position": 7888
-				},
-				"bot-chan": {
-					"height": 148,
-					"width": 120,
-					"position": 8008
-				},
-				"yanderebot": {
-					"height": 148,
-					"width": 128,
-					"position": 8136
-				},
-				"konosubawot3": {
-					"height": 148,
-					"width": 129,
-					"position": 8265
-				},
-				"blushubot": {
-					"height": 148,
-					"width": 154,
-					"position": 8419
-				},
-				"nosenpai": {
-					"height": 152,
-					"width": 150,
-					"position": 8569
-				},
-				"brokencommentface": {
-					"height": 154,
-					"width": 120,
-					"position": 8689
-				},
-				"konhug": {
-					"height": 143,
-					"width": 150,
-					"position": 8839
-				}
+				"cheekychika": { "height": 116, "width": 144, "position": 7241 },
+				"done": { "height": 116, "width": 144, "position": 7419 },
+				"hikariactually": { "height": 116, "width": 144, "position": 7597 },
+				"worshipme": { "height": 116, "width": 144, "position": 7775 },
+				"heartbot": { "height": 148, "width": 113, "position": 7888 },
+				"bot-chan": { "height": 148, "width": 120, "position": 8008 },
+				"yanderebot": { "height": 148, "width": 128, "position": 8136 },
+				"konosubawot3": { "height": 148, "width": 129, "position": 8265 },
+				"blushubot": { "height": 148, "width": 154, "position": 8419 },
+				"nosenpai": { "height": 152, "width": 150, "position": 8569 },
+				"brokencommentface": { "height": 154, "width": 120, "position": 8689 },
+				"konhug": { "height": 143, "width": 150, "position": 8839 }
 			}
 		},
 		"16": {
 			"sprite-sheet": "cf-static-045",
-			"default": [
-				140,
-				121
-			],
+			"default": [140, 121],
 			"total-width": 8418,
 			"items": {
-				"lolismile": {
-					"height": 121,
-					"width": 140,
-					"position": 140
-				},
-				"harukathonk": {
-					"height": 121,
-					"width": 140,
-					"position": 280
-				},
-				"sagiri": {
-					"height": 121,
-					"width": 140,
-					"position": 420
-				}
+				"lolismile": { "height": 121, "width": 140, "position": 140 },
+				"harukathonk": { "height": 121, "width": 140, "position": 280 },
+				"sagiri": { "height": 121, "width": 140, "position": 420 }
 			}
 		},
 		"17": {
 			"sprite-sheet": "cf-static-045",
-			"default": [
-				138,
-				121
-			],
+			"default": [138, 121],
 			"total-width": 8418,
 			"items": {
-				"deletethis": {
-					"height": 121,
-					"width": 138,
-					"position": 560
-				},
-				"surprisedpikachu": {
-					"height": 121,
-					"width": 138,
-					"position": 700
-				},
-				"sakurathink": {
-					"height": 121,
-					"width": 133,
-					"position": 833
-				}
+				"deletethis": { "height": 121, "width": 138, "position": 560 },
+				"surprisedpikachu": { "height": 121, "width": 138, "position": 700 },
+				"sakurathink": { "height": 121, "width": 133, "position": 833 }
 			}
 		},
 		"18": {
 			"sprite-sheet": "cf-static-045",
-			"default": [
-				148,
-				112
-			],
+			"default": [148, 112],
 			"total-width": 8418,
 			"items": {
-				"bigshock": {
-					"height": 112,
-					"width": 148,
-					"position": 1011
-				},
-				"foldedarms": {
-					"height": 112,
-					"width": 148,
-					"position": 1189
-				},
-				"womanlytears": {
-					"height": 112,
-					"width": 148,
-					"position": 1367
-				}
+				"bigshock": { "height": 112, "width": 148, "position": 1011 },
+				"foldedarms": { "height": 112, "width": 148, "position": 1189 },
+				"womanlytears": { "height": 112, "width": 148, "position": 1367 }
 			}
 		},
 		"19": {
 			"sprite-sheet": "cf-static-045",
-			"default": [
-				150,
-				116
-			],
+			"default": [150, 116],
 			"total-width": 8418,
 			"items": {
-				"chitosesmug": {
-					"height": 116,
-					"width": 150,
-					"position": 1545
-				},
-				"selfcontrol": {
-					"height": 116,
-					"width": 150,
-					"position": 1723
-				},
-				"smoke": {
-					"height": 116,
-					"width": 150,
-					"position": 1901
-				}
+				"chitosesmug": { "height": 116, "width": 150, "position": 1545 },
+				"selfcontrol": { "height": 116, "width": 150, "position": 1723 },
+				"smoke": { "height": 116, "width": 150, "position": 1901 }
 			}
 		},
 		"20": {
 			"sprite-sheet": "cf-static-045",
-			"default": [
-				148,
-				110
-			],
+			"default": [148, 110],
 			"total-width": 8418,
 			"items": {
-				"funky": {
-					"height": 110,
-					"width": 148,
-					"position": 2079
-				},
-				"heavydrinker": {
-					"height": 110,
-					"width": 148,
-					"position": 2257
-				},
-				"nonnonbino": {
-					"height": 110,
-					"width": 148,
-					"position": 2435
-				}
+				"funky": { "height": 110, "width": 148, "position": 2079 },
+				"heavydrinker": { "height": 110, "width": 148, "position": 2257 },
+				"nonnonbino": { "height": 110, "width": 148, "position": 2435 }
 			}
 		},
 		"21": {
 			"sprite-sheet": "cf-static-045",
-			"default": [
-				100,
-				100
-			],
+			"default": [100, 100],
 			"total-width": 8418,
 			"items": {
-				"ok": {
-					"height": 100,
-					"width": 99,
-					"position": 2613
-				},
-				"umucool": {
-					"height": 100,
-					"width": 100,
-					"position": 2791
-				}
+				"ok": { "height": 100, "width": 99, "position": 2613 },
+				"umucool": { "height": 100, "width": 100, "position": 2791 }
 			}
 		},
 		"22": {
 			"sprite-sheet": "cf-static-045",
-			"default": [
-				128,
-				128
-			],
+			"default": [128, 128],
 			"total-width": 8418,
 			"items": {
-				"binoculars": {
-					"height": 128,
-					"width": 128,
-					"position": 2969
-				},
-				"kotohoops": {
-					"height": 128,
-					"width": 128,
-					"position": 3147
-				}
+				"binoculars": { "height": 128, "width": 128, "position": 2969 },
+				"kotohoops": { "height": 128, "width": 128, "position": 3147 }
 			}
 		},
 		"23": {
 			"sprite-sheet": "cf-static-045",
-			"default": [
-				129,
-				168
-			],
+			"default": [129, 168],
 			"total-width": 8418,
 			"items": {
-				"loliwave": {
-					"height": 168,
-					"width": 129,
-					"position": 3325
-				},
-				"towel": {
-					"height": 168,
-					"width": 129,
-					"position": 3503
-				}
+				"loliwave": { "height": 168, "width": 129, "position": 3325 },
+				"towel": { "height": 168, "width": 129, "position": 3503 }
 			}
 		},
 		"24": {
 			"sprite-sheet": "cf-static-045",
-			"default": [
-				150,
-				150
-			],
+			"default": [150, 150],
 			"total-width": 8418,
 			"items": {
-				"cup7": {
-					"height": 150,
-					"width": 150,
-					"position": 3681
-				},
-				"lifeishard": {
-					"height": 150,
-					"width": 150,
-					"position": 3859
-				}
+				"cup7": { "height": 150, "width": 150, "position": 3681 },
+				"lifeishard": { "height": 150, "width": 150, "position": 3859 }
 			}
 		},
 		"25": {
 			"sprite-sheet": "cf-static-045",
-			"default": [
-				132,
-				150
-			],
+			"default": [132, 150],
 			"total-width": 8418,
 			"items": {
-				"backfired": {
-					"height": 150,
-					"width": 132,
-					"position": 4037
-				},
-				"finethen": {
-					"height": 150,
-					"width": 132,
-					"position": 4215
-				},
-				"lifedrained": {
-					"height": 150,
-					"width": 132,
-					"position": 4393
-				},
-				"sassyimouto": {
-					"height": 150,
-					"width": 132,
-					"position": 4571
-				},
-				"scarredforlife": {
-					"height": 150,
-					"width": 132,
-					"position": 4749
-				},
-				"smugkillua": {
-					"height": 150,
-					"width": 132,
-					"position": 4927
-				}
+				"backfired": { "height": 150, "width": 132, "position": 4037 },
+				"finethen": { "height": 150, "width": 132, "position": 4215 },
+				"lifedrained": { "height": 150, "width": 132, "position": 4393 },
+				"sassyimouto": { "height": 150, "width": 132, "position": 4571 },
+				"scarredforlife": { "height": 150, "width": 132, "position": 4749 },
+				"smugkillua": { "height": 150, "width": 132, "position": 4927 }
 			}
 		},
 		"26": {
 			"sprite-sheet": "cf-static-045",
-			"default": [
-				128,
-				150
-			],
+			"default": [128, 150],
 			"total-width": 8418,
 			"items": {
-				"norice": {
-					"height": 150,
-					"width": 128,
-					"position": 5105
-				},
-				"pout": {
-					"height": 150,
-					"width": 128,
-					"position": 5283
-				},
-				"spilledtea": {
-					"height": 150,
-					"width": 128,
-					"position": 5461
-				}
+				"norice": { "height": 150, "width": 128, "position": 5105 },
+				"pout": { "height": 150, "width": 128, "position": 5283 },
+				"spilledtea": { "height": 150, "width": 128, "position": 5461 }
 			}
 		},
 		"27": {
 			"sprite-sheet": "cf-static-045",
-			"default": [
-				122,
-				160
-			],
+			"default": [122, 160],
 			"total-width": 8418,
 			"items": {
-				"merch": {
-					"height": 160,
-					"width": 122,
-					"position": 5639
-				},
-				"mugiwait": {
-					"height": 160,
-					"width": 122,
-					"position": 5817
-				},
-				"nobully": {
-					"height": 160,
-					"width": 122,
-					"position": 5995
-				}
+				"merch": { "height": 160, "width": 122, "position": 5639 },
+				"mugiwait": { "height": 160, "width": 122, "position": 5817 },
+				"nobully": { "height": 160, "width": 122, "position": 5995 }
 			}
 		},
 		"28": {
 			"sprite-sheet": "cf-static-045",
-			"default": [
-				150,
-				142
-			],
+			"default": [150, 142],
 			"total-width": 8418,
 			"items": {
-				"illyastare": {
-					"height": 142,
-					"width": 150,
-					"position": 6173
-				},
-				"mug8": {
-					"height": 142,
-					"width": 150,
-					"position": 6351
-				}
+				"illyastare": { "height": 142, "width": 150, "position": 6173 },
+				"mug8": { "height": 142, "width": 150, "position": 6351 }
 			}
 		},
 		"29": {
 			"sprite-sheet": "cf-static-045",
-			"default": [
-				150,
-				146
-			],
+			"default": [150, 146],
 			"total-width": 8418,
 			"items": {
-				"etotamadunno": {
-					"height": 146,
-					"width": 150,
-					"position": 6529
-				},
-				"sowwy": {
-					"height": 146,
-					"width": 150,
-					"position": 6707
-				}
+				"etotamadunno": { "height": 146, "width": 150, "position": 6529 },
+				"sowwy": { "height": 146, "width": 150, "position": 6707 }
 			}
 		},
 		"30": {
 			"sprite-sheet": "cf-static-045",
-			"default": [
-				151,
-				148
-			],
+			"default": [151, 148],
 			"total-width": 8418,
 			"items": {
-				"hardtruthbot": {
-					"height": 148,
-					"width": 151,
-					"position": 6885
-				},
-				"lewdbot": {
-					"height": 148,
-					"width": 151,
-					"position": 7063
-				}
+				"hardtruthbot": { "height": 148, "width": 151, "position": 6885 },
+				"lewdbot": { "height": 148, "width": 151, "position": 7063 }
 			}
 		},
 		"31": {
 			"sprite-sheet": "cf-static-045",
-			"default": [
-				100,
-				150
-			],
+			"default": [100, 150],
 			"total-width": 8418,
 			"items": {
-				"kukuku": {
-					"height": 150,
-					"width": 100,
-					"position": 7241
-				},
-				"lewd": {
-					"height": 150,
-					"width": 100,
-					"position": 7419
-				}
+				"kukuku": { "height": 150, "width": 100, "position": 7241 },
+				"lewd": { "height": 150, "width": 100, "position": 7419 }
 			}
 		},
 		"32": {
 			"sprite-sheet": "cf-static-045",
-			"default": [
-				125,
-				150
-			],
+			"default": [125, 150],
 			"total-width": 8418,
 			"items": {
-				"bacchiri": {
-					"height": 150,
-					"width": 125,
-					"position": 7597
-				},
-				"hypeoverload": {
-					"height": 150,
-					"width": 125,
-					"position": 7775
-				},
-				"scaredmio": {
-					"height": 154,
-					"width": 123,
-					"position": 7898
-				},
-				"cateyes": {
-					"height": 158,
-					"width": 129,
-					"position": 8027
-				},
-				"harukathink": {
-					"height": 160,
-					"width": 112,
-					"position": 8139
-				},
-				"kannathumbs": {
-					"height": 162,
-					"width": 150,
-					"position": 8289
-				},
-				"konosubawot4": {
-					"height": 166,
-					"width": 129,
-					"position": 8418
-				}
+				"bacchiri": { "height": 150, "width": 125, "position": 7597 },
+				"hypeoverload": { "height": 150, "width": 125, "position": 7775 },
+				"scaredmio": { "height": 154, "width": 123, "position": 7898 },
+				"cateyes": { "height": 158, "width": 129, "position": 8027 },
+				"harukathink": { "height": 160, "width": 112, "position": 8139 },
+				"kannathumbs": { "height": 162, "width": 150, "position": 8289 },
+				"konosubawot4": { "height": 166, "width": 129, "position": 8418 }
 			}
 		},
+
 		"33": {
 			"sprite-sheet": "cf-static-038",
 			"total-width": 5417,
 			"items": {
-				"cinema": {
-					"height": 121,
-					"width": 222,
-					"position": 222
-				},
-				"aidoru": {
-					"height": 121,
-					"width": 193,
-					"position": 415
-				},
-				"bgataxmas": {
-					"height": 121,
-					"width": 193,
-					"position": 608
-				},
-				"bored": {
-					"height": 121,
-					"width": 193,
-					"position": 801
-				},
-				"brightidea": {
-					"height": 121,
-					"width": 193,
-					"position": 994
-				},
-				"brothersinarms": {
-					"height": 121,
-					"width": 193,
-					"position": 1187
-				},
-				"chilly": {
-					"height": 121,
-					"width": 121,
-					"position": 1308
-				},
-				"gorigori": {
-					"height": 121,
-					"width": 193,
-					"position": 1501
-				},
-				"happycake": {
-					"height": 121,
-					"width": 193,
-					"position": 1694
-				},
-				"hornyjail": {
-					"height": 121,
-					"width": 193,
-					"position": 1887
-				},
-				"itsnotfair": {
-					"height": 121,
-					"width": 134,
-					"position": 2021
-				},
-				"kannainspect": {
-					"height": 121,
-					"width": 135,
-					"position": 2156
-				},
-				"kanpai": {
-					"height": 121,
-					"width": 193,
-					"position": 2349
-				},
-				"missingpiece": {
-					"height": 121,
-					"width": 193,
-					"position": 2542
-				},
-				"myjobhereisdone": {
-					"height": 121,
-					"width": 161,
-					"position": 2703
-				},
-				"needac": {
-					"height": 121,
-					"width": 193,
-					"position": 2896
-				},
-				"needit": {
-					"height": 121,
-					"width": 193,
-					"position": 3089
-				},
-				"notlistening": {
-					"height": 121,
-					"width": 142,
-					"position": 3231
-				},
-				"objection": {
-					"height": 121,
-					"width": 193,
-					"position": 3424
-				},
-				"riskyclick": {
-					"height": 121,
-					"width": 193,
-					"position": 3617
-				},
-				"runningLate": {
-					"height": 121,
-					"width": 174,
-					"position": 3791
-				},
-				"sakuraconcern": {
-					"height": 121,
-					"width": 173,
-					"position": 3964
-				},
-				"shhh": {
-					"height": 121,
-					"width": 133,
-					"position": 4097
-				},
-				"sillyme": {
-					"height": 121,
-					"width": 182,
-					"position": 4279
-				},
-				"singalong": {
-					"height": 121,
-					"width": 193,
-					"position": 4472
-				},
-				"stardriving": {
-					"height": 121,
-					"width": 193,
-					"position": 4665
-				},
-				"tsundereblush": {
-					"height": 121,
-					"width": 193,
-					"position": 4858
-				},
-				"wakarimasu": {
-					"height": 121,
-					"width": 193,
-					"position": 5051
-				},
-				"attentivenote": {
-					"height": 131,
-					"width": 79,
-					"position": 5130
-				},
-				"diy": {
-					"height": 135,
-					"width": 115,
-					"position": 5245
-				},
-				"psyduck": {
-					"height": 121,
-					"width": 172,
-					"position": 5417
-				}
+				"cinema": { "height": 121, "width": 222, "position": 222 },
+				"aidoru": { "height": 121, "width": 193, "position": 415 },
+				"bgataxmas": { "height": 121, "width": 193, "position": 608 },
+				"bored": { "height": 121, "width": 193, "position": 801 },
+				"brightidea": { "height": 121, "width": 193, "position": 994 },
+				"brothersinarms": { "height": 121, "width": 193, "position": 1187 },
+				"chilly": { "height": 121, "width": 121, "position": 1308 },
+				"gorigori": { "height": 121, "width": 193, "position": 1501 },
+				"happycake": { "height": 121, "width": 193, "position": 1694 },
+				"hornyjail": { "height": 121, "width": 193, "position": 1887 },
+				"itsnotfair": { "height": 121, "width": 134, "position": 2021 },
+				"kannainspect": { "height": 121, "width": 135, "position": 2156 },
+				"kanpai": { "height": 121, "width": 193, "position": 2349 },
+				"missingpiece": { "height": 121, "width": 193, "position": 2542 },
+				"myjobhereisdone": { "height": 121, "width": 161, "position": 2703 },
+				"needac": { "height": 121, "width": 193, "position": 2896 },
+				"needit": { "height": 121, "width": 193, "position": 3089 },
+				"notlistening": { "height": 121, "width": 142, "position": 3231 },
+				"objection": { "height": 121, "width": 193, "position": 3424 },
+				"riskyclick": { "height": 121, "width": 193, "position": 3617 },
+				"runningLate": { "height": 121, "width": 174, "position": 3791 },
+				"sakuraconcern": { "height": 121, "width": 173, "position": 3964 },
+				"shhh": { "height": 121, "width": 133, "position": 4097 },
+				"sillyme": { "height": 121, "width": 182, "position": 4279 },
+				"singalong": { "height": 121, "width": 193, "position": 4472 },
+				"stardriving": { "height": 121, "width": 193, "position": 4665 },
+				"tsundereblush": { "height": 121, "width": 193, "position": 4858 },
+				"wakarimasu": { "height": 121, "width": 193, "position": 5051 },
+				"attentivenote": { "height": 131, "width": 79, "position": 5130 },
+				"diy": { "height": 135, "width": 115, "position": 5245 },
+				"psyduck": { "height": 121, "width": 172, "position": 5417 }
 			}
 		},
+
 		"34": {
 			"sprite-sheet": "cf-static-046",
 			"total-width": 6818,
 			"items": {
-				"araragi-1": {
-					"height": 50,
-					"width": 100,
-					"position": 100
-				},
-				"yui-crying": {
-					"height": 80,
-					"width": 78,
-					"position": 178
-				},
-				"facepalm": {
-					"height": 80,
-					"width": 77,
-					"position": 258
-				},
-				"gununu": {
-					"height": 80,
-					"width": 107,
-					"position": 365
-				},
-				"heart-thumbs-up": {
-					"height": 100,
-					"width": 79,
-					"position": 444
-				},
-				"thumbs-up": {
-					"height": 100,
-					"width": 119,
-					"position": 564
-				},
-				"head-tilt": {
-					"height": 100,
-					"width": 121,
-					"position": 685
-				},
-				"gendo-pls": {
-					"height": 114,
-					"width": 170,
-					"position": 856
-				},
-				"thoughtful": {
-					"height": 114,
-					"width": 143,
-					"position": 999
-				},
-				"killitwithfire": {
-					"height": 118,
-					"width": 150,
-					"position": 1149
-				},
-				"cantbehelped": {
-					"height": 124,
-					"width": 150,
-					"position": 1299
-				},
-				"kumikouninterested": {
-					"height": 140,
-					"width": 125,
-					"position": 1424
-				},
-				"megushock": {
-					"height": 144,
-					"width": 150,
-					"position": 1574
-				},
-				"nanami-hug": {
-					"height": 150,
-					"width": 119,
-					"position": 1694
-				},
-				"mugistronk": {
-					"height": 150,
-					"width": 145,
-					"position": 1839
-				},
-				"konosubawot2": {
-					"height": 152,
-					"width": 129,
-					"position": 1968
-				},
-				"fingertwirl": {
-					"height": 172,
-					"width": 129,
-					"position": 2097
-				},
-				"mug9": {
-					"height": 178,
-					"width": 129,
-					"position": 2226
-				},
-				"smugrose": {
-					"height": 111,
-					"width": 150,
-					"position": 2376
-				},
-				"uwaa": {
-					"height": 113,
-					"width": 150,
-					"position": 2526
-				},
-				"disbelief": {
-					"height": 119,
-					"width": 125,
-					"position": 2651
-				},
-				"datass": {
-					"height": 119,
-					"width": 150,
-					"position": 2801
-				},
-				"crazedlaugh": {
-					"height": 119,
-					"width": 178,
-					"position": 2979
-				},
-				"maskedup": {
-					"height": 121,
-					"width": 156,
-					"position": 3135
-				},
-				"bruh": {
-					"height": 121,
-					"width": 144,
-					"position": 3279
-				},
-				"promise": {
-					"height": 121,
-					"width": 144,
-					"position": 3423
-				},
-				"urarahype": {
-					"height": 139,
-					"width": 150,
-					"position": 3573
-				},
-				"gintamathispleasesme": {
-					"height": 141,
-					"width": 143,
-					"position": 3716
-				},
-				"kanyehidouyo": {
-					"height": 145,
-					"width": 129,
-					"position": 3845
-				},
-				"dejected": {
-					"height": 145,
-					"width": 150,
-					"position": 3995
-				},
-				"makicry": {
-					"height": 149,
-					"width": 129,
-					"position": 4124
-				},
-				"nicoisdone": {
-					"height": 151,
-					"width": 129,
-					"position": 4253
-				},
-				"sideeyes": {
-					"height": 161,
-					"width": 129,
-					"position": 4382
-				},
-				"konosubawot": {
-					"height": 167,
-					"width": 129,
-					"position": 4511
-				}
+				"araragi-1": { "height": 50, "width": 100, "position": 100 },
+				"yui-crying": { "height": 80, "width": 78, "position": 178 },
+				"facepalm": { "height": 80, "width": 77, "position": 258 },
+				"gununu": { "height": 80, "width": 107, "position": 365 },
+				"heart-thumbs-up": { "height": 100, "width": 79, "position": 444 },
+				"thumbs-up": { "height": 100, "width": 119, "position": 564 },
+				"head-tilt": { "height": 100, "width": 121, "position": 685 },
+				"gendo-pls": { "height": 114, "width": 170, "position": 856 },
+				"thoughtful": { "height": 114, "width": 143, "position": 999 },
+				"killitwithfire": { "height": 118, "width": 150, "position": 1149 },
+				"cantbehelped": { "height": 124, "width": 150, "position": 1299 },
+				"kumikouninterested": { "height": 140, "width": 125, "position": 1424 },
+				"megushock": { "height": 144, "width": 150, "position": 1574 },
+				"nanami-hug": { "height": 150, "width": 119, "position": 1694 },
+				"mugistronk": { "height": 150, "width": 145, "position": 1839 },
+				"konosubawot2": { "height": 152, "width": 129, "position": 1968 },
+				"fingertwirl": { "height": 172, "width": 129, "position": 2097 },
+				"mug9": { "height": 178, "width": 129, "position": 2226 },
+				"smugrose": { "height": 111, "width": 150, "position": 2376 },
+				"uwaa": { "height": 113, "width": 150, "position": 2526 },
+				"disbelief": { "height": 119, "width": 125, "position": 2651 },
+				"datass": { "height": 119, "width": 150, "position": 2801 },
+				"crazedlaugh": { "height": 119, "width": 178, "position": 2979 },
+				"maskedup": { "height": 121, "width": 156, "position": 3135 },
+				"bruh": { "height": 121, "width": 144, "position": 3279 },
+				"promise": { "height": 121, "width": 144, "position": 3423 },
+				"urarahype": { "height": 139, "width": 150, "position": 3573 },
+				"gintamathispleasesme": { "height": 141, "width": 143, "position": 3716 },
+				"kanyehidouyo": { "height": 145, "width": 129, "position": 3845 },
+				"dejected": { "height": 145, "width": 150, "position": 3995 },
+				"makicry": { "height": 149, "width": 129, "position": 4124 },
+				"nicoisdone": { "height": 151, "width": 129, "position": 4253 },
+				"sideeyes": { "height": 161, "width": 129, "position": 4382 },
+				"konosubawot": { "height": 167, "width": 129, "position": 4511 }
 			}
 		},
+
 		"35": {
 			"sprite-sheet": "cf-static-046",
 			"total-width": 6818,
 			"items": {
-				"michaelwink": {
-					"height": 137,
-					"width": 189,
-					"position": 4700
-				},
-				"listen": {
-					"height": 115,
-					"width": 204,
-					"position": 4904
-				},
-				"bocchitheshock": {
-					"height": 121,
-					"width": 215,
-					"position": 5119
-				},
-				"angryvampire": {
-					"height": 121,
-					"width": 215,
-					"position": 5334
-				},
-				"tomboyshades": {
-					"height": 121,
-					"width": 215,
-					"position": 5549
-				},
-				"trololol": {
-					"height": 121,
-					"width": 215,
-					"position": 5764
-				},
-				"skyhype": {
-					"height": 121,
-					"width": 215,
-					"position": 5979
-				},
-				"ohoho": {
-					"height": 121,
-					"width": 215,
-					"position": 6194
-				},
-				"unamusedfern": {
-					"height": 121,
-					"width": 215,
-					"position": 6409
-				},
-				"headpat": {
-					"height": 121,
-					"width": 194,
-					"position": 6603
-				},
-				"fish": {
-					"height": 121,
-					"width": 194,
-					"position": 6818
-				}
+				"michaelwink": { "height": 137, "width": 189, "position": 4700 },
+				"listen": { "height": 115, "width": 204, "position": 4904 },
+				"bocchitheshock": { "height": 121, "width": 215, "position": 5119 },
+				"angryvampire": { "height": 121, "width": 215, "position": 5334 },
+				"tomboyshades": { "height": 121, "width": 215, "position": 5549 },
+				"trololol": { "height": 121, "width": 215, "position": 5764 },
+				"skyhype": { "height": 121, "width": 215, "position": 5979 },
+				"ohoho": { "height": 121, "width": 215, "position": 6194 },
+				"unamusedfern": { "height": 121, "width": 215, "position": 6409 },
+				"headpat": { "height": 121, "width": 194, "position": 6603 },
+				"fish": { "height": 121, "width": 194, "position": 6818 }
 			}
 		},
+
 		"36": {
 			"sprite-sheet": "cf-static-039",
 			"total-width": 4300,
 			"items": {
-				"seasonalapproval": {
-					"height": 121,
-					"width": 215,
-					"position": 215
-				},
-				"seasonalblush": {
-					"height": 121,
-					"width": 215,
-					"position": 430
-				},
-				"seasonalconfused": {
-					"height": 121,
-					"width": 215,
-					"position": 645
-				},
-				"seasonalcool": {
-					"height": 121,
-					"width": 215,
-					"position": 860
-				},
-				"seasonaldepression": {
-					"height": 121,
-					"width": 215,
-					"position": 1075
-				},
-				"seasonaldisapproval": {
-					"height": 121,
-					"width": 215,
-					"position": 1290
-				},
-				"seasonaldisdain": {
-					"height": 121,
-					"width": 215,
-					"position": 1505
-				},
-				"seasonalfoodie": {
-					"height": 121,
-					"width": 215,
-					"position": 1720
-				},
-				"seasonalhype": {
-					"height": 121,
-					"width": 215,
-					"position": 1935
-				},
-				"seasonallaugh": {
-					"height": 121,
-					"width": 215,
-					"position": 2150
-				},
-				"seasonallisten": {
-					"height": 121,
-					"width": 215,
-					"position": 2365
-				},
-				"seasonallove": {
-					"height": 121,
-					"width": 215,
-					"position": 2580
-				},
-				"seasonalneat": {
-					"height": 121,
-					"width": 215,
-					"position": 2795
-				},
-				"seasonalpls": {
-					"height": 121,
-					"width": 215,
-					"position": 3010
-				},
-				"seasonalpout": {
-					"height": 121,
-					"width": 215,
-					"position": 3225
-				},
-				"seasonalsecret": {
-					"height": 121,
-					"width": 215,
-					"position": 3440
-				},
-				"seasonalshock": {
-					"height": 121,
-					"width": 215,
-					"position": 3655
-				},
-				"seasonalsmug": {
-					"height": 121,
-					"width": 215,
-					"position": 3870
-				},
-				"seasonalthink": {
-					"height": 121,
-					"width": 215,
-					"position": 4085
-				},
-				"seasonaltired": {
-					"height": 121,
-					"width": 215,
-					"position": 4300
-				}
+				"seasonalapproval": { "height": 121, "width": 215, "position": 215 },
+				"seasonalblush": { "height": 121, "width": 215, "position": 430 },
+				"seasonalconfused": { "height": 121, "width": 215, "position": 645 },
+				"seasonalcool": { "height": 121, "width": 215, "position": 860 },
+				"seasonaldepression": { "height": 121, "width": 215, "position": 1075 },
+				"seasonaldisapproval": { "height": 121, "width": 215, "position": 1290 },
+				"seasonaldisdain": { "height": 121, "width": 215, "position": 1505 },
+				"seasonalfoodie": { "height": 121, "width": 215, "position": 1720 },
+				"seasonalhype": { "height": 121, "width": 215, "position": 1935 },
+				"seasonallaugh": { "height": 121, "width": 215, "position": 2150 },
+				"seasonallisten": { "height": 121, "width": 215, "position": 2365 },
+				"seasonallove": { "height": 121, "width": 215, "position": 2580 },
+				"seasonalneat": { "height": 121, "width": 215, "position": 2795 },
+				"seasonalpls": { "height": 121, "width": 215, "position": 3010 },
+				"seasonalpout": { "height": 121, "width": 215, "position": 3225 },
+				"seasonalsecret": { "height": 121, "width": 215, "position": 3440 },
+				"seasonalshock": { "height": 121, "width": 215, "position": 3655 },
+				"seasonalsmug": { "height": 121, "width": 215, "position": 3870 },
+				"seasonalthink": { "height": 121, "width": 215, "position": 4085 },
+				"seasonaltired": { "height": 121, "width": 215, "position": 4300 }
 			}
 		}
 	}
