@@ -136,7 +136,7 @@ $header-snoo-reserved-width: vars.$header-snoo-width + 2 * vars.$header-snoo-pad
 *
 *#header-img {
 *	@include mixins.nightmode {
-*		@extend %display-none !optional;
+*		@extend %display-none;
 *	}
 *}
 *
