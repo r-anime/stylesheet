@@ -1,6 +1,10 @@
 @use "util/mixins";
 @use "util/vars";
 
+// Set to `false` if there'a temporary custom snoo that we want to show up in
+// nightmode as well; set to `true` when using the standard snoo
+$use-nightmode-snoo: true;
+
 $header-snoo-reserved-width: vars.$header-snoo-width + 2 * vars.$header-snoo-padding-horizontal;
 
 #header {
@@ -131,18 +135,20 @@ $header-snoo-reserved-width: vars.$header-snoo-width + 2 * vars.$header-snoo-pad
 	height: vars.$header-snoo-height;
 }
 
-// In nightmode, display a custom image in a pseudo-element
-#header-img {
-	@include mixins.nightmode {
-		@extend %display-none;
+@if $use-nightmode-snoo {
+	// In nightmode, display a custom image in a pseudo-element
+	#header-img {
+		@include mixins.nightmode {
+			@extend %display-none;
+		}
 	}
-}
 
-#header-img-a::after {
-	@include mixins.nightmode {
-		content: "";
-		display: block;
-		background: url("images/general.png") 0 -172px/128px;
+	#header-img-a::after {
+		@include mixins.nightmode {
+			content: "";
+			display: block;
+			background: url("images/general.png") 0 -172px/128px;
+		}
 	}
 }
 
