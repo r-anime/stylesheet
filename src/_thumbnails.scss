@@ -1,5 +1,7 @@
 // Custom thumbnail image handling
 
+@use "util/mixins";
+
 // Default Reddit classes
 .thumbnail.self {background: 0 -1084px}
 .thumbnail.spoiler {background: 0 -1154px}
@@ -37,6 +39,6 @@
 .linkflair-fanart,
 .linkflair-fanart-oc {
 	.thumbnail img {
-		@extend %display-none !optional;
+		@extend %display-none;
 	}
 }
