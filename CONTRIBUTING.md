@@ -17,20 +17,10 @@ Hi there! Interested in contributing to /r/anime's theme? We appreciate the help
 
 The stylesheet's entry point is the `main.scss` file in the project root, and it contains nothing but imports. Most of the actual stylesheet code lives in the `src` directory, with a couple files in the root directory for commonly-changed customization options. The `src/util` directory has utilities mostly used by the comment face code.
 
-The `images` directory is where images referenced by the stylesheet live. To reference images in here from code, use `url("images/FILENAME")`. Note that the name of this directory and the image reference format aren't real path specifiers, they're hardcoded - you can't make another directory outside `images` and reference it from code right now.
+Images are referenced in the stylesheet using a custom Sass function `i`, which is used like `i("images/sidebar.png")`. The path points to the image file you want to use, including file extension, and is interpreted relative to the repository root. The function also accepts optional `$width` and `$height` arguments which can be used to indicate the desired image size in either dimensions; if you use these arguments, the build script will scale the given image to fit within those dimensions before uploading it to the subreddit.
 
-The `util` directory holds the Python code for building and uploading the stylesheet. The Github Actions definition in `.github/workflows` runs various scripts from that directory. Note that currently, building the stylesheet requires Reddit API credentials, so for testing purposes it's generally easier to use another tool for building and testing changes, e.g. the official Sass CLI. In the future this will hopefully not be the case.
+The `build` directory holds the Node script for building and uploading the stylesheet, which can be run with `npm run build`. By default, without any credentials, it will compile the stylesheet and spit it out in the `out` directory, alongside all the transformed images it referenced - this is useful for debugging.
 
-## Build process
+If you want to actually deploy your local copy to a subreddit to test it live, you'll need a script-type OAuth application from https://www.reddit.com/prefs/apps. Set the environment variables `REDDIT_CLIENT_ID`, `REDDIT_CLIENT_SECRET`, `REDDIT_USERNAME`, `REDDIT_PASSWORD`, and if necessary, `REDDIT_TOTP_SECRET`. Then, pass the `--deploy-to-subreddit="YOUR_SUB"` flag to have the script attempt to upload the stylesheet to that subreddit. Note that when running in this mode, the script will assume that it's the _only thing_ that will ever modify the images on your subreddit, and it will keep a record of the images it's saved in the `stylesheet/data` wiki page on the subreddit. It may not cooperate if you have existing images in the subreddit or if the image list gets out of sync. If you're having persistent issues, try manually deleting all the images from your sub via https://old.reddit.com/r/YOUR_SUB/about/stylesheet, emptying the `stylesheet/data` wiki page, and rerunning the script.
 
-The rough outline of the build step is something like this:
-
-- Build Sass to CSS
-- Scan CSS for image references
-- Map image references in code to image files on disk
-- Check Reddit for any required files that already exist on the target subreddit, using a wiki page to store and track file hashes, etc.
-- Shorten the names of all images that need to be uploaded
-
-Once the build is done, all the relevant files can be pushed to Reddit.
-
-(TODO: document this better when the deploy script is reworked)
+The Github Actions definition in `.github/workflows` run the build script every time changes are pushed to the repository. Any time the `main` branch is updated, those changes get pushed to /r/anime; changes on other branches within the organization get pushed to /r/animestaging. Changes in pull requests from outside the /r/anime organization won't get pushed anywhere.

@@ -81,7 +81,7 @@ body > .content,
 
 	> .spacer {
 		margin: 0;
-		
+
 		+ .spacer {
 			margin-top: vars.$sidebar-padding;
 		}
@@ -138,7 +138,7 @@ body > .content,
 //}
 //
 //#header .redditname a {
-//    background-image: url("images/redditname.png");
+//    background-image: i("images/redditname.png");
 //    background-size: auto $redditname-height;
 //    //background-position: 0% 0%;
 //    background-repeat: no-repeat;
@@ -160,7 +160,7 @@ body > .content,
 	// I'm not entirely sure why the -1px is necessary but it is
 	margin-top: -1px - vars.$sidebar-section-header-margin-vertical - math.div(vars.$sidebar-section-header-height, 2) - math.div(18px, 2);
 	margin-bottom: vars.$sidebar-section-header-margin-vertical;
-	
+
 	.option {
 		width: 100%;
 		height: 100%;
@@ -229,7 +229,7 @@ span.multi-count {
 	padding: 0 0 0 vars.$sidebar-section-padding + vars.$sidebar-section-border-width;
 	position: relative;
 	line-height: 35px;
-	
+
 	h1 {
 		color: vars.$text-on-primary-color;
 		text-transform: lowercase;
@@ -281,20 +281,20 @@ span.multi-count {
 // Allow headings to have multiple buttons
 .side .md h1 a + a {
 	margin-right: vars.$base-spacing-small;
-}  
+}
 
 // Position the "message the mods" button where it used to be because I hate change
 .sidecontentbox .message-button {
 	position: relative;
 	margin: 0;
 	padding: 0;
-	
+
 	a {
 		position: absolute;
 		top: -(vars.$sidebar-padding) - vars.$sidebar-section-header-height;
 		right: 0;
 		text-transform: lowercase;
-		
+
 		::after {
 			content: " »";
 		}
@@ -367,18 +367,18 @@ span.multi-count {
 		transition: background-color 200ms,box-shadow 200ms;
 		box-shadow: 0 0 rgba(0,0,0,.1);
 	}
-	
+
 
 	// Give it a nice "push" animation when clicked
 	&:hover {
 		top: -2px;
-		
+
 		a {
 			color: vars.$text-on-secondary-color;
 			background: vars.$sidebar-button-secondary-color;
 			box-shadow: 0 5px 10px vars.$primary-secondary-shadow;
 		}
-		
+
 		&:active {
 			top: 1px;
 		}
@@ -394,7 +394,7 @@ span.multi-count {
 	height: 35px;
 	top: 0;
 	right: 0;
-	background: url("images/general.png") -58px -93px/128px no-repeat vars.$sidebar-button-secondary-color;
+	background: i("images/general.png") -58px -93px/128px no-repeat vars.$sidebar-button-secondary-color;
 	border-top-right-radius: vars.$sidebar-section-border-radius;
 	border-bottom-right-radius: vars.$sidebar-section-border-radius;
 }
@@ -441,7 +441,7 @@ span.multi-count {
 
 // Vote icons
 .thing .arrow {
-	background: url("images/general.png") 0 0/128px !important;
+	background: i("images/general.png") 0 0/128px !important;
 
 	&.up {
 		background-position: -98px 0 !important;
@@ -506,7 +506,7 @@ span.multi-count {
 // Title colors
 .link a.title {
 	color: #333;
-	
+
 	&:hover {
 		color: #567;
 	}
@@ -516,7 +516,7 @@ span.multi-count {
 .link .title:visited,
 .link.visited a.title {
 	color: #888;
-	
+
 	&:hover {
 		color: #A0A8AF;
 	}
@@ -570,7 +570,7 @@ body > .content .spacer {
 // Style comment section
 .commentarea {
 	padding: 0 5px;
-	
+
 	> .sitetable {
 		padding: 0 5px;
 	}
@@ -582,7 +582,7 @@ body > .content .spacer {
 	margin: 0;
 	padding-left: 25px;
 	overflow: hidden;
-	
+
 	.child {
 		border: 0;
 		margin: 0;
@@ -606,7 +606,7 @@ body > .content .spacer {
 			padding: 5px 0;
 		}
 	}
-	
+
 	// Fancy collapse/expand buttons that go down the side
 	.expand {
 		position: absolute;
@@ -849,7 +849,7 @@ body #progressIndicator {
 	margin-bottom: 0;
 }
 
-// Reorder submit page entries 
+// Reorder submit page entries
 .spacer:nth-child(1) {
 	order: 1;
 }
@@ -995,7 +995,7 @@ body #progressIndicator {
 	margin: 1em 0;
 	height: vars.$base-border-width;
 	background-color: vars.$separator-color;
-	
+
 	@include mixins.nightmode {
 		background-color: #000 !important;
 	}
@@ -1013,7 +1013,7 @@ body #progressIndicator {
 .md a,
 .tagline a {
 	color: vars.$link-color;
-	
+
 	&:hover {
 		color: vars.$link-hover-color;
 		text-decoration: underline;
@@ -1075,7 +1075,7 @@ body #progressIndicator {
 
 .res-nightmode .content .link { // bulky selector to override weird report res style
 	border-color: #0F0F0F;
-} 
+}
 
 .res-nightmode .link.RES-keyNav-activeThing {
 	background: #373737;

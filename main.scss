@@ -5,11 +5,6 @@
  * public domain (http://creativecommons.org/publicdomain/zero/1.0)
  */
 
-// Global variable definitions
-@use "src/util/vars";
-// Mixins and placeholders
-@use "src/util/mixins";
-
 // Customizations
 @use "subcount"; // Contains the sidebar subscriber/online user phrases
 @use "banner"; // Custom banner images for special events

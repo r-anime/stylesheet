@@ -1,65 +1,20 @@
 name: Build and deploy
 on: push
-env:
-  REDDIT_USERNAME: AnimeMod
-  REDDIT_PASSWORD:  ${{ secrets.ANIMEMOD_PASSWORD }}
-  REDDIT_TOTP_SECRET:  ${{ secrets.ANIMEMOD_TOTP_SECRET }}
-  REDDIT_CLIENT_ID: ${{ secrets.STYLESHEET_CLIENT_ID }}
-  REDDIT_CLIENT_SECRET: ${{ secrets.STYLESHEET_CLIENT_SECRET }}
-  REDDIT_REDIRECT_URI: ${{ secrets.STYLESHEET_REDIRECT_URI }}
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
 
-    - name: Use Python 3.11
-      uses: actions/setup-python@v4
+    - name: Use Node LTS
+      uses: actions/setup-node@v4
       with:
-        python-version: '3.11'
+        node-version: 'lts/*'
 
-    - name: Install pip requirements
-      run: pip install -r utils/requirements.txt
-      
-    - name: Install Sass
-      run: npm install --no-save sass
-
-    - name: Build and some other testing stuff
-      run: |
-        python utils/validate.py
-
-    - name: Upload build artifacts
-      if: always()
-      uses: actions/upload-artifact@v4
-      with:
-        name: stylesheet_build
-        if-no-files-found: ignore
-        path: |
-          stylesheet.css
-          images
-          subreddit_data.yml
-          css_validation_result.html
-
-  deploy:
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-    - name: Checkout
-      uses: actions/checkout@v3
-
-    - name: Use Python 3.11
-      uses: actions/setup-python@v4
-      with:
-        python-version: '3.11'
-
-    - name: Install pip requirements
-      run: |
-        pip install -r utils/requirements.txt
-
-    - name: Install Sass
-      run: npm install --no-save sass
+    - name: Install build script dependencies
+      run: npm ci
 
     - name: Detect target environment
       id: target
@@ -82,12 +37,18 @@ jobs:
         environment-url: https://old.reddit.com/r/${{ steps.target.outputs.subreddit }}
         environment: ${{ steps.target.outputs.environment }}
 
-    - name: Deploy
+    - name: Build and deploy
       env:
-        REDDIT_SUBREDDIT: ${{ steps.target.outputs.subreddit }}
+        REDDIT_USERNAME: AnimeMod
+        REDDIT_PASSWORD: ${{ secrets.ANIMEMOD_PASSWORD }}
+        REDDIT_TOTP_SECRET: ${{ secrets.ANIMEMOD_TOTP_SECRET }}
+        REDDIT_CLIENT_ID: ${{ secrets.STYLESHEET_CLIENT_ID }}
+        REDDIT_CLIENT_SECRET: ${{ secrets.STYLESHEET_CLIENT_SECRET }}
+        REDDIT_REDIRECT_URI: ${{ secrets.STYLESHEET_REDIRECT_URI }}
       run: |
-        python utils/build.py -r "${{ github.event.compare }}"
-        python utils/update.py
+        npm run build -- \
+          --deploy-to-subreddit="${{ steps.target.outputs.subreddit }}" \
+          --reason="${{ github.event.compare }}"
 
     - name: Update deployment status (success)
       if: success()
