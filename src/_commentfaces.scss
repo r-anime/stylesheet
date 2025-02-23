@@ -35,7 +35,6 @@
 @use "commentfaces-static";
 //@import "util/SassySort";
 
-
 // Returns the selector of the Comment Face.
 @function cf-selector($comment-face) {
 	@return ".md [href=\"\##{$comment-face}\" i]";
