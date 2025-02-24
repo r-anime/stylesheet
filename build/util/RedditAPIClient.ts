@@ -156,7 +156,6 @@ export class RedditAPIClient {
 			method: 'POST',
 			body: multipartFormDataBody({
 				upload_type: 'img',
-				img_type: 'jpg',
 				name: name,
 				file: new Blob([data]),
 			}),
