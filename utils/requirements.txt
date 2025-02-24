@@ -1,9 +1,0 @@
-praw
-csscompressor
-click
-Pillow
-ruamel.yaml
-anyconfig
-coloredlogs
-verboselogs
-mintotp

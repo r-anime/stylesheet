@@ -80,7 +80,7 @@ $header-snoo-reserved-width: vars.$header-snoo-width + 2 * vars.$header-snoo-pad
 
 // Main header content (sub icon, name, page info on search/config pages, tab bar)
 #header-bottom-left {
-	// background: url("images/banner.png") center bottom no-repeat;
+	// background: i("images/banner.png") center bottom no-repeat;
 
 	// push to bottom of header
 	position: absolute;
@@ -144,7 +144,7 @@ $header-snoo-reserved-width: vars.$header-snoo-width + 2 * vars.$header-snoo-pad
 *	@include mixins.nightmode {
 *		content: "";
 *		display: block;
-*		background: url("images/general.png") 0 -172px/128px;
+*		background: i("images/general.png") 0 -172px/128px;
 *	}
 *}
 */
@@ -193,7 +193,7 @@ $header-snoo-reserved-width: vars.$header-snoo-width + 2 * vars.$header-snoo-pad
 		font-weight: 400;
 		height: vars.$header-tabmenu-height;
 		position: relative;
-		
+
 		&:hover {
 			background: rgba(0,0,0,.1);
 		}

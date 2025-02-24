@@ -80,7 +80,7 @@
 	width: 47px;
 	height: 44px;
 	display: block;
-	background: url("images/general.png") 0 -128px/128px no-repeat;
+	background: i("images/general.png") 0 -128px/128px no-repeat;
 }
 .side .titlebox [href*="discord.gg/r-anime"] em, .side [href*="twitter.com/RedditChan"] em {
 	display: block;
@@ -100,7 +100,7 @@
 
 .side .titlebox [href*="twitter.com/RedditChan"]:before {
 	width: 41px;
-	background: url("images/general.png") -50px -128px/128px no-repeat;
+	background: i("images/general.png") -50px -128px/128px no-repeat;
 }
 
 .side .titlebox [href*="twitter.com/RedditChan"]:hover {
