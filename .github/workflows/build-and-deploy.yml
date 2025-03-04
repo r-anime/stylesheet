@@ -45,6 +45,7 @@ jobs:
         REDDIT_CLIENT_ID: ${{ secrets.STYLESHEET_CLIENT_ID }}
         REDDIT_CLIENT_SECRET: ${{ secrets.STYLESHEET_CLIENT_SECRET }}
         REDDIT_REDIRECT_URI: ${{ secrets.STYLESHEET_REDIRECT_URI }}
+        REDDIT_USER_AGENT: ${{ vars.STYLESHEET_USER_AGENT }}
       run: |
         npm run build -- \
           --deploy-to-subreddit="${{ steps.target.outputs.subreddit }}" \
