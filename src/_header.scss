@@ -231,3 +231,12 @@ $header-snoo-reserved-width: vars.$header-snoo-width + 2 * vars.$header-snoo-pad
 #header-bottom-right a {
 	color: #FFF;
 }
+
+// make new notification icons look slightly better
+#notifications, #chat-v2 {
+	filter: brightness(999); // change icon color from black-ish to white
+	width: 16px;
+	height: 16px;
+	background-size: 16px;
+	top: 4px; // match positioning of modmail icon
+}
