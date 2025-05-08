@@ -668,8 +668,8 @@
 				"seasonalshock": { "height": 121, "width": 215, "position": 3332 },
 				"seasonalsmug": { "height": 121, "width": 215, "position": 3547 },
 				"seasonaltired": { "height": 121, "width": 215, "position": 3762 },
-				"seasonalconfused": { "height": 121, "width": 135, "position": 3897 },
-				"seasonalthink": { "height": 151, "width": 430, "position": 4327 }
+				"seasonalconfused": { "height": 151, "width": 135, "position": 3897 },
+				"seasonalthink": { "height": 243, "width": 430, "position": 4327 }
 			}
 		}
 	}
