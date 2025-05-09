@@ -551,7 +551,7 @@
 
 		"33": {
 			"sprite-sheet": "cf-static-038",
-			"total-width": 5417,
+			"total-width": 5632,
 			"items": {
 				"cinema": { "height": 121, "width": 222, "position": 222 },
 				"aidoru": { "height": 121, "width": 193, "position": 415 },
@@ -583,7 +583,8 @@
 				"wakarimasu": { "height": 121, "width": 193, "position": 5051 },
 				"attentivenote": { "height": 131, "width": 79, "position": 5130 },
 				"diy": { "height": 135, "width": 115, "position": 5245 },
-				"psyduck": { "height": 121, "width": 172, "position": 5417 }
+				"psyduck": { "height": 121, "width": 172, "position": 5417 },
+				"deadtired": { "height": 121, "width": 215, "position": 5632 }
 			}
 		},
 
