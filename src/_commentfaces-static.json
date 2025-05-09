@@ -649,7 +649,7 @@
 
 		"36": {
 			"sprite-sheet": "cf-static-039",
-			"total-width": 4327,
+			"total-width": 4112,
 			"items": {
 				"seasonalapproval": { "height": 121, "width": 215, "position": 215 },
 				"seasonalblush": { "height": 121, "width": 215, "position": 430 },
@@ -668,9 +668,9 @@
 				"seasonalsecret": { "height": 121, "width": 215, "position": 3117 },
 				"seasonalshock": { "height": 121, "width": 215, "position": 3332 },
 				"seasonalsmug": { "height": 121, "width": 215, "position": 3547 },
-				"seasonaltired": { "height": 121, "width": 215, "position": 3762 },
-				"seasonalconfused": { "height": 151, "width": 135, "position": 3897 },
-				"seasonalthink": { "height": 243, "width": 430, "position": 4327 }
+				"seasonalthink": { "height": 121, "width": 215, "position": 3762 },
+				"seasonaltired": { "height": 121, "width": 215, "position": 3977 },
+				"seasonalconfused": { "height": 151, "width": 135, "position": 4112 }
 			}
 		}
 	}
