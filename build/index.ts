@@ -74,15 +74,14 @@ try {
 }
 console.groupEnd();
 
-// let css = output.css;
-// if (process.env['SECRET_CSS']) {
-// 	css += "\n" + process.env['SECRET_CSS'].replace("\r", ''); // replace carriage returns for multi line secret css
-// }
+let css = output.css;
+if (process.env['SECRET_CSS']) {
+	css += "\n" + process.env['SECRET_CSS'].replace("\r", ''); // replace carriage returns for multi line secret css
+}
 
 // We have the stylesheet and its images - let's do something with it
 try {
-	await backend.uploadBuild(output.css, Image.collect());
-	// await backend.uploadBuild(css, Image.collect());
+	await backend.uploadBuild(css, Image.collect());
 } catch (error) {
 	// If something fails, make sure we return non-zero for CI purposes
 	process.exit(1);
