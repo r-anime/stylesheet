@@ -76,7 +76,7 @@ console.groupEnd();
 
 let css = output.css;
 if (process.env['SECRET_CSS']) {
-	css += "\n" + process.env['SECRET_CSS'];
+	css += "\n" + process.env['SECRET_CSS'].replace("\r", ''); // replace carriage returns for multi line secret css
 }
 
 // We have the stylesheet and its images - let's do something with it
