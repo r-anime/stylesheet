@@ -168,6 +168,8 @@ export class RedditBackend implements StylesheetUploadBackend {
 
 		// Now that all the referenced images are present, we can update the CSS
 		console.group('Writing CSS...');
+		console.group('css: ');
+		console.group(css);
 		console.group('css: ', css.split("\n").slice(6).join("\n"));
 		try {
 			await this.apiClient.updateCSS(this.subreddit, css, this.reason);
