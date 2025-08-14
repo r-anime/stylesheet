@@ -551,7 +551,7 @@
 
 		"33": {
 			"sprite-sheet": "cf-static-038",
-			"total-width": 5632,
+			"total-width": 5847,
 			"items": {
 				"cinema": { "height": 121, "width": 222, "position": 222 },
 				"aidoru": { "height": 121, "width": 193, "position": 415 },
@@ -584,7 +584,8 @@
 				"attentivenote": { "height": 131, "width": 79, "position": 5130 },
 				"diy": { "height": 135, "width": 115, "position": 5245 },
 				"psyduck": { "height": 121, "width": 172, "position": 5417 },
-				"deadtired": { "height": 121, "width": 215, "position": 5632 }
+				"deadtired": { "height": 121, "width": 215, "position": 5632 },
+				"bigthink": { "height": 121, "width": 194, "position": 5847 }
 			}
 		},
 
@@ -649,28 +650,28 @@
 
 		"36": {
 			"sprite-sheet": "cf-static-039",
-			"total-width": 4112,
+			"total-width": 4218,
 			"items": {
 				"seasonalapproval": { "height": 121, "width": 215, "position": 215 },
-				"seasonalblush": { "height": 121, "width": 215, "position": 430 },
+				"seasonalconfused": { "height": 121, "width": 215, "position": 430 },
 				"seasonalcool": { "height": 121, "width": 215, "position": 645 },
 				"seasonaldepression": { "height": 121, "width": 215, "position": 860 },
 				"seasonaldisapproval": { "height": 121, "width": 215, "position": 1075 },
 				"seasonaldisdain": { "height": 121, "width": 215, "position": 1290 },
-				"seasonalfoodie": { "height": 121, "width": 174, "position": 1464 },
-				"seasonalhype": { "height": 121, "width": 215, "position": 1679 },
-				"seasonallaugh": { "height": 121, "width": 148, "position": 1827 },
-				"seasonallisten": { "height": 121, "width": 215, "position": 2042 },
-				"seasonallove": { "height": 121, "width": 215, "position": 2257 },
-				"seasonalneat": { "height": 121, "width": 215, "position": 2472 },
-				"seasonalpls": { "height": 121, "width": 215, "position": 2687 },
-				"seasonalpout": { "height": 121, "width": 215, "position": 2902 },
-				"seasonalsecret": { "height": 121, "width": 215, "position": 3117 },
-				"seasonalshock": { "height": 121, "width": 215, "position": 3332 },
-				"seasonalsmug": { "height": 121, "width": 215, "position": 3547 },
-				"seasonalthink": { "height": 121, "width": 215, "position": 3762 },
-				"seasonaltired": { "height": 121, "width": 215, "position": 3977 },
-				"seasonalconfused": { "height": 151, "width": 135, "position": 4112 }
+				"seasonalfoodie": { "height": 121, "width": 215, "position": 1505 },
+				"seasonalhype": { "height": 121, "width": 215, "position": 1720 },
+				"seasonallaugh": { "height": 121, "width": 215, "position": 1935 },
+				"seasonallisten": { "height": 121, "width": 215, "position": 2150 },
+				"seasonallove": { "height": 121, "width": 215, "position": 2365 },
+				"seasonalneat": { "height": 121, "width": 245, "position": 2610 },
+				"seasonalpls": { "height": 121, "width": 215, "position": 2825 },
+				"seasonalsecret": { "height": 121, "width": 215, "position": 3040 },
+				"seasonalshock": { "height": 121, "width": 215, "position": 3255 },
+				"seasonalsmug": { "height": 121, "width": 215, "position": 3470 },
+				"seasonalthink": { "height": 121, "width": 215, "position": 3685 },
+				"seasonaltired": { "height": 121, "width": 215, "position": 3900 },
+				"seasonalblush": { "height": 161, "width": 159, "position": 4059 },
+				"seasonalpout": { "height": 161, "width": 159, "position": 4218 }
 			}
 		}
 	}
