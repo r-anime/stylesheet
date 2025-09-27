@@ -32,6 +32,7 @@
 .linkflair-wt             .linkflairlabel {background: #CCAC2B !important}
 .linkflair-writing        .linkflairlabel {background: #DDBD37 !important}
 .linkflair-clip           .linkflairlabel {background: #9d76b8 !important}
+.linkflair-short-film     .linkflairlabel {background: #660022 !important}
 .linkflair-satire         .linkflairlabel {background: #6B6031 !important}
 .linkflair-survey         .linkflairlabel {background: #50B34D !important}
 .linkflair-question       .linkflairlabel {background: #9E8D49 !important}
@@ -139,11 +140,13 @@ div#thing_t3_swql95 {
 [lang=xe] .link.linkflair-contest,
 // xm - No Official Media
 [lang=xm] .link.linkflair-official-media,
+// xs - No Short Film
+[lang=xs] .link.linkflair-short-film
 // xq - No Questions
 [lang=xq] .link.linkflair-question,
 // xr - No Recommendations
 [lang=xr] .link.linkflair-recommendation,
-// xa - No "Light Media" (Fanart, Cosplay, Clips, Video Edits, Official Media, Questions, Recommendations)
+// xa - No "Light Media" (Fanart, Cosplay, Clips, Video Edits, Official Media, Short Film, Questions, Recommendations)
 [lang=xa] .link.linkflair-fanart,
 [lang=xa] .link.linkflair-fanart-oc,
 [lang=xa] .link.linkflair-fanart-misc,
@@ -151,6 +154,7 @@ div#thing_t3_swql95 {
 [lang=xa] .link.linkflair-clip,
 [lang=xa] .link.linkflair-video-edit,
 [lang=xa] .link.linkflair-official-media,
+[lang=xa] .link.linkflair-short-film,
 [lang=xa] .link.linkflair-recommendation,
 [lang=xa] .link.linkflair-question {
 	@extend %display-none;
