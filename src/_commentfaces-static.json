@@ -551,7 +551,7 @@
 
 		"33": {
 			"sprite-sheet": "cf-static-038",
-			"total-width": 5871,
+			"total-width": 6086,
 			"items": {
 				"cinema": { "height": 121, "width": 222, "position": 222 },
 				"aidoru": { "height": 121, "width": 193, "position": 415 },
@@ -585,7 +585,8 @@
 				"diy": { "height": 135, "width": 115, "position": 5245 },
 				"psyduck": { "height": 121, "width": 172, "position": 5417 },
 				"deadtired": { "height": 121, "width": 215, "position": 5632 },
-				"bigthink": { "height": 135, "width": 239, "position": 5871 }
+				"bigthink": { "height": 135, "width": 239, "position": 5871 },
+				"yesss": { "height": 121, "width": 215, "position": 6086 }
 			}
 		},
 
