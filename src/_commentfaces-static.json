@@ -666,7 +666,7 @@
 				"seasonallove": { "height": 121, "width": 215, "position": 2313 },
 				"seasonalneat": { "height": 121, "width": 215, "position": 2528 },
 				"seasonalpls": { "height": 121, "width": 215, "position": 2743 },
-				// "seasonalpout": { "height": 121, "width": 215, "position": 2958 }, // Replaced with animated
+				
 				"seasonalsecret": { "height": 121, "width": 215, "position": 3173 },
 				"seasonalshock": { "height": 121, "width": 215, "position": 3388 },
 				"seasonalsmug": { "height": 121, "width": 215, "position": 3603 },
