@@ -655,7 +655,7 @@
 			"items": {
 				"seasonalapproval": { "height": 121, "width": 215, "position": 215 },
 				"seasonalblush": { "height": 121, "width": 198, "position": 413 },
-				"seasonalcool": { "height": 121, "width": 215, "position": 628 },
+				"seasonalcool": { "height": 121, "width": 136, "position": 628 },
 				"seasonaldepression": { "height": 121, "width": 215, "position": 843 },
 				"seasonaldisapproval": { "height": 121, "width": 180, "position": 1023 },
 				"seasonaldisdain": { "height": 121, "width": 215, "position": 1238 },
