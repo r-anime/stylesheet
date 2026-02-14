@@ -82,6 +82,7 @@
 		},
 		"cf-animated-012": {
 			"items": {
+				"seasonalpout": { "height": 107, "width": 191, "from-position": -1908, "to-position": -2336, "frames": 4, "duration": 0.5, "loop": true },
 				"banjo": { "height": 105, "width": 191, "from-position": -2410, "to-position": -3565, "frames": 12, "duration": 1.57, "loop": false },
 				"restrainedanger": { "height": 100, "width": 184, "from-position": 9325, "to-position": 2725, "frames": 67, "duration": 5.36, "loop": false },
 				"happyclap": { "height": 104, "width": 184, "from-position": 2101, "to-position": 2725, "frames": 6, "duration": 0.25, "loop": true }
