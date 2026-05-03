@@ -88,6 +88,20 @@ $images-height-cumulative: 0px;
 		$images-height-cumulative + $height + vars.$sidebar-section-margin-vertical;
 }
 
+// easter egg
+.side [href*="#sidebarimg2"]:hover {
+  animation: full-spin 1s cubic-bezier(.5, -0.5, .5, 1.5);
+}
+
+@keyframes full-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 // Leave appropriate room at the top of the sidebar for all the
 // absolutely-positioned images + the search bar
 .side {
