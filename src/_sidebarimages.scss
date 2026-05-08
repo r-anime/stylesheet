@@ -90,12 +90,12 @@ $images-height-cumulative: 0px;
 
 // easter egg
 .side [href*="1t6rrgo#"] {
-	clip-path: inset(0 0 0 0);
+	clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
 	transition: clip-path 10s ease-in;
 
 	&:hover {
 		//animation: full-spin 1s cubic-bezier(.5, -0.5, .5, 1.5); // spin
-		clip-path: inset(72% 47% 5% 0%) !important; // fish focus
+		clip-path: polygon(0% 72%, 53% 72%, 53% 95%, 0% 95%) !important // fish focus
 	}
 }
 
