@@ -89,8 +89,14 @@ $images-height-cumulative: 0px;
 }
 
 // easter egg
-.side [href*="1t0d9pj#"]:hover {
-  animation: full-spin 1s cubic-bezier(.5, -0.5, .5, 1.5);
+.side [href*="1t6rrgo#"] {
+	clip-path: inset(0 0 0 0);
+	transition: clip-path 10s ease-in;
+
+	&:hover {
+		//animation: full-spin 1s cubic-bezier(.5, -0.5, .5, 1.5); // spin
+		clip-path: inset(72% 47% 5% 0%) !important; // fish focus
+	}
 }
 
 @keyframes full-spin {
