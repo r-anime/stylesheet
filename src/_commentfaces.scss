@@ -147,7 +147,7 @@ $hisocuck_2: map.get($special-comment-faces, "hisocuck_2");
 
 // A prank, revert this on May 18th
 .md [href="#seasonalcool" i] {
-	scale: 0.5;
+	transform: scale(0.5);
 }
 
 // The following code could be used to shorten the length of Comment Face selectors. It has its shortcomings so it's
