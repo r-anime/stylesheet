@@ -145,6 +145,11 @@ $hisocuck_2: map.get($special-comment-faces, "hisocuck_2");
 	background: functions.image-url(list.nth($hisocuck_2, 1)) functions.format-px(list.nth($hisocuck_2, 2));
 }
 
+// A prank, revert this on May 18th
+.md [href="#seasonalcool" i] {
+	scale: 0.5;
+}
+
 // The following code could be used to shorten the length of Comment Face selectors. It has its shortcomings so it's
 // not used for the time being. It may come in handy one day.
 
