@@ -671,7 +671,7 @@
 				"seasonalsmug": { "height": 121, "width": 163, "position": 2958 },
 				"seasonalthink": { "height": 121, "width": 145, "position": 3103 },
 				"seasonaltired": { "height": 121, "width": 215, "position": 3318 },
-				"seasonalcool": { "height": 161, "width": 286, "position": 3604 },
+				"seasonalcool": { "height": 121, "width": 215, "position": 3604 },
 				"seasonalfoodie": { "height": 161, "width": 176, "position": 3780 },
 				"seasonalapproval": { "height": 181, "width": 139, "position": 3919 }
 			}
