@@ -154,6 +154,11 @@ $brokencommentface: map.get($special-comment-faces, "brokencommentface");
 	animation: spin 1s linear infinite;
 }
 
+.md [href="#needac" i]:hover {
+	animation: spin 1s linear infinite;
+}
+
+
 // Manually defined
 $hisocuck_2: map.get($special-comment-faces, "hisocuck_2");
 #{cf-selector("hisocuck")}:hover {
