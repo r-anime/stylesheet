@@ -139,6 +139,21 @@ $brokencommentface: map.get($special-comment-faces, "brokencommentface");
 	text-align: center
 }
 
+// A prank, revert this on May 24th
+
+@keyframes spin {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+.md [href="#seasonalcool" i] {
+	animation: spin 1s linear infinite;
+}
+
 // Manually defined
 $hisocuck_2: map.get($special-comment-faces, "hisocuck_2");
 #{cf-selector("hisocuck")}:hover {
