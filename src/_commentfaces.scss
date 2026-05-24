@@ -150,7 +150,7 @@ $brokencommentface: map.get($special-comment-faces, "brokencommentface");
 	}
 }
 
-.md [href="#seasonalcool" i] {
+.md [href="#seasonalcool" i]:hover {
 	animation: spin 1s linear infinite;
 }
 
