@@ -139,24 +139,23 @@ $brokencommentface: map.get($special-comment-faces, "brokencommentface");
 	text-align: center
 }
 
-// A prank, revert this on May 24th
-
-@keyframes spin {
-	from {
-		transform: rotate(0deg);
-	}
-	to {
-		transform: rotate(360deg);
-	}
-}
-
-.md [href="#seasonalcool" i]:hover {
-	animation: spin 1s linear infinite;
-}
-
-.md [href="#needac" i]:hover {
-	animation: spin 1s linear infinite;
-}
+//// A prank, revert this on May 24th
+//@keyframes spin {
+//	from {
+//		transform: rotate(0deg);
+//	}
+//	to {
+//		transform: rotate(360deg);
+//	}
+//}
+//
+//.md [href="#seasonalcool" i]:hover {
+//	animation: spin 1s linear infinite;
+//}
+//
+//.md [href="#needac" i]:hover {
+//	animation: spin 1s linear infinite;
+//}
 
 
 // Manually defined
