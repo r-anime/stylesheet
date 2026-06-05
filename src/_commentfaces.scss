@@ -140,19 +140,19 @@ $brokencommentface: map.get($special-comment-faces, "brokencommentface");
 }
 
 // A prank, revert this on May 31th
-@keyframes spin {
-	from {
-		transform: rotateY(0) rotate(0deg);
-	}
-	to {
-		transform: rotateY(60deg) rotate(36000deg);
-	}
-}
-
-.md [href="#seasonalcool" i]:hover {
-	animation: spin 5s linear infinite alternate;
-	transform-origin: 63% 50%;
-}
+//@keyframes spin {
+//	from {
+//		transform: rotateY(0) rotate(0deg);
+//	}
+//	to {
+//		transform: rotateY(60deg) rotate(36000deg);
+//	}
+//}
+//
+//.md [href="#seasonalcool" i]:hover {
+//	animation: spin 5s linear infinite alternate;
+//	transform-origin: 63% 50%;
+//}
 
 //.md [href="#needac" i]:hover {
 //	animation: spin 1s linear infinite;
