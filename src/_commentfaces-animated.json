@@ -244,9 +244,6 @@
 			"items": {
 				"lwahorror": { "height": 98, "width": 178, "from-position": -1703, "to-position": -3565, "frames": 20, "duration": 2, "loop": false },
 				"unsure": { "height": 105, "width": 190, "from-position": 6295, "to-position": 2725, "frames": 34, "duration": 4, "loop": true },
-				"unsure-fast": { "height": 105, "width": 190, "from-position": 6295, "to-position": 2725, "frames": 34, "duration": 1.5, "loop": true },
-				"unsure-ultra_fast": { "height": 105, "width": 190, "from-position": 6295, "to-position": 2725, "frames": 34, "duration": 0.5, "loop": true },
-				"unsure-turbo_ultra_fast": { "height": 105, "width": 190, "from-position": 6295, "to-position": 2725, "frames": 34, "duration": 0.1, "loop": true },
 				"garlock": { "height": 105, "width": 191, "from-position": 1885, "to-position": 2725, "frames": 9, "duration": 0.72, "loop": false },
 				"megadeathparty": { "height": 104, "width": 184, "from-position": -1235, "to-position": 949, "frames": 21, "duration": 2.1, "loop": true }
 			}
