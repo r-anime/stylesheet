@@ -634,7 +634,7 @@
 
 		"35": {
 			"sprite-sheet": "cf-static-046",
-			"total-width": 6977,
+			"total-width": 7116,
 			"items": {
 				"michaelwink": { "height": 137, "width": 189, "position": 4700 },
 				"listen": { "height": 115, "width": 204, "position": 4904 },
@@ -647,7 +647,8 @@
 				"unamusedfern": { "height": 121, "width": 215, "position": 6409 },
 				"headpat": { "height": 121, "width": 194, "position": 6603 },
 				"fish": { "height": 121, "width": 194, "position": 6818 },
-				"umagiri": { "height": 161, "width": 159, "position": 6977 }
+				"umagiri": { "height": 161, "width": 159, "position": 6977 },
+				"hattastic": { "height": 178, "width": 139, "position": 7116 }
 			}
 		},
 
