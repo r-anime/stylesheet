@@ -142,6 +142,7 @@
 		},
 		"cf-animated-020": {
 			"items": {
+				"tablefilp": { "height": 105, "width": 191, "from-position": -730, "to-position": -3565, "frames": 28, "duration": 1.72, "loop": false },
 				"volibearQ": { "height": 105, "width": 191, "from-position": -730, "to-position": -3565, "frames": 28, "duration": 1.72, "loop": false },
 				"micdrop": { "height": 123, "width": 176, "from-position": 7030, "to-position": 2725, "frames": 36, "duration": 1.44, "loop": false },
 				"kaguyashaking": { "height": 127, "width": 176, "from-position": 2471, "to-position": 2725, "frames": 2, "duration": 0.14, "loop": true },
