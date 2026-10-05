@@ -33,11 +33,19 @@
 @use "util/functions";
 @use "commentfaces-animated";
 @use "commentfaces-static";
+@use "commentfaces-alias";
 //@import "util/SassySort";
 
 // Returns the selector of the Comment Face.
 @function cf-selector($comment-face) {
 	@return ".md [href=\"\##{$comment-face}\" i]";
+}
+
+// Lists all aliases for a given comment face. Includes the original name.
+@function all-names($comment-face) {
+  $extra-names: map.get(commentfaces-alias.$aliases, $comment-face);
+  $extra-names: () !default;
+  @return list.append($extra-names, $comment-face);
 }
 
 // A list of comment faces that are not meant for direct use.
@@ -254,7 +262,11 @@ $animation-identifiers: ();
 			$duration: string.slice(#{$duration}, 2);
 		}
 
-		#{cf-selector($comment-face)} {
+		$selectors: ();
+		@each $alias in all-names($comment-face) {
+			$selectors: list.append($selectors, cf-selector($alias), comma);
+		}
+		#{$selectors} {
 			height: #{map.get($attributes, "height")}px;
 			width: #{map.get($attributes, "width")}px;
 			@if $from-position != 0 {
@@ -347,7 +359,11 @@ $aligned-positions-odd: ();
 		$width: map.get($attributes, "width");
 		$height: map.get($attributes, "height");
 
-		#{cf-selector($comment-face)} {
+		$selectors: ();
+		@each $alias in all-names($comment-face) {
+			$selectors: list.append($selectors, cf-selector($alias), comma);
+		}
+		#{$selectors} {
 			@if $width == $default-width and $height == $default-height {
 				@extend %default-#{$index};
 
@@ -359,7 +375,7 @@ $aligned-positions-odd: ();
 				height: #{$height}px;
 				background: functions.image-url($sprite-sheet) static-cf-position($background-position, $height)
 			}
-		}
+        }
 	}
 }
 
@@ -371,9 +387,11 @@ $aligned-positions-odd: ();
 		}
 
 		@each $comment-face in $aligned-comment-faces {
-			#{cf-selector($comment-face)} {
-				@extend %aligned-position-even#{$position};
-			}
+            @each $alias in all-names($comment-face) {
+                #{cf-selector($alias)} {
+                    @extend %aligned-position-even#{$position};
+                }
+            }
 		}
 	}
 }
@@ -386,9 +404,11 @@ $aligned-positions-odd: ();
 		}
 
 		@each $comment-face in $aligned-comment-faces {
-			#{cf-selector($comment-face)} {
-				@extend %aligned-position-odd#{$position};
-			}
+            @each $alias in all-names($comment-face) {
+                #{cf-selector($alias)} {
+                    @extend %aligned-position-odd#{$position};
+                }
+            }
 		}
 	}
 }
