@@ -262,21 +262,23 @@ $animation-identifiers: ();
 			$duration: string.slice(#{$duration}, 2);
 		}
 
-        @each $alias in all-names($comment-face) {
-            #{cf-selector($alias)} {
-                height: #{map.get($attributes, "height")}px;
-                width: #{map.get($attributes, "width")}px;
-                @if $from-position != 0 {
-                    background: functions.image-url($sprite-sheet) 0 functions.format-px($from-position);
-                } @else {
-                    background: functions.image-url($sprite-sheet);
-                }
+		$selectors: ();
+		@each $alias in all-names($comment-face) {
+			$selectors: list.append($selectors, cf-selector($alias), comma);
+		}
+		#{$selectors} {
+			height: #{map.get($attributes, "height")}px;
+			width: #{map.get($attributes, "width")}px;
+			@if $from-position != 0 {
+				background: functions.image-url($sprite-sheet) 0 functions.format-px($from-position);
+			} @else {
+				background: functions.image-url($sprite-sheet);
+			}
 
-                &:hover {
-                    animation: string.unquote($animation-identifier) #{$duration}s steps($steps) if($is-loop, infinite, forwards);
-                }
-            }
-        }
+			&:hover {
+				animation: string.unquote($animation-identifier) #{$duration}s steps($steps) if($is-loop, infinite, forwards);
+			}
+		}
 	}
 }
 
@@ -357,20 +359,22 @@ $aligned-positions-odd: ();
 		$width: map.get($attributes, "width");
 		$height: map.get($attributes, "height");
 
-        @each $alias in all-names($comment-face) {
-            #{cf-selector($alias)} {
-                @if $width == $default-width and $height == $default-height {
-                    @extend %default-#{$index};
+		$selectors: ();
+		@each $alias in all-names($comment-face) {
+			$selectors: list.append($selectors, cf-selector($alias), comma);
+		}
+		#{$selectors} {
+			@if $width == $default-width and $height == $default-height {
+				@extend %default-#{$index};
 
-                    @if not get-aligned-comment-faces($background-position, $height) {
-                        background-position: static-cf-position($background-position, $height)
-                    }
-                } @else {
-                    width: #{$width}px;
-                    height: #{$height}px;
-                    background: functions.image-url($sprite-sheet) static-cf-position($background-position, $height)
-                }
-            }
+				@if not get-aligned-comment-faces($background-position, $height) {
+					background-position: static-cf-position($background-position, $height)
+				}
+			} @else {
+				width: #{$width}px;
+				height: #{$height}px;
+				background: functions.image-url($sprite-sheet) static-cf-position($background-position, $height)
+			}
         }
 	}
 }
