@@ -1,8 +1,23 @@
 {
-    "aliases": {
-        "kanyehidouyo": ["sniffle"],
-        "nottodisushittoagen": ["bigwig"],
-        "volibearQ": ["tableflip", "tablefilp"],
-        "wakarimasu": ["UQdkni4"]
-    }
+  "aliases": {
+    "itsnotfair": [
+      "itshouldhavebeenme"
+    ],
+    "surprisedpikachu": [
+      "shockedpikachu"
+    ],
+    "kanyehidouyo": [
+      "sniffle"
+    ],
+    "nottodisushittoagen": [
+      "bigwig"
+    ],
+    "volibearQ": [
+      "tableflip",
+      "tablefilp"
+    ],
+    "wakarimasu": [
+      "UQdkni4"
+    ]
+  }
 }
