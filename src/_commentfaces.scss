@@ -220,10 +220,14 @@ $hisocuck_2: map.get($special-comment-faces, "hisocuck_2");
 
 // A mixin for the definition of the ending position of animated Comment Faces. To save the CSS size a single ending
 // position could be reused for multiple Comment Faces which are aligned accordingly in their sprite sheets.
-@mixin animation-keyframes($identifier, $to-position) {
+@mixin animation-keyframes($identifier, $to-position, $tint) {
 	@keyframes #{$identifier} {
 		to {
-			background-position: 0 functions.format-px($to-position);
+			@if $tint {
+				background-position: #{map.get($tint, "ending-position")}, 0 functions.format-px($to-position);
+			} @else {
+				background-position: 0 functions.format-px($to-position);
+			}
 		}
 	}
 }
@@ -232,10 +236,10 @@ $animation-identifiers: ();
 
 // Assigns base-26 alphabet number as an identifier for the definition of Comment Face animation that ends at the given
 // position.
-@function assign-animation-identifier($to-position) {
+@function assign-animation-identifier($animation-key) {
 	$animation-identifier: functions.alpha-base(list.length($animation-identifiers));
 
-	$animation-identifiers: map.merge($animation-identifiers, ($to-position: $animation-identifier)) !global;
+	$animation-identifiers: map.merge($animation-identifiers, ($animation-key: $animation-identifier)) !global;
 
 	@return $animation-identifier;
 }
@@ -249,12 +253,15 @@ $animation-identifiers: ();
 		$from-position: map.get($attributes, "from-position");
 		$to-position: map.get($attributes, "to-position");
 		$steps: map.get($attributes, "frames") - if($is-loop, 0, 1);
+		$tint: map.get($attributes, "tint");
+		$extra: map.get($attributes, "extra");
+		$animation-key: "#{$to-position}-#{$tint != null}";
 
-		$animation-identifier: map.get($animation-identifiers, $to-position);
+		$animation-identifier: map.get($animation-identifiers, $animation-key);
 
 		@if not $animation-identifier {
-			$animation-identifier: assign-animation-identifier($to-position);
-			@include animation-keyframes($animation-identifier, $to-position);
+			$animation-identifier: assign-animation-identifier($animation-key);
+			@include animation-keyframes($animation-identifier, $to-position, $tint);
 		}
 
 		// Drops the leading zero for values below 1.
@@ -269,10 +276,22 @@ $animation-identifiers: ();
 		#{$selectors} {
 			height: #{map.get($attributes, "height")}px;
 			width: #{map.get($attributes, "width")}px;
-			@if $from-position != 0 {
+			@if $tint {
+				background-blend-mode: color;
+				@if $from-position != 0 {
+					background: linear-gradient(#{map.get($tint, "color")}, #{map.get($tint, "color")}) #{map.get($tint, "position")} / #{map.get($tint, "size")} no-repeat, functions.image-url($sprite-sheet) 0 functions.format-px($from-position);
+				} @else {
+					background: linear-gradient(#{map.get($tint, "color")}, #{map.get($tint, "color")}) #{map.get($tint, "position")} / #{map.get($tint, "size")} no-repeat, functions.image-url($sprite-sheet);
+				}
+			} @else if $from-position != 0 {
 				background: functions.image-url($sprite-sheet) 0 functions.format-px($from-position);
 			} @else {
 				background: functions.image-url($sprite-sheet);
+			}
+			@if $extra {
+				@each $property, $value in $extra {
+					#{$property}: #{$value};
+				}
 			}
 
 			&:hover {

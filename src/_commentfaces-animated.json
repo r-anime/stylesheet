@@ -119,6 +119,8 @@
 		"cf-animated-017": {
 			"items": {
 				"upvote": { "height": 104, "width": 184, "from-position": -2005, "to-position": -3565, "frames": 16, "duration": 1.44, "loop": false },
+				"downvote": { "height": 104, "width": 184, "from-position": -2005, "to-position": -3565, "frames": 16, "duration": 1.44, "loop": false,
+					"tint": {"color": "#7193ff", "size": "40px 30px", "position": "60px 140px", "ending-position": "66px 60px"}, "extra": {"transform": "rotate(180deg)"}},
 				"deflate": { "height": 104, "width": 184, "from-position": 7405, "to-position": 2725, "frames": 46, "duration": 4.6, "loop": false },
 				"headrub": { "height": 104, "width": 184, "from-position": 1789, "to-position": 2725, "frames": 9, "duration": 1.08, "loop": true },
 				"badday": { "height": 120, "width": 160, "from-position": -1211, "to-position": 949, "frames": 19, "duration": 2.39, "loop": false }
