@@ -634,7 +634,7 @@
 
 		"35": {
 			"sprite-sheet": "cf-static-046",
-			"total-width": 7254,
+			"total-width": 7116,
 			"items": {
 				"michaelwink": { "height": 137, "width": 189, "position": 4700 },
 				"listen": { "height": 115, "width": 204, "position": 4904 },
@@ -648,21 +648,20 @@
 				"headpat": { "height": 121, "width": 194, "position": 6603 },
 				"fish": { "height": 121, "width": 194, "position": 6818 },
 				"umagiri": { "height": 161, "width": 159, "position": 6977 },
-				"hattastic": { "height": 178, "width": 139, "position": 7116 },
-				"ashrubbery": { "height": 191, "width": 138, "position": 7254 }
+				"hattastic": { "height": 178, "width": 139, "position": 7116 }
 			}
 		},
 
 		"36": {
 			"sprite-sheet": "cf-static-039",
-			"total-width": 4300,
+			"total-width": 4162,
 			"items": {
 				"seasonalapproval": { "height": 121, "width": 215, "position": 215 },
 				"seasonalblush": { "height": 121, "width": 215, "position": 430 },
 				"seasonalconfused": { "height": 121, "width": 215, "position": 645 },
 				"seasonalcool": { "height": 121, "width": 215, "position": 860 },
 				"seasonaldepression": { "height": 121, "width": 215, "position": 1075 },
-				"seasonaldisapproval": { "height": 121, "width": 215, "position": 1290 },
+				"seasonaldisapproval": { "height": 121, "width": 163, "position": 1238 },
 				"seasonaldisdain": { "height": 121, "width": 215, "position": 1505 },
 				"seasonalfoodie": { "height": 121, "width": 215, "position": 1720 },
 				"seasonalhype": { "height": 121, "width": 215, "position": 1935 },
@@ -672,11 +671,11 @@
 				"seasonalneat": { "height": 121, "width": 215, "position": 2795 },
 				"seasonalpls": { "height": 121, "width": 215, "position": 3010 },
 				"seasonalpout": { "height": 121, "width": 215, "position": 3225 },
-				"seasonalsecret": { "height": 121, "width": 215, "position": 3440 },
-				"seasonalshock": { "height": 121, "width": 215, "position": 3655 },
-				"seasonalsmug": { "height": 121, "width": 215, "position": 3870 },
-				"seasonalthink": { "height": 121, "width": 215, "position": 4085 },
-				"seasonaltired": { "height": 121, "width": 215, "position": 4300 }
+				"seasonalshock": { "height": 121, "width": 154, "position": 3379 },
+				"seasonalsmug": { "height": 121, "width": 215, "position": 3594 },
+				"seasonalthink": { "height": 121, "width": 215, "position": 3809 },
+				"seasonaltired": { "height": 121, "width": 215, "position": 4024 },
+				"seasonalsecret": { "height": 191, "width": 138, "position": 4162 }
 			}
 		}
 	}
