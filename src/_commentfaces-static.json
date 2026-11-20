@@ -683,7 +683,7 @@
 			"sprite-sheet": "cf-static-039",
 			"total-width": 4438,
 			"items": {
-				"ashrubbery": { "height": 191, "width": 138, "position": 138 }
+				"ashrubbery": { "height": 191, "width": 138, "position": 4438 }
 			}
 		}
 	}
